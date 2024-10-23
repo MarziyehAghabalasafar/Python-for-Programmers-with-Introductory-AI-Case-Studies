@@ -23,7 +23,7 @@
  * گزارش مشکلات: به ما کمک کنید تا این منبع باکیفیت را حفظ کنیم.
 
 <br>
-<a href=https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions>سوالات خود را در اینجا به اشتزاک بگذارید!</a>
+<a align = "right" href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات خود را در اینجا به اشتراک بگذارید</a>
 
   
 <br>
