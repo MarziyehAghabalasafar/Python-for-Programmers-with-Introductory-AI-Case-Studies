@@ -21,6 +21,10 @@
  * ایجاد نوت‌بوک‌های جدید: موضوعات جدید را پوشش دهید یا راه حل‌های جایگزین ارائه کنید.
  * بهبود نوت‌بوک‌های موجود: توضیحات، مثال‌ها یا نمودارهای جدید اضافه کنید.
  * گزارش مشکلات: به ما کمک کنید تا این منبع باکیفیت را حفظ کنیم.
+
+<br>
+<a href=https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions>سوالات خود را در اینجا به اشتزاک بگذارید!</a>
+
   
 <br>
 <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>
