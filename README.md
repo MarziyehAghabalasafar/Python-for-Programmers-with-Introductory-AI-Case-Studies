@@ -22,8 +22,7 @@
  * بهبود نوت‌بوک‌های موجود: توضیحات، مثال‌ها یا نمودارهای جدید اضافه کنید.
  * گزارش مشکلات: به ما کمک کنید تا این منبع باکیفیت را حفظ کنیم.
 
-<br>
-<a align = "right" href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات خود را در اینجا به اشتراک بگذارید</a>
+<a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات خود را در اینجا به اشتراک بگذارید</a>
 
   
 <br>
