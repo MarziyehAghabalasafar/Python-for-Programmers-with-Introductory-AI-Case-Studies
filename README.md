@@ -25,11 +25,5 @@
 #
 * <a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات و نظرات خود را در این‌جا به اشتراک بگذارید!</a>
 # 
-<br>
-
-
-
-![Visitors](https://visitor-badge.glitch.me/badge?page_id=MarziyehAghabalasafar.Python-for-Programmers-with-Introductory-AI-Case-Studies)
-
 
 <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>
