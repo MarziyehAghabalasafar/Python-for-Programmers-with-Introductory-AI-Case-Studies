@@ -3,7 +3,7 @@
 <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
 
 این ریپازیتوری، مکمل کتاب پرفروش "پایتون برای برنامه‌نویسان" نوشته پل و هاروی دایتل است. با استفاده از نوت‌بوک‌های تعاملی Jupyter، می‌توانید مفاهیم پایتون را به صورت عملی و گام‌به‌گام یاد بگیرید. هر نوت‌بوک، مربوط به یک فصل یا موضوع خاص در کتاب است و شامل مثال‌های کد، تمرین‌ها و نمودارهای گرافیکی است.
-
+#
 
 ویژگی‌های کلیدی:
  * یادگیری تعاملی: به صورت عملی با پایتون کار کنید و مفاهیم را عمیق‌تر درک کنید.
@@ -22,8 +22,14 @@
  * بهبود نوت‌بوک‌های موجود: توضیحات، مثال‌ها یا نمودارهای جدید اضافه کنید.
  * گزارش مشکلات: به ما کمک کنید تا این منبع باکیفیت را حفظ کنیم.
 
-<a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات و نظرات خود را در این‌جا به اشتراک بگذارید!</a>
-
-  
+#
+* <a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/discussions">سوالات و نظرات خود را در این‌جا به اشتراک بگذارید!</a>
+# 
 <br>
+
+
+
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=MarziyehAghabalasafar.Python-for-Programmers-with-Introductory-AI-Case-Studies)
+
+
 <a href=https://amzn.to/2Kd8dQk target="_blank">Python for Programmers</a>
