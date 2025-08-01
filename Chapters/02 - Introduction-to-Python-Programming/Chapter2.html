@@ -1,0 +1,2262 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/02 - Introduction-to-Python-Programming/Chapter2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../03%20-%20Control-Statements/Chapter3.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/02 - Introduction-to-Python-Programming/Chapter2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/02 - Introduction-to-Python-Programming/Chapter2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۲: مقدمه‌ای بر برنامه‌نویسی پایتون</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>دوباره از IPython در مود تعاملی برای وارد کردن کدهای اسنیپت و مشاهده فوری نتایج استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>دستورات و اسکریپت‌های ساده پایتون را می‌نویسید.<br>
+    <span style="color:#F50057;">■ </span>متغیرهایی را برای ذخیره داده و استفاده بعدی ایجاد خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>با انواع داده‌های از پیش تعریف شده آشنا خواهید شد.<br>
+    <span style="color:#F50057;">■ </span>با عملگرهای ریاضی و مقایسه‌ای کار می‌کنید و با مفهوم اولویت عملگرها آشنا خواهید شد.<br>
+    <span style="color:#F50057;">■ </span>با رشته‌های محصور با کاراکتر نقل قول تکی، دوتایی و سه تایی کار خواهید کرد.<br> 
+    <span style="color:#F50057;">■ </span>با تابع از پیش تعریف شده print برای نمایش متن کار خواهید کرد.<br> 
+    <span style="color:#F50057;">■ </span>با تابع از پیش تعریف شده input کار خواهید کرد. این تابع پیامی را برای ورود داده از طریق کیبورد به کاربر نشان می‌دهد و داده ورودی را برای استفاده در برنامه دریافت می‌کند.<br>
+    <span style="color:#F50057;">■ </span>با تابع از پیش تعریف شده convert متن را به عدد تبدیل خواهید کرد.<br> 
+    <span style="color:#F50057;">■ </span>با عملگرهای مقایسه‌ای و دستور if کار خواهید کرد و در مورد اجرا و یا عدم اجرای یک و یا چند دستور تصمیم می‌گیرید.<br>
+    <span style="color:#F50057;">■ </span>در مورد اشیا و داده‌های پویا در پایتون مطالبی می‌آموزید.<br>
+    <span style="color:#F50057;">■ </span>با کمک تابع از پیش تعریف شده type نوع یک شیء را مشخص خواهید کرد.<br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="2">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">مقدمه‌ای بر برنامه‌نویسی پایتون</span></a></p>
+<ul class="simple">
+<li><p>2.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>2.2 <a class="reference internal" href="#3"><span class="xref myst">متغیرها و دستورات انتساب</span></a></p></li>
+<li><p>2.3 <a class="reference internal" href="#4"><span class="xref myst">ریاضیات</span></a></p></li>
+<li><p>2.4 <a class="reference internal" href="#5"><span class="xref myst">تابع print و مقدمه‌ای بر رشته‌های محصور با کاراکتر نقل‌قول تکی، دوتایی</span></a></p></li>
+<li><p>2.5 <a class="reference internal" href="#6"><span class="xref myst">رشته‌هایی با کاراکتر نقل‌قول سه‌تایی</span></a></p></li>
+<li><p>2.6 <a class="reference internal" href="#7"><span class="xref myst">گرفتن ورودی از کاربر</span></a></p></li>
+<li><p>2.7 <a class="reference internal" href="#8"><span class="xref myst">تصمیم‌گیری: دستور if و عملگرهای مقایسه‌ای</span></a></p></li>
+<li><p>2.8 <a class="reference internal" href="#9"><span class="xref myst">اشیاء و داده‌ها با نوع پویا </span></a></p></li>
+<li><p>2.9 <a class="reference internal" href="#10"><span class="xref myst">مقدمه‌ای بر علم‌داده: آمار توصیفی پایه</span></a></p></li>
+<li><p>2.10 <a class="reference internal" href="#11"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل برنامه نویسی پایتون را معرفی می‌کنیم و برای نشان دادن ویژگی‌های اصلی این زبان مثال‌هایی را ارائه می‌دهیم. فرض را بر این گذاشته‌ایم که قسمت اجرای برنامه‌ها با IPython در فصل ۱ را مطالعه کرده‌اید این بخش مفسر IPython و نحوه استفاده از آن برای ارزیابی عبارت‌های ریاضی را شرح می‌دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.2 <span style="color:#F50057;">متغیرها و دستورات انتساب</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما با حالت تعاملی IPython به عنوان یک ماشین حساب برای ارزیابی عبارت‌های ریاضی نظیر عبارت ذیل استفاده کرده‌اید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span> <span class="o">+</span> <span class="mi">72</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>117
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با دستور ذیل یک متغیر با نام x تعریف شده و مقدار ۷ در آن ذخیره می‌گردد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [2]  یک دستور است. هر دستور وظیفه‌ای را برای اجرا مشخص می‌کند. دستور بالا متغیر x  را ایجاد کرده و با کمک نماد انتساب =   آن را مقدار دهی می‌کند. اکثر دستورها  امکان دارد در انتهای خط متوقف شوند. دستور ذیل متغیر y  را تعریف کرده و به آن مقدار ۳ را تخصیص می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از مقادیر x و y می‌توان در عبارت‌ها استفاده کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">محاسبات در دستورات انتساب</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور ذیل مقادیر x و y را با یکدیگر جمع کرده و نتیجه را در متغیر total قرار می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نماد = یک عملگر محسوب نمی‌شود. همیشه اول سمت راست نماد = محاسبه می‌شود و سپس نتیجه در متغیر سمت چپ ذخیره می‌گردد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سبک کدنویسی در پایتون</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">راهنمای سبک کدنویسی در پایتون به شما کمک می‌کند کدها را مطابق قراردادهای متعارف برنامه نویسی پایتون بنویسید. این راهنما توصیه می‌کند برای افزایش خوانایی برنامه در دو طرف نماد انتساب و عملگرهای دودویی نظیر + یک فاصله قرار دهید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نام‌گذاری متغیرها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نام متغیر نظیر x یک شناسه محسوب می‌شود. هر شناسه می‌تواند از حروف الفبای انگلیسی، ارقام و خط تیره تشکیل شود ولی نمی‌تواند با یک رقم شروع شود. پایتون به حروف کوچک و بزرگ حساس است، بنابراین number و Number شناسه‌های مختلفی هستند چرا که یکی با حرف کوچک و دیگری با یک حرف بزرگ شروع شده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">انواع داده</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر مقدار در پایتون دارای یک نوع است و نوع داده‌ای که نمایش می‌دهد را نشان می‌دهد.  با استفاده از تابع از پیش تعریف شده type می‌توانید نوع یک مقدار را مشخص کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقدار متغیر 
+    x 
+    عدد صحیح 
+    ۷ 
+    است (از اسنیپت ۲). 
+    بنابراین پایتون 
+    int 
+    را نمایش می‌دهد(مخفف 
+    integer). 
+    ۱۰.۵ 
+    یک عدد ممیز شناور است، بنابراین پایتون عبارت 
+    float 
+    را نمایش می‌دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.3 <span style="color:#F50057;">ریاضیات</span></h1> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول زیر عملگرهای ریاضی را به طور خلاصه نشان می‌دهد و شامل نمادهایی است که در جبر استفاده نمی‌شود.
+</div><p><img alt="Screenshot%20%2825%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2825%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ضرب ($*$)</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون از کاراکتر $*$ به‌عنوان عملگر ضرب استفاده می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">توان ($**$)</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر توان یک مقدار را به توان یک مقدار دیگر می‌رساند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1024
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای محاسبه ریشه دوم، می توانید از توان $۱/۲$ (یعنی ۰.۵) استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تقسیم معمولی ($/$) در قیاس با تقسیم صحیح ($//$)</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تقسیم معمولی یک عدد را بر مقسوم‌علیه تقسیم کرده و یک مقدار اعشاری را به عنوان نتیجه برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.75
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تقسیم اعشاری یک عدد را بر مقسوم‌علیه تقسیم کرده و بزرگترین عدد صحیحی که از خارج‌قسمت به دست آمده کوچک‌تر و یا مساوی است را برمی‌گرداند. پایتون قسمت اعشاری را حذف می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">//</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">//</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">14</span> <span class="o">//</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در تقسیم معمولی  $-۱۳$ بر $۴$ مقدار اعشاری $-۳.۲۵$ به دست می‌آید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">13</span> <span class="o">/</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.25
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در تقسیم صحیح مقدار ۴ به دست می‌آید، این مقدار بزرگترین عدد صحیحی است که از ۳.۲۵$-$ بیشتر نیست:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">13</span> <span class="o">//</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استثناها و
+Tracebackها
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تقسیم معمولی و صحیح بر صفر مجاز نبوده و منجر به تولید یک استثنا می‌گردد، یک استثنا معرف رویداد یک مشکل می‌باشد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">123</span> <span class="o">/</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">123</span> <span class="o">/</span> <span class="mi">0</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون یک استثنا را با Traceback گزارش می‌کند. این Traceback معرف آن است که یک استثنا از نوع ZeroDivisionError روی‌داده است. اکثر استثناها به کلمه Error ختم می‌شوند. در حالت محاوره‌ای شماره اسنیپتی که موجب خطا شده ذکر می‌گردد. خط  $---->$  کدی که موجب رخ دادن استثنا شده است را نشان می‌دهد. گاهی اوقات اسنیپت چند خطی است و عدد ۱ در سمت راست نماد  $---->$  شماره خطی که موجب بروز استثنا شده را نشان می‌دهد. در انتها استثنای ایجاد شده و به دنبال آن کاراکتر : به همراه توضیحات کامل‌تری نشان داده می‌شود.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل فایل‌ها و استثناها، مبحث استثناها با جزئیات کامل مورد بررسی قرار می‌گیرد. اگر سعی کنید از متغیری استفاده کنید که ایجاد نشده، یک استثنا روی خواهد داد. اسنیپت زیر سعی می‌کند مقدار ۷ را با متغیر تعریف نشده  z جمع کند و در نتیجه استثنای  NameError روی می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">+</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">z</span> <span class="o">+</span> <span class="mi">7</span>
+
+<span class="ne">NameError</span>: name &#39;z&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عملگر باقی‌مانده تقسیم</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در پایتون این عملگر (%)، باقیمانده تقسیم عملوند اول بر دوم را برمی‌گرداند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">17</span> <span class="o">%</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مثال بالا با تقسیم ۱۷ بر ۵ خارج قسمت ۳ و باقی‌مانده ۲ به دست می‌آید. معمولاً این عملگر با اعداد صحیح استفاده می‌شود ولی می‌توان آن را با اعداد اعشاری هم استفاده کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">7.5</span> <span class="o">%</span> <span class="mf">3.5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرم تک خطی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مفسرها و کامپایلرها معمولاً نماد جبری نظیر
+    $\frac{a}{b}$
+    را قبول نمی‌کنند. به همین دلیل هنگام نوشتن عبارت جبری با استفاده از عملگرهای پایتون باید از فرم تک خطی استفاده کرد. بنابراین باید عبارت بالا را به فرم
+     <code>a / b</code> (or <code>a // b</code> for floor division) 
+    نوشت تا تمام عملگرها و عملوندها در یک خط قرار بگیرند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">گروه‌بندی عبارت با کمک پرانتزها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از پرانتزها می‌توان در پایتون عبارت‌ها را همانند جبر گروه‌بندی کرد. برای مثال عبارت ذیل حاصل جمع ۵ + ۳ را در ۱۰ ضرب می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>80
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بدون پرانتزها نتیجه متفاوت خواهد بود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر با حذف پرانتزها نتیجه تغییر نکند، پرانتزها اضافی محسوب می‌شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">قواعد اولویت اپراتورها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون بر اساس قوانین اولویت بندی عملگرهای ذیل، عملگرها را در عبارات ریاضی محاسبه می‌کند. این قوانین معمولاً همانند قوانین جبر هستند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#D50000;">1. </span>عبارات داخل پرانتز ابتدا ارزیابی می‌شوند، بنابراین با استفاده از پرانتز‌ها می‌توانید اولویت ارزیابی عبارت‌ها را تغییر دهید. پرانتز بالاترین سطح اولویت را دارد. در عباراتی که دارای پرانتز تو در تو مثل فلان هستند، داخلی‌ترین پرانتز یعنی فلان ابتدا ارزیابی می‌شود.<br>
+    <span style="color:#D50000;">2. </span>عملگر توان در مرحله بعدی ارزیابی می‌شود. اگر عبارتی شامل چندین عملگر توان باشد، پایتون آنها را از راست به چپ ارزیابی می‌کند.<br>
+    <span style="color:#D50000;">3. </span>عملگر ضرب، تقسیم و باقیمانده در مرحله بعد ارزیابی می‌شوند. اگر عبارتی شامل چندین عمل ضرب، تقسیم، تقسیم صحیح و باقیمانده باشد، پایتون آن‌ها را از چپ به راست ارزیابی می‌کند. عملگرهای ضرب، تقسیم و باقیمانده اولویت‌های برابری دارند.<br>
+    <span style="color:#D50000;">4. </span>عملگر جمع و تفریق در مرحله آخر ارزیابی می‌شوند. اگر عبارتی شامل چندین عملگر جمع و تفریق باشد، پایتون آنها را از چپ به راست ارزیابی می‌کند. عملگرهای جمع و تفریق اولویت‌های برابری دارند.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای مشاهده لیست کامل عملگرها و اولویت آنها از پایین به بالا به آدرس ذیل مراجعه کنید: 
+    <a href="https://docs.python.org/3/reference/expressions.html#operator-precedence">https://docs.python.org/3/reference/expressions.html#operator-precedence</a><br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">گروه‌بندی عملگرها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی می‌گوییم پایتون عملگرها را از چپ به راست ارزیابی می‌کند در حقیقت به طور ضمنی به گروه بندی عملگرها اشاره می‌کنیم. به عنوان مثال، در عبارت ذیل:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+
+<span class="ne">NameError</span>: name &#39;a&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر جمع از چپ به راست گروه‌بندی می‌شود، یعنی اگر عبارت فوق را به صورت عبارت 
+    (a + b) + c 
+    پرانتز بندی کنیم دو عبارت یکی هستند. پایتون تمامی عملگرها به استثنای عملگر توان
+    ($**$)  
+    با اولویت یکسان را از چپ به راست ارزیابی می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پرانتزهای اضافی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای افزایش خوانایی می‌توانید با استفاده از پرانتزهای اضافی عبارت‌ها را گروه‌بندی کنید. برای مثال چند‌جمله‌ای درجه دوم 
+    <br>
+    $y = a * x ** 2 + b * x + c $
+    <br>
+    را می‌توان به صورت عبارت ذیل پرانتز بندی کرد تا خوانایی آن افزایش یابد: 
+    <br>
+    $y = (a * (x ** 2)) + (b * x) + c $
+    <br>
+    تبدیل یک عبارت پیچیده به چندین عبارت کوچک‌تر و ساده‌تر موجب افزایش خوانایی می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">انواع عملوندها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگرهای ریاضی را می‌توان با اعداد صحیح و اعداد اعشاری استفاده کرد. اگر هر دو عملوند عدد صحیح باشند، نتیجه یک عدد صحیح است، به جز عملگر تقسیم فلان که همیشه نتیجه یک عدد اعشاری تولید می‌کند. اگر هر دو عملوند اعشاری باشند، نتیجه یک عدد اعشاری است. عبارت‌هایی که شامل یک عدد صحیح و یک عدد اعشاری باشند، از نوع ترکیبی تلقی شده و همیشه نتیجه اعشاری تولید می‌کنند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.4 <span style="color:#F50057;">تابع 
+    print 
+    و مقدمه‌ای بر رشته‌های محصور با کاراکتر نقل قول تکی، دوتایی</span></h1> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع از پیش تعریف شده
+    print 
+    آرگومان‌های ورودی خود را به صورت یک خط از متن نشان می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welcome to Python!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python!
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در کد بالا، عبارت 
+    'Welcome to Python!' 
+    یک رشته است. رشته دنباله‌ای از کاراکترها است که بین دو علامت نقل قول تکی
+     (') 
+    محصور شده است. برخلاف زمانی که عبارات را در حالت تعاملی ارزیابی می‌کنید، عبارت
+     Out[1] 
+    قبل از متنی که به وسیله 
+    print 
+    نمایش داده می‌شود قرار نمی‌گیرد. علاوه بر این 
+    print 
+    علامت‌های نقل قول یک رشته را نمایش نمی‌دهد ولی به زودی نحوه نمایش نقل قول‌های داخل یک رشته را نشان خواهیم داد. یک رشته را می‌توان میان دو علامت نقل قول دوتایی
+    (") 
+    قرار داد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Python!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python!
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه نویسان پایتون معمولاً علامت نقل قول تکی را ترجیح می‌دهند. تابع 
+    print 
+    بعد از اتمام کار خود، مکان نما 
+     (screen cursor)
+    را به ابتدای خط بعدی منتقل می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نمایش لیستی از داده‌ها که با کاما از هم جدا شده‌اند</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    print 
+    می‌تواند لیستی از آرگومان‌های ورودی که با کاما از یکدیگر جدا شده‌اند را دریافت کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welcome&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;Python!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python!
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    print 
+    هر آرگومان را به اندازه یک فضای خالی از آرگومان بعدی نمایش می‌دهد. کدهای بالا خروجی یکسانی را با دو کد قبلی تولید می‌کند. این مثال لیستی از رشته‌ها که با کاما تفکیک شده‌اند را نشان می‌دهند ولی می‌توان از هر نوع داده دیگری هم استفاده کرد. در فصل بعدی نحوه جلوگیری از فاصله گذاری خودکار بین مقادیر و یا استفاده از جدا کننده متفاوت را نشان می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">چاپ تعدادی خطوط متنی با یک دستور</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که کاراکتر بک اسلش 
+    (\) 
+    در یک رشته ظاهر می‌شود، به عنوان یک کاراکتر ویژه شناخته می‌شود. بک اسلش و کاراکتر بعد آن یک دنباله ویژه تشکیل می‌دهند. به عنوان مثال 
+    $\n$ 
+    معرف خط جدید است به بیان دیگر این دنباله به تابع 
+    print 
+    می‌گوید مکان‌نما را در خروجی به خط بعدی منتقل کند. اسنیپت ذیل برای ایجاد یک خروجی سه خطی از سه 
+    $\n$ 
+    استفاده می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welcome</span><span class="se">\n</span><span class="s1">to</span><span class="se">\n\n</span><span class="s1">Python!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome
+to
+
+Python!
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سایر کاراکترهای ویژه</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول ذیل تعدادی از دنباله‌های ویژه رایج را نشان می‌دهد:
+</div><p><img alt="Screenshot%20%2829%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2829%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">صرف‌نظر کردن از شکسته شدن در یک رشته طولانی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از کاراکتر ادامه دادن 
+    (\)  
+    می‌توان یک رشته طولانی و یا یک دستور طولانی را در چند خط بسط داد ولی به‌طوری‌که عملاً به عنوان یک خط تلقی شود.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this is a longer string, so we </span><span class="se">\</span>
+<span class="s1">split it over two lines&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is a longer string, so we split it over two lines
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مفسر اجزای رشته را دوباره به صورت یک رشته و بدون خط شکسته تلفیق می‌کند. اگرچه کاراکتر بک اسلش در اسنیپت قبلی درون یک رشته است، اما این کاراکتر یک کاراکتر ویژه تلقی نمی‌شود و سایر کاراکترها آن را دنبال نمی‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نمایش مقدار یک عبارت</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توان محاسبات را در تابع 
+     print  
+    انجام داد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum is&#39;</span><span class="p">,</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sum is 10
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.5 <span style="color:#F50057;">رشته‌هایی با کاراکتر نقل‌قول سه‌تایی</span></h1> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در قسمت‌های قبل رشته‌هایی را معرفی کردیم که میان یک جفت نقل‌قول منفرد (') یا یک جفت نقل‌قول مضاعف (") محصور شده بودند. رشته‌های سه‌تایی با سه نقل‌قول مضاعف (""") یا سه نقل‌قول منفرد (''') شروع می‌شوند و به پایان می‌رسند. راهنمای سبک کدنویسی در پایتون سه نقل‌قول مضاعف (""") را توصیه می‌کند. برای این موارد از نقل‌قول سه‌تایی استفاده کنید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>رشته‌های چندخطی<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>رشته‌هایی که شامل کاراکتر نقل قول منفرد و مضاعف هستند<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در 
+    docstring
+    ها، برای مستندسازی و مشخص کردن اهداف اجزای کد از 
+    docstring
+    ها توصیه می‌شود.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">قرار دادن علامت نقل‌قول در رشته‌ها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کاراکتر نقل‌قول مضاعف را می‌توان در رشته‌ای که میان دو کاراکتر نقل‌قول منفرد محصور شده قرار داد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Display &quot;hi&quot; in quotes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Display &quot;hi&quot; in quotes
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اما با این روش نمی‌توان کاراکتر نقل‌قول منفرد را در چنین رشته‌ای قرار داد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Display &#39;</span><span class="n">hi</span><span class="s1">&#39; in quotes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Display &#39;</span><span class="n">hi</span><span class="s1">&#39; in quotes&#39;</span><span class="p">)</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax. Perhaps you forgot a comma?
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای این کار باید از ترکیب  $\'$ استفاده کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Display </span><span class="se">\&#39;</span><span class="s1">hi</span><span class="se">\&#39;</span><span class="s1"> in quotes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Display &#39;hi&#39; in quotes
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [2] یک خطای گرامری را نشان می‌دهد، چرا که کاراکتر نقل‌قول ساده در رشته‌ای قرار گرفت که با همین کاراکتر محصورشده است. 
+    IPython
+    اطلاعات مربوط به خط کدی که باعث خطای گرامری شده است را نشان می‌دهد و با علامت 
+    ^
+    به خطا اشاره می‌کند. علاوه بر این 
+    IPython 
+    پیام خطای 
+    SyntaxError: invalid syntax 
+    را نشان می‌دهد. کاراکتر نقل‌قول منفرد را می‌توان در رشته‌ای که میان دو کاراکتر نقل قول مضاعف محصورشده، قرار داد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Display the name O&#39;Brien&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Display the name O&#39;Brien
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اما با این روش نمی‌توان کاراکتر نقل‌قول مضاعف را در چنین رشته‌ای قرار داد مگر آنکه از ترکیب 
+    $\"$ 
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Display </span><span class="se">\&quot;</span><span class="s2">hi</span><span class="se">\&quot;</span><span class="s2"> in quotes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Display &quot;hi&quot; in quotes
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای عدم استفاده از ترکیب 
+   $ \' $
+    و 
+    $ \" $
+    در درون یک رشته، رشته مذکور را میان کاراکترهای نقل‌قول سه‌تایی محصور کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;Display &quot;hi&quot; and &#39;bye&#39; in quotes&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Display &quot;hi&quot; and &#39;bye&#39; in quotes
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">رشته‌های چندخطی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت ذیل یک رشته چندخطی که میان کاراکتر نقل‌قول سه‌تایی محصور شده را به متغیر 
+    triple_quoted_string 
+    اختصاص می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triple_quoted_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is a triple-quoted</span>
+<span class="s2">string that spans two lines&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    IPython 
+    می‌داند که این یک رشته کامل نیست چرا که شما کاراکتر 
+    """ 
+    و یا همان کاراکتر انتهایی رشته را قبل از 
+    Enter
+    کردن وارد نکردید. به همین دلیل 
+    IPython 
+    کاراکتر 
+    $...:$
+    و یا اعلان ادامه کار 
+    ^
+    را نشان می‌دهد و می‌توانید یک رشته چند خطی را وارد کنید. این روند تا زمانی که ترکیب     """ 
+    و متعاقب آن 
+    Enter
+    را وارد کنید ادامه خواهد داشت اسنیپت زیر محتوای 
+    triple_quoted_string 
+    را نشان می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">triple_quoted_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is a triple-quoted
+string that spans two lines
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون هنگام ذخیره کردن یک رشته چندخطی کاراکتر 
+    $\n$
+    را در آن رشته می‌گنجاند. هنگامی که به جای نمایش 
+    triple_quoted_string
+    مقدار آن را ارزیابی کنیم، 
+    IPython
+    یک رشته را به صورت رشته‌ای محصور میان دو کاراکتر نقل‌قول تکی نشان می‌دهد و در جاهایی که در اسنیپت ۷ 
+    Enter
+    کردید، کاراکتر 
+    $\n$
+    را قرار می‌دهد. محصور کردن 
+    triple_quoted_string 
+    با دو علامت نقل‌قول معرف آن است که این متغیر خود به تنهایی یک رشته بوده و قسمتی از رشته دیگری تلقی نمی‌شود.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triple_quoted_string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is a triple-quoted\nstring that spans two lines&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.6 <span style="color:#F50057;">گرفتن ورودی از کاربر</span></h1> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع از پیش تعریف‌شده 
+     input 
+    ورودی را از کاربر تقاضا کرده و آن را دریافت می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name? &quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span>
+
+<span class="ne">NameError</span>: name &#39;name&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;name&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت فوق به شرح ذیل اجرا می‌گردد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ابتدا تابع 
+    input
+    آرگومان رشته‌ای خود را نمایش می‌دهد و به کاربر اعلام می‌کند چه کاری باید انجام دهد و  منتظر پاسخ کاربر می‌ماند. ما کلمه 
+    Paul
+    را تایپ و 
+    Enter
+    کردیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در ادامه تابع 
+    input
+    آن کاراکترها را به عنوان رشته‌ای که برنامه می‌تواند استفاده کند، برمی‌گرداند. در این قسمت رشته مزبور را به متغیر 
+    name
+    اختصاص داده‌ایم.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [2]  مقدار متغیر 
+    name
+    را نشان می‌دهد. ارزیابی متغیر 
+    name
+    آن را به صورت یک رشته محصور میان دو نقل‌قول منفرد و یا به فرم 
+    'Paul'
+    نشان می‌دهد، چرا که 
+    name
+    یک رشته تلقی می‌شود. تایپ کلمه 
+    name
+    در اسنیپت [3] رشته را بدون علامت دو نقل‌قول منفرد نشان می‌دهد. اگر علامت نقل‌قول را وارد کنید به‌عنوان قسمتی از رشته محسوب می‌شوند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name? &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What&#39;s your name? &quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span>
+
+<span class="ne">NameError</span>: name &#39;name&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;name&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    input
+    همیشه یک رشته برمی‌گرداند</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت زیر را در نظر بگیرید. این اسنیپت سعی می‌کند دو عدد را از ورودی بخواند و آنها را با هم جمع کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first number: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first number: &#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second number: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second number: &#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value1</span> <span class="o">+</span> <span class="n">value2</span>
+
+<span class="ne">NameError</span>: name &#39;value1&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون به جای جمع کردن اعداد صحیح ۷ و ۳ برای تولید ۱۰، مقادیر رشته '۷' و '۳' را به یکدیگر می‌چسباند و رشته '۷۳' را تولید می‌کند. این عمل به عنوان الحاق رشته شناخته می‌شود. این عمل با چسباندن عملگر سمت راست به انتهای عملگر سمت چپ یک رشته جدید ایجاد می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">گرفتن یک عدد صحیح از کاربر</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر به یک عدد صحیح نیاز دارید باید با کمک تابع از پیش تعریف‌شده 
+    int
+    مقدار رشته را به عدد صحیح تبدیل کنید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;value&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">51</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value</span>
+
+<span class="ne">NameError</span>: name &#39;value&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توانیم اسنیپت‌های  [10] و  [11] را با یکدیگر ترکیب کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">another_value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter another integer: &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">52</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">another_value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter another integer: &#39;</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">another_value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">another_value</span>
+
+<span class="ne">NameError</span>: name &#39;another_value&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون متغیرهای 
+    value
+    و 
+    another_value
+    دارای عدد مقادیر صحیح هستند. جمع کردن این متغیرها یک نتیجه صحیح تولید می‌کند (به جای الحاق):
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">+</span> <span class="n">another_value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">54</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value</span> <span class="o">+</span> <span class="n">another_value</span>
+
+<span class="ne">NameError</span>: name &#39;value&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر رشته منتقل شده به 
+    int 
+    قابل تبدیل به عدد صحیح نباشد یک استثنای 
+    ValueError
+    رخ می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad_value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter another integer: &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">55</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">bad_value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter another integer: &#39;</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">علاوه بر این تابع 
+    int
+    می‌تواند یک مقدار اعشاری را به عدد صحیح تبدیل کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تبدیل رشته‌ها به اعداد اعشاری از تابع از پیش تعریف شده 
+    float 
+    استفاده کنید.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.7 <span style="color:#F50057;">تصمیم‌گیری: دستور
+    if
+    و عملگرهای مقایسه‌ای</span></h1> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شرط یک عبارت بولین با مقادیر درست و یا نادرست می‌باشد. کدهای ذیل مشخص می‌کنند که آیا ۷ از ۴ بزرگتر است و یا خیر:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">&gt;</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">&lt;</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">True
+    و 
+    False
+    کلمات کلیدی پایتون محسوب می‌شوند. استفاده از یک کلمه کلیدی برای شناسه موجب بروز خطای 
+    SyntaxError
+    می‌گردد. دو کلمه 
+    True
+    و 
+    False
+    با حرف بزرگ شروع می‌شوند. اغلب شرط‌ها را با استفاده از عملگرهای مقایسه‌ای در جدول ذیل مشاهده می‌کنید:
+</div><p><img alt="Screenshot%20%2827%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2827%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگرهای 
+    $>$، $<$، $>=$ و $<=$ همه دارای اولویت یکسانی هستند.
+عملگرهای $==$ و $!=$ هر دو دارای اولویت یکسانی هستند که کمتر از $>$، $<$، $>=$ و $<=$ است.
+یک syntax error زمانی رخ می دهد که هر یک از عملگرهای $==$، $!=$، $>=$ و $<=$ بین جفت نمادهای خود فاصله داشته باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">&gt;</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="g g-Whitespace">    </span><span class="mi">7</span> <span class="o">&gt;</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر نمادهای عملگرهای $!=$، $>=$ و $<=$ را معکوس کنید (با نوشتن آنها به صورت $=!$، $=>$ و $=<$) یک syntax error دیگر رخ می دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تصمیم گیری با دستور 
+    if:
+    مقدمه‌ای بر اسکریپت‌ها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون یک نسخه ساده از دستور 
+    if
+    ارائه می‌دهیم که از یک عبارت برای تصمیم گیری در مورد اجرای دستور (گروهی از دستورات) استفاده می‌کند. در اینجا دو عدد صحیح را از کاربر می‌گیریم و آنها را با استفاده از شش دستور متوالی 
+    if
+    به ازای هر عملگر مقایسه‌ای، مقایسه می‌کنیم. اگر شرط موجود در دستور 
+    if
+    درست باشد، دستور 
+     print
+    مربوطه اجرا می‌شود، در غیر این صورت از آن صرف‌نظر می‌شود. 
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">حالت تعاملی IPython برای اجرای کدهای کوتاه و دیدن نتایج فوری مفید است.
+وقتی دستورات زیادی برای اجرا به صورت گروهی دارید، معمولاً آنها را به صورت یک اسکریپت ذخیره شده در یک فایل با پسوند $.py$ (مخفف Python) می نویسید - مانند fig02_01.py برای اسکریپت این مثال.
+به اسکریپت ها برنامه نیز گفته می شود.
+برای دستورالعمل‌های مربوط به مکان‌یابی و اجرای اسکریپت‌ها در این کتاب، به بخش تست درایو IPython فصل ۱ مراجعه کنید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر بار که این اسکریپت را اجرا می‌کنید، سه شرط از شش شرط True هستند. برای نشان دادن این موضوع، اسکریپت را سه بار اجرا می‌کنیم - در بار اول اولین عدد صحیح از عدد دوم کمتر است، دومین بار دو عدد برابر هستند و در اجرای سوم عدد اول از عدد دوم بزرگتر است.
+سه اجرای نمونه بعد از اسکریپت ظاهر می‌شوند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر بار که اسکریپتی مانند تصویر زیر ارائه می‌کنیم، آن را قبل از شکل معرفی می‌کنیم، سپس کد اسکریپت را بعد از شکل توضیح می‌دهیم.
+ما شماره خطوط را برای راحتی شما نشان می‌دهیم - این شماره ها بخشی از پایتون نیستند.
+IDE ها به شما این امکان را می‌دهند که انتخاب کنید شماره خطوط نمایش داده شود یا خیر.
+برای اجرای این مثال، به پوشه نمونه‌های ch02 این فصل بروید، سپس وارد کنید:
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ipython</span> <span class="n">fig02_01</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">   
+یا اگر از قبل در IPython هستید، می‌توانید از دستور ذیل استفاده کنید:
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">run</span> <span class="n">fig02_01</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig02_01.py</span>
+<span class="sd">&quot;&quot;&quot;Compare integers using if statements and comparison operators.&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter two integers and I will tell you&#39;</span><span class="p">,</span> 
+      <span class="s1">&#39;the relationships they satisfy.&#39;</span><span class="p">)</span>
+
+<span class="c1"># read first integer</span>
+<span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first integer: &#39;</span><span class="p">))</span>
+
+<span class="c1"># read second integer</span>
+<span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second integer: &#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">==</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is equal to&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">!=</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is not equal to&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">&lt;</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is less than&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">&gt;</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is greater than&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">&lt;=</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is less than or equal to&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">number1</span> <span class="o">&gt;=</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is greater than or equal to&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter two integers and I will tell you the relationships they satisfy.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter two integers and I will tell you&#39;</span><span class="p">,</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span>       <span class="s1">&#39;the relationships they satisfy.&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># read first integer</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first integer: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># read second integer</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second integer: &#39;</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#run fig02_01.py</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot%20%2828%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2828%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">کامنت‌ها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+خط 1 با کاراکتر هش (#) شروع می‌شود که نشان می دهد بقیه خط یک کامنت است:
+</div> 
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig02_01.py</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">  
+برای ارجاع آسان، هر اسکریپت را با یک کامنت شروع می‌کنیم که نام فایل اسکریپت را نشان می‌دهد.
+یک کامنت همچنین می‌تواند از سمت راست کد در یک خط مشخص شروع شود و تا انتهای آن خط ادامه یابد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Docstringها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">راهنمای سبک کدنویسی پایتون بیان می‌کند که هر اسکریپت باید با یک رشته مستند شروع شود که هدف اسکریپت را توضیح می‌دهد، مانند آنچه در خط ۲ وجود دارد: 
+</div>  
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Comparing integers using if statements and comparison operators.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+برای اسکریپت‌های پیچیده‌تر، رشته مستند اغلب خطوط زیادی را در بر می‌گیرد.
+در فصل‌های بعدی، از رشته‌های اسنادی برای توصیف اجزای اسکریپت که تعریف می‌کنید، مانند توابع جدید و انواع جدیدی به نام کلاس‌ها استفاده خواهید کرد.
+همچنین درباره نحوه دسترسی به رشته‌های اسنادی با مکانیسم کمکی IPython بحث خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">خطوط خالی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خط ۳ یک خط خالی است.
+شما از خطوط خالی و کاراکترهای space استفاده می‌کنید تا کد را راحت‌تر بخوانید.
+خطوط خالی، کاراکترهای space و کاراکترهای tab با هم به عنوان <b>فضای سفید</b> شناخته می‌شوند.
+پایتون بیشتر فضای سفید را نادیده می‌گیرد - خواهید دید که مقداری تورفتگی لازم است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تقسیم یک دستور طولانی به چند خط</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۴ و ۵ دستورالعمل‌هایی را به کاربر نشان می‌دهد. این دستورالعمل‌ها طولانی هستند و در یک خط جا نمی‌شوند، به همین دلیل آنها را به دو رشته تقسیم کرده‌ایم. به یاد بیاورید که می‌توانید مقادیر مختلفی را با کاما جدا کنید و برای نمایش به تابع 
+    print
+    ارسال کنید. تابع 
+    print
+    هر مقدار را با یک فاصله از مقدار بعدی نشان می‌دهد.
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter two integers, and I will tell you&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;the relationships they satisfy.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور معمول، شما دستورها را در یک خط می‌نویسید. ممکن است یک دستور طولانی را با استفاده از کاراکتر 
+    \
+    به چند خط تقسیم کنید. علاوه بر این پایتون این امکان را به شما می‌دهد بدون استفاده از کاراکتر
+    \
+    کدهای طولانی درون پرانتز را به چند خط تقسیم کنید (مانند خطوط ۴ و ۵). راهنمای سبک کدنویسی پایتون این روش را توصیه می‌کند. همیشه نقاط شکست را منطقی انتخاب کنید، برای مثال نقاط شکست را پس از یک کاما در فراخوانی تابع 
+    print
+    و یا قبل از یک عملگر در یک عبارت طولانی قرار دهید. 
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">خواندن مقادیر صحیح از کاربر</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سپس، خطوط ۸ و ۱۱ از توابع input و int داخلی برای درخواست و خواندن دو مقدار صحیح از کاربر استفاده می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دستورات if</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور if در خطوط ۱۳ و ۱۴
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">number1</span> <span class="o">==</span> <span class="n">number2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="s1">&#39;is equal to&#39;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+از عملگر مقایسه == برای تعیین مساوی بودن مقادیر متغیرهای number1 و number2 استفاده می‌کند.
+اگر چنین باشد، شرط True است و خط ۱۴ خطی از متن را نشان می‌دهد که مقادیر برابر هستند.
+اگر هر یک از شرایط عبارات if باقی‌مانده، True باشد (خطوط ۱۶، ۱۹، ۲۲، ۲۵ و ۲۸)، print مربوطه یک خط متن را نمایش می‌دهد.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر دستور if متشکل از کلمه کلیدی if، شرطی که باید تست شود، و یک دونقطه (:) به دنبال یک بدنه تورفتگی به نام suite است. هر suite باید حاوی یک یا چند عبارت باشد.
+فراموش کردن کولون (:) بعد از شرط یک  syntax error رایج است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تورفتگی Suite</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">زبان پایتون کدهای 
+    Suite
+    را با تورفتگی مشخص می‌کند.
+راهنمای سبک برنامه‌نویسی پایتون برای این کار ۴ کاراکتر 
+    space
+    را توصیه می‌کند - ما از این قرارداد در سراسر این کتاب استفاده می‌کنیم.
+در فصل بعدی خواهید دید که تورفتگی نادرست می‌تواند باعث ایجاد خطا شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشتباه گرفتن =  با ==</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">استفاده از نماد تخصیص (=) به جای عملگر برابری (==) در شرط if یک خطای نحوی رایج است. برای جلوگیری از این امر، == را به عنوان "برابر است" و = را به عنوان "تخصیص داده شده" بخوانید.
+در فصل بعدی خواهید دید که استفاده از == به جای = در یک دستور انتساب می‌تواند منجر به مشکلات ظریفی شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مقایسه‌های زنجیره‌ای</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عملگرهای مقایسه زنجیره‌ای می‌توان مشخص کرد که آیا یک مقدار در محدوده مورد نظر وجود دارد یا خیر.
+مقایسه زیر تعیین می‌کند که آیا x در محدوده ۱ تا ۵ قرار دارد یا خیر:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اولویت عملگرهایی که تاکنون با آنها آشنا شده‌ایم</h2><a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول ذیل اولویت عملگرهای بررسی شده در این فصل را نشان می‌دهد:
+</div><p><img alt="Screenshot%20%2830%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2830%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این جدول عملگرهای با اولویت بالا در بالای جدول و عملگرهای با اولویت کم در پایین جدول قرار گرفته‌اند. جدول، عملگرها را از بالا به پایین به ترتیب تقدم نزولی فهرست می‌کند.
+هنگام نوشتن عبارات حاوی چندین عملگر، تأیید کنید که آنها به ترتیبی که انتظار دارید ارزیابی می‌شوند.
+  برای اطلاعات بیشتر در خصوص اولویت عملگرها به آدرس ذیل مراجعه کنید:
+    <a href="https://docs.python.org/3/reference/expressions.html#operator-precedence">https://docs.python.org/3/reference/expressions.html#operator-precedence</a><br>
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.8 <span style="color:#F50057;">اشیاء و نوع داده پویا</span></h1> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقادیری مانند ۷ (یک عدد صحیح)، ۴.۱ (یک عدد ممیز شناور) و 'dog' همه اشیا هستند.
+هر شیء یک نوع و یک مقدار دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">4.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقدار یک شیء، داده‌های ذخیره شده در آن شیء است.
+اسنیپت‌های بالا اشیایی از انواع داخلی int (برای اعداد صحیح)، float (برای اعداد ممیز شناور) و str (برای رشته‌ها) را نشان می‌دهند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متغیرها به اشیاء اشاره می‌کنند</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اختصاص دادن یک شیء به یک متغیر، نام آن متغیر را به شیء متصل می‌کند.
+همان‌طور که مشاهده کردید، سپس می‌توانید از متغیر موجود در کد خود برای دسترسی به مقدار شیء استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پس از انتساب اسنیپت [4]، متغیر x به شیء عدد صحیح حاوی ۷ اشاره می کند.
+همان‌طور که در اسنیپت [6] نشان داده‌شده است، اسنیپت [5] مقدار x را تغییر نمی دهد.
+می‌توانید x را به صورت زیر تغییر دهید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نوع داده پویا</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون از نوع داده پویا استفاده می‌کند — با کمک این ویژگی می‌تواند در هنگام اجرای کد، نوع شیئی که یک متغیر به آن اشاره می‌کند را تعیین کند.
+ما می‌توانیم این را با پیوند مجدد متغیر x به اشیاء مختلف و بررسی نوع داده آنها نشان دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">4.1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;dog&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بازیابی حافظه یا جمع آوری زباله</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون اشیاء را در حافظه ایجاد می‌کند و در صورت لزوم آنها را از حافظه حذف می‌کند.
+بعد از اسنیپت [10]، متغیر x اکنون به یک شیء float اشاره می‌کند.
+شیء عدد صحیح از اسنیپت [7] دیگر به یک متغیر محدود نمی‌شود. همان‌طور که در فصل بعدی بحث خواهیم کرد، پایتون به‌طور خودکار چنین اشیایی را از حافظه حذف می‌کند.
+این فرآیند - که <b>جمع‌آوری زباله</b> نامیده می‌شود - کمک می‌کند تا اطمینان حاصل شود که حافظه برای اشیاء جدیدی که ایجاد می‌کنید در دسترس است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.9 <span style="color:#F50057;">مقدمه‌ای بر علم داده: آمار توصیفی پایه</span></h1> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در علم داده، اغلب از آمار برای توصیف و خلاصه کردن داده‌های خود استفاده می‌کنید.
+در اینجا، با معرفی چندین آمار توصیفی از جمله:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>minimum:</b> کم‌ترین مقدار در مجموعه مقادیر<br>
+    <span style="color:#8e24aa;">• </span><b>maximum:</b> بیش‌ترین مقدار در مجموعه مقادیر<br>
+    <span style="color:#8e24aa;">• </span><b>range:</b> دامنه مقادیر از حداقل به حداکثر<br>
+    <span style="color:#8e24aa;">• </span><b>count:</b> تعداد مقادیر موجود در یک مجموعه<br>
+    <span style="color:#8e24aa;">• </span><b>sum:</b> مجموعه مقادیر موجود در یک مجموعه<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ما در فصل بعدی به تعیین 
+    count
+    و 
+    sum
+    خواهیم پرداخت. معیارهای پراکندگی (که معیارهای تغییرپذیری نیز نامیده می‌شوند)، مانند 
+    range
+    ، به تعیین میزان پراکندگی مقادیر کمک می‌کنند.
+سایر معیارهای پراکندگی که در فصل های بعدی ارائه خواهیم کرد شامل واریانس و انحراف استاندارد است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین حداقل سه مقدار</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ابتدا، اجازه دهید نحوه تعیین حداقل سه مقدار را به صورت دستی نشان دهیم.
+اسکریپت زیر سه مقدار را درخواست می‌کند و آن را وارد می‌کند، از دستور if برای تعیین حداقل مقدار استفاده می‌کند، سپس آن را نمایش می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fig. 2.2: fig02_02.py</span>
+<span class="sd">&quot;&quot;&quot;Find the minimum of three values.&quot;&quot;&quot;</span>
+
+<span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first integer: &#39;</span><span class="p">))</span>
+<span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second integer: &#39;</span><span class="p">))</span>
+<span class="n">number3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter third integer: &#39;</span><span class="p">))</span>
+
+<span class="n">minimum</span> <span class="o">=</span> <span class="n">number1</span>  
+
+<span class="k">if</span> <span class="n">number2</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">number2</span>
+
+<span class="k">if</span> <span class="n">number3</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="n">number3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Minimum value is&#39;</span><span class="p">,</span> <span class="n">minimum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">79</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Fig. 2.2: fig02_02.py</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Find the minimum of three values.&quot;&quot;&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter first integer: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter second integer: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">number3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter third integer: &#39;</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#run fig02_02.py</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot%20%2831%29.png" src="Chapters/02 - Introduction-to-Python-Programming/attachment:Screenshot%20%2831%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پس از وارد کردن سه مقدار، در هر زمان یک مقدار را پردازش می کنیم:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ابتدا فرض می‌کنیم که 
+    number1
+    حاوی کوچک‌ترین مقدار است، بنابراین خط ۸ آن را به متغیر 
+    minimum
+    اختصاص می‌دهد.
+البته، ممکن است که 
+    number2 
+    یا 
+    number3
+    دارای کوچک‌ترین مقدار واقعی باشد، بنابراین ما هنوز باید هر یک از اینها را با 
+    minimum
+    مقایسه کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span> در اولین دستور 
+    if
+    (خطوط ۱۰-۱۱) شرط 
+    $number2 < minimum$
+    را آزمایش می‌کند و اگر این شرط 
+    True
+    باشد، 
+    number2
+     به متغیر 
+    minimum
+    تخصیص داده می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span> در دومین دستور 
+    if
+    (خطوط ۱۳-۱۴) شرط 
+    $number3 < minimum$
+    را آزمایش می‌کند و اگر این شرط 
+    True
+    باشد، 
+    number3
+     به متغیر 
+    minimum
+    تخصیص داده می‌شود.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون 
+    minimum
+    حاوی کوچک‌ترین مقدار است، بنابراین آن را نمایش می‌دهیم.
+ما اسکریپت را سه بار اجرا کردیم تا نشان دهیم بدون در نظر گرفتن اینکه کاربر آن را بار اول، دوم یا سوم وارد می‌کند همیشه کوچک‌ترین مقدار صحیح پیدا می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین حداقل و حداکثر با توابع داخلی 
+    min
+    و 
+    max</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون دارای توابع داخلی زیادی برای انجام 
+    وظایف رایج
+    (common tasks)
+    است. توابع داخلی 
+    min و max
+    به ترتیب حداقل و حداکثر مجموعه‌ای از مقادیر را محاسبه می‌کنند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توابع min و max می‌توانند هر تعداد آرگومان را دریافت کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین محدوده مجموعه‌ای از ارزش‌ها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">range
+    مقادیر به سادگی از مقدار حداقل تا مقدار حداکثر است.
+    در مثال بالا، 
+    (range)
+    ۱۲
+    تا 
+    ۳۶ 
+    است.
+قسمت عمده علوم‌داده به شناخت داده‌های شما اختصاص دارد.
+آمار توصیفی بخش مهمی از آن است، اما شما همچنین باید بدانید که چگونه آمار را تفسیر کنید.
+به‌عنوان مثال، اگر ۱۰۰ عدد با دامنه ۱۲ تا ۳۶ دارید،
+این اعداد می توانند به طور مساوی در آن محدوده توزیع شوند.
+در حالت مقابل، این اعداد می‌توانند به صورت ۹۹ مقدار ۱۲ و یک مقدار ۳۶ و یا ۹۹ مقدار ۳۶ و یک مقدار ۱۲ توزیع شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">برنامه نویسی به سبک تابعی: ساده سازی (کاهش)</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در سراسر این کتاب، ما قابلیت های مختلف برنامه‌نویسی به سبک تابعی را معرفی می‌کنیم.
+این‌ها به شما امکان می‌دهند کدی بنویسید که می‌تواند مختصرتر، واضح‌تر و آسان‌تر برای اشکال‌زدایی باشد، یعنی خطاها را پیدا کرده و تصحیح کنید.
+توابع min و max نمونه‌هایی از مفهوم برنامه‌نویسی سبک تابعی به نام کاهش هستند.
+آنها مجموعه‌ای از مقادیر را به یک مقدار کاهش می‌دهند.
+کاهش‌های دیگری که مشاهده خواهید کرد شامل 
+    sum
+    ، 
+    average
+    ، واریانس و انحراف استاندارد مجموعه‌ای از مقادیر است.
+همچنین خواهید دید که چگونه کاهش‌های سفارشی را تعریف کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مقدمه‌ای بر بخش‌های آینده مبحث علم‌داده</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در دو فصل بعدی بحث خود را در مورد آمار توصیفی پایه ادامه خواهیم داد. در این فصول شاخص‌های مرکزی نظیر میانگین، میانه و مد و همچنین معیارهای پراکندگی نظیر واریانس و انحراف استاندارد مورد بررسی قرار می‌گیرند
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">2.10 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل بحث خود را در مورد ریاضیات ادامه دادیم. از متغیرها برای ذخیره مقادیر استفاده کردید. عملگرهای ریاضی پایتون را معرفی کردیم و نشان دادیم که باید تمام عبارات را به فرم تک خطی بنویسید. از تابع از پیش تعریف شده پرینت برای نمایش داده‌ها استفاده کردید. رشته‌های محصور با علائم نقل‌قول تکی، دوتایی و سه تایی ایجاد کردیم. برای ایجاد رشته‌های چند خطی و قرار دادن علائم نقل‌قول تکی، دوتایی در رشته‌ها از رشته‌هایی با علائم نقل‌قول سه‌تایی استفاده کردید.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما از تابع input برای درخواست و دریافت ورودی از کاربر در صفحه کلید استفاده کردید.
+ما از توابع int و float برای تبدیل رشته ها به مقادیر عددی استفاده کردیم. ما عملگرهای مقایسه‌ای پایتون را ارائه کردیم.
+سپس، شما از آنها در یک اسکریپت استفاده کردید که دو عدد صحیح را از کاربر می خواند و مقادیر آنها را با استفاده از یک سری دستور if مقایسه می کرد.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ما در مورد نوع داده پویای پایتون بحث کردیم و از تابع داخلی type برای نمایش نوع یک شیء استفاده کردیم.
+در نهایت، حداقل و حداکثر را در آمار توصیفی پایه معرفی کرده و از آنها برای محاسبه محدوده مجموعه‌ای از مقادیر استفاده کردیم.
+در فصل بعدی، دستورات کنترل پایتون را ارائه می‌کنیم.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/02 - Introduction-to-Python-Programming"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../03%20-%20Control-Statements/Chapter3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

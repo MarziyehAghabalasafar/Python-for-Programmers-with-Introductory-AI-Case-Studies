@@ -1,0 +1,2295 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/09 - Files-and-Exceptions/Chapter9';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../10%20-%20Object-Oriented-Programming/Chapter10.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../08%20-%20Strings-%28A-Deeper-Look%29/Chapter8.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/09 - Files-and-Exceptions/Chapter9.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/09 - Files-and-Exceptions/Chapter9.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۹: فایل‌ها و استثناها</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>مفهوم فایل‌ها و داده‌های پایدار را درک خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>فایل‌ها را می‌خوانید و فایل‌ها را به‌روزرسانی خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>فایل‌های
+        CSV 
+        را می‌خوانید و در آن‌ها می‌نویسید،
+        CSV
+        یک فرمت رایج برای دیتاست‌های یادگیری ماشین محسوب می‌شود.
+        <br>
+    <span style="color:#F50057;">■ </span>اشیاء را به فرمت تبادل اطلاعات 
+        JSON
+        سریالایز کرده و سپس 
+        JSON
+        را به اشیاء دیگر دی‌سریالایز خواهید کرد. 
+        JSON
+        فرمت رایج برای ارسال داده از بستر اینترنت محسوب می شود.
+        <br>
+    <span style="color:#F50057;">■ </span>از دستور 
+        with
+        استفاده می‌کنید تا مطمئن شوید منابع به‌درستی آزاد شده‌اند و از نشت منابع جلوگیری خواهید کرد.
+        <br>
+    <span style="color:#F50057;">■ </span>برای کنترل کدی که ممکن است در آن استثناء رخ دهد، از دستور 
+        try
+        استفاده می‌کنید و با دستور مربوط به قسمت 
+        except
+        استثناها را مدیریت خواهید کرد.
+        <br>
+    <span style="color:#F50057;">■ </span>برای مواقعی که هیچ استثنایی در قسمت 
+        try 
+        اتفاق نیفتاده است، از دستور 
+        try 
+        با 
+        else 
+        برای اجرای کد استفاده خواهید کرد.
+        <br>
+    <span style="color:#F50057;">■ </span>بدون در نظر گرفتن این که آیا استثنایی در 
+        try
+        رخ داده و یا خیر، از دستور 
+        try
+        با 
+        finally 
+        برای اجرای کد استفاده خواهید کرد.
+        <br>
+    <span style="color:#F50057;">■ </span>برای نشان دادن ارورهای زمان اجرا، استثناها را ایجاد خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>نحوه 
+        trackback 
+        کردن توابع و متدهایی که منجر به یک استثنا شده‌اند را درک خواهید کرد.
+        <br>
+    <span style="color:#F50057;">■ </span>از
+        Pandas
+        برای بارگذاری در یک 
+        DataFrame 
+        استفاده خواهید کرد و دیتاست 
+        CSV
+        مربوط به فاجعه تایتانیک را پردازش خواهید کرد.
+        <br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="9">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">فصل ۹: فایل‌ها و استثناها</span></a></p>
+<ul class="simple">
+<li><p>9.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>9.2 <a class="reference internal" href="#3"><span class="xref myst">فایل‌ها</span></a></p></li>
+<li><p>9.3 <a class="reference internal" href="#4"><span class="xref myst">پردازش فایل‌های متنی</span></a></p>
+<ul>
+<li><p>9.3.1 <a class="reference internal" href="#5"><span class="xref myst">نوشتن در یک فایل متنی: معرفی دستور with</span></a></p></li>
+<li><p>9.3.2 <a class="reference internal" href="#6"><span class="xref myst">خواندن داده از یک فایل متنی</span></a></p></li>
+</ul>
+</li>
+<li><p>9.4 <a class="reference internal" href="#7"><span class="xref myst">به روز رسانی فایل‌های متنی</span></a></p></li>
+<li><p>9.5 <a class="reference internal" href="#8"><span class="xref myst">Serialization با JSON</span></a></p></li>
+<li><p>9.6 <a class="reference internal" href="#9"><span class="xref myst">تمرکز بر روی امنیت: pickle Serialization and Deserialization</span></a></p></li>
+<li><p>9.7 <a class="reference internal" href="#10"><span class="xref myst">مطالب بیشتر در مورد فایل‌ها</span></a></p></li>
+<li><p>9.8 <a class="reference internal" href="#11"><span class="xref myst">مدیریت استثناها</span></a></p>
+<ul>
+<li><p>9.8.1 <a class="reference internal" href="#12"><span class="xref myst">Division by Zero و Invalid Input</span></a></p></li>
+<li><p>9.8.2 <a class="reference internal" href="#13"><span class="xref myst">دستور try</span></a></p></li>
+<li><p>9.8.3 <a class="reference internal" href="#14"><span class="xref myst">مدیریت چندین استثنا در یک دستور except</span></a></p></li>
+<li><p>9.8.4 <a class="reference internal" href="#15"><span class="xref myst">یک تابع یا یک متد چه استثنائاتی را ایجاد می‌کنند؟</span></a></p></li>
+<li><p>9.8.5 <a class="reference internal" href="#16"><span class="xref myst">چه کدی باید در بلاک try قرار گیرد؟</span></a></p></li>
+</ul>
+</li>
+<li><p>9.9 <a class="reference internal" href="#17"><span class="xref myst">عبارت finally</span></a></p></li>
+<li><p>9.10 <a class="reference internal" href="#18"><span class="xref myst">ایجاد یک استثنا به طور صریح</span></a></p></li>
+<li><p>9.11 <a class="reference internal" href="#19"><span class="xref myst">(Optional) Stack Unwinding و Tracebacks</span></a></p></li>
+<li><p>9.12 <a class="reference internal" href="#20"><span class="xref myst">مقدمه‌ای بر علم داده: کار با فایل‌های CSV</span></a></p>
+<ul>
+<li><p>9.12.1 <a class="reference internal" href="#21"><span class="xref myst">ماژول CSV در کتابخانه استاندارد پایتون</span></a></p></li>
+<li><p>9.12.2 <a class="reference internal" href="#22"><span class="xref myst">خواندن فایل‌های CSV و وارد کردن داده‌های آنها به Pandas DataFrame </span></a></p></li>
+<li><p>9.12.3 <a class="reference internal" href="#23"><span class="xref myst">خواندن دیتاست Titanic</span></a></p></li>
+<li><p>9.12.4 <a class="reference internal" href="#24"><span class="xref myst">تجزیه و تحلیل داده‌ها با دیتاست Titanic</span></a></p></li>
+<li><p>9.12.5 <a class="reference internal" href="#25"><span class="xref myst">هیستوگرام Passenger Age </span></a></p></li>
+</ul>
+</li>
+<li><p>9.13 <a class="reference internal" href="#26"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متغیرها، لیست‌ها، تاپل‌ها، دیکشنری‌ها، مجموعه‌ها، آرایه‌ها،
+    pandas Series
+    و 
+    pandas DataFrames
+    داده‌ها را به طور موقت ذخیره می‌کنند. وقتی متغیر محلی از محدود برنامه خارج شود و یا هنگام خاتمه برنامه، داده‌هایی از این دست از بین می‌روند. فایل‌ها حتی پس از خاتمه برنامه ایجاد کننده داده، معمولا داده‌های زیادی را حفظ می‌کنند، بنابراین داده‌های نگهداری شده در فایل‌ها پایدار هستند. کامپیوترها فایل‌ها را بر روی دستگاه‌های ذخیره‌سازی ثانویه مانند دیسک‌های حالت جامد، هارد دیسک و سایر دستگاه‌ها ذخیره می‌کنند. در این فصل، نحوه ایجاد، به‌روزرسانی و پردازش فایل‌های داده به‌وسیله برنامه‌های پایتون را شرح می‌دهیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فایل‌های متنی را در چند فرمت رایج نظیر متن ساده، 
+    JSON (JavaScript Object Notation)
+    و 
+    CSV (comma-separated values)
+    بررسی می‌کنیم. برای سهولت ذخیره کردن اشیاء در حافظه‌های ثانویه و انتقال آنها از طریق اینترنت، از 
+    JSON
+    برای سریالایز کردن و دی‌سریالایز کردن اشیاء استفاده خواهیم کرد.
+    حتماً بخش مقدمه‌ای بر علم داده در این فصل را
+    بخوانید، در این قسمت از ماژول 
+    CSV
+    کتابخانه استاندارد پایتون و 
+    Pandas
+    برای بارگذاری و دستکاری داده‌های 
+    CSV
+    استفاده خواهیم کرد. به طور خاص نسخه 
+    CSV
+    دیتاست تایتانیک را بررسی خواهیم کرد. در فصل‌های آینده مطالعه موردی علم داده در مورد پردازش زبان طبیعی، داده کاوی
+    توییتر، آی‌بی‌ام واتسون، یادگیری ماشین، یادگیری عمیق و کلان داده از تعداد زیادی دیتاست‌های رایج استفاده خواهیم کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به عنوان 
+    بخشی از تاکید
+    مستمر ما بر امنیت پایتون، درباره آسیب پذیری‌های امنیتی سریالایز کردن و دی‌سریالایز کردن داده‌ها با ماژول 
+    Pickle
+    در کتابخانه استاندارد پایتون صحبت خواهیم کرد.
+    توصیه می‌کنیم از سریالایز کردن
+    JSON
+    استفاده کنید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همچنین مدیریت استثناها را معرفی می‌کنیم. یک استثنا نشان دهنده یک مشکل در زمان اجرا است. شما استثناهایی از انواع 
+    ZeroDivisionError, NameError, ValueError,
+StatisticsError, TypeError, IndexError, KeyError و RuntimeError
+    را مشاهده کرده‌اید.
+    نحوه مدیریت و برخورد با استثناها را با دستور
+    try
+    و
+    except
+    نشان می‌دهیم. همچنین در مورد دستور
+    try 
+    همراه با 
+    except
+    و 
+    finally 
+    صحبت می‌کنیم.
+    قابلیت‌های ارائه شده در این‌جا به شما کمک می‌کنند تا برنامه‌های قابل اعتماد و تحمل‌پذیر خطا بنویسید، این برنامه‌ها می‌توانند با ارورها روبرو شوند، به اجرا خود ادامه دهند و یا با ظرافت خاتمه یابند. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه‌ها معمولاً در حین اجرا منابعی مانند فایل‌ها را درخواست و آزاد می‌کنند. 
+    اغلب، این‌ها در عرضه محدود هستند یا می‌توانند در هر زمان تنها توسط یک برنامه استفاده شوند.
+    نشان می‌دهیم که چگونه اطمینان حاصل کنیم بعد از اینکه برنامه‌ای از منبعی استفاده کرد، آن را برای استفاده سایر برنامه‌ها رها کند حتی اگر استثنایی رخ داده باشد. برای این منظور از دستور 
+    with
+    استفاده خواهید کرد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.2 <span style="color:#F50057;">فایل‌ها</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    پایتون یک فایل متنی را به عنوان دنباله‌ای از کاراکترها و یک فایل باینری (برای تصاویر، فیلم‌ها و موارد دیگر) را به عنوان دنباله‌ای از بایت‌ها در نظر می‌گیرد. همانند لیست‌ها و آرایه‌ها، اولین کاراکتر در یک فایل متنی و اولین بایت در یک فایل باینری در موقعیت صفر قرار دارد، بنابراین در فایلی با 
+    n
+    کاراکتر یا 
+    n
+    بایت، بالاترین عدد موقعیت 
+    n - 1
+    است.
+    نمودار زیر نمای مفهومی یک فایل را نشان می‌دهد:
+</div><p><img alt="Screenshot_7-2-2025_14836_.jpeg" src="Chapters/09 - Files-and-Exceptions/attachment:ccc02ab4-2e7b-4ca3-ba91-196761372050.jpeg" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    پایتون برای هر فایلی که باز می‌کنید، یک شیء 
+    file
+    ایجاد می‌کند و برای تعامل با فایل از این شیء استفاده خواهید کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">انتهای فایل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر 
+    سیستم عامل راهکاری برای مشخص کردن انتهای فایل فراهم می‌کند. برخی انتهای فایل را با نشانگر انتهای فایل نشان می‌دهند (مانند شکل قبل) و برخی دیگر ممکن است تعداد کل کاراکترها یا بایت‌های فایل را ذخیره کنند. به طور کلی زبان‌های برنامه نویسی
+    این جزئیات سیستم عامل را از شما پنهان می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشیای استاندارد فایل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    هنگامی که یک برنامه پایتون اجرا می‌شود، سه شیء استاندارد فایل ایجاد می‌کند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>sys.stdin - </b>
+    شیء استاندارد فایل ورودی
+    <br>
+    <span style="color:#8e24aa;">• </span><b>sys.stdout - </b>
+    شیء استاندارد فایل خروجی
+    <br>
+    <span style="color:#8e24aa;">• </span><b> sys.stderr - </b>
+    شیء استاندارد فایل ارور
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    اگرچه این‌ها به عنوان اشیاء فایل در نظر گرفته می‌شوند، اما به طور پیش‌فرض از فایل‌ها نمی‌خوانند یا نمی‌نویسند. تابع ورودی به طور ضمنی از 
+    sys.stdin
+    برای دریافت ورودی کاربر از صفحه کلید استفاده می‌کند. تابع 
+    print
+    به طور ضمنی به 
+    sys.stdout
+    که در خط فرمان ظاهر می‌شود خروجی می‌دهد. پایتون به طور ضمنی خطاها و ردیابی‌های برنامه را به 
+    sys.stderr
+    خروجی می‌دهد که در خط فرمان نیز ظاهر می‌شود. اگر نیاز دارید به این اشیاء در کد خود به صراحت اشاره کنید، باید ماژول 
+    sys
+    را وارد کنید، اما این اتفاق نادر است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.3 <span style="color:#F50057;">پردازش فایل‌های متنی</span></h1> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این بخش، ما یک فایل متنی ساده می‌نویسیم که ممکن است توسط یک سیستم حساب‌های دریافتی برای ردیابی پول بدهی مشتریان یک شرکت استفاده شود. سپس آن فایل متنی را می‌خوانیم تا تأیید کنیم که حاوی داده است. برای هر مشتری، شماره حساب مشتری، نام‌خانوادگی و موجودی حساب بدهکار به شرکت را ذخیره می‌کنیم. این فیلدهای داده با هم یک رکورد مشتری را نشان می‌دهند. پایتون هیچ ساختاری را بر فایل تحمیل نمی کند، بنابراین مفاهیمی مانند رکوردها به صورت ذاتی در پایتون وجود ندارند. برنامه نویسان باید فایل‌ها را طوری ساختار بدهند که نیازهای برنامه‌هایشان را برآورده کنند. ما این فایل را به ترتیب با شماره حساب ایجاد و نگهداری می‌کنیم. از این نظر، شماره حساب ممکن است به عنوان یک کلید رکورد در نظر گرفته شود. برای این فصل، فرض می‌کنیم که 
+    IPython
+    را از پوشه نمونه‌های 
+    ch09
+    اجرا می‌کنید.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.3.1 <span style="color:#8e24aa;">نوشتن در یک فایل متنی: معرفی دستور
+with
+</span></h2> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید یک فایل 
+    accounts.txt
+    ایجاد کنیم و پنج رکورد مشتری را در فایل بنویسیم. به طور کلی، هر رکورد در فایل‌های متنی در یک خط ذخیره می‌شود، بنابراین هر رکورد را با یک کاراکتر 
+    newline
+    خاتمه می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="n">accounts</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;100 Jones 24.98</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">accounts</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;200 Doe 345.67</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">accounts</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;300 White 0.00</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">accounts</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;400 Stone -42.16</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">accounts</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;500 Rich 224.62</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    همچنین می‌‌توانید با 
+    print
+    روی یک فایل بنویسید
+    (که به طور خودکار یک 
+    n\
+    در خروجی نشان می‌دهد)
+    مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;100 Jones 24.98&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">accounts</span><span class="p">)</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دستور
+with
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بسیاری از برنامه‌ها منابعی مانند فایل‌ها، اتصالات شبکه، اتصالات پایگاه داده و غیره را دریافت می‌کنند. شما باید منابع را به محض اینکه دیگر نیازی به آنها ندارید، آزاد کنید. این کار تضمین می‌کند که سایر برنامه‌ها بتوانند از این منابع استفاده کنند. عبارت 
+    with
+    در پایتون:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    یک منبع (در این مورد، شیء فایل 
+    accounts.txt
+    ) را دریافت می‌کند و شیء مربوطه را به یک متغیر (در این مثال 
+    accounts
+    ) اختصاص می‌دهد،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    به برنامه اجازه می‌دهد از این منبع از طریق آن متغیر استفاده کند، و
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    متد 
+    close
+    شیء منبع را برای آزاد کردن منبع زمانی که کنترل برنامه به پایان بلوک 
+    with
+    می‌رسد، فراخوانی می‌کند.
+    <br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    تابع داخلی open
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    تابع داخلی 
+    open
+    فایل 
+    accounts.txt
+    را باز می‌کند و آن را با یک شیء فایل مرتبط می‌سازد. آرگومان 
+    mode
+    حالت باز کردن فایل را مشخص می‌کند و نشان می‌دهد که آیا فایل برای خواندن، نوشتن یا هر دو باز می‌شود. حالت 
+    'w'
+    فایل را برای نوشتن باز می‌کند و اگر فایل وجود نداشته باشد، آن را ایجاد می‌کند. اگر مسیر فایل را مشخص نکنید، پایتون آن را در پوشه جاری (در اینجا 
+    ch09
+    ) ایجاد می‌کند. مراقب باشید — باز کردن یک فایل برای نوشتن، تمام داده‌های موجود در فایل را پاک می‌کند. به طور معمول، پسوند 
+    txt.
+    نشان‌دهنده یک فایل متنی ساده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    نوشتن در فایل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    عبارت 
+    with
+    شیء بازگشتی از تابع 
+    open
+    را به متغیر 
+    accounts
+    در بخش 
+    as
+    اختصاص می‌دهد. در بلوک 
+    with
+    ، از متغیر 
+    accounts
+    برای تعامل با فایل استفاده می‌کنیم. در این مورد، پنج بار متد 
+    write
+    شیء فایل را فراخوانی می‌کنیم تا پنج رکورد را در فایل بنویسیم، هر کدام به عنوان یک خط متنی جداگانه که با یک کاراکتر 
+    newline
+    به پایان می‌رسد. در پایان بلوک 
+    with
+    ، عبارت 
+    with
+    به طور ضمنی متد 
+    close
+    شیء فایل را برای بستن فایل فراخوانی می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    محتوای فایل accounts.txt
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پس از اجرای قطعه کد قبلی، پوشه 
+    ch09
+    شما حاوی فایل 
+    accounts.txt
+    با محتوای زیر خواهد بود که می‌توانید آن را در یک ویرایشگر متن مشاهده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># macOS/Linux Users: View file contents</span>
+<span class="o">!</span>cat<span class="w"> </span>accounts.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 Jones 24.98
+200 Doe 345.67
+300 White 0.00
+400 Stone -42.16
+500 Rich 224.62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Windows Users: View file contents</span>
+<span class="o">!</span>more<span class="w"> </span>accounts.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 Jones 24.98
+200 Doe 345.67
+300 White 0.00
+400 Stone -42.16
+500 Rich 224.62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="n">Jones</span> <span class="mf">24.98</span>
+<span class="mi">200</span> <span class="n">Doe</span> <span class="mf">345.67</span>
+<span class="mi">300</span> <span class="n">White</span> <span class="mf">0.00</span>
+<span class="mi">400</span> <span class="n">Stone</span> <span class="o">-</span><span class="mf">42.16</span>
+<span class="mi">500</span> <span class="n">Rich</span> <span class="mf">224.62</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش بعدی، فایل را می‌خوانیم و محتوای آن را نمایش می‌دهیم.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.3.2 <span style="color:#8e24aa;">خواندن داده از یک فایل متنی</span></h2> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ما به تازگی فایل متنی 
+    accounts.txt
+    را ایجاد کردیم و داده‌هایی را در آن نوشتیم. حالا بیایید آن داده‌ها را از فایل به ترتیب از ابتدا تا انتها بخوانیم. قطعه کد زیر رکوردها را از فایل 
+    accounts.txt
+    می‌خواند و محتوای هر رکورد را در ستون‌هایی نمایش می‌دهد که ستون‌های 
+    Account
+    و 
+    Name
+    به چپ تراز شده‌اند و ستون 
+    Balance
+    به راست تراز شده است، به طوری که نقاط اعشار به صورت عمودی تراز شوند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;Account&quot;</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="s2">&quot;Name&quot;</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="s2">&quot;Balance&quot;</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">accounts</span><span class="p">:</span>
+        <span class="n">account</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">account</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="n">name</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="n">balance</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Account   Name         Balance
+100       Jones          24.98
+200       Doe           345.67
+300       White           0.00
+400       Stone         -42.16
+500       Rich          224.62
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر محتوای یک فایل نباید تغییر کند، فایل را فقط برای خواندن باز کنید. این کار از تغییر تصادفی فایل توسط برنامه جلوگیری می‌کند. شما می‌توانید با ارسال حالت 
+    'r'
+    به عنوان آرگومان دوم تابع 
+    open
+    ، فایل را برای خواندن باز کنید. اگر پوشه‌ای را برای ذخیره فایل مشخص نکنید، تابع 
+    open
+    فرض می‌کند که فایل در پوشه جاری قرار دارد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+تکرار از طریق یک شیء فایل، همان‌طور که در عبارت 
+    for
+    قبلی نشان داده شد، در هر بار یک خط از فایل می‌خواند و آن را به عنوان یک رشته برمی‌گرداند. برای هر رکورد (یعنی خط) در فایل، متد 
+    split
+    رشته، توکن‌های خط را به عنوان یک لیست برمی‌گرداند که ما آن‌ها را در متغیرهای 
+    account
+    ، 
+    name
+    و 
+    balance
+    باز می‌کنیم. آخرین عبارت در بلوک 
+    for
+    این متغیرها را در ستون‌ها با استفاده از عرض فیلد 
+    نمایش می‌دهد.
+    هنگام تقسیم رشته‌ها بر اساس کارکتر 
+    space
+    (پیش فرض)، 
+    split
+    به طور خودکار کاراکتر 
+    newline
+    را حذف می کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    متد readlines فایل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    متد 
+    readlines
+    شیء فایل نیز می‌تواند برای خواندن کل یک فایل متنی استفاده شود. این متد هر خط را به عنوان یک رشته در یک لیست از رشته‌ها برمی‌گرداند. برای فایل‌های کوچک، این روش خوب کار می‌کند، اما تکرار از طریق خطوط یک شیء فایل، همان‌طور که در بالا نشان داده شد، می‌تواند کارآمدتر باشد. فراخوانی 
+    readlines
+    برای یک فایل بزرگ می‌تواند یک عملیات زمان‌بر باشد که باید قبل از شروع استفاده از لیست رشته‌ها کامل شود. استفاده از شیء فایل در یک عبارت 
+    for
+    به برنامه شما اجازه می‌دهد هر خط متنی را به محض خواندن پردازش کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   جستجو به یک موقعیت خاص در فایل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    هنگام خواندن یک فایل، سیستم یک اشاره‌گر موقعیت فایل را نگه می‌دارد که نشان‌دهنده مکان کاراکتر بعدی برای خواندن است. گاهی اوقات لازم است یک فایل را چندین بار به ترتیب از ابتدا پردازش کنید. هر بار، باید اشاره‌گر موقعیت فایل را به ابتدای فایل بازگردانید، که می‌توانید این کار را با بستن و باز کردن مجدد فایل یا با فراخوانی متد 
+    seek
+    شیء فایل انجام دهید، مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">file_object</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    روش دوم سریع‌تر است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.4 <span style="color:#F50057;">به‌روزرسانی فایل‌های متنی</span></h1> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داده‌های قالب‌بندی شده که در یک فایل متنی نوشته می‌شوند، بدون خطر از بین بردن داده‌های دیگر قابل تغییر نیستند. اگر نام 
+    'white'
+    در فایل 
+    accounts.txt
+    نیاز به تغییر به 
+    'williams'
+    داشته باشد، نام قدیمی نمی‌تواند به سادگی بازنویسی شود. رکورد اصلی برای 
+    white
+    به صورت زیر ذخیره شده است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">300</span> <span class="n">White</span> <span class="mf">0.00</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    اگر نام 
+    'white'
+    را با نام 
+    'williams'
+    بازنویسی کنید، رکورد به صورت زیر در می‌آید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">300</span> <span class="n">Williams00</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    نام خانوادگی جدید سه کاراکتر بیشتر از نام اصلی دارد، بنابراین کاراکترهای بعد از دومین 
+    'i'
+    در 
+    'williams'
+    کاراکترهای دیگر در خط را بازنویسی می‌کنند. مشکل این است که در مدل ورودی-خروجی قالب‌بندی شده، رکوردها و فیلدهای آن‌ها می‌توانند اندازه‌های متفاوتی داشته باشند. برای مثال، اعداد ۷، ۱۴، -۱۱۷، ۲۰۷۴ و ۲۷۳۸۳ همگی اعداد صحیح هستند و به همان تعداد بایت داده خام (معمولاً ۴ یا ۸ بایت در سیستم‌های امروزی) ذخیره می‌شوند. با این حال، زمانی که این اعداد به عنوان متن قالب‌بندی شده خروجی داده می‌شوند، فیلدهایی با اندازه‌های متفاوت می‌شوند. برای مثال، ۷ یک کاراکتر، ۱۴ دو کاراکتر و ۲۷۳۸۳ پنج کاراکتر است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای انجام تغییر نام فوق، می‌توانیم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    رکوردهای قبل از 
+    $ 300\quad white\quad 0.00 $
+    را در یک فایل موقت کپی کنیم،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    رکورد به‌روزرسانی و قالب‌بندی شده صحیح برای حساب ۳۰۰ را در این فایل بنویسیم،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    رکوردهای بعد از 
+    $ 300\quad white\quad 0.00 $
+    را در فایل موقت کپی کنیم،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    فایل قدیمی را حذف کنیم و
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    فایل موقت را به نام فایل اصلی تغییر نام دهیم.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این کار می‌تواند خسته‌کننده باشد زیرا نیاز به پردازش هر رکورد در فایل دارد، حتی اگر فقط نیاز به به‌روزرسانی یک رکورد داشته باشید. به‌روزرسانی یک فایل به این روش زمانی کارآمدتر است که یک برنامه نیاز به به‌روزرسانی بسیاری از رکوردها در یک بار پیمایش از فایل داشته باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   به‌روزرسانی فایل accounts.txt
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید از عبارت 
+    with
+    برای به‌روزرسانی فایل 
+    accounts.txt
+    استفاده کنیم تا نام حساب ۳۰۰ را از 
+    'white'
+    به 
+    'williams'
+    تغییر دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;temp_file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">accounts</span><span class="p">,</span> <span class="n">temp_file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">accounts</span><span class="p">:</span>
+        <span class="n">account</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">account</span> <span class="o">!=</span> <span class="s1">&#39;300&#39;</span><span class="p">:</span>
+            <span class="n">temp_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_record</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">account</span><span class="p">,</span> <span class="s1">&#39;Williams&#39;</span><span class="p">,</span> <span class="n">balance</span><span class="p">])</span>
+            <span class="n">temp_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">new_record</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+                    
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای خوانایی بهتر، ابتدا شیء‌های فایل را باز کردیم (قطعه‌های کد [۱] و [۲])، سپس نام متغیرهای آن‌ها را در خط اول قطعه کد [۳] مشخص کردیم. این عبارت with دو شیء منبع را مدیریت می‌کند که در یک لیست جدا شده با کاما بعد از with مشخص شده‌اند. عبارت for هر رکورد را به account، name و balance تفکیک می‌کند. اگر حساب '300' نباشد، رکورد (که شامل یک کاراکتر newline
+    است) را در
+    temp_file می‌نویسیم. در غیر این صورت، رکورد جدید حاوی 'Williams' به جای 'white' را می‌سازیم و آن را در فایل می‌نویسیم. پس از قطعه کد [۳]، فایل temp_file.txt حاوی موارد زیر است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="n">Jones</span> <span class="mf">24.98</span>
+<span class="mi">200</span> <span class="n">Doe</span> <span class="mf">345.67</span>
+<span class="mi">300</span> <span class="n">Williams</span> <span class="mf">0.00</span>
+<span class="mi">400</span> <span class="n">Stone</span> <span class="o">-</span><span class="mf">42.16</span>
+<span class="mi">500</span> <span class="n">Rich</span> <span class="mf">224.62</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   توابع پردازش فایل در ماژول os
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در این مرحله، ما فایل قدیمی accounts.txt و فایل جدید temp_file.txt را داریم. برای تکمیل به‌روزرسانی، بیایید فایل قدیمی accounts.txt را حذف کنیم، سپس فایل موقت temp_file.txt را به نام accounts.txt تغییر نام دهیم. ماژول os توابعی برای تعامل با سیستم عامل فراهم می‌کند، از جمله چندین تابع که فایل‌ها و پوشه‌های سیستم شما را دستکاری می‌کنند. حالا که فایل موقت را ایجاد کرده‌ایم، بیایید از تابع remove برای حذف فایل اصلی استفاده کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;accounts.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    سپس، از تابع rename برای تغییر نام فایل موقت به 'accounts.txt' استفاده می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;temp_file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;accounts.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># macOS/Linux Users: View file contents</span>
+<span class="o">!</span>cat<span class="w"> </span>accounts.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 Jones 24.98
+200 Doe 345.67
+300 Williams 0.00
+400 Stone -42.16
+500 Rich 224.62
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Windows Users: View file contents</span>
+<span class="o">!</span>more<span class="w"> </span>accounts.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 Jones 24.98
+200 Doe 345.67
+300 Williams 0.00
+400 Stone -42.16
+500 Rich 224.62
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.5 <span style="color:#F50057;"> Serialization
+با
+ JSON     
+</span></h1> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بسیاری از کتابخانه‌هایی که برای تعامل با سرویس‌های مبتنی بر ابر مانند توییتر، IBM Watson و غیره استفاده می‌کنیم، با برنامه‌های شما از طریق اشیاء JSON ارتباط برقرار می‌کنند. JSON (JavaScript Object Notation) یک فرمت متنی، قابل خواندن توسط انسان و کامپیوتر، برای تبادل داده است که برای نمایش اشیاء به عنوان مجموعه‌ای از جفت‌های نام-مقدار استفاده می‌شود. JSON حتی می‌تواند اشیاء کلاس‌های سفارشی مانند آن‌هایی که در فصل بعد می‌سازید را نیز نمایش دهد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    JSON به فرمت داده ترجیحی برای انتقال اشیاء در بین پلتفرم‌ها تبدیل شده است. این موضوع به ویژه برای فراخوانی سرویس‌های وب مبتنی بر ابر صادق است، که توابع و متدهایی هستند که شما از طریق اینترنت فراخوانی می‌کنید. شما در کار با داده‌های JSON مهارت پیدا خواهید کرد. در فصل "داده‌کاوی توییتر"، به اشیاء JSON حاوی توییت‌ها و متاداده‌های آن‌ها دسترسی خواهید داشت. در فصل "IBM Watson و محاسبات شناختی"، به داده‌های موجود در پاسخ‌های JSON بازگشتی از سرویس‌های Watson دسترسی خواهید داشت. در فصل "داده‌های بزرگ: Hadoop، Spark، NoSQL و IoT"، اشیاء JSON توییت‌هایی که از توییتر به دست می‌آوریم را در MongoDB، یک پایگاه داده NoSQL محبوب، ذخیره خواهیم کرد. در آن فصل، با سایر سرویس‌های وب که داده‌ها را به صورت اشیاء JSON ارسال و دریافت می‌کنند نیز کار خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   فرمت داده JSON
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اشیاء JSON شبیه به دیکشنری‌های پایتون هستند. هر شیء JSON شامل یک لیست جدا شده با کاما از نام‌ها و مقادیر در داخل آکولاد است. برای مثال، جفت‌های کلید-مقدار زیر ممکن است یک رکورد مشتری را نمایش دهند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;account&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jones&quot;</span><span class="p">,</span> <span class="s2">&quot;balance&quot;</span><span class="p">:</span> <span class="mf">24.98</span><span class="p">}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">JSON همچنین از آرایه‌ها پشتیبانی می‌کند که مانند لیست‌های پایتون، مقادیر جدا شده با کاما در داخل براکت‌ها هستند. برای مثال، آرایه زیر یک آرایه JSON قابل قبول از اعداد است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقادیر در اشیاء و آرایه‌های JSON می‌توانند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    رشته‌ها در داخل دابل کوتیشن (مانند "Jones")،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    اعداد (مانند 100 یا 24.98)،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    مقادیر بولین JSON (که در JSON به صورت true یا false نمایش داده می‌شوند)،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    null (برای نمایش عدم وجود مقدار، مانند None در پایتون)،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    آرایه‌ها (مانند [100, 200, 300])، و
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    سایر اشیاء JSON باشند.
+    <br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+  ماژول استاندارد 
+    JSON
+    در پایتون
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول json به شما امکان می‌دهد اشیاء را به فرمت متنی JSON (JavaScript Object Notation) تبدیل کنید. این کار به عنوان سریال‌سازی داده‌ها شناخته می‌شود. دیکشنری زیر را در نظر بگیرید که شامل یک جفت کلید-مقدار است که کلید 'accounts' با مقدار آن که یک لیست از دیکشنری‌ها است، دو حساب را نمایش می‌دهد. هر دیکشنری حساب شامل سه جفت کلید-مقدار برای شماره حساب، نام و موجودی است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;accounts&#39;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;account&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jones&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">:</span> <span class="mf">24.98</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;account&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">:</span> <span class="mf">345.67</span><span class="p">}]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   سریال‌سازی یک شیء به JSON
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید این شیء را در قالب JSON در یک فایل بنویسیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">accounts_dict</span><span class="p">,</span> <span class="n">accounts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قطعه کد [۳] فایل accounts.json را باز می‌کند و از تابع dump ماژول json برای سریال‌سازی دیکشنری accounts_dict در فایل استفاده می‌کند. فایل حاصل شامل متن زیر است که کمی برای خوانایی بهتر فرمت شده است:
+</div><div class="highlight-Json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;accounts&quot;</span><span class="p">:</span><span class="w"> </span>
+<span class="w"> </span><span class="p">[{</span><span class="nt">&quot;account&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jones&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">24.98</span><span class="p">},</span><span class="w"> </span>
+<span class="w"> </span><span class="p">{</span><span class="nt">&quot;account&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">345.67</span><span class="p">}]}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توجه داشته باشید که JSON رشته‌ها را با کاراکترهای دابل کوتیشن (") محصور می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   دی‌سریال‌سازی متن JSON
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع load ماژول json تمام محتوای JSON فایل را می‌خواند و آن را به یک شیء پایتون تبدیل می‌کند. این کار به عنوان دی‌سریال‌سازی داده‌ها شناخته می‌شود. بیایید شیء پایتون اصلی را از این متن JSON بازسازی کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="n">accounts_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">accounts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حالا می‌توانیم با شیء بارگذاری شده تعامل کنیم. برای مثال، می‌توانیم دیکشنری را نمایش دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts_json</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accounts&#39;: [{&#39;account&#39;: 100, &#39;name&#39;: &#39;Jones&#39;, &#39;balance&#39;: 24.98},
+  {&#39;account&#39;: 200, &#39;name&#39;: &#39;Doe&#39;, &#39;balance&#39;: 345.67}]}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    همان‌طور که انتظار دارید، می‌توانید به محتوای دیکشنری دسترسی پیدا کنید. بیایید لیست دیکشنری‌های مرتبط با کلید 'accounts' را دریافت کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts_json</span><span class="p">[</span><span class="s1">&#39;accounts&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;account&#39;: 100, &#39;name&#39;: &#39;Jones&#39;, &#39;balance&#39;: 24.98},
+ {&#39;account&#39;: 200, &#39;name&#39;: &#39;Doe&#39;, &#39;balance&#39;: 345.67}]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حالا بیایید دیکشنری‌های حساب‌های فردی را دریافت کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts_json</span><span class="p">[</span><span class="s1">&#39;accounts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;account&#39;: 100, &#39;name&#39;: &#39;Jones&#39;, &#39;balance&#39;: 24.98}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accounts_json</span><span class="p">[</span><span class="s1">&#39;accounts&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;account&#39;: 200, &#39;name&#39;: &#39;Doe&#39;, &#39;balance&#39;: 345.67}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    اگرچه ما این کار را اینجا انجام ندادیم، اما می‌توانید دیکشنری را نیز تغییر دهید. برای مثال، می‌توانید حساب‌هایی به لیست اضافه کنید یا حساب‌هایی را از لیست حذف کنید، سپس دیکشنری را دوباره در فایل JSON بنویسید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+   نمایش متن
+    JSON
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    تابع dumps ماژول json (مخفف "dump string") یک نمایش رشته‌ای از یک شیء در قالب JSON برمی‌گرداند. با استفاده از dumps همراه با load، می‌توانید JSON را از فایل بخوانید و آن را در یک فرمت تو رفته (indented) نمایش دهید — که گاهی اوقات به آن "چاپ زیبا" (pretty printing) JSON می‌گویند. وقتی فراخوانی تابع dumps شامل آرگومان کلیدی indent باشد، رشته حاوی کاراکترهای جدیدخط و تو رفتگی برای چاپ زیبا خواهد بود — شما همچنین می‌توانید از indent با تابع dump هنگام نوشتن در یک فایل استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">accounts</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;accounts&quot;: [
+        {
+            &quot;account&quot;: 100,
+            &quot;name&quot;: &quot;Jones&quot;,
+            &quot;balance&quot;: 24.98
+        },
+        {
+            &quot;account&quot;: 200,
+            &quot;name&quot;: &quot;Doe&quot;,
+            &quot;balance&quot;: 345.67
+        }
+    ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.6 <span style="color:#F50057;">تمرکز بر روی امنیت: 
+ pickle
+Serialization and Deserialization 
+</span></h1> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    ماژول pickle در کتابخانه استاندارد پایتون می‌تواند اشیاء را در یک فرمت داده خاص پایتون سریال‌سازی کند. 
+    <br>
+    هشدار:
+    مستندات پایتون هشدارهای زیر را در مورد pickle ارائه می‌دهد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    فایل‌های pickle می‌توانند هک شوند. اگر یک فایل pickle خام را از طریق شبکه دریافت کردید، به آن اعتماد نکنید! ممکن است حاوی کد مخربی باشد که هنگام دی‌سریال‌سازی آن، کد پایتون دلخواهی را اجرا کند. با این حال، اگر خودتان فایل‌های pickle را می‌نویسید و می‌خوانید، در امان هستید (البته به شرطی که هیچ کس دیگری به فایل pickle دسترسی نداشته باشد).
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    pickle یک پروتکل است که امکان سریال‌سازی اشیاء پیچیده پایتون را فراهم می‌کند. به همین دلیل، این پروتکل خاص پایتون است و نمی‌تواند برای ارتباط با برنامه‌های نوشته شده به زبان‌های دیگر استفاده شود. همچنین به طور پیش‌فرض ناامن است: دی‌سریال‌سازی داده‌های pickle از یک منبع غیرقابل اعتماد می‌تواند کد دلخواهی را اجرا کند، اگر داده‌ها توسط یک مهاجم ماهر ساخته شده باشد
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    ما استفاده از pickle را توصیه نمی‌کنیم، اما از آنجایی که این ماژول سال‌ها مورد استفاده قرار گرفته است، احتمالاً در کدهای قدیمی (legacy code) — کدهایی که اغلب دیگر پشتیبانی نمی‌شوند — با آن مواجه خواهید شد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.7 <span style="color:#F50057;">مطالب بیشتر در مورد فایل‌ها</span></h1> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    جدول زیر حالت‌های مختلف باز کردن فایل‌های متنی را خلاصه می‌کند، از جمله حالت‌های خواندن و نوشتن که معرفی کرده‌ایم. حالت‌های نوشتن و افزودن، فایل را ایجاد می‌کنند اگر وجود نداشته باشد. حالت‌های خواندن اگر فایل وجود نداشته باشد، یک خطای FileNotFoundError ایجاد می‌کنند. هر حالت فایل متنی یک حالت متناظر برای فایل‌های باینری دارد که با b مشخص می‌شود، مانند 'rb' یا 'wb+'. از این حالت‌ها مثلاً زمانی استفاده می‌کنید که فایل‌های باینری مانند تصاویر، صدا، ویدئو، فایل‌های فشرده ZIP و بسیاری از فرمت‌های فایل سفارشی محبوب دیگر را می‌خوانید یا می‌نویسید.
+</div><p><img alt="Screenshot_7-2-2025_74442_.jpeg" src="Chapters/09 - Files-and-Exceptions/attachment:37b78cde-0149-4b63-98f6-e065d209d6ae.jpeg" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    سایر متدهای شیء فایل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در اینجا چند متد مفید دیگر برای شیء فایل آورده شده است:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    برای یک فایل متنی، متد read یک رشته حاوی تعداد کاراکترهای مشخص شده توسط آرگومان عددی متد را برمی‌گرداند. برای یک فایل باینری، این متد تعداد بایت‌های مشخص شده را برمی‌گرداند. اگر هیچ آرگومانی مشخص نشده باشد، این متد تمام محتوای فایل را برمی‌گرداند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    متد readline یک خط از متن را به عنوان یک رشته برمی‌گرداند، که شامل کاراکتر newline (اگر وجود داشته باشد) نیز می‌شود. این متد زمانی که به انتهای فایل برسد، یک رشته خالی برمی‌گرداند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    متد writelines یک لیست از رشته‌ها را دریافت می‌کند و محتوای آن‌ها را در یک فایل می‌نویسد.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    کلاس‌هایی که پایتون برای ایجاد اشیاء فایل استفاده می‌کند، در ماژول 
+    io
+    کتابخانه استاندارد پایتون تعریف شده‌اند 
+    <a href="https://docs.python.org/3/library/io.html">(لینک)</a>
+    .
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.8 <span style="color:#F50057;">مدیریت استثناها</span></h1> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    انواع مختلفی از استثناها ممکن است هنگام کار با فایل‌ها رخ دهند، از جمله:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    اگر سعی کنید یک فایل غیرموجود را برای خواندن با حالت‌های 'r' یا 'r+' باز کنید، یک FileNotFoundError رخ می‌دهد.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    اگر عملیاتی را انجام دهید که مجوز آن را ندارید، یک PermissionError رخ می‌دهد. این ممکن است اتفاق بیفتد اگر سعی کنید فایلی را باز کنید که حساب کاربری شما اجازه دسترسی به آن را ندارد یا فایلی را در پوشه‌ای ایجاد کنید که حساب کاربری شما مجوز نوشتن در آن را ندارد، مانند جایی که سیستم عامل کامپیوتر شما ذخیره شده است.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    یک ValueError (با پیام خطای 'I/O operation on closed file.') زمانی رخ می‌دهد که سعی کنید در فایلی که قبلاً بسته شده است، بنویسید.
+    <br>
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.8.1 <span style="color:#8e24aa;"> Division by Zero 
+    و
+    Invalid Input
+</span></h2> <a id='12'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید دو استثنایی که قبلاً در کتاب دیدید را دوباره بررسی کنیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    تقسیم بر صفر
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به یاد داشته باشید که تلاش برای تقسیم بر 0 منجر به ZeroDivisionError می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span> 
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این حالت، مفسر یک استثنای نوع ZeroDivisionError را ایجاد می‌کند. وقتی یک استثنا در IPython ایجاد می‌شود، این کارها انجام می‌شود:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    قطعه کد متوقف می‌شود،
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    traceback استثنا نمایش داده می‌شود، سپس
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    prompt بعدی [] In  نشان داده می‌شود تا بتوانید قطعه کد بعدی را وارد کنید.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر یک استثنا در یک اسکریپت رخ دهد، اسکریپت متوقف می‌شود و 
+    (IPython)
+    traceback
+    را نمایش می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    ورودی نامعتبر
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به یاد داشته باشید که تابع int یک ValueError ایجاد می‌کند، اگر سعی کنید رشته‌ای (مانند 'hello') را که نشان‌دهنده یک عدد نیست، به یک عدد صحیح تبدیل کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.8.2 <span style="color:#8e24aa;">دستور
+try
+</span></h2> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">حال بیایید ببینیم چگونه می‌توان این استثناها را مدیریت کرد تا کد بتواند به پردازش ادامه دهد. اسکریپت زیر و اجرای نمونه آن را در نظر بگیرید. حلقه آن سعی می‌کند دو عدد صحیح از کاربر بخواند، سپس عدد اول را بر عدد دوم تقسیم کرده و نمایش دهد. این اسکریپت از مدیریت استثنا استفاده می‌کند تا هرگونه ZeroDivisionError و ValueError را بگیرد و مدیریت کند — در این مورد، به کاربر اجازه می‌دهد تا ورودی را دوباره وارد کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dividebyzero.py</span>
+<span class="sd">&quot;&quot;&quot;Simple exception handling example.&quot;&quot;&quot;</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># attempt to convert and divide values</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter numerator: &#39;</span><span class="p">))</span>
+        <span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter denominator: &#39;</span><span class="p">))</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">/</span> <span class="n">number2</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>  <span class="c1"># tried to convert non-numeric value to int</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You must enter two integers</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>  <span class="c1"># denominator was 0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Attempted to divide by zero</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># executes only if no exceptions occur</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">number2</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">result</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c1"># terminate the loop</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># attempt to convert and divide values</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>         <span class="n">number1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter numerator: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter denominator: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">/</span> <span class="n">number2</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    بند try
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون از دستورات try (مانند خطوط ۶–۱۶) برای فعال‌سازی مدیریت استثنا استفاده می‌کند. بند try (خطوط ۶–۹) با کلمه کلیدی try شروع می‌شود، به دنبال آن یک دونقطه (:) و مجموعه‌ای از دستورات که ممکن است استثنا ایجاد کنند، قرار می‌گیرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    بند except
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک بند try ممکن است به دنبال یک یا چند بند except (خطوط ۱۰–۱۱ و ۱۲–۱۳) باشد که بلافاصله پس از مجموعه دستورات بند try قرار می‌گیرند. این‌ها به عنوان مدیریت‌کننده‌های استثنا نیز شناخته می‌شوند. هر بند except نوع استثنایی را که مدیریت می‌کند، مشخص می‌کند. در این مثال، هر مدیریت‌کننده استثنا فقط یک پیام نشان می‌دهد که مشکل رخ داده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    بند else
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پس از آخرین بند except، یک بند else اختیاری (خطوط ۱۴–۱۶) وجود دارد که کدی را مشخص می‌کند که فقط در صورتی اجرا می‌شود که کد در مجموعه try هیچ استثنایی ایجاد نکرده باشد. اگر هیچ استثنایی در مجموعه try این مثال رخ ندهد، خط ۱۵ نتیجه تقسیم را نمایش می‌دهد و خط ۱۶ حلقه را خاتمه می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    جریان کنترل برای ZeroDivisionError
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال بیایید جریان کنترل این مثال را بر اساس سه خط اول خروجی نمونه در نظر بگیریم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    ابتدا کاربر در پاسخ به خط ۷ در مجموعه try، عدد ۱۰۰ را به عنوان صورت وارد می‌کند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    سپس کاربر در پاسخ به خط ۸ در مجموعه try، عدد ۰ را به عنوان مخرج وارد می‌کند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    در این مرحله، ما دو مقدار صحیح داریم، بنابراین خط ۹ سعی می‌کند ۱۰۰ را بر ۰ تقسیم کند، که باعث می‌شود پایتون یک ZeroDivisionError ایجاد کند. نقطه‌ای در برنامه که یک استثنا رخ می‌دهد، اغلب به عنوان نقطه ایجاد استثنا شناخته می‌شود.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    وقتی یک استثنا در مجموعه try رخ می‌دهد، بلافاصله متوقف می‌شود. اگر هرگونه مدیریت‌کننده except پس از مجموعه try وجود داشته باشد، کنترل برنامه به اولین مدیریت‌کننده منتقل می‌شود. اگر هیچ مدیریت‌کننده except وجود نداشته باشد، فرآیندی به نام باز شدن پشته (stack unwinding) رخ می‌دهد که بعداً در فصل درباره آن بحث خواهیم کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در این مثال، مدیریت‌کننده‌های except وجود دارند، بنابراین مفسر به دنبال اولین مدیریت‌کننده‌ای می‌گردد که با نوع استثنای ایجاد شده مطابقت دارد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    بند except در خطوط ۱۰–۱۱، ValueErrorها را مدیریت می‌کند. این با نوع ZeroDivisionError مطابقت ندارد، بنابراین مجموعه دستورات این بند except اجرا نمی‌شود و کنترل برنامه به مدیریت‌کننده بعدی منتقل می‌شود.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    بند except در خطوط ۱۲–۱۳، ZeroDivisionErrorها را مدیریت می‌کند. این یک تطابق است، بنابراین مجموعه دستورات این بند except اجرا می‌شود و پیام "Attempted to divide by zero" نمایش داده می‌شود.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    وقتی یک بند except به طور موفقیت‌آمیز استثنا را مدیریت می‌کند، اجرای برنامه با بند finally (اگر وجود داشته باشد) ادامه می‌یابد، سپس با دستور بعدی پس از دستور try. در این مثال، ما به انتهای حلقه می‌رسیم، بنابراین اجرا با تکرار بعدی حلقه ادامه می‌یابد. توجه داشته باشید که پس از مدیریت یک استثنا، کنترل برنامه به نقطه ایجاد استثنا باز نمی‌گردد. بلکه کنترل پس از دستور try ادامه می‌یابد. به زودی در مورد بند finally بحث خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    جریان کنترل برای ValueError
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال بیایید جریان کنترل را بر اساس سه خط بعدی خروجی نمونه در نظر بگیریم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    ابتدا کاربر در پاسخ به خط ۷ در مجموعه try، عدد ۱۰۰ را به عنوان صورت وارد می‌کند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    سپس کاربر در پاسخ به خط ۸ در مجموعه try، رشته hello را به عنوان مخرج وارد می‌کند. ورودی یک عدد صحیح معتبر نیست، بنابراین تابع int یک ValueError ایجاد می‌کند.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">استثنا مجموعه try را متوقف می‌کند و کنترل برنامه به اولین مدیریت‌کننده except منتقل می‌شود. در این مورد، بند except در خطوط ۱۰–۱۱ یک تطابق است، بنابراین مجموعه دستورات آن اجرا می‌شود و پیام "You must enter two integers" نمایش داده می‌شود. سپس، اجرای برنامه با دستور بعدی پس از دستور try ادامه می‌یابد. دوباره، این انتهای حلقه است، بنابراین اجرا با تکرار بعدی حلقه ادامه می‌یابد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    جریان کنترل برای یک تقسیم موفق
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال بیایید جریان کنترل را بر اساس سه خط آخر خروجی نمونه در نظر بگیریم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    ابتدا کاربر در پاسخ به خط ۷ در مجموعه try، عدد ۱۰۰ را به عنوان صورت وارد می‌کند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    سپس کاربر در پاسخ به خط ۸ در مجموعه try، عدد ۷ را به عنوان مخرج وارد می‌کند.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    در این مرحله، ما دو مقدار صحیح معتبر داریم و مخرج ۰ نیست، بنابراین خط ۹ با موفقیت ۱۰۰ را بر ۷ تقسیم می‌کند.
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    وقتی هیچ استثنایی در مجموعه try رخ نمی‌دهد، اجرای برنامه با بند else (اگر وجود داشته باشد) ادامه می‌یابد؛ در غیر این صورت، اجرای برنامه با دستور بعدی پس از دستور try ادامه می‌یابد. در بند else این مثال، نتیجه تقسیم را نمایش می‌دهیم، سپس حلقه را خاتمه می‌دهیم و برنامه به پایان می‌رسد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.8.3 <span style="color:#8e24aa;">مدیریت چندین استثنا در یک دستور
+except
+</span></h2> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">معمول است که یک بند try به دنبال چند بند except باشد تا انواع مختلف استثناها را مدیریت کند. اگر چند مجموعه except یکسان باشند، می‌توانید آن انواع استثناها را با مشخص کردن آن‌ها به عنوان یک تاپل در یک مدیریت‌کننده except بگیرید، مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">except</span> <span class="p">(</span><span class="n">type1</span><span class="p">,</span> <span class="n">type2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">variable_name</span><span class="p">:</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بند as اختیاری است. معمولاً برنامه‌ها نیازی به ارجاع مستقیم به شیء استثنای گرفته شده ندارند. اگر نیاز دارید، می‌توانید از متغیر در بند as برای ارجاع به شیء استثنا در مجموعه except استفاده کنید.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.8.4 <span style="color:#8e24aa;">یک تابع یا یک متد چه استثنائاتی را ایجاد می‌کنند؟</span></h2> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    استثناها ممکن است از طریق دستورات در مجموعه try، از طریق توابع یا متدهایی که مستقیماً یا غیرمستقیم از مجموعه try فراخوانی می‌شوند، یا از طریق مفسر پایتون در حین اجرای کد (مثلاً ZeroDivisionError) ایجاد شوند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    قبل از استفاده از هر تابع یا متد، مستندات API آن‌ها را به صورت آنلاین بخوانید، که مشخص می‌کند چه استثناهایی (در صورت وجود) توسط تابع یا متد ایجاد می‌شوند و دلایل احتمالی ایجاد چنین استثناهایی را نشان می‌دهد. سپس، مستندات API هر نوع استثنا را بخوانید تا دلایل احتمالی ایجاد چنین استثناهایی را ببینید.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.8.5 <span style="color:#8e24aa;">چه کدی باید در بلاک 
+try
+قرار گیرد؟
+</span></h2> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در مجموعه try یک بخش منطقی مهم از برنامه را قرار دهید که در آن چندین دستور ممکن است استثنا ایجاد کنند، به جای اینکه هر دستوری که استثنا ایجاد می‌کند را در یک دستور try جداگانه بپیچید. با این حال، برای دانه‌بندی مناسب مدیریت استثنا، هر دستور try باید بخشی از کد را محصور کند که به اندازه‌ای کوچک باشد که وقتی یک استثنا رخ می‌دهد، زمینه خاص آن مشخص باشد و مدیریت‌کننده‌های except بتوانند استثنا را به درستی پردازش کنند. اگر بسیاری از دستورات در یک مجموعه try همان انواع استثناها را ایجاد کنند، ممکن است به چندین دستور try نیاز باشد تا زمینه هر استثنا مشخص شود.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.9 <span style="color:#F50057;">عبارت
+finally
+</span></h1> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    سیستم‌های عامل معمولاً می‌توانند از دستکاری همزمان یک فایل توسط بیش از یک برنامه جلوگیری کنند. وقتی یک برنامه پردازش یک فایل را به پایان می‌رساند، باید آن را ببندد تا منبع آزاد شود و برنامه‌های دیگر بتوانند به آن دسترسی داشته باشند. بستن فایل به جلوگیری از نشت منابع کمک می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    بند finally دستور try
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    یک دستور try ممکن است یک بند finally پس از هر بند except یا بند else داشته باشد. بند finally تضمین می‌شود که اجرا شود. در زبان‌های دیگر که finally دارند، این باعث می‌شود که مجموعه finally مکان ایده‌آلی برای قرار دادن کد آزادسازی منابع برای منابعی باشد که در مجموعه try مربوطه به دست آمده‌اند. در پایتون، ما ترجیح می‌دهیم از دستور with برای این منظور استفاده کنیم و انواع دیگر کدهای "تمیزکاری" را در مجموعه finally قرار دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    مثال
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    جلسه IPython زیر نشان می‌دهد که بند finally همیشه اجرا می‌شود، صرف نظر از اینکه آیا استثنایی در مجموعه try مربوطه رخ داده است یا خیر. ابتدا، بیایید یک دستور try را در نظر بگیریم که در مجموعه try آن هیچ استثنایی رخ نمی‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;try suite with no exceptions raised&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this will not execute&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;else executes because no exceptions in the try suite&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;finally always executes&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>try suite with no exceptions raised
+else executes because no exceptions in the try suite
+finally always executes
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    مجموعه try قبل‌تر یک پیام نمایش می‌دهد اما هیچ استثنایی ایجاد نمی‌کند. وقتی کنترل برنامه با موفقیت به انتهای مجموعه try می‌رسد، بند except رد می‌شود، بند else اجرا می‌شود و بند finally یک پیام نشان می‌دهد که نشان می‌دهد همیشه اجرا می‌شود. وقتی بند finally خاتمه می‌یابد، کنترل برنامه با دستور بعدی پس از دستور try ادامه می‌یابد. در یک جلسه 
+    (IPython)
+    ، prompt بعدی [] In ظاهر می‌شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال بیایید یک دستور try را در نظر بگیریم که در مجموعه try آن یک استثنا رخ می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;try suite that raises an exception&#39;</span><span class="p">)</span>
+    <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this will not execute&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a ValueError occurred&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;else will not execute because an exception occurred&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;finally always executes&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>try suite that raises an exception
+a ValueError occurred
+finally always executes
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+     این مجموعه try با نمایش یک پیام شروع می‌شود. دستور دوم سعی می‌کند رشته 'hello' را به یک عدد صحیح تبدیل کند، که باعث می‌شود تابع int یک ValueError ایجاد کند. مجموعه try بلافاصله متوقف می‌شود و آخرین دستور print آن رد می‌شود. بند except استثنای ValueError را می‌گیرد و یک پیام نمایش می‌دهد. بند else اجرا نمی‌شود زیرا یک استثنا رخ داده است. سپس، بند finally یک پیام نشان می‌دهد که نشان می‌دهد همیشه اجرا می‌شود. وقتی بند finally خاتمه می‌یابد، کنترل برنامه با دستور بعدی پس از دستور try ادامه می‌یابد. در یک جلسه 
+    (IPython)
+    ، prompt بعدی [] In ظاهر می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    ترکیب دستورات with و try...except
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بیشتر منابعی که نیاز به آزادسازی صریح دارند، مانند فایل‌ها، اتصالات شبکه و اتصالات پایگاه داده، استثناهای بالقوه‌ای در ارتباط با پردازش آن منابع دارند. به عنوان مثال، برنامه‌ای که یک فایل را پردازش می‌کند ممکن است IOError ایجاد کند. به همین دلیل، کد پردازش فایل قوی معمولاً در یک مجموعه try حاوی یک دستور with قرار می‌گیرد تا تضمین شود که منبع آزاد می‌شود. کد در یک مجموعه try قرار دارد، بنابراین می‌توانید هر استثنایی که رخ می‌دهد را در مدیریت‌کننده‌های except بگیرید و نیازی به بند finally ندارید زیرا دستور with آزادسازی منابع را مدیریت می‌کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای نشان دادن این موضوع، ابتدا فرض کنید که از کاربر می‌خواهید نام یک فایل را ارائه دهد و او نام را به اشتباه وارد می‌کند، مثلاً gradez.txt به جای فایلی که قبلاً ایجاد کردیم grades.txt. در این حالت، فراخوانی open با تلاش برای باز کردن یک فایل غیرموجود، یک FileNotFoundError ایجاد می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gradez.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gradez.txt&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:343,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">337</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">343</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;gradez.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای گرفتن استثناهایی مانند FileNotFoundError که هنگام تلاش برای باز کردن یک فایل برای خواندن رخ می‌دهند، دستور 
+    with
+    را در یک مجموعه 
+    try
+    بگذارید، مانند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gradez.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;ID&quot;</span><span class="si">:</span><span class="s1">&lt;3</span><span class="si">}{</span><span class="s2">&quot;Name&quot;</span><span class="si">:</span><span class="s1">&lt;7</span><span class="si">}{</span><span class="s2">&quot;Grade&quot;</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">accounts</span><span class="p">:</span>  
+            <span class="n">student_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">student_id</span><span class="si">:</span><span class="s1">&lt;3</span><span class="si">}{</span><span class="n">name</span><span class="si">:</span><span class="s1">&lt;7</span><span class="si">}{</span><span class="n">grade</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The file name you specified does not exist&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The file name you specified does not exist
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.10 <span style="color:#F50057;">ایجاد یک استثنا به طور صریح</span></h1> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما تاکنون استثناهای مختلفی را که توسط کد پایتون شما ایجاد شده‌اند، دیده‌اید. گاهی اوقات ممکن است نیاز داشته باشید توابعی بنویسید که استثنا ایجاد کنند تا خطاهایی که رخ می‌دهند را به فراخواننده‌ها اطلاع دهند. دستور raise به طور صریح یک استثنا ایجاد می‌کند. ساده‌ترین شکل دستور raise به صورت زیر است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">ExceptionClassName</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    دستور raise یک شیء از کلاس استثنای مشخص شده ایجاد می‌کند. به طور اختیاری، نام کلاس استثنا می‌تواند به دنبال پرانتزهایی باشد که حاوی آرگومان‌هایی برای مقداردهی اولیه شیء استثنا هستند — معمولاً برای ارائه یک پیام خطای سفارشی. کدی که یک استثنا ایجاد می‌کند، ابتدا باید هر منبعی که قبل از وقوع استثنا به دست آورده است را آزاد کند. در بخش بعدی، مثالی از ایجاد یک استثنا را نشان خواهیم داد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در بیشتر موارد، زمانی که نیاز به ایجاد یک استثنا دارید، توصیه می‌شود که از یکی از انواع استثناهای داخلی پایتون استفاده کنید که در لینک زیر فهرست شده‌اند:
+    <a href="https://docs.python.org/3/library/exceptions.html">(لینک).</a>
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.11 <span style="color:#F50057;">(Optional) Stack Unwinding and 
+Tracebacks</span></h1> <a id='19'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    هر شیء استثنا اطلاعاتی را ذخیره می‌کند که نشان‌دهنده سری دقیق فراخوانی‌های تابعی است که منجر به استثنا شده است. این اطلاعات هنگام اشکال‌زدایی کد شما مفید هستند. تعاریف تابع زیر را در نظر بگیرید — تابع function1 تابع function2 را فراخوانی می‌کند و تابع function2 یک استثنا ایجاد می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function1</span><span class="p">():</span>
+    <span class="n">function2</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function2</span><span class="p">():</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;An exception occurred&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    فراخوانی تابع function1 منجر به traceback زیر می‌شود. برای تأکید، بخش‌هایی از traceback که نشان‌دهنده خطوط کد منجر به استثنا هستند را پررنگ کرده‌ایم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">function1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">function1</span><span class="p">()</span>
+
+<span class="nn">Cell In[29], line 2,</span> in <span class="ni">function1</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">function1</span><span class="p">():</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">function2</span><span class="p">()</span>
+
+<span class="nn">Cell In[30], line 2,</span> in <span class="ni">function2</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">function2</span><span class="p">():</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;An exception occurred&#39;</span><span class="p">)</span>
+
+<span class="ne">Exception</span>: An exception occurred
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot_8-2-2025_45415_.jpeg" src="Chapters/09 - Files-and-Exceptions/attachment:3a9ba550-9b68-4331-864e-fe2566dc4f4e.jpeg" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    جزئیات Traceback
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    Traceback نوع استثنایی که رخ داده است (Exception) را نشان می‌دهد و به دنبال آن پشته کامل فراخوانی‌های تابعی که منجر به نقطه ایجاد استثنا شده است، آورده می‌شود. پایین‌ترین فراخوانی تابع در پشته ابتدا فهرست می‌شود و بالاترین فراخوانی آخر است، بنابراین مفسر متن زیر را به عنوان یادآوری نمایش می‌دهد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در این traceback، متن زیر نشان‌دهنده پایین پشته فراخوانی تابع — فراخوانی function1 در قطعه کد [۳] (که با ipython-input-3 نشان داده شده است) — است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">c0b3cafe2087</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">function1</span><span class="p">()</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    سپس می‌بینیم که function1 تابع function2 را از خط ۲ در قطعه کد [۱] فراخوانی کرده است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">a9f4faeeeb0c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="n">function1</span><span class="p">()</span>
+    <span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">function1</span><span class="p">():</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">function2</span><span class="p">()</span>
+    <span class="mi">3</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در نهایت، نقطه ایجاد استثنا را می‌بینیم — در این مورد، خط ۲ در قطعه کد [۲] استثنا را ایجاد کرده است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">c65e1966b45b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="n">function2</span><span class="p">()</span>
+    <span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">function2</span><span class="p">():</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;An exception occurred&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    Stack Unwinding
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در مثال‌های قبلی مدیریت استثنا، نقطه ایجاد استثنا در مجموعه try رخ داده است و استثنا در یکی از مدیریت‌کننده‌های except مربوط به دستور try مدیریت شده است. وقتی یک استثنا در یک تابع مشخص گرفته نشود، باز شدن پشته رخ می‌دهد. بیایید باز شدن پشته را در چارچوب این مثال در نظر بگیریم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>
+    در تابع function2، دستور raise یک استثنا ایجاد می‌کند. این در مجموعه try نیست، بنابراین function2 خاتمه می‌یابد، فریم پشته آن از پشته فراخوانی تابع حذف می‌شود و کنترل به دستوری در function1 که function2 را فراخوانی کرده است، باز می‌گردد.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    در function1، دستوری که function2 را فراخوانی کرده است در مجموعه try نیست، بنابراین function1 خاتمه می‌یابد، فریم پشته آن از پشته فراخوانی تابع حذف می‌شود و کنترل به دستوری که function1 را فراخوانی کرده است — قطعه کد [۳] در جلسه IPython — باز می‌گردد.
+    <br>
+    <span style="color:#8e24aa;">• </span>
+    فراخوانی در قطعه کد [۳] در مجموعه try نیست، بنابراین این فراخوانی تابع خاتمه می‌یابد. از آنجا که استثنا گرفته نشده است (که به عنوان استثنای گرفته نشده شناخته می‌شود)، (IPython) traceback را نمایش می‌دهد، سپس منتظر ورودی بعدی شما می‌ماند. اگر این اتفاق در یک اسکریپت معمولی رخ دهد، اسکریپت خاتمه می‌یابد.
+    <br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    نکته برای خواندن Traceback
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    شما اغلب توابع و متدهایی را فراخوانی می‌کنید که متعلق به کتابخانه‌هایی هستند که شما ننوشته‌اید. گاهی اوقات این توابع و متدها استثنا ایجاد می‌کنند. هنگام خواندن traceback، از انتهای traceback شروع کنید و ابتدا پیام خطا را بخوانید. سپس، به سمت بالا در traceback حرکت کنید و به دنبال اولین خطی باشید که نشان‌دهنده کدی است که شما در برنامه خود نوشته‌اید. معمولاً این مکان در کد شما است که منجر به استثنا شده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    استثناها در مجموعه‌های finally
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    ایجاد یک استثنا در مجموعه finally می‌تواند منجر به مشکلات ظریف و سخت‌ شود. اگر یک استثنا رخ دهد و تا زمان اجرای مجموعه finally پردازش نشده باشد، باز شدن پشته رخ می‌دهد. اگر مجموعه finally یک استثنای جدید ایجاد کند که مجموعه آن را نگیرد، استثنای اول از دست می‌رود و استثنای جدید به دستور try بعدی منتقل می‌شود. به همین دلیل، یک مجموعه finally باید همیشه هر کدی که ممکن است استثنا ایجاد کند را در یک دستور try قرار دهد، تا استثناها در آن مجموعه پردازش شوند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.12 <span style="color:#F50057;">مقدمه‌ای بر علم داده: کار با فایل‌های 
+CSV
+</span></h1> <a id='20'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در سراسر این کتاب، شما با بسیاری از مجموعه‌داده‌ها کار خواهید کرد تا مفاهیم علم داده را ارائه دهیم. فرمت فایل CSV (مقادیر جدا شده با کاما) یک فرمت فایل بسیار محبوب است. در این بخش، پردازش فایل‌های CSV را با استفاده از یک ماژول کتابخانه استاندارد پایتون و pandas نشان خواهیم داد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.12.1 <span style="color:#8e24aa;">ماژول
+CSV
+در کتابخانه استاندارد پایتون</span></h2> <a id='21'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    ماژول csv
+  توابعی برای کار با فایل‌های CSV ارائه می‌دهد. بسیاری از کتابخانه‌های دیگر پایتون نیز از CSV پشتیبانی می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    نوشتن در یک فایل CSV
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بیایید یک فایل accounts.csv با فرمت CSV ایجاد کنیم. مستندات ماژول csv توصیه می‌کند که فایل‌های CSV را با آرگومان کلیدی اضافی 
+    ' '=newline
+    باز کنید تا اطمینان حاصل شود که خطوط جدید به درستی پردازش می‌شوند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">accounts</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;Jones&#39;</span><span class="p">,</span> <span class="mf">24.98</span><span class="p">])</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="mf">345.67</span><span class="p">])</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">])</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;Stone&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">42.16</span><span class="p">])</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;Rich&#39;</span><span class="p">,</span> <span class="mf">224.62</span><span class="p">])</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    پسوند فایل csv. نشان‌دهنده یک فایل با فرمت CSV است. تابع writer ماژول csv یک شیء برمی‌گرداند که داده‌های CSV را در فایل مشخص شده می‌نویسد. هر فراخوانی به متد writerow شیء writer یک iterable دریافت می‌کند تا در فایل ذخیره شود. در اینجا ما از لیست‌ها استفاده می‌کنیم. به طور پیش‌فرض، writerow مقادیر را با کاما جدا می‌کند، اما می‌توانید جداکننده‌های سفارشی را مشخص کنید.
+  پس از قطعه کد قبلی، فایل accounts.csv حاوی موارد زیر است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="p">,</span><span class="n">Jones</span><span class="p">,</span><span class="mf">24.98</span>
+<span class="mi">200</span><span class="p">,</span><span class="n">Doe</span><span class="p">,</span><span class="mf">345.67</span>
+<span class="mi">300</span><span class="p">,</span><span class="n">White</span><span class="p">,</span><span class="mf">0.00</span>
+<span class="mi">400</span><span class="p">,</span><span class="n">Stone</span><span class="p">,</span><span class="o">-</span><span class="mf">42.16</span>
+<span class="mi">500</span><span class="p">,</span><span class="n">Rich</span><span class="p">,</span><span class="mf">224.62</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    فایل‌های CSV معمولاً فاصله‌هایی بعد از کاما ندارند، اما برخی افراد از آن‌ها برای بهبود خوانایی استفاده می‌کنند. فراخوانی‌های writerow بالا را می‌توان با یک فراخوانی writerows جایگزین کرد که یک لیست جدا شده با کاما از iterable‌ها که نشان‌دهنده رکوردها هستند را خروجی می‌دهد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    اگر داده‌ای بنویسید که حاوی کاما در یک رشته مشخص باشد، writerow آن رشته را درون کوتیشن‌های دوتایی قرار می‌دهد. به عنوان مثال، لیست پایتون زیر را در نظر بگیرید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;Jones, Sue&#39;</span><span class="p">,</span> <span class="mf">24.98</span><span class="p">]</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    رشته 'Jones, Sue' حاوی یک کاما است که نام خانوادگی و نام را جدا می‌کند. در این مورد، writerow رکورد را به صورت زیر خروجی می‌دهد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;Jones, Sue&quot;</span><span class="p">,</span> <span class="mf">24.98</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    کوتیشن
+    های دور "Jones, Sue" نشان‌دهنده این است که این یک مقدار واحد است. برنامه‌هایی که این را از یک فایل CSV می‌خوانند، رکورد را به سه بخش تقسیم می‌کنند — ۱۰۰، 'Jones, Sue' و ۲۴.۹۸.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    خواندن از یک فایل CSV
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال بیایید داده‌های CSV را از فایل بخوانیم. قطعه کد زیر رکوردها را از فایل accounts.csv می‌خواند و محتوای هر رکورد را نمایش می‌دهد، که همان خروجی قبلی را تولید می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;accounts.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">accounts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;Account&quot;</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="s2">&quot;Name&quot;</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="s2">&quot;Balance&quot;</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">accounts</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>  
+        <span class="n">account</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">record</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">account</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="n">name</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}{</span><span class="n">balance</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Account   Name         Balance
+100       Jones          24.98
+200       Doe           345.67
+300       White            0.0
+400       Stone         -42.16
+500       Rich          224.62
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    تابع reader ماژول csv یک شیء برمی‌گرداند که داده‌های با فرمت CSV را از فایل مشخص شده می‌خواند. همان‌طور که می‌توانید از طریق یک شیء فایل تکرار کنید، می‌توانید از طریق شیء reader نیز یک رکورد از مقادیر جدا شده با کاما در هر بار تکرار کنید. دستور for قبل‌تر هر رکورد را به عنوان یک لیست از مقادیر برمی‌گرداند، که ما آن‌ها را در متغیرهای account، name و balance باز می‌کنیم و سپس نمایش می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    هشدار: کاما در فیلدهای داده CSV
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    هنگام کار با رشته‌هایی که حاوی کاماهای توکار هستند، مانند نام 'Jones, Sue'، مراقب باشید. اگر به اشتباه این را به عنوان دو رشته 'Jones' و 'Sue' وارد کنید، writerow به طور طبیعی یک رکورد CSV با چهار فیلد ایجاد می‌کند، نه سه. برنامه‌هایی که فایل‌های CSV را می‌خوانند، معمولاً انتظار دارند که هر رکورد تعداد فیلدهای یکسانی داشته باشد؛ در غیر این صورت، مشکلاتی رخ می‌دهد. به عنوان مثال، دو لیست زیر را در نظر بگیرید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;Jones&#39;</span><span class="p">,</span> <span class="s1">&#39;Sue&#39;</span><span class="p">,</span> <span class="mf">24.98</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="mf">345.67</span><span class="p">]</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    لیست اول حاوی چهار مقدار و لیست دوم فقط سه مقدار دارد. اگر این دو رکورد در فایل CSV نوشته شوند، سپس در برنامه‌ای با استفاده از قطعه کد قبلی خوانده شوند، دستور زیر هنگام تلاش برای باز کردن رکورد چهار فیلدی در فقط سه متغیر شکست می‌خورد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">account</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">record</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    هشدار: کاماهای گم‌شده و اضافی در فایل‌های CSV
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    هنگام آماده‌سازی و پردازش فایل‌های CSV مراقب باشید. به عنوان مثال، فرض کنید فایل شما از رکوردهایی تشکیل شده است که هر کدام حاوی چهار مقدار عددی صحیح جدا شده با کاما هستند، مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">9</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر به اشتباه یکی از این کاماها را حذف کنید، مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="p">,</span><span class="mi">8577</span><span class="p">,</span><span class="mi">9</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سپس رکورد فقط سه فیلد دارد، که یکی از آن‌ها مقدار نامعتبر ۸۵۷۷ است.
+اگر دو کاما مجاور در جایی که فقط یک کاما انتظار می‌رود قرار دهید، مانند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span><span class="p">,</span><span class="mi">85</span><span class="p">,,</span><span class="mi">77</span><span class="p">,</span><span class="mi">9</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سپس پنج فیلد به جای چهار فیلد دارید و یکی از فیلدها به اشتباه خالی خواهد بود.
+هر یک از این خطاهای مربوط به کاما می‌تواند برنامه‌هایی را که سعی در پردازش رکورد دارند، گیج کند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.12.2 <span style="color:#8e24aa;">خواندن فایل‌های 
+CSV
+ و وارد کردن داده‌های آن‌ها به
+Pandas 
+DataFrames
+</span></h2> <a id='22'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش‌های مقدمه‌ای بر علم داده در دو فصل قبل، بسیاری از مبانی pandas را معرفی کردیم. در اینجا، توانایی pandas برای بارگیری فایل‌ها با فرمت CSV و سپس انجام برخی کارهای تحلیل داده پایه را نشان می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    مجموعه‌داده‌ها
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مطالعات موردی علم داده، از مجموعه‌داده‌های رایگان و متن‌باز مختلفی برای نشان دادن مفاهیم یادگیری ماشین و پردازش زبان طبیعی استفاده خواهیم کرد. انواع زیادی از مجموعه‌داده‌های رایگان به صورت آنلاین موجود است. مخزن محبوب Rdatasets لینک‌هایی به بیش از ۱۱۰۰ مجموعه‌داده رایگان در فرمت CSV ارائه می‌دهد. این مجموعه‌داده‌ها در اصل با زبان برنامه‌نویسی R برای افرادی که در حال یادگیری و توسعه نرم‌افزارهای آماری هستند، ارائه شده‌اند، اگرچه مختص R نیستند. آن‌ها اکنون در GitHub در دسترس هستند:
+    <a href="https://vincentare1bundock.github.io/Rdatasets/datasets.html">(لینک)</a>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این مخزن آنقدر محبوب است که یک ماژول pydataset به طور خاص برای دسترسی به Rdatasets وجود دارد. برای دستورالعمل‌های نصب pydataset و دسترسی به مجموعه‌داده‌ها با آن، به لینک زیر مراجعه کنید:
+    <a href="https://github.com/iamaziz/PyDataset">(لینک)</a>
+    منبع بزرگ دیگر مجموعه‌داده‌ها:
+    <a href="https://github.com/awesomedata/awesome-public-datasets">(لینک)</a>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک مجموعه‌داده معمول یادگیری ماشین برای مبتدیان، مجموعه‌داده فاجعه تایتانیک است که تمام مسافران و اینکه آیا آن‌ها زنده ماندند یا خیر را فهرست می‌کند، زمانی که کشتی تایتانیک در ۱۴-۱۵ آوریل ۱۹۱۲ به یک کوه یخ برخورد کرد و غرق شد. در اینجا از آن استفاده می‌کنیم تا نشان دهیم چگونه یک مجموعه‌داده را بارگیری کنیم، برخی از داده‌های آن را مشاهده کنیم و برخی آمار توصیفی را نمایش دهیم. در فصل‌های بعدی کتاب، عمیق‌تر به مجموعه‌داده‌های محبوب مختلف خواهیم پرداخت.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    کار با فایل‌های CSV ذخیره شده محلی
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توانید یک مجموعه‌داده CSV را با تابع read_csv 
+    (pandas)
+    در یک DataFrame بارگیری کنید. موارد زیر فایل (CSV) accounts.csv را که قبلاً در این فصل ایجاد کردید، بارگیری و نمایش می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;accounts.csv&#39;</span><span class="p">,</span> 
+                 <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;account&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;accounts.csv&#39;</span><span class="p">,</span> 
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                  <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;account&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;balance&#39;</span><span class="p">])</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    آرگومان names نام‌های ستون‌های DataFrame را مشخص می‌کند. بدون این آرگومان، read_csv فرض می‌کند که اولین ردیف فایل CSV یک لیست جدا شده با کاما از نام ستون‌ها است.
+برای ذخیره یک DataFrame در یک فایل با فرمت CSV، از متد to_csv (DataFrame) استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;accounts_from_dataframe.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;accounts_from_dataframe.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">آرگومان کلیدی index=False نشان می‌دهد که نام‌های ردیف‌ها (۰-۴ در سمت چپ خروجی DataFrame در قطعه کد [۳]) در فایل نوشته نمی‌شوند. فایل حاصل حاوی نام ستون‌ها به عنوان اولین ردیف است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">account</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span>
+<span class="mi">100</span><span class="p">,</span> <span class="n">Jones</span><span class="p">,</span> <span class="mf">24.98</span>
+<span class="mi">200</span><span class="p">,</span> <span class="n">Doe</span><span class="p">,</span> <span class="mf">345.67</span>
+<span class="mi">300</span><span class="p">,</span> <span class="n">White</span><span class="p">,</span> <span class="mf">0.0</span>
+<span class="mi">400</span><span class="p">,</span> <span class="n">Stone</span><span class="p">,</span> <span class="o">-</span><span class="mf">42.16</span>
+<span class="mi">500</span><span class="p">,</span> <span class="n">Rich</span><span class="p">,</span> <span class="mf">224.62</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.12.3 <span style="color:#8e24aa;">خواندن دیتاست
+ Titanic</span></h2> <a id='23'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    مجموعه‌داده فاجعه تایتانیک یکی از محبوب‌ترین مجموعه‌داده‌های یادگیری ماشین است. این مجموعه‌داده در بسیاری از فرمت‌ها، از جمله CSV، موجود است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    بارگیری مجموعه‌داده تایتانیک از طریق URL
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر URLای دارید که نشان‌دهنده یک مجموعه‌داده CSV است، می‌توانید آن را با read_csv در یک DataFrame بارگیری کنید. بیایید مجموعه‌داده فاجعه تایتانیک را مستقیماً از GitHub بارگیری کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://vincentarelbundock.github.io/&#39;</span> <span class="o">+</span>
+    <span class="s1">&#39;Rdatasets/csv/carData/TitanicSurvival.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://vincentarelbundock.github.io/&#39;</span> <span class="o">+</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="s1">&#39;Rdatasets/csv/carData/TitanicSurvival.csv&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    مشاهده برخی از ردیف‌ها در مجموعه‌داده تایتانیک
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    این مجموعه‌داده حاوی بیش از ۱۳۰۰ ردیف است که هر کدام نشان‌دهنده یک مسافر است. بر اساس ویکی‌پدیا، حدود ۱۳۱۷ مسافر و ۸۱۵ نفر از آن‌ها جان باختند.
+  برای مجموعه‌داده‌های بزرگ، نمایش DataFrame فقط ۳۰ ردیف اول و سپس "..." و ۳۰ ردیف آخر را نشان می‌دهد. برای صرفه‌جویی در فضا، بیایید پنج ردیف اول و آخر را با متدهای head و tail DataFrame مشاهده کنیم. هر دو متد به طور پیش‌فرض پنج ردیف را برمی‌گردانند، اما می‌توانید تعداد ردیف‌ها را به عنوان آرگومان مشخص کنید:
+    <a href="https://en.wikipedia.org/wiki/Passengers_of_the_RWS_Titanic">(لینک)</a>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># format for floating-point values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># format for floating-point values</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">42</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    توجه داشته باشید که pandas عرض هر ستون را بر اساس گسترده‌ترین مقدار در ستون یا بر اساس نام ستون، هر کدام که بزرگ‌تر باشد، تنظیم می‌کند. همچنین، مقدار در ستون age ردیف ۱۳۰۵ NaN (نه یک عدد) است که نشان‌دهنده یک مقدار گم‌شده در مجموعه‌داده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    سفارشی‌سازی نام ستون‌ها
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    اولین ستون در این مجموعه‌داده یک نام عجیب دارد ('Unnamed: 0'). می‌توانیم آن را با تنظیم نام ستون‌ها تمیز کنیم. بیایید 'Unnamed: 0' را به 'name' و 'passengerClass' را به 'class' تغییر دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;survived&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;survived&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.12.4 <span style="color:#8e24aa;">تجزیه و تحلیل داده‌ها با
+    دیتاست
+ Titanic
+</span></h2> <a id='24'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    حال می‌توانید از pandas برای انجام برخی تحلیل‌های ساده استفاده کنید. به عنوان مثال، بیایید به برخی آمار توصیفی نگاه کنیم. وقتی describe را روی یک DataFrame که حاوی ستون‌های عددی و غیر عددی است فراخوانی می‌کنید، describe این آمار را فقط برای ستون‌های عددی محاسبه می‌کند — در این مورد، فقط ستون age:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">titanic</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    توجه داشته باشید که اختلاف در تعداد (count) (۱۰۴۶) در مقابل تعداد ردیف‌های مجموعه‌داده (۱۳۰۹ — آخرین ردیف هنگام فراخوانی tail شاخص ۱۳۰۸ داشت). فقط ۱۰۴۶ (تعداد بالا) از رکوردها حاوی یک مقدار age بودند. بقیه گم‌شده بودند و به عنوان NaN علامت‌گذاری شده بودند، مانند ردیف ۱۳۰۵. هنگام انجام محاسبات، Pandas به طور پیش‌فرض داده‌های گم‌شده (NaN) را نادیده می‌گیرد. برای ۱۰۴۶ نفری که سن معتبر داشتند، میانگین سن (mean) ۲۹.۸۸ سال بود. جوان‌ترین مسافر (min) کمی بیش از دو ماه سن داشت (۰.۱۷ * ۱۲ برابر است با ۲.۰۴)، و مسن‌ترین (max) ۸۰ سال داشت. میانه سن (median) ۲۸ سال بود (که با چارک ۵۰٪ نشان داده شده است). چارک ۲۵٪ میانه سن در نیمه اول مسافران (مرتب‌شده بر اساس سن) است، و چارک ۷۵٪ میانه سن در نیمه دوم مسافران است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید بگوییم می‌خواهید برخی آمار در مورد افرادی که زنده ماندند را تعیین کنید. می‌توانیم ستون survived را با 'yes' مقایسه کنیم تا یک Series جدید حاوی مقادیر True/False به دست آوریم، سپس از describe برای خلاصه‌سازی نتایج استفاده کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">survived</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="p">(</span><span class="n">titanic</span><span class="o">.</span><span class="n">survived</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای داده‌های غیر عددی، describe آمار توصیفی متفاوتی را نمایش می‌دهد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>count - </b>
+    تعداد کل موارد در نتیجه است.
+    <br>
+    <span style="color:#8e24aa;">• </span><b>unique - </b>
+    تعداد مقادیر منحصر به فرد (۲) در نتیجه است — True (زنده ماند) و False (جان باخت).
+    <br>
+    <span style="color:#8e24aa;">• </span><b>top - </b>
+    مقداری است که بیشترین تکرار را در نتیجه دارد.
+    <br>
+    <span style="color:#8e24aa;">• </span><b>freq - </b>
+    تعداد تکرارهای مقدار top است.
+    <br>
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">9.12.5 <span style="color:#8e24aa;">هیستوگرام
+ Passenger Age
+</span></h2> <a id='25'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    تجسم یک راه خوب برای شناخت داده‌های شما است. Pandas قابلیت‌های تجسم داخلی زیادی دارد که با Matplotlib پیاده‌سازی شده‌اند. برای استفاده از آن‌ها، ابتدا پشتیبانی Matplotlib را در IPython فعال کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2504,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2502</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2503</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2504</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2506</span> <span class="c1"># The code below prevents the output from being displayed</span>
+<span class="g g-Whitespace">   </span><span class="mi">2507</span> <span class="c1"># when using magics with decorator @output_can_be_silenced</span>
+<span class="g g-Whitespace">   </span><span class="mi">2508</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2509</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/IPython/core/magics/pylab.py:103,</span> in <span class="ni">PylabMagics.matplotlib</span><span class="nt">(self, line)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="nb">print</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>         <span class="s2">&quot;Available matplotlib backends: </span><span class="si">%s</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span>         <span class="o">%</span> <span class="n">_list_matplotlib_backends_and_gui_loops</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>     <span class="n">gui</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">enable_matplotlib</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_show_matplotlib_backend</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3787,</span> in <span class="ni">InteractiveShell.enable_matplotlib</span><span class="nt">(self, gui)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3784</span>     <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib_inline.backend_inline</span>
+<span class="g g-Whitespace">   </span><span class="mi">3786</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">pylabtools</span> <span class="k">as</span> <span class="n">pt</span>
+<span class="ne">-&gt; </span><span class="mi">3787</span> <span class="n">gui</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">find_gui_and_backend</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pylab_gui_select</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3789</span> <span class="k">if</span> <span class="n">gui</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3790</span>     <span class="c1"># If we have our first gui selection, store it</span>
+<span class="g g-Whitespace">   </span><span class="mi">3791</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pylab_gui_select</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/IPython/core/pylabtools.py:338,</span> in <span class="ni">find_gui_and_backend</span><span class="nt">(gui, gui_select)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> <span class="k">def</span><span class="w"> </span><span class="nf">find_gui_and_backend</span><span class="p">(</span><span class="n">gui</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gui_select</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Given a gui string return the gui and mpl backend.</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span><span class="sd">     Parameters</span>
+<span class="sd">   (...)    335     &#39;WXAgg&#39;,&#39;Qt4Agg&#39;,&#39;module://matplotlib_inline.backend_inline&#39;,&#39;agg&#39;).</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">338</span>     <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>     <span class="k">if</span> <span class="n">_matplotlib_manages_backends</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span>         <span class="n">backend_registry</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">backend_registry</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    یک هیستوگرام توزیع داده‌های عددی را در یک محدوده از مقادیر تجسم می‌کند. متد hist (DataFrame) به طور خودکار داده‌های هر ستون عددی را تحلیل می‌کند و یک هیستوگرام مربوطه ایجاد می‌کند. برای مشاهده هیستوگرام‌های هر ستون داده عددی، hist را روی DataFrame خود فراخوانی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">histogram</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">histogram</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;titanic&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    مجموعه‌داده تایتانیک فقط یک ستون داده عددی دارد، بنابراین نمودار یک هیستوگرام برای توزیع سن نشان می‌دهد. برای مجموعه‌داده‌هایی با چندین ستون عددی، hist یک هیستوگرام جداگانه برای هر ستون عددی ایجاد می‌کند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">9.13 <span style="color:#F50057;">جمع‌بندی
+</span></h1> <a id='26'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در این فصل، پردازش فایل‌های متنی و مدیریت استثناها را معرفی کردیم. فایل‌ها برای ذخیره داده‌ها به صورت پایدار استفاده می‌شوند. ما در مورد اشیاء فایل صحبت کردیم و اشاره کردیم که پایتون یک فایل را به عنوان دنباله‌ای از کاراکترها یا بایت‌ها می‌بیند. همچنین به اشیاء فایل استانداردی اشاره کردیم که به طور خودکار هنگام شروع اجرای یک برنامه پایتون برای شما ایجاد می‌شوند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    نشان دادیم که چگونه فایل‌های متنی را ایجاد، خواندن، نوشتن و به‌روزرسانی کنیم. چندین فرمت فایل محبوب را بررسی کردیم — متن ساده، JSON (نشان‌گذاری شیء جاوااسکریپت) و CSV (مقادیر جدا شده با کاما). از تابع داخلی open و دستور with استفاده کردیم تا یک فایل را باز کنیم، در آن بنویسیم یا از آن بخوانیم و به طور خودکار فایل را ببندیم تا از نشت منابع هنگامی که دستور with خاتمه می‌یابد، جلوگیری کنیم. از ماژول json کتابخانه استاندارد پایتون استفاده کردیم تا اشیاء را به فرمت JSON سریال‌سازی کنیم و آن‌ها را در یک فایل ذخیره کنیم، اشیاء JSON را از یک فایل بارگیری کنیم، آن‌ها را به اشیاء پایتون تبدیل کنیم و یک شیء JSON را برای خوانایی بهتر چاپ کنیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در مورد اینکه چگونه استثناها مشکلات زمان اجرا را نشان می‌دهند بحث کردیم و انواع استثناهایی که تاکنون دیده‌اید را فهرست کردیم. نشان دادیم که چگونه با استثناها برخورد کنیم با قرار دادن کد در دستورات try که بندهای except را برای مدیریت انواع خاصی از استثناهایی که ممکن است در مجموعه 
+    try
+    رخ دهند، ارائه می‌دهند و برنامه‌های شما را مقاوم‌تر و تحمل‌پذیرتر در برابر خطا می‌کنند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در مورد بند finally دستور try برای اجرای کد در صورتی که جریان برنامه وارد مجموعه try مربوطه شده باشد، بحث کردیم. شما می‌توانید از دستور with یا بند finally یک دستور try برای این منظور استفاده کنید — ما دستور with را ترجیح می‌دهیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در بخش مقدمه‌ای بر علم داده، از ماژول csv کتابخانه استاندارد پایتون و قابلیت‌های کتابخانه pandas برای بارگیری، دستکاری و ذخیره داده‌های CSV استفاده کردیم. در نهایت، مجموعه‌داده فاجعه تایتانیک را در یک DataFrame از pandas بارگیری کردیم، برخی نام‌های ستون‌ها را برای خوانایی بهتر تغییر دادیم، ابتدا و انتهای مجموعه‌داده را نمایش دادیم و تحلیل ساده‌ای از داده‌ها انجام دادیم. در فصل بعدی، در مورد قابلیت‌های برنامه‌نویسی شیء‌گرای پایتون بحث خواهیم کرد.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./Chapters/09 - Files-and-Exceptions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../08%20-%20Strings-%28A-Deeper-Look%29/Chapter8.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../10%20-%20Object-Oriented-Programming/Chapter10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

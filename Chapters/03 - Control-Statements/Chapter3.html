@@ -1,0 +1,2520 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/03 - Control-Statements/Chapter3';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../04%20-%20Functions/Chapter4.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../02%20-%20Introduction-to-Python-Programming/Chapter2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/03 - Control-Statements/Chapter3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/03 - Control-Statements/Chapter3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۳: دستورات کنترلی</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>با دستور  
+    if
+    ،
+    if…else
+    و 
+    if…elif…else
+    تصمیم گیری خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>با  
+    for
+    و 
+    while 
+    دستورهایی را چندین بار اجرا خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>با استفاده از دستورات کوتاه شده، دستورات انتساب را کوتاه‌تر می‌کنید.<br>
+    <span style="color:#F50057;">■ </span>با استفاده از دستور 
+    for
+    و تابع از پیش تعریف‌شده 
+    range
+    ، اعمالی را روی دنباله‌ای از مقادیر انجام خواهید داد.<br>
+    <span style="color:#F50057;">■ </span>با دستور 
+    while
+    حلقه‌هایی تعریف می‌کنید که با نشانه خاص کنترل می‌شوند.<br>
+    <span style="color:#F50057;">■ </span>با کمک دستورات منطقی 
+    and
+    ، 
+    or 
+    و 
+    not
+    شرط‌های پیچیده‌تری ایجاد می‌کنید.<br> 
+    <span style="color:#F50057;">■ </span>با دستور 
+    break
+    حلقه تکرار را متوقف می‌کنید.<br> 
+    <span style="color:#F50057;">■ </span>با دستور 
+    continue
+    دور بعدی حلقه را تکرار می‌کنید.<br>
+    <span style="color:#F50057;">■ </span>از ویژگی‌های برنامه نویسی به سبک تابعی استفاده می‌کنید تا اسکریپت‌هایی که می‌نویسید کوتاه‌تر و خواناتر بوده و قابلیت اشغال زدایی و موازی کردن راحت‌تری داشته باشند.<br> 
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="3">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">دستورات کنترلی</span></a></p>
+<ul class="simple">
+<li><p>3.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>3.2 <a class="reference internal" href="#3"><span class="xref myst">دستورهای کنترلی</span></a></p></li>
+<li><p>3.3 <a class="reference internal" href="#4"><span class="xref myst">دستور if</span></a></p></li>
+<li><p>3.4 <a class="reference internal" href="#5"><span class="xref myst">دستور if…else و if…elif…else</span></a></p></li>
+<li><p>3.5 <a class="reference internal" href="#6"><span class="xref myst">دستور while</span></a></p></li>
+<li><p>3.6 <a class="reference internal" href="#7"><span class="xref myst">دستور for</span></a></p>
+<ul>
+<li><p>3.6.1 <a class="reference internal" href="#8"><span class="xref myst">Iterableها، Listها و Iteratorها</span></a></p></li>
+<li><p>3.6.2 <a class="reference internal" href="#9"><span class="xref myst">تابع درونی range</span></a></p></li>
+</ul>
+</li>
+<li><p>3.7 <a class="reference internal" href="#10"><span class="xref myst">دستورات انتساب کوتاه شده</span></a></p></li>
+<li><p>3.8 <a class="reference internal" href="#11"><span class="xref myst">تکرارهای کنترل‌شده روی دنباله‌ها؛ رشته‌های فرمت‌شده</span></a></p></li>
+<li><p>3.9 <a class="reference internal" href="#12"><span class="xref myst">حلقه‌هایی که با نشانه خاص کنترل می‌شوند</span></a></p></li>
+<li><p>3.10 <a class="reference internal" href="#13"><span class="xref myst">بررسی عمیق‌تر تابع range</span></a></p></li>
+<li><p>3.11 <a class="reference internal" href="#14"><span class="xref myst">استفاده از نوع  Decimal برای مبالغ پولی</span></a></p></li>
+<li><p>3.12 <a class="reference internal" href="#15"><span class="xref myst">دستورات break و continue</span></a></p></li>
+<li><p>3.13 <a class="reference internal" href="#16"><span class="xref myst">عملگرهای منطقی and، or و  not</span></a></p></li>
+<li><p>3.14 <a class="reference internal" href="#17"><span class="xref myst">مقدمه‌ای بر علم‌داده: سنجش شاخص مرکزی - میانه، مد و میانگین</span></a></p></li>
+<li><p>3.15 <a class="reference internal" href="#18"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، دستورات کنترلی پایتون را ارائه می‌کنیم - if، if...else، if...elif...else،while، for، break و continue.
+شما از دستور for برای انجام تکرارهای کنترل شده با ترتیب استفاده خواهید کرد - خواهید دید که تعداد موارد در دنباله‌ای از آیتم‌ها، تعداد تکرارهای دستور for را تعیین می‌کند.
+شما از تابع داخلی  range برای تولید دنباله‌ای از اعداد صحیح استفاده خواهید کرد.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نحوه کار با دستور while را برای حلقه‌هایی نشان می‌دهیم که با نشانه خاص کنترل می‌شوند.
+شما از کتابخانه استاندارد Decimal در پایتون برای محاسبات پولی دقیق استفاده خواهید کرد.
+ما داده‌ها را در رشته‌های f (format strings) با استفاده از مشخص‌کننده‌های فرمت مختلف قالب‌بندی می‌کنیم.
+همچنین عملگرهای Boolean and, or و not را برای ایجاد شرایط ترکیبی نشان خواهیم داد.
+در بخش مقدمه ای بر علم‌داده، با استفاده از ماژول statistics کتابخانه استاندارد پایتون، معیارهای گرایش مرکزی - میانگین، میانه و مد را در نظر خواهیم گرفت.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.2 <span style="color:#F50057;">دستورهای کنترلی</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در پایتون سه دستور کنترلی وجود دارد و بسته به درست بودن و یا نادرست بودن شرط،  دستوراتی را اجرا می‌کند.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>دستور if:</b>  در صورت True بودن یک شرط، دستور if عملی را انجام می‌دهد یا اگر شرط نادرست باشد از آن عمل می‌گذرد.<br>
+    <span style="color:#8e24aa;">• </span><b>دستور  if…else:</b> اگر یک شرط True باشد دستور if…else عملی را انجام می‌دهد یا اگر شرط False باشد عمل دیگری را انجام می‌دهد.<br>
+    <span style="color:#8e24aa;">• </span><b>دستور if…elif…else:</b> دستور if…elif…else بسته به درستی یا نادرستی چند شرط، یکی از چندین عمل مختلف را انجام می‌دهد.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در هر جایی که بتوان یک عمل واحد را قرار داد، گروهی از اقدامات را نیز می‌توان قرار داد.
+پایتون دو دستور تکرار را ارائه می کند
+    - 
+    while
+    و 
+    for:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b></b>دستور while یک عمل (یا گروهی از اقدامات) را تا زمانی که یک شرط True باقی بماند، تکرار می‌کند.<br>
+    <span style="color:#8e24aa;">• </span><b></b>دستور for یک عمل (یا گروهی از اقدامات) را برای هر آیتم در دنباله ای از آیتم ها تکرار می‌کند.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">کلمات کلیدی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کلمات if، elif، else، while، for، True و False کلمات کلیدی پایتون هستند. استفاده از یک کلمه کلیدی به عنوان یک شناسه مانند نام متغیر یک  syntax error است.
+جدول زیر کلمات کلیدی پایتون را فهرست می‌کند:
+</div><p><img alt="Screenshot%20%2833%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2833%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.3 <span style="color:#F50057;">دستور if</span></h1> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجازه دهید یک دستور 
+    if
+    را در پایتون اجرا کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">85</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از آنجایی که شرط 
+    grade >= ۶۰ 
+    برقرار است، تابع 
+    print
+    با تورفتگی در قسمت 
+    suite
+    دستور 
+    if
+    ، کلمه 
+    'Passed'
+    را نمایش می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تورفتگی Suite</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رعایت تورفتگی برای قسمت 
+    suite
+    ضروری است و در غیر این صورت یک خطای گرامری 
+    IndentationError
+    روی می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>  <span class="c1"># statement is not indented properly</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>  <span class="c1"># statement is not indented properly</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block after &#39;if&#39; statement on line 1
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر در یک 
+    suite
+    بیش از یک دستور باشد و تورفتگی این دستورات یکی نباشد، مجدداً خطای گرامری 
+    IndentationError
+    روی می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>  <span class="c1"># indented 4 spaces</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good job!)  # incorrectly indented only two spaces</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="o">&lt;</span><span class="n">tokenize</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good job!)  # incorrectly indented only two spaces</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: unindent does not match any outer indentation level
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات ممکن است پیام‌های خطا واضح نباشند. این واقعیت که پایتون توجه شما را معطوف به شماره خطی می‌کند که خطا در آن روی داده است، برای یافتن علت خطا کفایت می‌کند. سعی کنید فاصله گذاری و تورفتگی یکنواخت و متعارف را در کل کد اعمال کنید، خواندن و درک برنامه‌هایی که فاصله گذاری و تورفتگی یکنواختی ندارند، دشوار است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">هر عبارت را می‌توان به صورت 
+    True
+    و یا 
+    False
+    تفسیر کرد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توانید بر اساس هر عبارت تصمیم گیری کنید. مقدار غیر صفر 
+    True
+    و صفر 
+    False
+    قلمداد می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nonzero values are true, so this will print&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nonzero values are true, so this will print
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zero is false, so this will not print&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رشته های حاوی کاراکتر True و رشته های خالی (''، "" یا """""") False هستند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشتباه گرفتن =  با ==</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">استفاده از عملگر برابری == به جای = در یک دستور انتساب می‌تواند منجر به مشکلات ظریف شود.
+به عنوان مثال، در کد ذیل، اسنیپت [1] متغیر 
+    grade
+    را با یک دستور انتساب تعریف کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">85</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر به طور اتفاقی از کد ذیل استفاده کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">==</span> <span class="mi">85</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متغیر 
+    grade
+    تعریف نشده است و 
+    NameError
+    دریافت می‌کنیم.
+اگر 
+    grade
+    قبل از عبارت قبلی تعریف شده باشد، 
+    grade == 85
+    به سادگی به 
+    True یا False
+    ارزیابی می‌شود ولی هیچ دستور انتسابی انجام نمی‌گیرد. این اشتباه یک خطای منطقی
+     logic error
+    است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.4 <span style="color:#F50057;">دستور if…else و if…elif…else</span></h1> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    if…else
+    بر اساس برقرار بودن و یا عدم برقراری شرط، 
+     suite
+    های مختلفی را اجرا می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">85</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قسمت شرطی دستور 
+    if
+    برقرار است و به همین دلیل 
+    suite
+    دستور 
+    if
+    عبارت 
+    'Passed'
+    را نشان می‌دهد. توجه کنید زمانی که بعد از تایپ 
+    print('Passed')
+    کلید 
+    Enter
+    را می‌زنید، 
+    IPython
+    در خط بعدی چهار فضای خالی 
+    یا space
+    قرار می‌دهد. باید این چهار فضای خالی را حذف کنید تا 
+    else
+    و 
+    suite
+    آن با 
+    if
+    کاملا تراز شوند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد ذیل مقدار متغیر 
+    grade
+    را با ۵۷ مقداردهی می‌کند و نشان می‌دهد زمانی که قسمت شرط در دستور 
+     if…else
+    برقرار نباشد، 
+    suite
+    های قسمت 
+    else
+    اجرا می‌شوند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">57</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Failed
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از کلیدهای پیکان بالا و پایین برای پیمایش به عقب و جلو در 
+    اسنیپت‌های
+    جلسه تعاملی فعلی استفاده کنید.
+با فشار دادن Enter 
+    اسنیپت
+    نمایش داده‌شده مجددا اجرا می‌شود. بیایید 
+    grade
+    را روی ۹۹ تنظیم کنیم، کلید پیکان رو به بالا را دو بار فشار دهید تا کد از 
+    اسنیپت
+    [4] فراخوانی شود، سپس Enter را فشار دهید تا آن کد دوباره به عنوان 
+    اسنیپت
+    [6] اجرا شود. هر 
+    اسنیپت
+    فراخوانی شده‌ای که اجرا می‌کنید یک شناسه جدید دریافت می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">99</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عبارت‌های شرطی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برقراری شرط و یا عدم برقراری آن در 
+    if…else
+    موجب می‌شود قسمت 
+    suite
+    دستور 
+    if
+    دستورهای انتساب متفاوتی را انجام دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">87</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Passed&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Failed&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توانیم با تابع 
+    print
+    و یا ارزیابی مقادیر مقدار آن را ببینیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Passed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عبارت‌های شرطی کوتاه می‌توانید اسنیپت را به این شکل بنویسید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Passed&#39;</span> <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="k">else</span> <span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Passed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">استفاده از پرانتزها ضروری نیست ولی موجب افزایش خوانایی کد شده و نشان می‌دهد مقدار یک عبارت شرطی در متغیر 
+     result
+    ذخیره می‌گردد. در ابتدا پایتون شرط 
+     grade >= 60
+    را تست می‌کند:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اگر شرط برقرار باشد 
+    اسنیپت 
+    [۱۰] مقدار سمت چپ دستور 
+    if
+    یعنی 
+    'Passed'
+    را در متغیر 
+    result
+    ذخیره می‌کند. قسمت 
+     else
+    اجرا نمی‌شود.<br>
+    <span style="color:#8e24aa;">• </span>اگر شرط برقرار نباشد اسنیپت [۱۰] مقدار سمت راست دستور 
+    else
+    یعنی 
+    'Failed'
+    را در متغیر 
+    result
+    ذخیره می‌کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در حالت محاوره‌ای به راحتی می‌توانید عبارات شرطی را ارزیابی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Passed&#39;</span> <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="k">else</span> <span class="s1">&#39;Failed&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Passed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">چند دستور در یک suite</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در قسمت else کد ذیل دو دستور قرار گرفته‌اند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">49</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You must take this course again&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Failed
+You must take this course again
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر 
+    grade
+    کمتر از ۶۰ باشد، هر دو دستور در 
+    suite
+    قسمت 
+    else
+    اجرا می‌شوند. اگر تورفتگی 
+    print
+    دوم را رعایت نکنید به عنوان بخشی از 
+    suite
+    قسمت 
+    else
+    محسوب نخواهد شد. به همین دلیل این دستور اجرا شده و نتایج عجیب و غریبی تولید می‌شود.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Passed&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You must take this course again&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed
+You must take this course again
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دستور 
+if…elif…else</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با دستور 
+    if…elif…else
+    می‌توانید حالت‌های زیادی را بررسی و تست کنید. کد ذیل برای نمراتی که بزرگتر و یا مساوی ۹۰ هستند حرف 
+    A
+    ، نمراتی که بین ۸۰ تا ۸۹ هستند 
+    B
+    ، نمراتی که بین ۷۰ تا ۷۹ هستند 
+    C
+    ، نمراتی که بین ۶۰ تا ۶۹ هستند 
+    D
+    و برای سایر نمرات 
+    F
+    را نمایش می‌دهد. فقط دستورات اولین شرطی که درست باشند، اجرا می‌شوند. از آنجایی که مقدار 
+    grade
+    برابر ۷۲ است، اسنیپت [۱۸] حرف 
+    C
+    را نمایش می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">77</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اولین شرط یعنی 
+    grade >= 90
+    برقرار نیست و به همین دلیل از 
+    print('A')
+    صرف نظر می‌شود. دومین شرط یعنی 
+    grade >= 80
+    برقرار نیست و به همین دلیل از 
+    print('B')
+    صرف نظر می‌شود. سومین شرط یعنی 
+    grade >= 70
+    برقرار است و به همین دلیل دستور 
+    print('C')
+    اجرا می‌شود. از مابقی کدهای دستور 
+    if…elif…else
+    صرف نظر می‌شود. دستور 
+    if…elif…else
+    از دستور 
+    if
+    سریع‌تر است به دلیل آنکه به محض برقراری اولین شرط مابقی شرط‌ها تست نمی‌شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">قسمت 
+    else
+    اختیاری است</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قسمت 
+    else
+    در دستور 
+     if…elif…else
+    اختیاری است. اگر دستور 
+     if…elif
+    فاقد قسمت 
+    else
+    باشد و مقدار بررسی شده با هیچ یک از شرط‌ها مطابقت نداشته باشد، هیچ یک از دستورات 
+    suite
+    اجرا نمی‌شوند و دستور بعد از 
+     if…elif…else
+    اجرا خواهد شد. اگر می‌خواهید در دستور 
+     if…elif…else
+    قسمت 
+    else
+    قرار دهید آن را بعد از آخرین 
+    elif
+    قرار دهید، در غیر این صورت با خطای 
+    SyntaxError
+    مواجه خواهید شد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">خطاهای منطقی</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تو رفتگی نادرست در قسمتی از کد مربوط به اسنیپت [۱۶] مثالی از یک خطای منطقی غیر بحرانی است. این کد اجرا می‌شود ولی نتایج درستی تولید می‌کند. خطای منطقی بحرانی موجب بروز یک استثنا (برای مثال نظیر 
+    ZeroDivisionError
+    که به دلیل تقسیم بر صفر روی می‌دهد) می‌شود، پایتون یک 
+    traceback
+    نشان می‌دهد و اجرای اسکریپت خاتمه می‌یابد. هنگامی که در مد محاوره‌ای یک خطای بحرانی روی دهد، پایتون اجرای اسنیپت جاری را متوقف کرده و منتظر ورودی بعدی می‌ماند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.5 <span style="color:#F50057;">دستور while</span></h1> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    while
+    این امکان را به شما می‌دهد یک یا چند دستور را تا زمانی که شرط تکرار حلقه درست باشد اجرا کنید. مثال ذیل با استفاده از دستور 
+    while
+    اولین توانی از ۳ که بزرگتر از ۵۰ باشد را پیدا می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">product</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="n">product</span> <span class="o">*</span> <span class="mi">3</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [۳] متغیر 
+    product
+    را ارزیابی کرده و مقدار ۸۱ را نشان می‌دهد. ۸۱ اولین توان بزرگتر از ۵۰ عدد ۳ می‌باشد. در داخل 
+    suite
+    حلقه 
+    while
+    باید مقدار 
+    product
+    تغییر کند تا در نهایت شرط تکرار حلقه نادرست شود، در غیر این صورت یک حلقه تکرار نامتناهی رخ می‌دهد. هنگام اجرای برنامه‌ها در ترمینال، خط فرمان 
+    آناکوندا
+    Anaconda Command Prompt
+    یا 
+    shell
+    با زدن 
+    $ Ctrl + c \ or \ control + c $
+    حلقه بی‌نهایت خاتمه می‌یابد. معمولا 
+    IDEها
+    یک دکمه روی نوار ابزار یا گزینه‌ای در منو برای توقف اجرای برنامه دارند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.6 <span style="color:#F50057;">دستور for</span></h1> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    for
+    به شما این امکان را می‌دهد که یک عمل یا چند عمل را برای هر یک از داده‌های یک دنباله تکرار کنید. به عنوان مثال، یک رشته دنباله‌ای از کاراکترهای منفرد است. برنامه ذیل کاراکترهای کلمه 
+    Programming
+    را با دو فاصله از هم نشان می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="s1">&#39;Programming&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P  r  o  g  r  a  m  m  i  n  g  
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    for
+    به شرح زیر اجرا می‌شود:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>با وارد شدن به دستور 
+    for
+    کاراکتر 
+    'P'
+    از کلمه 
+    Programming 
+    به متغیر 
+    target
+    (در این مثال 
+     character
+    ) که بین دو کلمه کلیدی 
+    for
+    و 
+    in
+    قرار دارد، اختصاص می‌یابد.<br>
+    <span style="color:#8e24aa;">• </span>در مرحله بعد دستور داخل 
+    suite
+    اجرا شده و مقدار متغیر 
+    character
+    با دو فضای خالی چاپ می‌شود، به زودی در این مورد توضیح می‌دهیم.<br>
+    <span style="color:#8e24aa;">• </span>پایتون بعد از اجرای 
+    suite
+    کاراکتر بعدی در دنباله یعنی (
+    'r'
+    در 
+    Programming
+    ) را به متغیر 
+    character
+    اختصاص داده و 
+    suite
+    را اجرا می‌کند.<br>
+    <span style="color:#8e24aa;">• </span>این روند تا زمانی که تمامی کاراکترها در دنباله پردازش شوند، ادامه می‌یابد. در این مرحله بعد از نمایش 
+    'g'
+    به همراه دو کاراکتر 
+    space
+    ، اجرای حلقه 
+    for
+    خاتمه می‌یابد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">استفاده از متغیر 
+    target
+    در 
+    suite
+    همانطور که در اینجا برای نمایش مقدار آن انجام داده‌ایم، رایج است اما لازم نیست.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع print و آرگومان کلیدی end</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    print
+    آرگومان‌های خود را نمایش می‌دهد و سپس مکان نما را به خط بعدی منتقل می‌کند. با کمک آرگومان
+    end
+    می‌توانید این رفتار را تغییر دهید، برای مثال در کد بالا مقدار 
+    character
+    به همراه دو فاصله نمایش داده شد؛ بنابراین تمام کاراکترها به صورت افقی در یک خط نمایش داده شده‌اند. پایتون کلمه 
+    end
+    را به عنوان یک آرگومان کلیدی فراخوانی می‌کند، اما 
+    end
+    یک کلمه کلیدی در پایتون محسوب نمی‌شود. گاهی اوقات آرگومان‌های کلیدی را آرگومان‌های با نام می‌نامند. آرگومان 
+    end
+    اختیاری است. اگر آن را وارد نکنید تابع 
+    print
+    به‌طور پیش‌فرض از یک کاراکتر خط جدید 
+    $\n$
+    استفاده می‌کند. راهنمای سبک کدنویسی پایتون توصیه می‌کند در دو طرف آرگومان‌های کلیدی فضای خالی قرار ندهید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع print و آرگومان کلیدی sep</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تعیین رشته‌ای که در بین داده‌های نمایش داده شده توسط تابع 
+     print
+    قرار می‌گیرد، می‌توانید از کلمه کلیدی 
+    sep
+    مخفف
+    separator
+    استفاده کنید. وقتی این کلمه کلیدی را مشخص نکنید، تابع 
+     print
+    به‌طور پیش‌فرض از یک کاراکتر فاصله استفاده می‌کند. بگذارید سه عدد نمایش دهیم و به جای آنکه آن‌ها را فقط با یک فاصله از هم جدا کنیم، از یک کاما و یک فاصله برای این کار استفاده کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10, 20, 30
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای حذف فضاهای پیش‌فرض، از 
+</div> 
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    (یعنی یک رشته خالی) استفاده کنید.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">3.6.1 <span style="color:#8e24aa;">Iterableها، Listها و Iteratorها</span></h2> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دنباله سمت راست کلمه 
+    in 
+    در دستور 
+    for
+     باید یک شیء از نوع  
+    iterable
+    باشد - یعنی یک شیء که دستور 
+    for
+    می‌تواند هر بار یک داده از آن بگیرد تا زمانی که هیچ داده دیگری باقی نماند.
+پایتون علاوه بر رشته‌ها، انواع دیگری از دنباله‌های 
+    iterable
+    دارد.
+یکی از رایج‌ترین آن‌ها 
+    list
+    است که مجموعه‌ای از آیتم‌های جدا شده با کاما است که بین دو براکت 
+    ([ ])
+    محصور شده‌اند.
+کد زیر حاصل جمع پنج عدد صحیح در یک 
+    list
+    است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">9</span><span class="p">]:</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر دنباله دارای یک 
+    iterator
+    است.
+دستور 
+    for
+    از 
+    iterator
+    در
+    "پشت صحنه" برای دریافت هر آیتم متوالی استفاده می‌کند تا زمانی که دیگر داده‌ای برای پردازش وجود نداشته باشد.
+    iterator
+    مانند یک نشانک است - همیشه می‌داند در کجای دنباله قرار دارد، بنابراین می‌تواند مورد بعدی را هنگامی که برای انجام این کار فراخوانده شد، برگرداند.
+ما 
+    list 
+    ها را به‌طور مفصل در فصل "دنباله‌ها: لیست‌ها و تاپل‌ها" پوشش می‌دهیم.
+در آن‌جا خواهید دید که ترتیب موارد موجود در یک لیست مهم است و موارد یک لیست 
+    mutable
+    هستند (یعنی قابل تغییر).
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">3.6.2 <span style="color:#8e24aa;">تابع از پیش تعریف‌شده 
+    range</span></h2> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه ذیل با استفاده از دستور 
+    for
+    و تابع از پیش تعریف‌شده 
+    range
+    و با ۱۰ بار تکرار، اعداد صحیح از ۰ تا ۹ را نشان می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی تابع 
+    range(10)
+    یک شیء 
+    iterable
+    ایجاد می‌کند. شیء اخیر دنباله‌ای است از اعداد صحیح از صفر تا یک واحد کمتر از آرگومان ورودی تابع.
+    به‌بیانی دیگر، دنباله فوق حاوی اعداد ۰،۱،۲،۳،۴،۵،۶،۷،۸،۹ می‌باشد. دستور 
+    for
+    بعد از پردازش آخرین عدد تولید شده به‌وسیله تابع 
+    range
+    خاتمه می‌یابد. 
+    Iterator
+    و 
+    iterable
+    ویژگی‌های برنامه نویسی به سبک رویه‌ای زبان پایتون محسوب می‌شوند. در این مورد بیشتر شرح خواهیم داد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">خطاهای Off-By-One</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یکی از خطاهای 
+    Off-By-One
+    زمانی رخ می‌دهد که شما فرض کنید مقدار آرگومان تابع 
+    range
+    در دنباله ایجاد‌شده قرار گرفته است. به‌عنوان مثال، اگر برای تولید دنباله ۰ تا ۹ تابع 
+    range
+    را با آرگومان ۹ فراخوانی کنید، فقط دنباله ۰ تا ۸ تولید می‌شود.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.7 <span style="color:#F50057;">دستورات انتساب کوتاه شده</span></h1> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستورات انتساب کوتاه شده در حقیقت عملگر کوتاه شده‌ای است که یک متغیر در دو طرف نماد انتساب = قرار می‌گیرد. به کد ذیل برای محاسبه 
+    total
+    توجه کنید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+ <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">number</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [2] از دستور کوتاه شده 
+    $ += $
+    برای محاسبه 
+    total
+    استفاده می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">number</span>  <span class="c1"># add number to total</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    $ += $
+    مقدار متغیر 
+    number
+    را با مقدار فعلی 
+    total
+    جمع کرده و حاصل را در 
+    total
+    به‌عنوان مقدار جدید ذخیره می‌کند. جدول ذیل عملگرهای کوتاه شده را نشان می‌دهد:
+</div><p><img alt="Screenshot%20%2834%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2834%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.8 <span style="color:#F50057;">تکرارهای کنترل شده روی دنباله‌ها؛ رشته‌های فرمت شده</span></h1> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این بخش و بخش بعدی دو مسئله در ارتباط با محاسبه میانگین یک کلاس را حل می‌کند. به صورت مسئله توجه کنید:
+    <br>
+    <br>
+    <i>
+    از دانشجویان یک کلاس ۱۰ نفره کوئیزی گرفته شده است. نمرات دانشجویان عبارت است از 
+    ۹۸, ۷۶, ۷۱, ۸۷, ۸۳, ۹۰, ۵۷, ۷۹, ۸۲, ۹۴
+    . میانگین نمرات کلاس را تعیین کنید.
+    </i>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپت زیر برای حل این مسئله مجموع نمرات را نگه می‌دارد، میانگین را محاسبه کرده و نتیجه را نمایش می‌دهد. ۱۰ نمره را در یک لیست قرار دادیم، اما شما می‌توانید نمرات را از طریق صفحه کلید کاربر وارد کنید (همانطور که در مثال بعدی انجام خواهیم داد) یا آنها را از یک فایل بخوانید (نحوه انجام کار را در فصل فایل‌ها و استثناها مشاهده خواهید کرد). در فصل ۱۶ نحوه خواندن داده‌ها از پایگاه داده‌های 
+    SQL
+    و 
+    NoSQL
+    را نشان می‌دهیم.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># class_average.py</span>
+<span class="sd">&quot;&quot;&quot;Class average program with sequence-controlled iteration.&quot;&quot;&quot;</span>
+
+<span class="c1"># initialization phase</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># sum of grades</span>
+<span class="n">grade_counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">98</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">94</span><span class="p">]</span>  <span class="c1"># list of 10 grades</span>
+
+<span class="c1"># processing phase</span>
+<span class="k">for</span> <span class="n">grade</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>  
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">grade</span>  <span class="c1"># add current grade to the running total</span>
+    <span class="n">grade_counter</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># indicate that one more grade was processed</span>
+
+<span class="c1"># termination phase</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="n">grade_counter</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Class average is </span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Class average is 81.7
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۵ و ۶ متغیرهای 
+    total
+    و 
+     grade_counter
+    را ایجاد کرده و هر یک را با مقدار ۰ مقدار دهی می‌کند. خط ۷ متغیر 
+     grade
+    را ایجاد کرده و آن را با یک لیست ۱۰ تایی از اعداد صحیح مقداردهی می‌کند.
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">98</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">94</span><span class="p">]</span> <span class="c1"># list of 10 grades</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور for هر نمره را در لیست نمرات پردازش می‌کند. در خط ۱۱، نمره فعلی به total اضافه می‌شود. سپس، در خط ۱۲، یک واحد به متغیر grade_counter اضافه می‌شود تا تعداد نمرات پردازش شده تاکنون را پیگیری کند. اجرا به پایان می‌رسد وقتی که تمام ۱۰ نمره در لیست پردازش شده باشند. راهنمای سبک کدنویسی پایتون توصیه می‌کند که یک خط خالی قبل و بعد از هر دستور کنترلی قرار داده شود (مانند خطوط ۸ و ۱۳). وقتی دستور for پایان می‌یابد، خط ۱۵ میانگین را محاسبه کرده و خط ۱۶ آن را نمایش می‌دهد. در فصل‌های بعدی، از برنامه‌نویسی به سبک تابعی برای محاسبه میانگین موارد یک لیست به صورت مختصرتر استفاده می‌کنیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مقدمه‌ای بر رشته‌های فرمت‌شده</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خط ۱۶ برای درج نتایج این اسکریپت از 
+     f-string
+    ساده زیر (مخفف رشته فرمت شده) استفاده کرده و مقدار میانگین را در یک رشته درج می‌کند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;Class average is </span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">حرف 
+    f
+    قبل از نقل‌قول باز رشته نشان می‌دهد که آن یک رشته 
+     f-string
+    است. برای تعیین موقعیت مقادیری که باید در رشته درج شوند از متغیرهای 
+     placeholder
+    محصور بین 
+    ({ })
+    استفاده کنید.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">average</span><span class="p">}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    placeholder
+    متغیر
+     average
+    را به نمایش رشته‌ای تبدیل کرده و سپس متن جایگزین را به جای 
+     {average}
+    قرار می‌دهد. عبارت‌های مربوط به جایگزین می‌تواند شامل مقادیر، متغیرها، عبارات ریاضی و یا فراخوانی توابع باشند. در خط ۱۶ به جای متغیر 
+     average
+    از 
+    total / grade_counter
+    استفاده خواهیم کرد و عملاً خط ۱۵ حذف می‌شود
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.9 <span style="color:#F50057;">حلقه‌هایی که با نشانه خاص کنترل می‌شوند</span></h1> <a id='12'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجازه دهید مسئله میانگین نمرات کلاس را تعمیم دهیم. صورت مسئله و نیازمندی‌های آن را در نظر بگیرید:
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"><i>یک برنامه میانگین نمرات کلاس ایجاد کنید که هر بار که برنامه اجرا می شود، تعداد دلخواهی نمره را پردازش می کند.</i>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شرح نیازمندی‌های برنامه تعداد نمرات و یا نحوه تعداد آنها را مشخص نکرده است، بنابراین می‌خواهیم که کاربر این نمرات را وارد کند. این برنامه تعداد دلخواهی از نمرات را پردازش می‌کند. کاربر هر بار یک نمره را وارد می‌کند تا زمانی که همه نمرات وارد شوند، سپس یک مقدار خاص 
+    (همچنین یک مقدار سیگنال، یک مقدار ساختگی یا یک مقدار 
+    flag
+    نیز نامیده می شود)
+    وارد می‌کند تا نشان دهد که نمره دیگری برای وارد کردن وجود ندارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پیاده‌سازی حلقه‌هایی که با نشانه خاص کنترل می‌شوند</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپت زیر با استفاده از حلقه‌های کنترل شونده با نشانه خاص، مسئله میانگین نمرات کلاس را حل می‌کند. توجه داشته باشید که احتمال تقسیم بر صفر را بررسی کنید. اگر چنین مشکلی شناسایی نشود، ممکن است یک خطای منطقی مهلک ایجاد شود. در فصل فایل‌ها و استثناها، برنامه‌هایی می‌نویسیم که چنین استثناهایی را تشخیص می‌دهند و کدهای مناسب و مربوط به استثنا را اجرا می‌کنند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># class_average_sentinel.py</span>
+<span class="sd">&quot;&quot;&quot;Class average program with sentinel-controlled iteration.&quot;&quot;&quot;</span>
+
+<span class="c1"># initialization phase</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># sum of grades</span>
+<span class="n">grade_counter</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># number of grades entered</span>
+
+<span class="c1"># processing phase</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter grade, -1 to end: &#39;</span><span class="p">))</span>  <span class="c1"># get one grade</span>
+
+<span class="k">while</span> <span class="n">grade</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">grade</span>
+    <span class="n">grade_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter grade, -1 to end: &#39;</span><span class="p">))</span>
+
+<span class="c1"># termination phase</span>
+<span class="k">if</span> <span class="n">grade_counter</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="n">grade_counter</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Class average is </span><span class="si">{</span><span class="n">average</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No grades were entered&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">grade_counter</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># number of grades entered</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># processing phase</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter grade, -1 to end: &#39;</span><span class="p">))</span>  <span class="c1"># get one grade</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">while</span> <span class="n">grade</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">total</span> <span class="o">+=</span> <span class="n">grade</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/ipykernel/kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1259</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot%20%2835%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2835%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">منطق حلقه‌هایی که با نشانه خاص کنترل می‌شوند</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در چنین حلقه‌ای، برنامه اولین مقدار ورودی (سطر ۹) را قبل از رسیدن به دستور 
+    while
+    می‌خواند. مقدار وارد شده در خط ۹ تعیین می‌کند که آیا کنترل برنامه باید وارد 
+    suite
+    دستور 
+    while
+    (خطوط ۱۲ تا ۱۴) شود و یا خیر. اگر شرط موجود در خط ۱۱ نادرست باشد، کاربر مقدار خاص ۱- را وارد می‌کند و به همین دلیل 
+    suite
+    اجرا نمی‌شود زیرا کاربر هیچ نمره‌ای را وارد نکرده است. اگر شرط درست باشد، 
+    suite
+    اجرا می‌شود، مقدار 
+     grade
+    را با 
+    total
+    جمع کرده و 
+    grade_counter
+    را یک واحد افزایش می‌دهد.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ادامه، خط ۱۴ نمره دیگری از کاربر دریافت می‌کند و شرط حلقه (خط ۱۱) با استفاده از آخرین 
+    grade
+    وارد شده توسط کاربر، مجدداً بررسی می‌شود. مقدار 
+    grade
+    همیشه و بلافاصله قبل از آزمایش شرط حلقه وارد می‌شود، بنابراین می‌توانیم قبل از پردازش آن تعیین کنیم که آیا مقدار 
+    grade
+    مقدار خاص است و یا خیر.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که مقدار ۱- وارد می‌شود، حلقه تکرار خاتمه می‌یابد و برنامه مقدار ۱- را با 
+    total
+    جمع نمی‌کند. در چنین حلقه‌ای که کاربر داده‌ها را وارد می‌کند، باید مقدار خاص (خطوط ۹ و ۱۴) با یک اعلان به کاربر یادآوری شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرمت برنامه میانگین کلاس با دو رقم اعشار</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این مثال میانگین کلاس را با دو رقم در سمت راست نقطه اعشاری فرمت کرده است. در یک f-string می‌توانید به صورت اختیاری بعد از عبارت متن جایگزین، کاراکتر (:) و یک مشخص کننده فرمت قرار دهید تا نحوه فرمت بندی متن جایگزین را توصیف کند. مشخص کننده فرمت .2f  (خط ۱۹) میانگین را به صورت یک عدد اعشار (f) با دو رقم در سمت راست نقطه اعشاری (.2f) فرمت می‌کند. در این مثال مجموع نمرات ۲۵۷ بود و اگر بر ۳ تقسیم شود، عدد ۸۵.۶۶۶۶۶۶۶۶۶ به دست می‌آید. فرمت کردن average با .2f مقدار آن را با صدم اعشار تقریب می‌زند و مقدار ۸۵.۶۷ را برای جایگزین شدن در متن تولید می‌کند. میانگین فقط با یک رقم در سمت راست نقطه اعشاری با صفر انتهایی فرمت می‌شود (به عنوان مثال ۸۵.۵۰). در فصل رشته‌ها: نگاهی عمیق‌تر،
+بسیاری از ویژگی‌های فرمت کردن رشته‌ها مورد بررسی قرار می‌گیرد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.10 <span style="color:#F50057;">بررسی عمیق‌تر تابع  range</span></h1> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    range
+    با نسخه دو و سه آرگومان هم وجود دارد. همان‌طور که مشاهده کردید، نسخه یک آرگومان، دنباله‌ای از اعداد صحیح متوالی از۰ تا یک واحد کم‌تر از آرگومان ورودی تولید می‌کند. نسخه دو آرگومان تابع 
+    range
+    دنباله‌ای از اعداد صحیح متوالی از آرگومان اول تا یک واحد کمتر از آرگومان دوم تولید می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 6 7 8 9 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نسخه سه آرگومان تابع 
+    range
+    دنباله‌ای از اعداد صحیح متوالی از آرگومان اول تا آرگومان دوم تولید می‌کند. آرگومان دوم داخل دنباله نیست و عدد بعدی با جمع عدد قبلی و آرگومان سوم که گام نامیده می‌شود، به دست می‌آید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 2 4 6 8 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر آرگومان سوم منفی باشد، دنباله حاصل از آرگومان اول تا شروع و به‌طور نزولی تا آرگومان دوم تولید می‌شود. آرگومان دوم داخل دنباله نیست و عدد بعدی با تفریق عدد قبلی و آرگومان سوم به دست می‌آید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 8 6 4 2 
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.11 <span style="color:#F50057;">استفاده از نوع Decimal برای مبالغ پولی</span></h1> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این بخش، قابلیت‌های نوع 
+    Decimal
+    را برای محاسبات دقیق پولی معرفی می‌کنیم. اگر در کار بانکی یا سایر زمینه‌هایی هستید که به دقت بالای مالی نیاز دارند، باید قابلیت‌های 
+    Decimal
+    را به‌طور عمیق بررسی کنید. اعداد اعشاری در پایتون برای اکثر کاربردهای علمی و ریاضیاتی که از اعداد با نقطه اعشار استفاده می‌کنند، به‌خوبی کار می‌کنند. به‌عنوان مثال، وقتی از دمای طبیعی بدن یعنی ۹۸.۶ فارنهایت صحبت می‌کنیم، لازم نیست ارقام زیادی را بخوانیم. وقتی دما را روی یک دماسنج مشاهده می‌کنیم و آن را ۹۸.۶ می‌خوانیم، ممکن است مقدار واقعی ۹۸.۵۹۹۴۷۳۲۱۰۶۴۳ باشد. نکته اینجاست که خواندن این دما یعنی ۹۸.۶ فارنهایت به عنوان دمای بدن، برای بیشتر موارد کافی است.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقادیر اعشاری به صورت دودویی ذخیره می‌شوند(مبحث سیستم عددی دودویی را در فصل اول معرفی کردیم و در پیوست آنلاین با عنوان سیستم‌های اعداد دودویی به طور عمیق این مبحث را شرح داده‌ایم). برخی از مقادیر اعشاری بعد از تبدیل شدن به حالت دودویی، یک مقدار تقریبی را نشان می‌دهند. به‌عنوان مثال، مقدار 
+     amount
+    را با ارزش دلار و سنت و به مبلغ ۱۱۲.۳۱ دلار در نظر بگیرید. اگر مقدار 
+     amount
+    را نمایش دهید، به نظر می‌رسد مقدار دقیقی که به آن اختصاص داده‌اید نشان داده می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amount</span> <span class="o">=</span> <span class="mf">112.31</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>112.31
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با این حال اگر مقدار 
+    amount
+    را با دقت ۲۰ رقم در سمت راست نقطه اعشاری چاپ کنید، می‌بینید که مقدار واقعی عدد اعشاری در حافظه دقیقاً ۱۱۲.۳۱ نیست و فقط یک تقریب است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">amount</span><span class="si">:</span><span class="s1">.20f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>112.31000000000000227374
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بسیاری از برنامه‌ها نیاز به نمایش دقیق اعداد اعشاری دارند. مؤسساتی مانند بانک‌ها که روزانه با میلیون‌ها یا حتی میلیاردها تراکنش سروکار دارند، باید این تراکنش‌ها را با دقت کافی انجام دهند. اعداد اعشاری تا حدودی ولی نه با دقت کامل این مقادیر را نشان می‌دهند.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کتابخانه استاندارد پایتون قابلیت‌های بسیاری را فراهم می‌کند و می‌توانید از آنها در برنامه‌های خود استفاده کنید و نیازی به کدنویسی مجدد نداشته باشید. برای محاسبات مالی و سایر برنامه‌هایی که نیاز به نمایش دقیق اعداد اعشاری و کار با این اعداد را دارند، کتابخانه استاندارد پایتون نوع 
+    Decimal
+    را ارائه می‌دهد. نوع 
+    Decimal
+    از یک کدنویسی خاص برای حل مشکل دقت اعداد اعشاری استفاده می‌کند. این روش برای نگهداری اعداد به حافظه بیشتر و برای انجام محاسبات خود به زمان پردازش بیشتری نیاز دارد ولی دقت مورد نیاز برای محاسبات پولی را فراهم می‌کند. بانک‌ها هنگام محاسبه سود روزانه حساب‌ها باید با مواردی مانند الگوریتم گرد کردن اعداد عادلانه رفتار کنند. نوع 
+    Decimal
+    چنین قابلیت‌هایی را ارائه می‌دهد.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای دیدن ویژگی‌های ماژول 
+    Decimal
+    به آدرس ذیل مراجعه کنید:
+    <a href="https://docs.python.org/3.7/library/decimal.html">https://docs.python.org/3.7/library/decimal.html</a>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Import کردن نوع Decimal از ماژول decimal</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تا اینجای کار از چندین نوع داده داخلی استفاده کردیم، برای مثال 
+    int
+    (برای اعداد صحیح مانند ۱۰)
+    float
+    (برای اعداد اعشاری مانند ۷.۵) 
+    و 
+    str
+    (برای رشته‌هایی مانند 
+    "Python")
+    . نوع 
+    Decimal
+    در پایتون از قبل ساخته نشده است. 
+    decimal
+    بخشی از کتابخانه استاندارد پایتون محسوب می‌شود. این کتابخانه به گروه‌هایی به نام ماژول با قابلیت‌های مرتبط تقسیم می‌شود. ماژول 
+    decimal
+    نوع 
+    Decimal
+    و قابلیت‌های آن را تعریف می‌کند. برای استفاده از نوع 
+    Decimal
+    باید با دستور ذیل ماژول 
+    decimal
+    را در برنامه خود 
+    import
+    کنید.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">decimal</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و برای ارجاع به نوع 
+    Decimal
+    باید عبارت 
+    decimal.Decimal
+    را تایپ کنید و یا آنکه از قابلیت دستور 
+    import
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Decimal</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور بالا فقط نوع 
+    Decimal
+    را از ماژول 
+    decimal
+    داخل برنامه شما 
+    import
+    می‌کند. در فصل‌های بعدی فرم‌های مختلف دستور 
+    import
+    را شرح می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ایجاد Decimalها</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور معمول با استفاده از یک رشته یک نوع 
+    Decimal
+    ایجاد می‌کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;1000.00&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decimal(&#39;1000.00&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.05&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decimal(&#39;0.05&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به زودی از متغیرهای 
+    principal
+    و 
+    rate
+    برای محاسبه سود مرکب استفاده خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">محاسبات Decimal</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع 
+    Decimal
+    از عملگرهای استاندارد ریاضی نظیر +, -, *, /, //, ** و % و همچنین عملگرهای مختصر شده مربوط به آنها پشتیبانی می‌کند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;10.5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decimal(&#39;12.5&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decimal(&#39;5&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+=</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decimal(&#39;12.5&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما می‌توانید از عملگرهای حسابی میان اعداد صحیح و 
+    Decimalها
+    استفاده کنید ولی انجام این کار میان اعداد اعشاری و 
+    Decimalها
+    مجاز نیست.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">شرح مسئله نرخ مرکب و نیازمندی‌های آن</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت قصد داریم با استفاده از نوع 
+    Decimal
+    برای محاسبات دقیق پولی سود مرکب را محاسبه کنیم. به صورت مسئله و نیازمندی‌های آن دقت کنید:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"><i>
+    شخصی ۱۰۰۰ دلار در حساب پس‌انداز با نرخ سود %۵ سرمایه‌گذاری می‌کند. با این فرض که شخص به سود سپرده حساب خود دست نزند، مقدار مانده حساب را برای هر سال محاسبه کرده و نشان دهید. برای تعیین این مبالغ از فرمول زیر استفاده کنید:
+    <br>
+    $a = p{(1 + r)}^{n}$
+    <br>
+    در فرمول بالا 
+    p
+    مبلغ اصلی سرمایه‌گذاری شده است، 
+    r
+    نرخ بهره سالانه است، 
+    n
+    تعداد سال است و 
+    a
+    مبلغ سپرده گذاری شده در پایان سال 
+    n
+    م است.
+    </i>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">محاسبه نرخ مرکب</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در اسنیپت‌های [۵] و [۷] متغیرهای 
+    principal
+    و 
+    rate
+    را تعریف کرده و از آنها استفاده خواهیم کرد. برای محاسبه سود هر سال و با فرض آنکه طی این ۱۰ سال برداشتی از این حساب انجام نگیرد از حلقه 
+    for
+    استفاده می‌کنیم. حلقه تکرار با استفاده از فرمت رشته‌ها شماره سال و مبلغ سپرده در پایان سال را نشان می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="n">amount</span> <span class="o">=</span> <span class="n">principal</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">year</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">:</span><span class="s1">&gt;2</span><span class="si">}{</span><span class="n">amount</span><span class="si">:</span><span class="s1">&gt;10.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 1   1050.00
+ 2   1102.50
+ 3   1157.62
+ 4   1215.51
+ 5   1276.28
+ 6   1340.10
+ 7   1407.10
+ 8   1477.46
+ 9   1551.33
+10   1628.89
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رابطه ریاضی 
+    ${(1 + r)}^{n}$
+    با کد ذیل محاسبه می‌شود:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">year</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در رابطه بالا 
+    year
+    معرف 
+    n
+    و 
+    rate
+    معرف 
+    r
+    می‌باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرمت کردن سال و مبلغ سپرده</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور ذیل با استفاده از یک 
+    f-string
+    و دو 
+    placeholder
+    خروجی حلقه را فرمت می‌کند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">:</span><span class="s1">&gt;2</span><span class="si">}{</span><span class="n">amount</span><span class="si">:</span><span class="s1">&gt;10.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">placeholder
+    ذیل:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">year</span><span class="p">:</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از مشخص کننده فرمت 
+    $ >2 $
+    استفاده می‌کند تا نشان دهد مقدار سال باید به اندازه ۲ کاراکتر نشان داده شود و از سمت راست تراز گردد. 
+     field width
+    شماره مکانی کاراکتر را هنگام نمایش مقدار مشخص می‌کند. مشخص کننده فرمت 
+    $ >2 $
+    برای نمایش مقادیری از سال که یک رقمی هستند یعنی از ۱ تا ۹، قبل از مقدار سال یک فضای خالی قرار می‌دهد و به همین دلیل در ستون مقادیر سال از سمت راست تراز شده‌اند. شکل ذیل نحوه فرمت شدن اعداد ۱ تا ۱۰ را در فضای دو کاراکتر نشان می‌دهد.
+</div><p><img alt="Screenshot%20%2836%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2836%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کمک 
+    $ < $
+    می‌توانید متن را از سمت چپ تراز کنید. مشخص کننده فرمت 
+    10.2f
+    در 
+    placeholder
+    ذیل
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">amount</span><span class="p">:</span><span class="o">&gt;</span><span class="mf">10.2</span><span class="n">f</span><span class="p">}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقدار 
+    amount
+    را به عنوان یک مقدار اعشاری 
+    (f)
+    ، تراز شده از سمت راست 
+    ($>$)
+    و به اندازه ۱۰ کاراکتر به همراه نقطه اعشار و ۲ رقم بعد از نقطه اعشار 
+    ($.2$)
+    فرمت می‌کند. فرمت کردن مقادیر 
+    amount
+    با این روش نقاط اعشاری به‌طور عمودی تراز می‌شوند و این روش در محاسبات پولی معمول است. در فضای ۱۰ کاراکتری که به متغیر 
+    amount
+    اختصاص یافته، سه فضای سمت راست برای نقطه اعشار و دو رقم سمت راست اعشار است. ۷ فضای باقیمانده برای ارقام سمت چپ و فضای خالی اختصاص یافته است. در این مثال تمامی مقادیر 
+    amount
+    دارای ۴ رقم در سمت چپ نقطه اعشار هستند و به همین دلیل هر عدد با سه فضای خالی در ابتدا فرمت می‌شود. شکل ذیل نحوه فرمت شدن مقدار ۱۰۵۰٫۰۰ را نشان می‌دهد.
+</div><p><img alt="Screenshot%20%2837%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2837%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.12 <span style="color:#F50057;">دستورات break و  continue</span></h1> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستورات 
+    break
+    و 
+    continue
+    جریان کنترل یک حلقه را تغییر می‌دهند. اجرای دستور 
+    break
+    در حلقه 
+    while
+    و یا 
+    for
+    موجب خروج فوری از حلقه تکرار می‌شود. در کد زیر، تابع 
+    range
+    دنباله‌ای از اعداد صحیح در محدوده ۰ تا ۹۹ تولید می‌کند، اما وقتی مقدار 
+    number
+    برابر ۱۰ شود، حلقه خاتمه می‌یابد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این اسکریپت، اجرای کدها با اولین دستور بعد از حلقه 
+    for
+    ادامه می‌یابد. دستورات 
+    while
+    و 
+    for
+    یک قسمت اختیاری 
+    else
+    هم دارند و فقط در صورت خاتمه حلقه به طور معمول اجرا می‌شود؛ یعنی اگر حلقه با دستور 
+     break
+    خاتمه یابد، قسمت 
+    else
+    اجرا نمی‌شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجرای یک دستور 
+     continue
+    در یک حلقه 
+    while
+    و یا 
+    for
+    موجب می‌شود از اجرای دستورات بعدی در حلقه صرف نظر شود. در حلقه 
+    while
+    شرط تکرار مورد آزمایش قرار می‌گیرد تا مشخص شود آیا حلقه باید ادامه یابد یا خیر. در حلقه 
+    for
+    داده بعدی در دنباله پردازش می‌شود (در صورت وجود):
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 6 7 8 9 
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.13 <span style="color:#F50057;">عملگرهای منطقی and، or و  not</span></h1> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عملگرهای شرطی 
+    $>$, 
+    $<$, $>=$, $<=$, $==$ و $!=$
+    می‌توان شرط‌های ساده‌ای مانند 
+    grade >= 60
+    ایجاد کرد. برای ایجاد شرایط پیچیده‌تر که در حقیقت از تلفیق شرایط ساده به دست می‌آیند از عملگرهای منطقی 
+    and، or و  not
+    استفاده کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عملگر منطقی and</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای اطمینان از درست بودن دو شرط، قبل از اجرای دستورات کنترل و برای تلفیق شرط‌ها از عملگر منطقی 
+    and
+    استفاده کنید. کد زیر دو متغیر را تعریف می‌کند، سپس درستی یک شرط ترکیبی را آزمایش می‌کند. این شرط در صورتی درست است که اگر و تنها اگر هر دو شرط ساده آن درست باشند، اگر فقط یکی از شرط‌های ساده نادرست باشد، کل دستور 
+    and
+    نادرست تلقی می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender</span> <span class="o">=</span> <span class="s1">&#39;Female&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">70</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Senior female&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Senior female
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور if دو شرط ساده دارد:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>شرط gender == 'Female' مونث بودن یک شخص را تعیین می‌کند.<br>
+    <span style="color:#8e24aa;">• </span>شرط age >= 65 تعیین می‌کند که آیا آن شخص یک شهروند سالخورده است یا خیر.<br>
+</div>    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شرط ساده در سمت چپ عملگر 
+    and
+    ابتدا ارزیابی می‌شود، چرا که عملگر 
+    $ == $
+    نسبت به عملگر 
+    and
+    اولویت بالاتری دارد. در مرحله بعد و در صورت لزوم، شرط ساده سمت راست عملگر 
+    and
+    ارزیابی می‌شود، به دلیل آنکه عملگر 
+    $ >= $
+    دارای اولویت بیشتری نسبت به عملگر 
+    and
+    است. (به زودی توضیح خواهیم داد که چرا سمت راست یک عملگر 
+    and
+    فقط در صورت درستی شرط سمت چپ ارزیابی می‌شود.) کل شرط 
+    if
+    زمانی درست است که اگر و تنها اگر هر دو شرط ساده درست باشند. با افزودن پرانتز اضافی می‌توان شرایط ترکیبی را واضح‌تر نشان داد.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول زیر عملگر and را با نشان دادن هر چهار ترکیب ممکن از مقادیر False و True برای expression1 و expression2 خلاصه می‌کند—این جداول را 'truth table' می‌نامند:
+</div><p><img alt="Screenshot%20%2838%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2838%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عملگر منطقی or</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از عملگر منطقی 
+    or
+    برای بررسی درست بودن یکی از دو شرط و یا هر دو شرط استفاده کنید. کد زیر نشان می‌دهد اگر حداقل یکی از دو شرط ساده در دو طرف عملگر 
+    or
+    درست باشند، کل شرط درست ارزیابی می‌شود و فقط زمانی که هر دو شرط نادرست باشند، کل شرط نادرست خواهد بود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">semester_average</span> <span class="o">=</span> <span class="mi">83</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_exam</span> <span class="o">=</span> <span class="mi">95</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">semester_average</span> <span class="o">&gt;=</span> <span class="mi">90</span> <span class="ow">or</span> <span class="n">final_exam</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student gets an A&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Student gets an A
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [۶] از دو شرط ساده ذیل تشکیل شده است:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>شرط 
+    semester_average >= 90
+    مشخص می‌کند که آیا متوسط نمره دانشجو در طول ترم بیشتر از ۹۰ یعنی نمره 
+    A
+    هست و یا خیر.<br>
+    <span style="color:#8e24aa;">• </span>شرط 
+    final_exam >= 90
+    مشخص می‌کند که آیا نمره پایان‌ترم دانشجو 
+     A
+    می‌باشد و یا خیر.<br>
+</div> 
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول ذیل چهار حالت ممکن عملگر 
+    or
+    را نشان می‌دهد .عملگر 
+    and
+    از عملگر 
+    or
+    اولویت بیشتری دارد.
+</div><p><img alt="Screenshot%20%2839%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2839%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بهبود عملکرد با Short-Circuit Evaluation</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر زبان پایتون هنگام ارزیابی یک دستور 
+    and
+    بداند که کل دستور نادرست است، ارزیابی را متوقف می‌کند. به همین نحوه، اگر پایتون هنگام ارزیابی یک دستور 
+    or
+    بداند که کل دستور درست است، ارزیابی را متوقف می‌کند. به این روش، 
+    Short-Circuit Evaluation
+    گفته می‌شود.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">65</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر در دستور بالا مقدار 
+    gender
+    برابر 
+    'Female'
+    نباشد، کل دستور نادرست بوده و ارزیابی آن متوقف می‌شود. اگر مقدار 
+    gender
+    برابر 
+    'Female'
+    باشد، ارزیابی ادامه خواهد داشت، به دلیل آنکه دستور زمانی برقرار خواهد بود که 
+    age
+    بیشتر یا مساوی ۶۵ باشد.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">semester_average</span> <span class="o">&gt;=</span> <span class="mi">90</span> <span class="ow">or</span> <span class="n">final_exam</span> <span class="o">&gt;=</span> <span class="mi">90</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به همین نحو در کد بالا اگر مقدار 
+    semester_average
+    بیش‌تر و یا مساوی ۹۰ باشد، ارزیابی کل عبارت متوقف می‌شود، چرا که کل شرط درست است. اگر 
+    semester_average
+    کوچکتر از ۹۰ باشد، ارزیابی ادامه خواهد داشت، به دلیل آنکه درستی کل شرط منوط به بزرگ‌تر و یا مساوی بودن 
+    final_exam
+    از ۹۰ خواهد بود.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگام استفاده از دستور 
+    and
+    ، شرطی که احتمال نادرستی بیشتری دارد را در سمت چپ عملگر 
+    and
+    قرار دهید. در دستور 
+    or
+    شرطی که احتمال درستی بیشتری دارد را در سمت چپ عملگر 
+    or
+    قرار دهید. این تکنیک‌ها می‌توانند زمان اجرای برنامه را کاهش دهند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عملگر منطقی not</h2><a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر 
+    not
+    معنای یک شرط را برعکس می‌کند، اگر شرطی درست باشد، نادرست و اگر شرطی نادرست باشد، درست می‌شود. از آن‌جایی که این عملگر فقط یک عملوند دارد، یک عملگر تک عملوندی نامیده می‌شود. برای انتخاب یک مسیر اجرا برای یک شرط نادرست، مطابق کد ذیل قبل از آن شرط عملگر 
+    not
+    قرار دهید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="mi">87</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">grade</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The next grade is&#39;</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The next grade is 87
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">غالباً، می‌توانید با یک دستور شرطی متعارف‌تر و راحت‌تر، از دستور 
+    not
+    استفاده نکنید. به عنوان مثال، دستور 
+    if
+    قبلی را می‌توان به فرم زیر نوشت:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">grade</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The next grade is&#39;</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The next grade is 87
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول ذیل دو حالت ممکن عملگر 
+    not
+    را نشان می‌دهد:
+</div><p><img alt="Screenshot%20%2841%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2841%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول ذیل اولویت عملگرهای بررسی شده تا این فصل را نشان می‌دهد. عملگرهای بالای جدول اولویت بالاتر و عملگرهای پایین جدول اولویت کمتری دارند:
+</div><p><img alt="Screenshot%20%2842%29.png" src="Chapters/03 - Control-Statements/attachment:Screenshot%20%2842%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.14 <span style="color:#F50057;">مقدمه‌ای بر علم داده: سنجش شاخص مرکزی - میانه، مد و میانگین</span></h1> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت با استفاده از چند تابع آمار توصیفی جدید، بحث استفاده از آمار توصیفی برای تجزیه و تحلیل داده‌ها را ادامه می‌دهیم:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>mean:</b> یعنی میانگین مجموعه‌ای از مقادیر.<br>
+    <span style="color:#8e24aa;">• </span><b>median:</b> مقدار میانه زمانی که همه مقادیر مرتب باشند.<br>
+    <span style="color:#8e24aa;">• </span><b>mode:</b> مقداری که بیشترین فراوانی را داشته باشد.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این توابع شاخص‌های مرکزی را توصیف می‌کنند. این توابع، داده‌های تک مقداری را برای نشان دادن یک مقدار مرکزی در مجموعه‌ای از داده‌ها تولید می‌کنند. به عنوان مثال، داده‌ای که به نوعی نمونه‌ای از داده‌های دیگر است.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجازه دهید میانگین، میانه و مد لیستی از اعداد صحیح را محاسبه کنیم. کد ذیل لیستی به نام 
+    grades
+    ایجاد می‌کند، سپس از توابع درونی 
+    sum
+    و 
+    len
+    برای محاسبه میانگین به صورت دستی استفاده می‌کند. تابع 
+    sum
+    مجموع کل نمرات 
+    (۳۹۷)
+    را محاسبه می‌کند و تابع 
+    len
+    تعداد نمرات 
+    (۵)
+    را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">85</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.4
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل قبلی اشاره کردیم که دو تابع 
+    count
+    و 
+    sum
+    در آمار توصیفی به صورت دو تابع درونی با نام‌های 
+    len
+    و 
+    sum
+    در پایتون پیاده‌سازی شده‌اند. دو تابع اخیر همانند توابع 
+    min
+    و 
+    max
+    مثال‌هایی از برنامه نویسی تابعی و کاهشی هستند. این توابع مجموعه‌ای از مقادیر را به یک مقدار نگاشت می‌کنند، برای مثال دو تابع 
+    sum
+    و 
+    len
+    به ترتیب جمع و تعداد داده‌ها در یک مجموعه مقادیر را برمی‌گردانند. در مثال میانگین نمرات کلاس در 
+    <a href="#11">قسمت 3.8</a>
+    ،
+    می‌توانیم خطوط ۱۰ تا ۱۵ را حذف کنیم و در خط ۱۶ اسنیپت [2] را با تابع 
+    average
+    جایگزین کنیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول 
+    statistics
+    در کتابخانه استاندارد پایتون، توابعی برای محاسبه میانگین، مد و میانه ارائه می‌دهد. تمام این توابع از نوع کاهش‌دهنده هستند. برای استفاده از این قابلیت‌ها باید ماژول 
+    statistics
+    را در برنامه خودتان 
+    import
+    کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سپس با قرار دادن کلمه 
+     .statistics
+    قبل از نام توابع می‌توانید از آنها استفاده کنید. کد ذیل با استفاده از توابع 
+    mean
+    ، 
+    median
+    و 
+    mode
+    در ماژول 
+    statistics
+    مقادیر میانگین، میانه و مد لیست 
+    grades
+    را محاسبه می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>85
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>85
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">آرگومان هر تابع باید از نوع 
+    iterable
+    باشد. در این مثال، لیست 
+    grades
+    چنین خاصیتی دارد. برای اطمینان از درست بودن میانه و مد، با استفاده از تابع درونی 
+    sorted 
+    یک کپی از لیست 
+    grades
+    که به طور صعودی مرتب شده است، تهیه کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[45, 85, 85, 89, 93]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تعداد عناصر لیست 
+    grades
+    یک عدد فرد 
+    (۵)
+    است و به همین دلیل تابع 
+    median
+    مقدار میانی 
+    (۸۵)
+    را برمی‌گرداند. اگر تعداد عناصر یک لیست عددی زوج باشد، تابع 
+    median
+    میانگین دو مقدار وسطی را برمی‌گرداند. با بررسی لیست مرتب شده می‌بینید که مد برابر ۸۵ است؛ چرا که بیشترین فراوانی (در اینجا ۲) را دارد. استفاده از تابع 
+    mode
+    در لیست ذیل یک خطای 
+    StatisticsError
+    تولید می‌کند:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">93</span><span class="p">]</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این خطا به این دلیل رخ می‌دهد که بیش از دو و یا چند داده فراوانی‌های برابر دارند. به چنین مجموعه‌ای از داده‌ها 
+    bimodal
+    می‌گویند. در این لیست ۸۵ و ۹۳ دو بار تکرار شده‌اند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">3.15 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، دستورات کنترلی پایتون نظیر 
+    if, if…else, if…elif…else, while, for, break و continue
+    را مورد بحث قرار دادیم. مشاهده کردید که دستور 
+    for
+    یک حلقه تکرار را روی دنباله‌ای از داده‌ها انجام می‌دهد. دستور 
+    for
+    روی داده‌های 
+    iterable
+    نظیر محدوده‌ای (رنجی) از اعداد صحیح، یک رشته و یا یک لیست عمل می‌کند. از تابع درونی 
+    range
+    برای ایجاد دنباله‌ای از اعداد صحیح از صفر تا یک واحد کمتر از آرگومان آن استفاده کردید. برای تعیین تعداد تکرار دستور 
+    for
+    از این تابع استفاده کردید.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از دستور 
+    while
+    یک حلقه کنترل شده با مقدار خاص ایجاد کردید، اجرای حلقه تا زمان وارد کردن مقدار خاص ادامه می‌یابد. از تابع درونی 
+    range
+    با دو آرگومان برای ایجاد دنباله‌ای از اعداد صحیح استفاده کردید. دنباله حاصل از آرگومان اول تا یک واحد کمتر از آرگومان دوم تشکیل می‌شود. در نسخه سه آرگومان تابع 
+    range
+    ، عدد بعدی با جمع عدد قبلی و آرگومان سوم که گام نامیده می‌شود، به دست می‌آید.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع داده 
+    Decimal
+    را بررسی کردیم، این داده برای محاسبات مالی دقیق به کار می‌رود و برای محاسبه سود مرکب از آن استفاده کردید. از 
+    f-string
+    ها و سایر مشخص کننده‌ها برای تولید خروجی فرمت شده استفاده کردید. دستورات کنترلی 
+    break
+    و 
+    continue
+    را معرفی کردیم، این دو دستور روند اجرای حلقه را تغییر می‌دهند. برای ترکیب شرط‌های ساده عملگرهای منطقی 
+     and، 
+    or 
+    و 
+    not
+    را معرفی کردیم.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در انتها با معرفی معیارهای سنجش مرکزی نظیر میانه،  مد و میانگین بحث خود را در مورد آمار توصیفی ادامه دادیم. با استفاده از توابع موجود در ماژول 
+    statistics
+    این سه مقدار را محاسبه کردیم.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش بعد، توابع خودتان را ایجاد خواهید کرد و توابع موجود در ماژول‌های 
+    math
+    و 
+    random
+    در پایتون استفاده خواهید کرد. چندین برنامه نویسی کاهشی از پیش تعریف شده را نشان می‌دهیم و با دیگر قابلیت‌های برنامه نویسی تابعی آشنا خواهید شد.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/03 - Control-Statements"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../02%20-%20Introduction-to-Python-Programming/Chapter2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../04%20-%20Functions/Chapter4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

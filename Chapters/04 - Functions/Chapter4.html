@@ -1,0 +1,3018 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/04 - Functions/Chapter4';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../05%20-%20Sequences-%28Lists-and-Tuples%29/Chapter5.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../03%20-%20Control-Statements/Chapter3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/04 - Functions/Chapter4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/04 - Functions/Chapter4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۴: توابع</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>خلق توابع شخصی سازی شده<br>
+    <span style="color:#F50057;">■ </span>ماژول‌های توابع استاندارد پایتون مانند 
+    فلان
+    و 
+    فلان
+    را 
+    فلان
+    کرده و از آنها استفاده کنید. با استفاده مجدد از کد، از کدنویسی دوباره اجتناب خواهید کرد. 
+    ”.Reinventing the
+wheel“
+    <br>
+    <span style="color:#F50057;">■ </span>انتقال داده‌ها را میان توابع خواهید دید.<br>
+    <span style="color:#F50057;">■ </span>رنجی از اعداد صحیح را به صورت تصادفی ایجاد خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>خواهید دید که چگونه تکنیک‌های شبیه‌سازی از تولید اعداد تصادفی استفاده می‌کنند.<br>
+    <span style="color:#F50057;">■ </span>برای اطمینان از یکسان بودن اعداد تصادفی تولید شده، مولد اعداد تصادفی را مقدار دهی خواهید کرد.<br> 
+    <span style="color:#F50057;">■ </span>داده‌ها را در یک 
+    tuple
+    فشرده کرده و دوباره آن را از حالت فشرده خارج خواهید کرد.<br> 
+    <span style="color:#F50057;">■ </span>با استفاده از 
+    tuple
+   ، چندین مقدار را از یک تابع برمی‌گردانید.<br>
+    <span style="color:#F50057;">■ </span>درک خواهید کرد که چگونه محدوده یک شناسه تعیین می‌کند در کجای برنامه می‌توانید از آن استفاده کنید.<br> 
+    <span style="color:#F50057;">■ </span>توابعی با مقادیر پارامتر پیش فرض ایجاد خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>توابع را با آرگومان‌های کلیدی فراخوانی خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>توابعی ایجاد می‌کنید که بتوانند هر تعداد آرگومان دریافت کنند.<br>
+    <span style="color:#F50057;">■ </span>از متدهای یک شیء استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>توابع بازگشتی را تعریف کرده و از آن‌ها استفاده می‌کنید.<br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="4">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">توابع</span></a></p>
+<ul class="simple">
+<li><p>4.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>4.2 <a class="reference internal" href="#3"><span class="xref myst">تعریف توابع</span></a></p></li>
+<li><p>4.3 <a class="reference internal" href="#4"><span class="xref myst">توابع با چندین پارامتر</span></a></p></li>
+<li><p>4.4 <a class="reference internal" href="#5"><span class="xref myst">مولد اعداد تصادفی</span></a></p></li>
+<li><p>4.5 <a class="reference internal" href="#6"><span class="xref myst">مورد مطالعاتی: یک بازی شانسی</span></a></p></li>
+<li><p>4.6 <a class="reference internal" href="#7"><span class="xref myst">کتابخانه استاندارد پایتون</span></a></p></li>
+<li><p>4.7 <a class="reference internal" href="#8"><span class="xref myst">توابع ماژول math</span></a></p></li>
+<li><p>4.8 <a class="reference internal" href="#9"><span class="xref myst"> استفاده از Tab برای تکمیل کد در IPython </span></a></p></li>
+<li><p>4.9 <a class="reference internal" href="#10"><span class="xref myst">مقادیر پیش‌فرض آرگومان‌ها</span></a></p></li>
+<li><p>4.10 <a class="reference internal" href="#11"><span class="xref myst">آرگومان‌های کلیدی</span></a></p></li>
+<li><p>4.11 <a class="reference internal" href="#12"><span class="xref myst">لیستی دلخواه از آرگومان‌ها</span></a></p></li>
+<li><p>4.12 <a class="reference internal" href="#13"><span class="xref myst">متدها: توابعی که به اشیاء تعلق دارند</span></a></p></li>
+<li><p>4.13 <a class="reference internal" href="#14"><span class="xref myst">قوانین حوزه</span></a></p></li>
+<li><p>4.14 <a class="reference internal" href="#15"><span class="xref myst">نگاهی عمیق‌تر به import</span></a></p></li>
+<li><p>4.15 <a class="reference internal" href="#16"><span class="xref myst">ارسال آرگومان‌ها به توابع: نگاهی عمیق‌تر</span></a></p></li>
+<li><p>4.16 <a class="reference internal" href="#17"><span class="xref myst">Recursion</span></a></p></li>
+<li><p>4.17 <a class="reference internal" href="#18"><span class="xref myst">برنامه‌نویسی به سبک تابعی</span></a></p></li>
+<li><p>4.18 <a class="reference internal" href="#19"><span class="xref myst">مقدمه‌ای بر علم داده: سنجش پراکندگی</span></a></p></li>
+<li><p>4.19 <a class="reference internal" href="#20"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل مبانی پایتون را با توابع سفارشی و موضوعات مرتبط ادامه می‌دهیم. برای تولید اعداد تصادفی و شبیه سازی یک تاس شش وجهی از ماژول 
+     random
+    در کتابخانه استاندارد پایتون استفاده خواهیم کرد. برای پیاده سازی پرتاب تاس، مولد تولید اعداد تصادفی و توابع سفارشی را در یک اسکریپت ترکیب خواهیم کرد. در این مثال، نوع داده 
+    tuple
+    را معرفی خواهیم کرد و برای بازگرداندن بیش از یک مقدار از یک تابع از 
+    tuple
+    استفاده می‌کنیم. برای اطمینان از تولید نتایج یکسان در مورد مقداردهی کردن مولد اعداد تصادفی بحث خواهیم کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول 
+    math
+    از کتابخانه استاندارد پایتون را در برنامه خود 
+    import
+    خواهید کرد، در ادامه از قابلیت تکمیل کد به وسیله کلید 
+    tab
+    استفاده خواهید کرد، این قابلیت موجب افزایش سرعت کدنویسی و کسب اطلاعات در مورد کلمه تایپ شده می‌گردد. توابع با مقادیر پیش فرض پارامتر را تعریف می‌کنید، توابع را با آرگومان‌های کلیدی فراخوانی می‌کنید و توابع را با لیست‌های دلخواه از پارامترهای ورودی تعریف می‌نمایید. روش‌های فراخوانی متد اشیاء را نشان خواهیم داد. همچنین شرح خواهیم داد که چگونه حوزه یک شناسه مشخص می‌کند در کجای برنامه می‌توان از آن استفاده کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نحوه 
+    import
+    کردن ماژول‌ها را عمیق‌تر بررسی خواهیم کرد. با نحوه ارسال مقادیر به پارامترهای تابع با ارجاع آشنا می‌شوید. همچنین یک تابع بازگشتی را نشان می‌دهیم و نمایش قابلیت‌های برنامه نویسی به سبک تابعی پایتون را آغاز می‌کنیم.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش مقدمه‌ای بر علم داده بحثمان را در مورد آمار توصیفی با معرفی معیارهای پراکندگی نظیر واریانس و انحراف معیار ادامه خواهیم داد و با استفاده از توابع موجود در ماژول 
+    statistics
+    از کتابخانه استاندارد پایتون این مقادیر را محاسبه خواهیم کرد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.2 <span style="color:#F50057;">تعریف توابع</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تاکنون از توابع از پیش تعریف شده زیادی استفاده کرده‌اید. توابعی نظیر 
+    (int, float, print, input, type, sum, len, min و max)
+    و توابع 
+    (mean, median و mode)
+    در آمار توصیفی، توابعی از این دست محسوب می‌شوند. هر یک از آنها یک وظیفه واحد و کاملاً مشخصی را انجام می‌دادند. شما اغلب توابع سفارشی را تعریف و فراخوانی می‌کنید. کدهای ذیل یک تابع به نام 
+    square
+    را تعریف می‌کند، این تابع مربع آرگومان ورودی را محاسبه می‌کند. این تابع دوبار فراخوانی می‌شود، در بار اول با آرگومان عدد صحیح ۷ فراخوانی می‌شود و عدد صحیح ۴۹ را تولید می‌کند، در بار دوم با عدد اعشاری ۲.۵ فراخوانی می‌شود و عدد اعشاری ۶.۲۵ را تولید می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the square of number.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.25
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستورهای تعریف تابع در اسنیپت [۱] فقط یک بار نوشته می‌شوند، اما ممکن است در بسیاری از نقاط و به دفعات دلخواه شما برای انجام وظیفه فراخوانی شوند. فراخوانی تابع 
+    square
+    با یک آرگومان غیرعددی مانند 
+    'hello'
+    باعث بروز خطای 
+     TypeError
+    می‌شود، به دلیل آنکه عملگر توان 
+     (**)
+    فقط با مقادیر عددی کار می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعریف یک تابع سفارشی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تعریف تابع مانند 
+    فلان
+    در اسنیپت [۱] با کلمه کلیدی 
+    فلان
+    شروع می‌شود و به دنبال آن نام تابع 
+    فلان
+    ، مجموعه‌ای از پرانتزها و یک کاراکتر 
+    فلان
+    قرار می‌گیرد. مطابق قاعده نامگذاری متعارف برای نامگذاری توابع همانند شناسه‌های متغیر رفتار می‌شود، به بیان دیگر نام توابع باید با یک حرف کوچک شروع شود و در نام‌هایی که از چند کلمه تشکیل شده‌اند، باید هر کلمه را با کاراکتر 
+    underscore
+    جدا کرد. 
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">لیست پارامترها که داخل دو پرانتز قرار دارند، در حقیقت داده‌هایی هستند که با کاما جدا شده‌اند و تابع برای انجام وظیفه خود به آنها نیاز دارد. تابع 
+    square
+    فقط یک پارامتر به نام 
+    number
+    دارد و مقداری است که باید مربع آن محاسبه شود. اگر پرانتز خالی باشد، تابع برای انجام وظیفه خود از هیچ پارامتری استفاده نمی‌کند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فرورفتگی بعد از کاراکتر 
+    (:)
+    بدنه تابع محسوب می‌شود، این بخش از یک 
+    docstring
+    اختیاری و به دنبال آن دستوراتی که وظیفه تابع را انجام می‌دهند، تشکیل شده است. به زودی به تفاوت بین بدنه یک تابع و 
+    suite
+    دستورات کنترل اشاره خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تخصیص Docstring برای یک تابع سفارشی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مطابق راهنمایی سبک کدنویسی پایتون، اولین خط در یک بلوک تابع باید یک 
+    docstring
+    باشد و این قسمت به طور خلاصه هدف تابع را توضیح می‌دهد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Calculate the square of number.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای ارائه جزئیات بیشتر، می‌توان از یک 
+    docstring
+    چند خطی استفاده کنید، راهنمای سبک کد نویسی پایتون توصیه می‌کند که ابتدا با یک توضیح مختصر، سپس یک خط خالی و در ادامه با جزئیات بیش‌تر شروع کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بازگرداندن یک نتیجه در فراخوانی یک تابع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی یک تابع اجرا را تمام می‌کند، کنترل را به فراخواننده خود برمی‌گرداند، فراخواننده در حقیقت دستوری است که تابع را فراخوانی می‌کند. در بلوک 
+    square
+    ، دستور 
+    return
+    :
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ابتدا مربع 
+    number
+    را محاسبه می‌کند، سپس تابع را خاتمه می‌دهد و در نهایت نتیجه را به فراخواننده برمی‌گرداند. در این مثال اولین فراخواننده در اسنیپت [۲] است، بنابراین 
+    IPython
+    نتیجه را در 
+     Out[2]
+    نشان می‌دهد. فراخواننده دوم در اسنیپت [۳] است، بنابراین 
+    IPython
+    نتیجه را در 
+    Out[3]
+    نمایش می‌دهد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی تابع را می‌توان در دستورات گنجاند. کد زیر ابتدا تابع 
+     square
+    را فراخوانی می‌کند و سپس نتایج آن را با تابع 
+    print
+    نمایش می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The square of 7 is&#39;</span><span class="p">,</span> <span class="n">square</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The square of 7 is 49
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای برگرداندن کنترل از یک تابع به فراخواننده آن دو روش دیگر وجود دارد:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اجرای یک دستور 
+    return
+    بدون هیچ مقدار، این روش تابع را خاتمه می‌دهد و به طور ضمنی مقدار 
+    None
+    را به فراخوان باز می‌گرداند. در مستندات پایتون قید شده است که 
+    None
+    فقدان یک مقدار را نشان می‌دهد. مقدار 
+    None
+    در دستورات شرطی 
+    False
+    ارزیابی می‌شود.<br>
+    <span style="color:#8e24aa;">• </span>وقتی در یک تابع هیچ دستور 
+    return
+    وجود نداشته باشد، پس از اجرای آخرین دستور در بلوک تابع، به طور ضمنی مقدار 
+    None
+    بازگردانده می‌شود.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متغیرهای محلی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تاکنون متغیرها را در بدنه تابع 
+    square
+    تعریف نکردیم، اما این کار ممکن است. پارامترهای تابع و متغیرهای تعریف شده در بلوک تابع، همگی متغیرهای محلی هستند، این متغیرها فقط می‌توانند در داخل تابع مورد استفاده قرار گیرند و تا زمانی که تابع اجرا می‌شود، وجود دارند. تلاش برای دسترسی به یک متغیر محلی خارج از بلوک تابع باعث بروز خطای 
+     NameError
+    می‌شود و معرف آن است که متغیر تعریف نشده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دسترسی به Docstring یک تابع با استفاده از راهنمای IPython</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    IPython
+    می‌تواند به شما کمک کند تا در مورد ماژول‌ها و توابعی که قصد استفاده در کد خودتان را دارید و همچنین خود 
+    IPython
+    مطالبی را بیاموزید. به عنوان مثال، برای مشاهده 
+    docstring
+    یک تابع و یادگیری نحوه استفاده از این تابع، نام تابع را به همراه یک علامت سوال 
+    (?)
+    تایپ کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>square<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">انجام این کار برای تابع 
+    square
+    موارد ذیل را نشان می‌دهد:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>نام تابع و فهرست پارامترها که به عنوان امضای تابع شناخته می‌شود.<br>
+    <span style="color:#8e24aa;">• </span>docstring تابع.<br>
+    <span style="color:#8e24aa;">• </span>نام فایلی که تعریف تابع در آن ذخیره شده است. برای توابعی که در مدل محاوره‌ای تعریف شده‌اند، این خط، اطلاعاتی در مورد اسنیپتی که تعریف توابع در آن انجام گرفته را نشان می‌دهد. برای مثال عدد ۱ در خروجی ذیل
+    : 
+    <br>
+    "ipython-input-1-7268c8ff93a9"   
+     معرف آن است که تابع در اسنیپت [۱] تعریف شده است.<br>
+    <span style="color:#8e24aa;">• </span>نوع آیتمی که شما با کمک مکانیزم راهنمای 
+    IPython
+    به آن دست پیدا کردید. برای مثال در این حالت یک تابع مورد بررسی قرار گرفته است.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد منبع تابعی که در 
+    session
+    جاری تعریف شده  یا فایل‌هایی با پسوند 
+    py.
+    در 
+    session
+    جاری 
+    import
+    شده‌اند، از طریق 
+    IPython
+    قابل دسترسی هستند، با تایپ دو علامت سوال 
+    ??
+    می‌توانید کد منبع تابع را به طور کامل ببینید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>square<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر کد منبع از 
+    IPython
+    قابل دسترسی نباشد، 
+    ??
+    به سادگی 
+    docstring
+    مربوطه را نشان می‌دهد.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر محتویات 
+    docstring
+    در یک پنجره جا شود، 
+    IPython
+    اعلان 
+     [] In
+    را برای ورودی بعدی نشان می‌دهد، اما اگر محتویات 
+    docstring
+    طولانی باشد، 
+    IPython
+    علامت 
+    (:)
+    را در انتهای صفحه نشان می‌دهد و معرف آن است که اطلاعات بیشتری برای نمایش وجود دارد و با زدن کلید 
+    Space
+    صفحه بعدی نشان داده می‌شود. برای جابجایی صفحات 
+    docstring
+    می‌توانید از کلیدهای جهت‌دار بالا و پایین استفاده کنید. 
+    IPython
+    در انتهای 
+    docstring
+    کلمه 
+     (END)
+    را نشان می‌دهد. برای ورود به اعلان 
+    [] In
+    در اعلان 
+    (:)
+    و یا اعلان 
+     (END)
+    کاراکتر 
+    q
+    مخفف 
+    quit
+    را تایپ کنید. برای آشنایی بیشتر با قابلیت‌های 
+    IPython
+    و مطالعه راهنمای آن در اعلان 
+    [] In
+    کاراکتر 
+    ?
+    را تایپ کرده و 
+    Enter
+    کنید.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.3 <span style="color:#F50057;">توابع با چندین پارامتر</span></h1> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت یک تابع به نام 
+    maximum
+    تعریف می‌کنیم. این تابع بزرگترین مقدار را از میان سه مقدار تعیین کرده و آن را باز می‌گرداند، در ادامه این تابع را با اعداد صحیح، اعداد اعشاری و رشته‌ها سه بار فراخوانی می‌کنیم.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">maximum</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">value3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the maximum of three values.&quot;&quot;&quot;</span>
+    <span class="n">max_value</span> <span class="o">=</span> <span class="n">value1</span>
+    <span class="k">if</span> <span class="n">value2</span> <span class="o">&gt;</span> <span class="n">max_value</span><span class="p">:</span>
+        <span class="n">max_value</span> <span class="o">=</span> <span class="n">value2</span>
+    <span class="k">if</span> <span class="n">value3</span> <span class="o">&gt;</span> <span class="n">max_value</span><span class="p">:</span>
+        <span class="n">max_value</span> <span class="o">=</span> <span class="n">value3</span>
+    <span class="k">return</span> <span class="n">max_value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>36
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">(</span><span class="mf">12.3</span><span class="p">,</span> <span class="mf">45.6</span><span class="p">,</span> <span class="mf">9.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45.6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;yellow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بالا و پایین دستورات 
+    if
+    خطوط خالی قرار ندادیم، زیرا 
+    Enter
+    کردن در حالت تعاملی برای ایجاد یک خط خالی، به منزله اتمام تعریف تابع قلمداد می‌شود. همچنین ممکن است تابع 
+    maximum
+    را با انواع مختلف مانند 
+    int
+    و 
+    float
+    فراخوانی کنید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">(</span><span class="mf">13.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.5
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی تابع به صورت 
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">maximum</span><span class="p">(</span><span class="mf">13.5</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">منجر به خطای 
+    TypeError
+    می‌شود، چرا که با عملگر بزرگتر 
+    $(>)$
+    نمی‌توان یک رشته را با یک مقدار عددی مقایسه کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعریف تابع maximum</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    maximum
+    بیشترین مقدار در میان سه پارامتر واقع در لیستی که مقادیر آن با کاما از هم جدا شده‌اند را مشخص می‌کند. اسنیپت [۲] آرگومان‌های ۱۲، ۲۷ و ۳۶ را به ترتیب به پارامترهای 
+    value1, value2 و value3
+    اختصاص می‌دهد. برای تعیین بیشترین مقدار، در هر لحظه یک مقدار را پردازش می‌کنیم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در ابتدا فرض می‌کنیم که 
+    value1
+    دارای بیش‌ترین مقدار است، بنابراین مقدار آن را به مقدار متغیر محلی 
+    max_value
+    تخصیص می‌دهیم. البته ممکن است که 
+    value2
+    و یا 
+    value3
+    بیش‌ترین مقدار واقعی را داشته باشند، بنابراین ما باید هر کدام از آنها را با مقدار 
+    max_value
+    مقایسه کنیم.<br>
+    <span style="color:#8e24aa;">• </span>اولین دستور 
+    if
+    شرط 
+    value2 > max_value
+    را آزمایش می‌کند و اگر این شرط برقرار باشد مقدار 
+    value2
+    را به 
+    max_value
+    اختصاص می‌دهد.<br>
+    <span style="color:#8e24aa;">• </span>دومین دستور 
+    if
+    شرط 
+    value3 > max_value
+    را آزمایش می‌کند و اگر این شرط برقرار باشد مقدار 
+    value3
+    را به 
+    max_value
+    اختصاص می‌دهد.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هم اکنون بیشترین مقدار در 
+    max_value
+    قرار دارد و به همین دلیل آن را برمی‌گردانیم. هنگامی که کنترل به فراخواننده برمی‌گردد، پارامترهای 
+    value1, value2 و value3
+    و متغیر 
+     max_value
+    در بلوک تابع که همگی متغیرهای محلی هستند، دیگر وجود نخواهند داشت.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعریف توابع از پیش تعریف شده 
+    max
+    و 
+    min
+    در پایتون</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قابلیت‌های مورد نیاز شما برای انجام بسیاری از کارهای معمول، در پایتون وجود دارد. به عنوان مثال، توابع ساخته شده 
+    max
+    و 
+    min
+    به ترتیب می‌دانند که چگونه بزرگ‌ترین و کوچک‌ترین مقدار میان دو یا چند آرگومان خود را تعیین کنند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;yellow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر یک از این توابع می‌توانند یک آرگومان از نوع 
+    iterable
+    مانند یک لیست یا یک رشته دریافت کنند. استفاده از توابع ساخته شده در ماژول‌های کتابخانه استاندارد پایتون به جای نوشتن کد از ابتدا، می‌تواند باعث کاهش زمان توسعه و افزایش قابلیت اطمینان، قابلیت حمل و کارایی برنامه شود . برای مشاهده لیستی از توابع و ماژول‌های ساخته شده در پایتون به آدرس ذیل مراجعه کنید:
+    <a href="https://docs.python.org/3/library/index.html">https://docs.python.org/3/library/index.html</a>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.4 <span style="color:#F50057;">مولد اعداد تصادفی</span></h1> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون ما یک نوع برنامه نویسی شبیه سازی و بازی را به طور مختصر بررسی می‌کنیم. با استفاده از ماژول 
+    random
+    در کتابخانه استاندارد پایتون می‌توانید عنصر شانس را در برنامه خود معرفی کنید. 
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پرتاب تاس شش‌وجهی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجازه دهید برای شبیه سازی پرتاب یک تاس شش‌وجهی ۱۰ عدد صحیح در محدوده ۱ تا ۶ تولید کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 5 1 4 6 1 3 2 2 3 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ابتدا ماژول 
+    random
+    را 
+    import
+    می‌کنیم تا بتوانیم از قابلیت‌های این ماژول استفاده کنیم. تابع 
+    randrange
+    یک عدد صحیح از آرگومان اول تولید می‌کند، اما مقدار آرگومان دوم را شامل نمی‌شود. با استفاده از کلید جهت‌دار بالا دستور 
+    for
+    را مجدداً فراخوانی کرده و برای اجرای مجدد آن 
+    Enter
+    کنید. دقت کنید که نتایج دو اجرا با یکدیگر تفاوت دارند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 3 5 1 6 2 4 6 6 4 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بعضی اوقات برای مثال هنگام 
+    اشکال زدایی
+    (debugging)
+    ، ممکن است بخواهید قابلیت تکرار یک توالی تصادفی را تضمین کنید. در انتهای این بخش، برای انجام این کار از تابع 
+    seed
+    ماژول 
+    random
+    استفاده می‌کنیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پرتاب یک تاس ۶۰۰۰۰۰۰ بار</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر 
+    محدوده
+    واقعاً اعداد صحیح را به صورت تصادفی تولید کند، هر عدد در محدوده خود هر بار که آن را فراخوانی می‌کنیم، احتمال (یا 
+    chance
+    یا 
+    likelihood
+    ) برابری دارد که برگردانده شود. 
+    برای نشان دادن این‌که اعداد روی وجوه تاس احتمال‌های برابر دارند، اسکریپت بعدی پرتاب تاس را شبیه‌سازی می‌کند. مطابق نمونه خروجی، هنگامی‌که اسکریپت را اجرا می‌کنید، تقریبا هر عدد روی تاس ۱۰۰۰۰۰۰ بار می‌آید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Rolling a Six-Sided Die 6,000,000 Times</span>
+
+<span class="c1"># fig04_01.py</span>
+<span class="sd">&quot;&quot;&quot;Roll a six-sided die 6,000,000 times.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># face frequency counters</span>
+<span class="n">frequency1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">frequency2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">frequency3</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">frequency4</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">frequency5</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">frequency6</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># 6,000,000 die rolls</span>
+<span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6_000_000</span><span class="p">):</span>  <span class="c1"># note underscore separators</span>
+    <span class="n">face</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+    <span class="c1"># increment appropriate face counter</span>
+    <span class="k">if</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">frequency1</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">frequency2</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">frequency3</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">frequency4</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">frequency5</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">face</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="n">frequency6</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Face</span><span class="si">{</span><span class="s2">&quot;Frequency&quot;</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">1</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency1</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">2</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency2</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">3</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency3</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">4</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency4</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">5</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency5</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">6</span><span class="si">:</span><span class="s1">&gt;4</span><span class="si">}{</span><span class="n">frequency6</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Face    Frequency
+   1       999531
+   2      1000541
+   3      1000689
+   4      1000443
+   5       998335
+   6      1000461
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot%20%2845%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2845%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این اسکریپت برای تعیین تعداد دفعات آمدن هر عدد تاس از دستورات کنترلی تودرتو ( یک دستور 
+    if…elif
+    در داخل دستور 
+    for
+    قرار گرفته است) استفاده می‌کند. دستور 
+    for
+    شش میلیون
+    بار تکرار می‌شود. برای خوانایی بهتر مقدار ۶۰۰۰۰۰۰، از کاراکتر زیرخط 
+    (_)
+    استفاده کرده‌ایم، این کاراکتر در پایتون جداکننده ارقام محسوب می‌شود. هنگام فراخوانی تابع برای جدا کردن پارامترها از کاراکتر کاما استفاده می‌شود، به‌همین دلیل فراخوانی تابع 
+    range(6,000,000)
+    صحیح نیست و پایتون تابع 
+    range
+    را با سه پارامتر ۶، ۰ و ۰ فراخوانی می‌کند.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این اسکریپت در هر پرتاب تاس یک واحد به شمارنده مربوط به آن عدد اضافه می‌کند. برنامه را اجرا کرده و نتیجه را مشاهده کنید. این برنامه برای هر بار اجرا به چند ثانیه زمان نیاز دارد. همانطور که می‌بینید در هر بار اجرا، نتایج متفاوتی تولید می‌گردد. دقت کنید که در دستور 
+    if…elif
+    از قسمت 
+    else
+    استفاده نشده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مقداردهی کردن مولد اعداد تصادفی برای تولید خروجی یکسان</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    randrange
+    بر اساس یک محاسبه داخلی که با یک مقدار عددی معروف به نام 
+    seed
+    آغاز می‌شود، اعداد شبه تصادفی تولید می‌کند. هر بار که تابع 
+    randrange
+    را فراخوانی می‌کنید،  دنباله‌ای از اعداد را تولید می‌کند که به نظر تصادفی هستند، زیرا هر بار که یک 
+    session
+    تعاملی جدیدی را شروع می‌کنید یا یک اسکریپت را اجرا می‌کنید که از توابع ماژول 
+    random
+    استفاده می‌کنند، پایتون از مقادیر مختلفی برای 
+    seed
+    استفاده می‌کند. هنگام اشکال زدایی در برنامه‌ای که از مقادیر تصادفی استفاده می‌کند، استفاده از دنباله اعداد قبلی مفید واقع می‌گردد، بعد از برطرف کردن خطای منطقی می‌توان از مقادیر جدید استفاده کرد. برای این کار می‌توانید از تابع 
+    seed
+    برای مقداردهی اولیه مولد اعداد تصادفی استفاده کنید، این تابع 
+    randrange
+    را وادار می‌کند دنباله‌ای از اعداد را براساس مقداری که شما تعیین کرده‌اید تولید کند. در 
+    session
+    ذیل، اسنیپت [۵] و [۸] نتایج یکسانی را تولید می‌کنند، زیرا اسنیپت‌های [۴] و [۷] از یک تابع 
+    seed (32)
+    یکسان استفاده می‌کنند. بر اساس مستندات پایتون، این زبان برای مقداردهی کردن 
+    seed
+    از ساعت سیستم و یا سایر منابع تصادفی وابسته به سیستم عامل استفاده می‌کند. مستندات پایتون برای کاربردهایی مانند رمزنگاری که نیازمند اعداد تصادفی امن هستند، توصیه می‌کند به جای استفاده از ماژول 
+    random
+    ، از ماژول 
+    secrets
+    استفاده کنید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 2 3 6 2 4 1 6 1 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 3 5 3 1 5 6 4 3 5 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 2 3 6 2 4 1 6 1 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [۶] مقادیر مختلفی تولید می‌کند زیرا به سادگی دنباله اعداد شبه تصادفی شروع شده در اسنیپت [۵] را ادامه می‌دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.5 <span style="color:#F50057;">مورد مطالعاتی: یک بازی شانسی</span></h1> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این بخش، بازی تاس معروف به 
+    ”craps“
+    را شبیه‌سازی می‌کنیم. به صورت مسئله و نیازمندی‌های آن توجه کنید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"><i>دو تاس شش وجهی را می‌اندازید. بر روی هر وجه هر تاس یک، دو، سه، چهار، پنج و شش نقطه حک شده است. بعد از پرتاب دو تاس مجموع دو عدد وجه بالایی محاسبه می‌شود، اگر در اولین پرتاب تاس مجموعه ۷ یا ۱۱ بیاید، برنده می‌شوید. اگر در اولین پرتاب مجموع ۲، ۳ یا ۱۲ بیاید، بازنده می‌شوید. اگر در اولین پرتاب مجموع ۴، ۵، ۶، ۸، ۹ یا ۱۰ بیاید، این عدد امتیاز شما محسوب می‌شود. برای برنده شدن باید آن‌قدر تاس‌ها را پرتاب کنید تا همین امتیاز را کسب کنید. اگر قبل از رسیدن به این امتیاز عدد ۷ بیاید، بازی را می‌بازید.
+</i></div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپت زیر، این بازی را شبیه سازی کرده و چندین نمونه اجرای آن را نشان می‌دهد، برنده شدن در پرتاب اول، باختن در پرتاب اول، برنده شدن در پرتاب‌های بعدی و باختن در پرتاب‌های بعدی.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig04_02.py</span>
+<span class="sd">&quot;&quot;&quot;Simulating the dice game Craps.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">roll_dice</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Roll two dice and return their face values as a tuple.&quot;&quot;&quot;</span>
+    <span class="n">die1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="n">die2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="p">)</span>  <span class="c1"># pack die face values into a tuple</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display_dice</span><span class="p">(</span><span class="n">dice</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display one roll of the two dice.&quot;&quot;&quot;</span>
+    <span class="n">die1</span><span class="p">,</span> <span class="n">die2</span> <span class="o">=</span> <span class="n">dice</span>  <span class="c1"># unpack the tuple into variables die1 and die2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Player rolled </span><span class="si">{</span><span class="n">die1</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">die2</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">die_values</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">()</span>  <span class="c1"># first roll</span>
+<span class="n">display_dice</span><span class="p">(</span><span class="n">die_values</span><span class="p">)</span>
+
+<span class="c1"># determine game status and point, based on first roll</span>
+<span class="n">sum_of_dice</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">die_values</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">sum_of_dice</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>  <span class="c1"># win</span>
+    <span class="n">game_status</span> <span class="o">=</span> <span class="s1">&#39;WON&#39;</span>
+<span class="k">elif</span> <span class="n">sum_of_dice</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>  <span class="c1"># lose</span>
+    <span class="n">game_status</span> <span class="o">=</span> <span class="s1">&#39;LOST&#39;</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># remember point</span>
+    <span class="n">game_status</span> <span class="o">=</span> <span class="s1">&#39;CONTINUE&#39;</span>
+    <span class="n">my_point</span> <span class="o">=</span> <span class="n">sum_of_dice</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Point is&#39;</span><span class="p">,</span> <span class="n">my_point</span><span class="p">)</span>
+
+<span class="c1"># continue rolling until player wins or loses</span>
+<span class="k">while</span> <span class="n">game_status</span> <span class="o">==</span> <span class="s1">&#39;CONTINUE&#39;</span><span class="p">:</span>
+    <span class="n">die_values</span> <span class="o">=</span> <span class="n">roll_dice</span><span class="p">()</span>
+    <span class="n">display_dice</span><span class="p">(</span><span class="n">die_values</span><span class="p">)</span>
+    <span class="n">sum_of_dice</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">die_values</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">sum_of_dice</span> <span class="o">==</span> <span class="n">my_point</span><span class="p">:</span>  <span class="c1"># win by making point</span>
+        <span class="n">game_status</span> <span class="o">=</span> <span class="s1">&#39;WON&#39;</span>
+    <span class="k">elif</span> <span class="n">sum_of_dice</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>  <span class="c1"># lose by rolling 7</span>
+        <span class="n">game_status</span> <span class="o">=</span> <span class="s1">&#39;LOST&#39;</span>
+
+<span class="c1"># display &quot;wins&quot; or &quot;loses&quot; message</span>
+<span class="k">if</span> <span class="n">game_status</span> <span class="o">==</span> <span class="s1">&#39;WON&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Player wins&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Player loses&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Player rolled 1 + 3 = 4
+Point is 4
+Player rolled 5 + 3 = 8
+Player rolled 1 + 5 = 6
+Player rolled 6 + 4 = 10
+Player rolled 3 + 5 = 8
+Player rolled 1 + 5 = 6
+Player rolled 2 + 5 = 7
+Player loses
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot%20%2846%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2846%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    roll_dice
+    چند مقدار را از طریق 
+    Tuple
+    برمی‌گرداند</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    roll_dice
+    (خطوط ۵ و ۹) پرتاب دوتاس را شبیه سازی می‌کند. این تابع یک بار تعریف شده ولی در چندین قسمت برنامه فراخوانی شده است (خطوط ۱۶ و ۳۳). لیست پارامترهای خالی نشان می‌دهد که تابع 
+    roll_dice
+    برای انجام وظیفه خود به آرگومان ورودی نیاز ندارد.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تاکنون توابع سفارشی و یا از پیش تعریف شده‌ای که فراخوانی کرده‌اید یک مقدار را باز می‌گرداندند. گاهی اوقات مانند خط ۹ در تابع 
+    roll_dice
+    ، بازگرداندن بیش از یک مقدار، مفید است. این تابع دو وجه بالایی تاس‌ها را به صورت یک 
+    tuple
+    (یک توالی تغییر ناپذیر از مقادیر)
+    برمی‌گرداند. مطابق خط ۹ برای ایجاد یک 
+    tuple
+    ، مقادیر آن را با کاما از هم جدا کنید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این کار به عنوان 
+    packing a tuple
+    شناخته می‌شود. پرانتزها اختیاری هستند، اما توصیه می‌کنیم برای افزایش خوانایی و وضوح از آنها استفاده کنید. در فصل بعدی 
+    tuple
+    را به طور عمیق‌تر توضیح خواهیم داد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    display_dice
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای استفاده از مقادیر یک 
+    tuple
+    ، می‌توانید آنها را به لیستی از متغیرهای جدا شده با کاما اختصاص دهید تا 
+    tuple
+    را از حالت فشرده خارج کند. تابع 
+    display_dice
+    برای نمایش نتیجه پرتاب تاس‌ها (در خطوط ۱۱ - ۱۴ تعریف شده و در سطرهای ۱۷ و ۳۴ فراخوانی می‌شود) آرگومان ورودی که در حقیقت یک 
+    tuple
+    است را از حالت فشرده خارج می‌کند (خط ۱۳). تعداد متغیرهای سمت چپ علامت 
+     = 
+    باید با تعداد داده‌های موجود در 
+    tuple
+    مطابقت داشته باشد؛ در غیر این صورت، یک خطای 
+    ValueError
+    اتفاق می‌افتد. خط ۱۴ یک رشته فرمت شده را چاپ می‌کند. این رشته شامل دو عدد تاس‌ها و حاصل جمع آن‌ها است. برای محاسبه مجموع اعداد تاس‌ها، اعداد را به صورت یک 
+    tuple
+    به تابع از پیش تعریف شده 
+    sum
+    ارسال کردیم. یک 
+    tuple
+    همانند لیست یک دنباله قلمداد می‌شود. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توجه داشته باشید که توابع 
+    roll_dice
+    و 
+    display_dice
+    بدنه کدهای خود را با یک 
+    docstring
+    شروع می‌کنند، این 
+    docstring
+    مشخص می‌کند که تابع مربوطه چه کاری انجام می‌دهد. هر دو تابع دارای متغیرهای محلی 
+     die1
+    و 
+     die2
+    هستند. از آنجایی که این متغیرها به بلوک‌های دو تابع مختلف تعلق دارند، با یکدیگر دچار مشکل نخواهند شد. هر متغیر محلی تنها در بلوکی که آن متغیر در آن تعریف شده است، قابل دسترسی است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">First Roll یا اولین پرتاب</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که اسکریپت شروع به اجرا می‌شود، خطوط ۱۶ - ۱۷ تاس‌ها را پرتاب کرده و نتایج را نشان می‌دهند. خط ۲۰ مجموع اعداد روی دو تاس را برای استفاده در سطرهای ۲۲ - ۲۹ محاسبه می‌کند. شما می‌توانید در اولین پرتاب یا در پرتاب‌های بعدی برنده و یا بازنده شوید. دو وضعیت بازی یعنی پیروزی / باخت در متغیر 
+    game_status
+    ذخیره می‌شود. عملگر 
+    in
+    در خط ۲۲
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_dice</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مشخص می‌کند آیا مقدار متغیر 
+    sum_of_dice
+    در 
+    tuple (7, 11)
+    قرار دارد و یا خیر. اگر شرایط برقرار باشد در پرتاب شما عدد ۷ یا ۱۱ آمده است. در این حال در اولین پرتاب تاس برنده شده‌اید و اسکریپت مقدار 
+    'WON'
+    را در متغیر 
+    game_status
+    ذخیره می‌کند. عملوند سمت راست عملگر 
+    in
+    باید از نوع 
+    iterable
+    باشد. برای بررسی عدم وجود داده در 
+    iterable
+    ها
+    از عملگر 
+    not
+    استفاده می‌شود. دستور مختصر بالا معادل کد ذیل است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">sum_of_dice</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">sum_of_dice</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و به همین نحو خط ۲۴
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_dice</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بررسی می‌کند که آیا مقدار 
+    sum_of_dice
+    در 
+    tuple (2, 3, 12)
+    قرار دارد و یا خیر. اگر چنین باشد در اولین پرتاب تاس بازنده شده‌اید و اسکریپت مقدار 
+    'LOST'
+    را در متغیر 
+    game_status
+    ذخیره می‌کند. برای سایر مقادیر جمع دو عدد طاس 
+    (۴, ۵, ۶, ۸, ۹ و یا ۱۰)
+    :
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در خط ۲۷ مقدار 
+     'CONTINUE'
+    در متغیر 
+    game_status
+    قرار می‌گیرد و شما می‌توانید به پرتاب تاس‌ها ادامه دهید.<br>
+    <span style="color:#8e24aa;">• </span>خط ۲۸ مجموعه اعداد دو تاس را در متغیر 
+     my_point
+    ذخیره می‌کند و این مقداری است که برای برنده شدن باید به دست آورید.<br>
+    <span style="color:#8e24aa;">• </span>خط ۲۹ مقدار 
+     my_point
+    را نشان می‌دهد.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پرتاب‌های بعدی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر مقدار متغیر 
+    game_status
+    برابر 
+    'CONTINUE'
+    باشد (خط ۳۲) نه برنده‌اید و نه بازنده، بنابراین کدهای دستور 
+    while
+    (خطوط ۳۳ - ۴۰) اجرا می‌شوند. هر پرتاب تاس تابع 
+    roll_dice
+    را فراخوانی می‌کند تا اعداد دو تاس را نشان داده و مجموع آن‌ها را محاسبه کند. اگر مقدار 
+    sum_of_dice
+    برابر 
+    my_point
+    (خط ۳۷) و یا برابر ۷ (خط ۳۹) باشد، اسکریپت مقدار 
+    game_status
+    را به ترتیب برابر 
+    'WON'
+    یا 
+    'LOST'
+    قرار می‌دهد و حلقه خاتمه می‌یابد. در غیر این صورت، حلقه 
+    while
+    با پرتاب بعدی به اجرای خود ادامه می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نمایش نتایج نهایی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بعد از خاتمه یافتن حلقه، اسکریپت دستور 
+    if…else
+    خطوط (۴۳ - ۴۶) را انجام می‌دهد، اگر مقدار 
+    game_status
+    برابر 
+    'WON'
+    باشد، عبارت 
+    'Player wins'
+    و اگر برابر 
+    'LOST'
+    باشد عبارت 
+    'Player loses'
+    را نشان می‌دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.6 <span style="color:#F50057;">کتابخانه استاندارد پایتون</span></h1> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور معمول، برای نوشتن برنامه‌ای در پایتون، توابع و کلاس‌هایی که خودتان نوشته‌اید را با توابع و کلاس‌هایی که از قبل در ماژول‌ها، مانند کتابخانه استاندارد پایتون و سایر کتابخانه‌ها تعریف شده‌اند، تلفیق می‌کنید. هدف اصلی برنامه نویسی، اجتناب از کد نویسی مجدد است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول فایلی است که توابع، داده‌ها و رده‌های مرتبط را گروه‌بندی می‌کند. نوع 
+    Decimal
+    از ماژول 
+    decimal
+    در کتابخانه استاندارد پایتون در واقع یک کلاس است. کلاس‌ها را به طور خلاصه در فصل ۱ معرفی کردیم و در فصل برنامه نویسی شی‌ء‌گرا به طور مفصل در مورد آن‌ها بحث می‌کنیم. یک پکیج ماژول‌های مرتبط را گروه‌بندی می‌کند. در این کتاب با بسیاری از ماژول‌ها و پکیج‌های موجود کار خواهید کرد و ماژول‌های خود را ایجاد خواهید کرد. در واقع هر فایل کد منبع که با پسوند 
+    (py.)
+    ایجاد می‌کنید، یک ماژول است. ایجاد پکیج‌ها از حوصله این کتاب خارج است. معمولا از آنها برای سازماندهی توابع یک کتابخانه بزرگ به زیر مجموعه‌های کوچک‌تر استفاده می‌شود تا نگهداری آنها راحت‌تر باشد و برای راحتی کار بتوان آنها را جداگانه 
+    import
+    کرد. به عنوان مثال، کتابخانه 
+    matplotlib
+    که در بخش ۱۷ - ۵ استفاده می‌کنیم توابع زیادی دارد (مستندات آن بیش از ۲۳۰۰ صفحه است) بنابراین فقط زیر مجموعه‌های مورد نیاز را در برنامه‌های خود 
+    import
+    می‌کنیم (
+    pyplot
+    و 
+    animation
+    ).
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کتابخانه استاندارد پایتون همراه با این زبان ارائه شده است. پکیج‌ها و ماژول‌های آن شامل قابلیت‌های بی‌شماری برای طیف گسترده‌ای از کارهای برنامه نویسی روزمره است. در آدرس ذیل می‌توانید لیست کاملی از ماژول‌های استاندارد کتابخانه را مشاهده کنید: 
+    <br>
+    <a href="https://docs.python.org/3/library/">
+https://docs.python.org/3/library/</a>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مستندات آموزشی پایتون این مرجع را کامل و جامع قلمداد می‌کنند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما قبلاً از قابلیت‌های موجود در ماژول‌های 
+    decimal
+    ، 
+    statistics
+    و 
+    random
+    استفاده کرده‌اید. در بخش بعدی، از قابلیت‌های ریاضیات در ماژول 
+    math
+    استفاده خواهید کرد. بسیاری از ماژول‌های کتابخانه استاندارد پایتون دیگر را در سرتاسر مثال‌های این کتاب مشاهده خواهید کرد، تعدادی از این ماژول‌ها در جدول ذیل فهرست شده‌اند:
+</div><p><img alt="Screenshot%20%2849%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2849%29.png" /></p>
+<p><img alt="Screenshot%20%2847%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2847%29.png" /></p>
+<p><img alt="Screenshot%20%2848%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2848%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.7 <span style="color:#F50057;">توابع ماژول 
+    math
+    </span></h1> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول 
+    math
+    توابع متعددی برای انجام محاسبات ریاضی متداول تعریف می‌کند. از فصل قبل به یاد می‌آورید که یک دستور 
+    import
+    به شکل زیر، این امکان را به شما می‌دهد تا از تعریف‌های یک ماژول از طریق نام آن و یک نقطه 
+    (.)
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به عنوان مثال، اسنیپت زیر با فراخوانی تابع 
+    sqrt
+    از ماژول 
+    math
+    جذر عدد ۹۰۰ را محاسبه کرده و نتیجه را به صورت یک داده نوع 
+    float
+    برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">900</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30.0
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به همین روش، اسنیپت زیر با فراخوانی تابع 
+    fabs
+    از ماژول 
+    math
+    قدر مطلق عدد ۱۰- را محاسبه کرده و نتیجه را به صورت یک داده نوع 
+     float
+    برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برخی از توابع ماژول 
+    math
+    در جدول زیر خلاصه شده‌اند، برای دیدن لیست کامل این توابع به آدرس زیر مراجعه کنید: 
+    <br>
+    <a href="https://docs.python.org/3/library/math.html">
+https://docs.python.org/3/library/math.html</a>
+</div><p><img alt="Screenshot%20%2850%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2850%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.8 <span style="color:#F50057;">استفاده از 
+    tab
+    برای تکمیل کد در 
+    IPython
+    </span></h1> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگام کار در حالت تعاملی 
+    IPython
+    می‌توانید با کمک از ویژگی تکمیل کد کلید 
+    Tab
+    ، مستندات یک ماژول را ببینید، این کار سرعت کدنویسی و مطالعه مستندات را افزایش می‌دهد. پس از تایپ بخشی از شناسه و فشار دادن کلید 
+    Tab
+    ،
+    مشاهده خواهید کرد که
+    IPython
+    با نمایش لیستی از شناسه‌هایی که با آنچه تایپ کرده‌اید شروع می‌شوند، کد شما را تکمیل خواهد کرد. ممکن است این موضوع با توجه به سیستم عامل شما و ماژول‌هایی که در جلسه 
+    IPython
+    خود 
+    import
+    کرده‌اید متفاوت باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># press &lt;Tab&gt; after ma  </span>
+<span class="n">ma</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># press &lt;Tab&gt; after ma  </span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">ma</span>
+
+<span class="ne">NameError</span>: name &#39;ma&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کلیدهای جهت‌دار بالا و پایین می‌توانید میان شناسه‌ها پیمایش کنید. همانطور که این کار را انجام می‌دهید، 
+    IPython
+    یک شناسه را برجسته می‌کند و آن را در سمت راست اعلان 
+    [ ] In 
+    نشان می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مشاهده شناسه‌های موجود در یک ماژول</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای مشاهده لیستی از شناسه‌های تعریف شده در یک ماژول، نام ماژول و یک نقطه 
+     (.)
+    را تایپ کرده و سپس 
+    Tab
+    را فشار دهید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># press &lt;Tab&gt; after the dot   </span>
+<span class="n">math</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">math</span><span class="o">.</span>
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر شناسه‌های بیشتری نسبت به آنچه در حال حاضر نشان داده شده، وجود داشته باشد 
+    IPython
+    نماد 
+    $ > $
+    (در برخی سیستم عامل‌ها) را در لبه سمت راست نشان می‌دهد. در لیست بالا این نماد در سمت راست 
+    ()factorial
+    قرار گرفته است. برای پیمایش در لیست می‌توانید از کلیدهای جهت‌دار بالا و پایین استفاده کنید. در لیست شناسه‌ها:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>شناسه‌هایی که به همراه دو پرانتز هستند، توابع محسوب می‌شوند (یا متدها که بعداً خواهید دید).<br>
+    <span style="color:#8e24aa;">• </span>شناسه‌های تک کلمه‌ای (مانند 
+    Employee
+    ) که با یک حرف بزرگ شروع می‌شوند و شناسه‌های چند کلمه‌ای که در آنها هر کلمه با یک حرف بزرگ شروع می‌شود (مانند 
+    CommissionEmployee
+    ) نام کلاس‌ها را نشان می‌دهند (هیچ کدام در لیست قبلی وجود ندارد). این قرارداد نام‌گذاری که راهنمای سبک کدنویسی پایتون آن را توصیه می‌کند، به نگارش 
+    CamelCase
+    معروف است زیرا حروف بزرگ مانند کوهان‌های شترهستند.<br>
+    <span style="color:#8e24aa;">• </span>شناسه‌های کوچک و بدون پرانتز مانند 
+    pi
+    (در لیست قبلی نشان داده نشده است) و 
+     e
+    متغیر هستند. شناسه 
+    pi
+    با مقدار 
+    3.141592653589793
+    و شناسه 
+     e
+    با مقدار 
+    2.718281828459045
+    ارزیابی می‌شوند. در ماژول 
+    math
+    ، شناسه‌های 
+    pi
+    و 
+     e
+    به ترتیب ثابت‌های ریاضی 
+   $ π $
+    و 
+    $ e $
+    را نشان می‌دهند.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگرچه بسیاری از اشیا موجود در پایتون تغییر ناپذیر (غیر قابل تغییر) هستند ولی در پایتون ثابت‌ها وجود ندارند. بنابراین اگرچه 
+    pi
+    و 
+    e
+    ثابت‌های مشهور و جهانی هستند، ولی نباید به آنها مقادیر جدیدی اختصاص دهید، زیرا این عمل موجب تغییر مقادیر آن‌ها می‌شود. راهنمای سبک کدنویسی پایتون برای کمک به تشخیص ثابت از سایر متغیرها توصیه می‌کند ثابت‌های خود را تماما با حروف بزرگ تعریف کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استفاده از تابع Highlighted فعلی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همان‌طور که در شناسه‌ها پیمایش می‌کنید، اگر بخواهید از یک تابع که 
+    highlight
+    شده استفاده کنید، کافی است آرگومان‌های تابع را در پرانتزهای آن تایپ کنید. در ادامه 
+    IPython
+    لیست تکمیل خودکار را پنهان می‌کند. اگر به اطلاعات بیشتری در مورد تابع 
+    highlight
+    شده فعلی نیاز دارید، کافی است نام تابع را با یک علامت سوال 
+    (?)
+    تایپ کرده و 
+    Enter
+    کنید، با این کار 
+    docstring
+    برای راهنمایی بیشتر به نمایش درمی‌آید. متن ذیل مستندات 
+    docstring
+    مربوط به تابع 
+    fabs
+    می‌باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math.fabs<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رشته 
+    builtin_function_or_method
+    در متن بالا معرف آن است که تابع 
+    fabs
+    قسمتی از ماژول استاندارد زبان پایتون محسوب می‌شود. چنین ماژول‌هایی، ماژول‌های از قبل تعریف شده در این زبان قلمداد می‌شوند. در این حالت تابع 
+    fabs
+    یک تابع از قبل تعریف شده در ماژول 
+    math
+    تلقی می‌شود.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.9 <span style="color:#F50057;">مقادیر پیش‌فرض آرگومان‌ها</span></h1> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگام تعریف یک تابع، می‌توانید تعیین کنید که یک پارامتر مقدار پیش‌فرض داشته باشد. اگر هنگام فراخوانی چنین تابعی، آرگومان مربوط به پارامتری را حذف کنید، مقدار پیش‌فرض آن پارامتر به طور خودکار ارسال می‌گردد. بیایید یک تابع به نام 
+    rectangle_area
+    با مقادیر پارامتر پیش‌فرض تعریف کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rectangle_area</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a rectangle&#39;s area.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تعیین مقادیر پیش‌فرض پارامترها، باید بعد از نام پارامتر علامت انتساب 
+    = 
+    و سپس مقدار آن را تعیین کنید. برای مثال در تابع بالا، ۲ و ۳ به ترتیب مقادیر پیش‌فرض 
+    length
+    و 
+    width
+    هستند. 
+    هر پارامتر با مقادیر پیش‌فرض در لیست پارامترها باید در سمت راست پارامترهایی که مقادیر پیش‌فرض ندارند، قرار گیرد. کدهای ذیل تابع 
+    rectangle_area
+    را بدون هیچ آرگومانی فراخوانی می‌کند، 
+     IPython
+    از مقادیر پیش‌فرض پارامترها استفاده می‌کند و کد ذیل معادل فراخوانی 
+    rectangle_area(2, 3)
+    می‌باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle_area</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی ذیل، تابع 
+    rectangle_area
+    را با یک آرگومان فراخوانی می‌کند. آرگومان‌ها از چپ به راست به پارامترها تخصیص می‌یابند، بنابراین 
+    length
+    از مقدار ۱۰ استفاده می‌کند. مفسر مقدار پیش‌فرض ۳ را به 
+    width
+    اختصاص می‌دهد و معادل فراخوانی 
+     rectangle_area(10, 3)
+    می‌باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle_area</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی 
+    rectangle_area
+    به صورت ذیل مقادیری به 
+    length
+    و 
+     width
+    اختصاص می‌دهد و به همین دلیل 
+    IPython
+    از مقادیر پیش‌فرض صرف نظر می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle_area</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.10 <span style="color:#F50057;">آرگومان‌های کلیدی</span></h1> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگام فراخوانی توابع می‌توانید از آرگومان‌های کلیدی برای انتقال آرگومان‌ها به ترتیب دلخواه استفاده کنید. برای نشان دادن آرگومان‌های کلیدی، تابع 
+    rectangle_area
+    را دوباره و این بار بدون مقادیر پارامتر پیش‌فرض تعریف می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rectangle_area</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a rectangle&#39;s area.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر آرگومان یک کلمه کلیدی در یک فراخوانی تابع به شکل 
+    parametername=value
+    است. فراخوانی زیر نشان می‌دهد که ترتیب آرگومان‌های کلیدی اهمیتی ندارند و نیازی به تطابق موقعیت پارامترهای مربوطه در تعریف تابع ندارند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rectangle_area</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در هر فراخوانی تابع، باید آرگومان‌های کلیدی را بعد از آرگومان‌های موقعیتی تابع قرار دهید، آرگومان‌های موقعیتی آرگومان‌هایی هستند که نام آنها را هنگام فراخوانی مشخص نمی‌کنید. بسته به مکان آرگومان‌های موقعیتی باید آرگومان‌های کلیدی را از چپ به راست به تابع اختصاص دهید. آرگومان‌های کلیدی برای بهبود خوانایی فراخوانی توابع، به ویژه زمانی که یک تابع آرگومان‌های زیادی داشته باشد، بسیار مفید هستند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.11 <span style="color:#F50057;">لیستی دلخواه از آرگومان‌ها</span></h1> <a id='12'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توابع با لیستی دلخواه از آرگومان‌ها، مانند توابع 
+    min
+    و 
+    max
+    ، می‌تواند هر تعداد آرگومان دریافت کنند. فراخوانی تابع 
+    min
+    با دستور زیر را در نظر بگیرید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">83</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مستندات تابع عنوان شده که تابع 
+    min
+    به دو پارامتر (به نام 
+    arg1
+    و 
+    arg2
+    ) و یک پارامتر سوم اختیاری به فرم 
+    args*
+    نیاز دارد. پارامتر سوم نشان می‌دهد که این تابع می‌تواند هر تعداد آرگومان اضافی دریافت کند. علامت ستاره 
+    *
+    قبل از نام پارامتر به پایتون می‌گوید آرگومان‌های باقی‌مانده را در یک 
+    tuple
+    قرار داده و به پارامتر 
+    args
+    منتقل کند. در فراخوانی بالا، پارامتر 
+    arg1
+    مقدار ۸۸، 
+    arg2
+    مقدار ۷۵ و پارامتر 
+    args
+    مقادیر
+    tuple (96, 55, 83)
+    را دریافت می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعریف یک تابع با لیست اختیاری از آرگومان‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید یک تابع به نام 
+    average
+    تعریف کنیم که می‌تواند تعداد دلخواهی از آرگومان‌ها را قبول کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">average</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نام پارامتر 
+    args
+    بر حسب قرارداد استفاده شده است ولی شما می‌توانید از هر شناسه دیگری استفاده کنید. اگر تابع دارای چندین پارامتر باشد، پارامتر 
+    args*
+    باید راست‌ترین پارامتر باشد. اکنون تابع 
+    average
+    را چندین بار و هر بار با لیست‌هایی با طول‌های مختلف فراخوانی می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.5
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای محاسبه میانگین، مجموع عناصر 
+    args tuple
+    (که توسط تابع درونی 
+    sum
+    برگردانده می‌شود) را بر تعداد عناصر 
+    tuple
+    تقسیم می‌کنیم (که توسط تابع درونی 
+    len
+    برگردانده می‌شود). اگر تعداد 
+    args
+    در تعریف تابع 
+    average
+    صفر باشد، خطای 
+    ZeroDivisionError 
+    رخ می‌دهد. در فصل بعد، نحوه دسترسی به یک 
+    tuple
+    را بدون بازکردن آن خواهید دید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارسال عناصر یک داده نوع Iterable به صورت منفرد به آرگومان تابع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">می‌توانید عناصر یک 
+    tuple
+    ، یک لیست و هر داده نوع 
+    iterable
+    را به عنوان داده‌های منفرد و تفکیک شده به آرگومان‌های یک تابع ارسال کنید. هنگامی که عملگر 
+    *
+    در فراخوانی تابع به آرگومان نوع 
+    iterable
+    اعمال شود، تمامی عناصر آن را از هم جدا می‌کند. کد زیر یک لیست پنج عنصری به نام 
+    grades
+    ایجاد می‌کند و سپس از دستور 
+    grades*
+    برای باز کردن عناصر لیست به عنوان آرگومان تابع 
+    average
+    استفاده می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">83</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average</span><span class="p">(</span><span class="o">*</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.4
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی بالا معادل فراخوانی 
+     average(88, 75, 96, 55, 83)
+    می‌باشد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.12 <span style="color:#F50057;">متدها: توابعی که به اشیاء تعلق دارند</span></h1> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"><b>متد</b> به سادگی تابعی است که شما با استفاده از یک شیء آن را به این صورت فراخوانی می‌کنید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">object_name</span><span class="o">.</span><span class="n">method_name</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به عنوان مثال، اسنیپت زیر یک متغیر رشته ایجاد می‌کند و شیء 
+    'Hello'
+    را به رشته اختصاص می‌دهد. در ادامه، متدهای 
+    lower
+    و 
+    upper
+    شیء را فراخوانی کرده و بدون تغییر رشته اصلی، دو رشته جدید ایجاد می‌کند. دو رشته اخیر، رشته‌هایی هستند که تمامی کاراکترهای آن به ترتیب از حروف کوچک و بزرگ رشته اصلی تشکیل شده‌اند.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># call lower method on string object s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;HELLO&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مرجع کتابخانه استاندارد پایتون در آدرس ذیل، شرح کاملی در مورد انواع type از پیش تعریف شده و متدهای مربوط به آن‌ها ارائه می‌دهد: 
+    <br>
+    <a href="https://docs.python.org/3/library/index.html">
+https://docs.python.org/3/library/index.html</a>
+    <br>
+    در فصل برنامه نویسی شیء گرا 
+    type
+    های خاص خودتان موسوم به کلاس را ایجاد می‌کنید و متدهای مربوطه را به گونه‌ای تعریف می‌کنید که می‌توانید از طریق اشیاء آن کلاس‌ها، متدها را فراخوانی کنید.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.13 <span style="color:#F50057;">قوانین حوزه</span></h1> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر شناسه دارای یک حوزه است و حوزه تعیین می‌کند در کجای برنامه خود می‌توانید از این شناسه استفاده کنید. برای این قسمت برنامه، گفته می‌شود شناسه در حوزه قرار دارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حوزه محلی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شناسه‌ی یک متغیر محلی دارای حوزه محلی است. این شناسه فقط از تعریف آن تا انتهای بلوک تابع در حوزه قرار دارد. شناسه هنگام بازگشت تابع به فراخواننده خود، از حوزه خارج می‌شود. به همین دلیل یک متغیر محلی تنها می‌تواند در داخل تابعی که آن را تعریف می‌کند مورد استفاده قرار گیرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حوزه سراسری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شناسه‌های تعریف شده خارج از هر تابع (یا کلاس) دارای حوزه سراسری هستند، این قسمت از کد ممکن است شامل توابع، متغیرها و کلاس‌ها باشد. متغیرهای با دامنه سراسری به عنوان متغیرهای سراسری شناخته می‌شوند. شناسه‌های دارای دامنه سراسری را می‌توان پس از تعریف در یک فایل با پسوند 
+    py.
+    یا یک 
+    session
+    تعاملی در هر قسمت استفاده کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دسترسی به یک متغیر سراسری از یک تابع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از داخل یک تابع می‌توانید به مقدار متغیر سراسری دسترسی پیدا کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">access_global</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x printed from access_global:&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">access_global</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x printed from access_global: 7
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور پیش‌فرض، هنگامی که برای اولین بار در بلوک یک تابع مقداری را به یک متغیر اختصاص می‌دهید، نمی‌توانید یک متغیر سراسری را در این تابع تغییر دهید، چرا که پایتون یک متغیر محلی جدید ایجاد می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">try_to_modify_global</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mf">3.5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x printed from try_to_modify_global:&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">try_to_modify_global</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x printed from try_to_modify_global: 3.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بلاک تابع 
+    try_to_modify_global
+    متغیر محلی 
+    x
+    روی متغیر سراسری 
+    x
+    اثر سایه‌ای دارد و موجب می‌شود این متغیر سراسری در بدنه تابع قابل دسترسی نباشد. اسنیپت [۶] نشان می‌دهد که متغیر سراسری 
+    x
+    هنوز هم وجود دارد و مقدار اصلی خود (۷) را بعد از اجرای تابع 
+    try_to_modify_global
+    حفظ کرده است. برای تغییر یک متغیر سراسری در بلوک یک تابع، باید از یک دستور 
+    global
+    استفاده کنید تا مشخص کند که این متغیر در دامنه سراسری تعریف شده است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">modify_global</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x printed from modify_global:&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modify_global</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x printed from modify_global: hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Blocks vs. Suites</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تا به اینجا بلوک‌های تابع و 
+    suite
+    ها را تعریف کرده‌اید. زمانی که یک متغیر را در یک بلوک ایجاد می‌کنید، در آن بلوک محلی است. با این حال وقتی یک متغیر را در 
+    suite
+    یک دستور کنترلی ایجاد می‌کنید، حوزه متغیر وابسته به جایی است که دستور کنترل تعریف می‌شود:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اگر دستور کنترل در حوزه سراسری باشد، در آن صورت، هر متغیر تعریف شده در دستور کنترلی، دارای حوزه سراسری است.<br>
+    <span style="color:#8e24aa;">• </span>اگر دستور کنترلی در بلوک تابع باشد، آنگاه هر متغیر تعریف شده در دستور کنترل، دارای حوزه محلی است.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">زمانی که در فصل مربوط به برنامه نویسی شیء گرا کلاس‌های تعریف شده توسط کاربر را شرح می‌دهیم، بحث حوزه را ادامه خواهیم داد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تحت‌الشعاع قرار دادن توابع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل‌های قبلی، هنگام جمع کردن مقادیر، مجموع آنها را در متغیری به نام 
+    total
+    ذخیره کردیم. این کار به این دلیل انجام شده است که 
+    sum
+    یک تابع درونی در پایتون محسوب می‌شود. اگر یک متغیر به نام 
+    sum
+    تعریف کنید، تابع 
+    built-in
+    را تحت‌الشعاع قرار داده و موجب می‌شود این تابع در کد شما غیرقابل دسترسی باشد. هنگامی که دستور انتساب ذیل را اجرا می‌کنید، پایتون شناسه 
+    sum
+    را به یک شیء 
+    int
+    حاوی ۱۵ متصل می‌کند. در این مرحله، شناسه 
+    sum
+    دیگر به تابع از قبل تعریف شده اشاره نمی‌کند و به همین دلیل، وقتی می‌خواهید از 
+    sum
+    به عنوان یک تابع استفاده کنید، یک خطای 
+    TypeError
+    رخ می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">58</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دستورات در حوزه سراسری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در اسکریپت‌هایی که تاکنون دیده‌اید، برخی از دستورات خارج از توابع را در حوزه سراسری و برخی از دستورات را در داخل بلوک‌های تابع نوشتیم. دستورات اسکریپت در حوزه سراسری به محض مواجه شدن با مفسر اجرا می‌شوند، ولی دستورات موجود در یک بلوک فقط هنگام فراخوانی تابع اجرا می‌شوند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.14 <span style="color:#F50057;">نگاهی عمیق‌تر به import</span></h1> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تا اینجای کار با استفاده از دستوری مشابه دستور ذیل، ماژول‌هایی(ماژول‌هایی مانند 
+    math
+    و 
+    random
+    ) را 
+    import
+    کرده‌اید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">module_name</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و در ادامه با استفاده از نام ماژول و عملگر 
+    (.)
+    به قابلیت‌های آن دسترسی پیدا کردید، علاوه بر این با استفاده از دستوری مشابه دستور ذیل توانستید یک شناسه خاص (مانند شناسه 
+    decimal
+    از ماژول 
+    Decimal
+    ) را 
+    import
+    کنید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">module_name</span><span class="w"> </span><span class="kn">import</span> <span class="n">identifier</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با این روش برای دسترسی به چنین شناسه‌ای، نیازی به نام ماژول و عملگر 
+    (.)
+    ندارید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Import کردن چند شناسه از یک ماژول</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از دستور 
+    from…import
+    می‌توانید فهرستی از شناسه‌ها که با کاما از یکدیگر جدا شده‌اند را از یک ماژول 
+    import
+    کرده و سپس آنها را در کد خود بدون نیاز به استفاده از نام ماژول و عملگر 
+    (.)
+    به کار ببرید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">ceil</span><span class="p">,</span> <span class="n">floor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ceil</span><span class="p">(</span><span class="mf">10.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">floor</span><span class="p">(</span><span class="mf">10.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تلاش برای استفاده از تابعی که 
+    import
+    نشده است باعث ایجاد 
+    NameError
+    می‌شود و نشان می‌دهد که نام تابع تعریف نشده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">احتیاط: برای import کردن از کاراکترهای جایگزین اجتناب کنید</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از دستور ذیل می‌توانید تمامی شناسه‌های موجود در یک ماژول را 
+    import
+    کنید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">modulename</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این کار موجب می‌شود تمام شناسه‌های موجود در ماژول برای استفاده در کد شما موجود باشند. وارد کردن شناسه‌های یک ماژول با چنین روشی می‌تواند به خطاهای ظریفی منجر شود. این رویکرد یک عمل خطرناک محسوب می‌شود و باید از آن اجتناب کنید. اسنیپت‌های زیر را در نظر بگیرید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.718281828459045
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ابتدا، رشته 
+    'hello'
+    را به متغیری به نام 
+    e
+    اختصاص می‌دهیم. پس از اجرای اسنیپت [۵] متغیر 
+    e
+    احتمالاً به طور تصادفی با ثابت 
+    e
+    در ماژول 
+    math
+    جایگزین می‌شود و در حقیقت مقدار اعشاری 
+    $ e $
+    را نشان می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استفاده از نام‌های مختصر برای ماژول‌ها و شناسه‌های ماژول</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات 
+    import
+    کردن یک ماژول و استفاده از یک نام مخفف آن برای ساده کردن کد، مفید است. عبارت 
+    as
+    در دستور 
+    import
+    به شما این امکان را می‌دهد که یک نام را به ماژول اختصاص دهید و از آن برای ارجاع به شناسه‌های ماژول استفاده کنید. به عنوان مثال، در بخش 
+    3.14
+    توانستیم ماژول 
+    statistics
+    را 
+    import
+    کرده و به تابع 
+    mean
+    دسترسی داشته باشیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">93</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>80.6
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همانطور که در بخش‌های بعدی خواهید دید، استفاده از دستور 
+    import…as
+    برای 
+    import
+    کردن کتابخانه‌های پایتون با اختصارات مناسب، مانند 
+    stats
+    برای ماژول 
+    statistics
+    استفاده می‌شود. به عنوان مثال دیگر، از ماژول 
+    numpy
+    که معمولاً با دستور ذیل 
+    import
+    می‌شود استفاده می‌کنیم:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مستندات کتابخانه پایتون اغلب از نام‌های مخفف رایج استفاده می‌شود. به طور معمول، هنگام 
+    import
+    کردن یک ماژول، باید از دستور 
+    import
+    یا 
+    import…as
+    استفاده کنید، سپس به ترتیب از طریق نام ماژول یا مخفف آن، که بعد از کلمه کلیدی 
+    as
+    قرار گرفته است به ماژول دسترسی پیدا کنید. این رویکرد این اطمینان را به شما می‌دهد که به طور تصادفی شناسه وارد شده با شناسه‌ای دیگر در کد شما در تضاد نباشد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.15 <span style="color:#F50057;">ارسال آرگومان‌ها به توابع: نگاهی عمیق‌تر</span></h1> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید نگاهی دقیق‌تر به نحوه ارسال آرگومان‌ها به بیندازیم. در بسیاری از زبان‌های برنامه نویسی، دو روش برای ارسال آرگومان وجود دارد، ارسال با مقدار و ارسال با ارجاع (که گاهی اوقات فراخوانی با مقدار و فراخوانی با ارجاع نامیده می‌شود):
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در ارسال با مقدار، تابع فراخوانی شده یک کپی از مقدار آرگومان دریافت می‌کند و منحصراً با آن نسخه کار می‌کند. هر تغییر در کپی مخصوص تابع بر مقدار متغیر اصلی در قسمت فراخواننده تاثیر نمی‌گذارد.<br>
+    <span style="color:#8e24aa;">• </span>در روش ارسال با ارجاع، تابع فراخوانی شده می‌تواند به آرگومان‌ها در قسمت فراخواننده دسترسی داشته باشد و اگر این آرگومان‌ها قابل تغییر باشند، آنها را تغییر می‌دهد.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">آرگومان‌های پایتون همیشه با ارجاع منتقل می‌شوند. از آنجایی که همه چیز در پایتون شیء محسوب می‌شود، بسیاری از افراد به این روش، ارسال شیء با ارجاع می‌گویند. اگر هنگام فراخوانی تابع یک آرگومان تولید شود، پایتون یک ارجاع به شیء آرگومان و نه خود شیء را در پارامتر مربوطه کپی می‌کند. این رویکرد برای کارایی بسیار مهم است. غالبا توابع با اشیاء بزرگی کار می‌کنند و کپی کردن مکرر این اشیاء باعث مصرف زیاد حافظه کامپیوتر و کاهش کارایی برنامه به طور چشمگیری می‌شود. حتی توابعی که در این فصل تعریف کرده‌اید و یا کلاس‌هایی(انواع سفارشی) که در فصل‌های بعدی تعریف خواهید کرد، یک شیء در پایتون محسوب می‌شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">آدرس‌های حافظه، ارجاع‌ها و اشاره‌گرها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شما از طریق ارجاع با یک شیء تعامل می‌کنید، در پشت صحنه، ارجاع آدرس (یا موقعیت مکانی) آن شیء در حافظه کامپیوتر محسوب می‌شود. گاهی اوقات در زبان‌های برنامه نویسی دیگر به ارجاع، اشاره‌گر می‌گویند. بعد از دستور انتساب ذیل:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متغیر 
+    x
+    در واقع حاوی مقدار ۷ نیست، بلکه شامل یک ارجاع به یک شیء حاوی ۷ است که این شیء در جای دیگری در حافظه ذخیره شده است. ممکن است بگویید مطابق شکل ذیل، 
+    x
+    به شیء شامل ۷ اشاره (یعنی ارجاع) می‌کند:
+</div><p><img alt="Screenshot%20%2851%29.png" src="Chapters/04 - Functions/attachment:Screenshot%20%2851%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع از پیش تعریف شده id و هویت اشیاء</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت نحوه انتقال آرگومان‌ها به توابع را بررسی می‌کنیم. در ابتدا مطابق بخش قبلی یک متغیر صحیح به نام 
+    x
+    ایجاد می‌کنیم و به زودی از 
+    x
+    به عنوان یک آرگومان تابع استفاده خواهیم کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون 
+    x
+    به یک شی صحیح حاوی ۷ ارجاع (یا اشاره) می‌کند. هیچ دو شیء متمایزی نمی‌توانند در یک آدرس حافظه قرار بگیرند و به همین دلیل هر شیء در حافظه آدرس منحصر به فردی دارد. اگرچه نمی‌توانیم آدرس یک شیء را ببینیم، اما می‌توانیم از تابع داخلی 
+    id
+    ، برای به‌دست آوردن یک مقدار صحیح منحصر به فرد برای شناسایی یک شیء استفاده کنیم. تابع 
+    id
+    فقط برای اشیایی که در حافظه قرار دارند به کار می‌رود (وقتی این را روی کامپیوتر خود اجرا می‌کنید احتمالا نتایج متفاوتی خواهید گرفت):
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139953779746984
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عدد صحیح حاصل از فراخوانی تابع 
+    id
+    به عنوان هویت و یا شناسه شیء شناخته می‌شود. هیچ دو شیئی در حافظه نمی‌توانند شناسه یکسانی داشته باشند. برای نشان دادن اینکه اشیاء با ارجاع منتقل می‌شوند، از شناسه شیء استفاده خواهیم کرد. بر اساس مستندات پایتون و بسته به پایتونی که استفاده می‌کنید، شناسه یک شیء ممکن است آدرس حافظه واقعی شیء باشد، اما همیشه این طور نیست.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارسال یک شیء به تابع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت یک تابع به نام 
+    cube
+    تعریف می‌کنیم. این تابع شناسه پارامتر خود را نشان می‌دهد و سپس مکعب پارامتر ورودی را باز می‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cube</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(number):&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ادامه تابع 
+    cube
+    را با آرگومان 
+    x
+    فراخوانی می‌کنیم، 
+    x
+    به یک شیء از جنس عدد صحیح با مقدار ۷ اشاره می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id(number): 139953779746984
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>343
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شناسه نمایش داده شده برای پارامتر تابع 
+    cube
+    یعنی 
+    number
+    برابر 
+    4350477840
+    می‌باشد و این مقدار با شناسه‌ای که قبلاً برای 
+    x
+    نشان داده شده برابر است. از آنجا که هر شیء دارای یک شناسه منحصر به فرد است، هر دو آرگومان 
+    x
+    و پارامتر 
+    number
+    هنگام اجرای تابع 
+    cube
+    ، به یک شیء واحد اشاره می‌کنند؛ بنابراین وقتی تابع 
+    cube
+    از 
+    number
+    به عنوان پارامتر در محاسبات خود استفاده می‌کند، مقدار 
+    number
+    را از شیء اصلی فراخواننده تابع دریافت می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تست سنجش شناسه اشیاء با عملگر 
+    is
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عملگر 
+    is
+    می‌توانید ثابت کنید که در پایتون آرگومان و پارامتر هر دو به یک شیء اشاره می‌کنند، اگر دو عملوند عملگر 
+    is
+    دارای شناسه‌ای برابر باشند، مقدار 
+    True
+    را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cube</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number is x:&#39;</span><span class="p">,</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># x is a global variable</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>number is x: True
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>343
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشیاء غیر قابل تغییر به عنوان آرگومان
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که یک تابع آرگومانی را به عنوان ارجاع به یک شیء تغییر ناپذیر (یا غیر قابل تغییر) مانند 
+    int
+    ، float، 
+    string
+    یا 
+    tuple
+    دریافت می‌کند، حتی اگر دسترسی مستقیم به شیء اصلی فراخواننده را هم داشته باشید، نمی‌توانید مقدار شیء غیرقابل تغییر اصلی را تغییر دهید. برای اثبات این موضوع، از طریق یک دستور انتساب اضافی مقدار شناسه 
+    number
+    در تابع 
+    cube 
+    را قبل و بعد از اختصاص به یک شیء جدید نشان می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cube</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(number) before modifying number:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="n">number</span> <span class="o">**=</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(number) after modifying number:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id(number) before modifying number: 139953779746984
+id(number) after modifying number: 139953538449872
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>343
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی تابع 
+    cube(x)
+    را فراخوانی می‌کنیم، اولین دستور 
+    print
+    نشان می‌دهد که شناسه 
+    id(number) 
+    با شناسه 
+    id(x)
+    در اسنیپت [۲] برابر است. مقادیر عددی غیر قابل تغییر محسوب می‌شوند، بنابراین دستور ذیل:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">**=</span> <span class="mi">3</span> 
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در واقع یک شیء جدید با مقدار مکعب شده ایجاد می‌کند و سپس ارجاع آن شیء را به پارامتر 
+    number
+    اختصاص می‌دهد. به یاد بیاورید که اگر هیچ ارجاعی به یک شیء اصلی وجود نداشته باشد، از حافظه جمع آوری خواهد شد 
+    (garbage collected).  
+    دستور 
+    print
+    دوم در تابع 
+    cube
+    ، شناسه یک شیء جدید را نشان می‌دهد. شناسه یک شیء باید منحصر به فرد باشد، بنابراین 
+    number
+    باید به شیء دیگری اشاره کند. برای آن که نشان دهیم مقدار 
+    x
+    تغییر نکرده است، دوباره مقدار و شناسه آن را نشان می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">; id(x) = </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 7; id(x) = 139953779746984
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشیاء قابل تغییر به عنوان آرگومان
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل بعدی، نشان خواهیم داد وقتی ارجاع به یک شیء قابل تغییر مانند یک لیست به یک تابع ارسال شود، این تابع می‌تواند شیء اصلی در قسمت فراخواننده را تغییر دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.16 <span style="color:#F50057;">Recursion</span></h1> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت قصد داریم یک برنامه برای محاسبه یک تابع مشهور ریاضی به نام فاکتوریل بنویسیم. فاکتوریل عدد صحیح مثبت 
+    n
+    که به صورت 
+    $ n! $
+    نوشته شده و فاکتوریل 
+    n
+    خوانده می‌شود، حاصل ضرب اعداد طبیعی است از ۱ تا خود 
+    n:
+    <br>
+</div>
+<p><span class="math notranslate nohighlight">\( n · (n – 1) · (n – 2) · … · 1 \)</span></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    $ 1! $
+    برابر ۱ بوده و بنا به تعریف 
+    $ 0! $
+    برابر ۱ است. برای مثال 
+    $ 5! $
+    حاصل ضرب 
+    $ 5 · 4 · 3 · 2 · 1 $
+    بوده و برابر ۱۲۰ است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">رویکرد تکراری فاکتوریل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای محاسبه 
+    $ 5! $
+    می‌توانید از رویکرد تکراری و حلقه 
+    for
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">factorial</span> <span class="o">*=</span> <span class="n">number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حل مسائل به روش بازگشتی
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رویکردهای بازگشتی حل مسئله‌ها دارای چندین مولفه مشترک هستند. هنگامی که یک تابع بازگشتی را برای حل یک مسئله فراخوانی می‌کنید، قادر است مسئله را تنها در ساده‌ترین حالت و یا حالت پایه حل کند. اگر تابع را با یک حالت پایه فراخوانی کنید، بلافاصله نتیجه را باز می‌گرداند. اگر تابع را با یک مسئله پیچیده‌تر فراخوانی کنید، معمولا مسئله را به دو قسمت تقسیم می‌کند: قسمت اول که تابع چگونگی انجام آن را می‌داند و قسمت دوم که نحوه انجام آن را نمی‌داند. برای عملی بودن روش بازگشتی، قسمت دوم باید کمی از مسئله اصلی ساده‌تر یا کوچک‌تر باشد. از آنجا که این مسئله جدید شبیه مسئله اصلی است، تابع یک کپی جدید از خود را برای کار بر روی مسئله کوچک‌تر فراخوانی می‌کند. این فراخوانی اخیر به عنوان فراخوانی بازگشتی و یا گام بازگشت نامیده می‌شود. مفهوم تفکیک مسئله به دو بخش کوچک‌تر شکلی از رویکرد تقسیم و راهبرد است که قبلا مطرح شده است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مرحله بازگشتی تا زمانی که فراخوانی تابع اصلی فعال باشد اجرا می‌شود (یعنی اجرا کامل نشده است). از آنجایی که تابع هر زیر مسئله جدید را به دو بخش مفهومی تقسیم می‌کند ممکن است فراخوانی بازگشتی زیادی انجام شود. برای پایان یافتن بازگشت، باید تابع هر بار خود را با یک نسخه ساده‌تر از مسئله اصلی فراخوانی کند و توالی این مسئله‌های کوچک‌تر و کوچک‌تر باید در نهایت به سمت حالت پایه همگرا شود. هنگامی که تابع حالت پایه را تشخیص دهد، نتیجه را به نسخه قبلی تابع برمی‌گرداند. دنباله‌ای از بازگشت‌ها پیش می‌آید و این فرآیند آن‌قدر تکرار می‌شود تا در نهایت فراخوانی اصلی تابع، مقدار نهایی را به فراخواننده بازگرداند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">رویکرد بازگشتی فاکتوریل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با توجه به آنکه رابطه 
+    $ n! $
+    را می‌توان مطابق فرمول ذیل نوشت، به راحتی می‌توانید به نمایش بازگشتی فاکتوریل برسید:
+</div>    
+    <br>
+    $ n! = n · (n – 1)! $
+    <br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">    
+    برای مثال 
+    $ 5! $
+    برابر 
+    $ 5 · 4! $
+    می‌باشد:
+</div>    
+    <br>
+    $ 5! = 5 · 4 · 3 · 2 · 1 $
+    <br>
+    $ 5! = 5 · (4 · 3 · 2 · 1) $
+    <br>
+    $ 5! = 5 · (4!) $
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دیاگرام بازگشتی
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">محاسبه 
+    $ 5! $
+    مانند شکل زیر انجام می‌گیرد. ستون سمت چپ نشان می‌دهد که چگونه توالی فراخوانی بازگشتی تا 
+    $ 1! $
+    ادامه می‌یابد (حالت پایه). در این مرحله مقدار ۱ ارزیابی شده و بازگشت خاتمه می‌یابد. ستون سمت راست مقادیری که در فراخوانی بازگشتی به فراخواننده بازمی‌گرداند را از پایین به بالا نشان می‌دهد. این فرآیند تا زمانی که مقدار نهایی محاسبه و برگردانده شود، ادامه خواهد داشت.
+</div><p><img alt="Screenshot (52).png" src="Chapters/04 - Functions/attachment:80a5abd8-f831-4112-ad74-115471e33c2b.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پیاده‌سازی بازگشتی تابع فاکتوریل
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قطعه کد زیر برای محاسبه و نمایش فاکتوریل اعداد صحیح ۰ تا ۱۰ از روش بازگشتی استفاده می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return factorial of number.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># recursive call</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">! = </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0! = 1
+1! = 1
+2! = 2
+3! = 6
+4! = 24
+5! = 120
+6! = 720
+7! = 5040
+8! = 40320
+9! = 362880
+10! = 3628800
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع بازگشتی فاکتوریل در اسنیپت [۴] ابتدا تعیین می‌کند که آیا شرط خاتمه یعنی نامساوی 
+    number <= 1
+    درست است و یا خیر. اگر این شرط درست باشد (حالت پایه)، 
+    factorial
+    عدد ۱ را برمی‌گرداند و دیگر نیازی به بازگشت بیشتر نیست. اگر 
+    number
+    بزرگتر از ۱ باشد دستور 
+    return
+    دوم مسئله را به صورت حاصل ضرب 
+    number
+    و یک فراخوانی بازگشتی 
+    factorial
+    بیان می‌کند. فراخوانی اخیر مقدار 
+    factorial(number - 1)
+    را محاسبه می‌کند. این فراخوانی در قیاس با محاسبه 
+    factorial(number)
+    مسئله کوچک‌تری محسوب می‌شود. توجه داشته باشید که فاکتوریل تابع باید مقادیر غیر منفی دریافت کند. این الزام در تعریف تابع فاکتوریل بررسی نمی‌شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">حلقه تکرار در اسنیپت [۵] تابع 
+    factorial
+    را برای مقادیر ۰ تا ۱۰ فراخوانی می‌کند. خروجی نشان می‌دهد که مقادیر فاکتوریل به سرعت رشد می‌کنند. پایتون بر خلاف بسیاری از زبان‌های برنامه نویسی برای اندازه یک عدد صحیح محدودیتی قائل نمی‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بازگشت غیرمستقیم
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک تابع بازگشتی ممکن است تابع دیگری را فراخوانی کند و این تابع اخیر ممکن است به نوبه خود، دوباره تابع بازگشتی اول را فراخوانی کند. این رویکرد به عنوان فراخوانی بازگشتی غیر مستقیم یا بازگشت غیر مستقیم شناخته می‌شود. به عنوان مثال، تابع 
+    A
+    تابع 
+    B
+    را فراخوانی می‌کند و تابع 
+    B
+    باعث فراخوانی تابع 
+    A
+    می‌شود. این روش بازگشتی قلمداد می‌شود، زیرا فراخوانی دوم برای تابع 
+    A
+    زمانی انجام می‌گیرد که اولین فراخوانی برای فراخوانی تابع 
+    A
+    هنوز فعال است. به بیانی دیگر اولین فراخوانی تابع 
+    A
+    هنوز به اتمام نرسیده است (زیرا منتظر تابع 
+    B
+    است تا نتیجه‌ای را به آن برگرداند) و کنترل به فراخواننده اصلی تابع 
+    A
+    بازنگشته است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سرریز شدن پشته و بازگشت نامتناهی
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بدیهی است مقدار حافظه در کامپیوتر محدود است، بنابراین برای ذخیره کردن رکوردهای فعالیت در پشته فراخوانی تابع، فضای مشخصی در اختیار داریم. اگر فراخوانی‌های تابع بازگشتی بیشتر از فضای پشته مخصوص ذخیره کردن رکورد رکوردهای فعالیت باشد، یک خطای بحرانی به نام سرریز پشته رخ می‌کند. معمولا این خطا نتیجه بازگشت بی‌نهایت است و می‌تواند ناشی از حذف حالت پایه یا نادرست نوشتن مرحله بازگشت باشد به طوری که به حالت پایه همگرا نشود. این خطا با مسئله حلقه نامتناهی در یک رویکرد تکراری (غیربازگشتی) مشابه است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.17 <span style="color:#F50057;">برنامه نویسی به سبک تابعی</span></h1> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون مانند سایر زبان‌های معروف مانند 
+    Java
+    و 
+    #C
+    زبان کاملاً تابعی نیست. این زبان قابلیت‌های سبک تابعی را ارائه می‌دهد تا به شما کمک کند کدی بنویسید که احتمالاً دارای خطای کمتری باشد، خلاصه‌تر باشد، قابلیت خوانایی بیشتری داشته باشد، اشکال زدایی و تغییر آن آسان‌تر باشد. توازی سازی برنامه‌هایی که با سبک تابعی نوشته شده‌اند برای دستیابی به کارایی بیشتر در پردازنده‌های چندهسته‌ای امروزی راحت‌تر است. جدول زیر بیشتر قابلیت‌های اصلی برنامه نویسی سبک تابعی پایتون را نشان می‌دهد. اعداد در پرانتز فصل‌هایی را نشان می‌دهد که در ابتدا بسیاری از این مطالب را بررسی می‌کنیم.
+</div><p><img alt="Screenshot (55).png" src="Chapters/04 - Functions/attachment:c283bb4f-de2e-4631-971d-9d24b9a0a7d6.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیشتر این مباحث را در طول کتاب پوشش می‌دهیم، بسیاری از آنها را با مثال کدنویسی و برخی دیگر را با توضیح شرح خواهیم داد. شما قبلاً از لیست، رشته و تابع داخلی 
+    range
+    ، تکرارکننده 
+    (iterator)
+    با دستور 
+     for
+    و چندین تابع کاهشی مانند 
+    (sum, len, min و
+max)
+    استفاده کرده‌اید. در ادامه درباره برنامه نویسی اعلامی، تغییرناپذیری و
+    iteration
+     های داخلی صحبت می‌کنیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">چگونگی انجام کد در قیاس با اهداف آن
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با پیچیده‌تر شدن کارهایی که یک برنامه انجام می‌دهد، خواندن، اشکال زدایی و اصلاح کد دشوارتر شده و احتمالاً کد مستعد خطا است. تعیین کردن نحوه کار کد می‌تواند پیچیده شود.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه نویسی به سبک تابعی این امکان را به شما می‌دهد به سادگی آنچه را که می‌خواهید انجام دهید، بیان کنید. این سبک کدنویسی جزئیات زیاد در نحوه انجام کار را پنهان می‌کند. معمولاً کدهای کتابخانه نحوه کار را برای شما کنترل می‌کنند. همانطور که مشاهده خواهید کرد، این روش می‌تواند بسیاری از خطاها را از بین ببرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    for
+    را در سایر زبان‌های برنامه نویسی در نظر بگیرید. به طور معمول، باید تمام جزئیات حلقه تکرار که با شمارنده کنترل می‌شوند را مشخص کنید: یک متغیر کنترل، مقدار اولیه آن، نحوه افزایش آن و یک شرط ادامه حلقه که از متغیر کنترل برای تعیین ادامه تکرار استفاده می‌کند. این سبک تکرار، به تکرار خارجی معروف است و مستعد خطا است. به عنوان مثال، ممکن است مقداردهی اولیه، تغییر گام حلقه و یا شرایط ادامه حلقه را نادرست انجام دهید. تکرار خارجی متغیر کنترل را تغییر می‌دهد و دستورات موجود در 
+    suite
+    دستور 
+    for
+    اغلب متغیرهای دیگر را نیز تغییر می‌دهند. هربار که متغیرها را تغییر می‌دهید می‌توانید باعث ایجاد یک خطا شوید. برنامه نویسی به سبک تابعی بر تغییرندادن تاکید دارد؛ یعنی از عملیاتی که مقادیر متغیرها را تغییر می‌دهند، اجتناب می‌کند. در فصل بعدی در این مورد بیشتر توضیح می‌دهیم. 
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+     range
+    و دستور 
+    for
+    جزئیات حلقه تکرار کنترل شده با شمارنده را پنهان می‌کنند. شما فقط دامنه مقادیر مورد نظر و متغیری که باید مقادیر تولید شده را دریافت کند، تعیین می‌کنید. تابع 
+     range
+    می‌داند که چگونه این مقادیر را تولید کند. به همین ترتیب دستور 
+    for
+    می‌داند که چگونه هر مقداری را از یک محدوده به دست آورد و زمانی که مقدار دیگری وجود ندارد، چگونه حلقه تکرار را متوقف کند. مشخص کردن آنچه می‌خواهیم، اما نه چگونگی آن، جنبه مهمی از تکرار داخلی است و یک مفهوم کلیدی در برنامه نویسی به سبک تابعی محسوب می‌شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توابع داخلی پایتون مانند 
+    sum, min و max
+    هر کدام از تکرارهای داخلی استفاده می‌کنند. برای جمع لیست نمرات، به سادگی آنچه را که می‌خواهید انجام دهید، اعلان می‌کنید؛ یعنی 
+    sum(grades)
+    را فراخوانی می‌کنید. تابع 
+    sum
+    می‌داند که چگونه از طریق تکرار، عناصر لیست را پیمایش کند و مقدار عنصر را به مجموع محاسبه شده فعلی اضافه کند. بیان آنچه می‌خواهید انجام شود به جای برنامه نویسی نحوه انجام آن، به عنوان برنامه نویسی اعلانی شناخته می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#8e24aa;">توابع خالص یا 
+    Pure Functions
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در یک زبان برنامه نویسی تابعی خالص، روی نوشتن توابع خالص تمرکز می‌کنید. نتیجه یک تابع خالص فقط به آرگومان‌هایی که با آن منتقل می‌کنید، بستگی دارد. علاوه بر این، یک تابع خالص با توجه به یک آرگومان خاص (یا آرگومان‌ها)، همیشه نتیجه یکسانی را تولید می‌کند. به عنوان مثال، خروجی تابع 
+    sum
+    فقط به آرگومان‌های نوع 
+    iterable
+    که به آن ارسال می‌کنید، بستگی دارد. تابع 
+    sum
+    در هر بار فراخوانی با آرگومان 
+    $[1, 2, 3]$
+    ، مقدار ۶ را برمی‌گرداند. همچنین، یک تابع خالص تاثیرات جانبی ندارد. به عنوان مثال، حتی اگر یک لیست قابل تغییر را به یک تابع خالص منتقل کنید، مقادیر این فهرست قبل از فراخوانی تابع و بعد از فراخوانی آن یکسان خواهد بود. تابع خالص 
+    sum
+    آرگومان خود را هنگام فراخوانی تغییر نمی‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">83</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="c1"># same call always returns same result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">84</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="c1"># same call always returns same result</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل بعدی، از مفاهیم برنامه نویسی به سبک تابعی استفاده خواهید کرد. در فصل بعدی خواهید دید توابع اشیایی هستند که می‌توانید آنها را به عنوان داده به سایر توابع منتقل کنید.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.18 <span style="color:#F50057;">مقدمه‌ای بر علم داده: سنجش پراکندگی</span></h1> <a id='19'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بحث آمار توصیفی، شاخص‌های مرکزی نظیر میانگین، میانه و مد را بررسی کردیم. این توابع به ما کمک می‌کنند مقادیر متعارف را در یک گروه طبقه بندی کنیم، برای مثال میانگین قد همکلاسی‌های شما یا مارک اتومبیلی که در یک کشور خاص بیشتر فروش را دارد، مثال‌هایی از این دست تلقی می‌شوند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی در مورد یک گروه صحبت می‌کنیم، کل گروه را جمعیت می‌نامند. گاهی اوقات یک جمعیت بسیار بزرگ است، برای مثال تعداد افرادی که احتمالاً در انتخابات بعدی ریاست جمهوری آمریکا رای خواهند داد، ۱۰۰۰۰۰۰۰۰ نفر خواهند بود. به همین دلیل، سازمان‌های نظرسنجی که سعی در پیش‌بینی نفر پیروز در انتخابات ریاست جمهوری دارند، با زیر مجموعه‌های کوچکی از جمعیت که به عنوان نمونه شناخته می‌شوند کار می‌کنند. بسیاری از نمونه‌های نظرسنجی‌ها در انتخابات ۲۰۱۶ جمعیتی حدود ۱۰۰۰ نفر داشتند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این بخش بحثمان در مورد آمار توصیفی پایه را ادامه می‌دهیم. معیارهای سنجش پراکندگی (که معیارهای تغییرپذیری نیز نامیده می‌شوند) را معرفی می‌کنیم. این معیارها به شما کمک می‌کنند تا دیدی در مورد میزان پراکندگی و تفاوت داده‌ها کسب کنید. برای مثال ممکن است در یک کلاس تعدادی از دانش‌آموزان قدی نزدیک به میانگین افراد آن کلاس داشته باشند و قد تعداد کمی از دانش‌آموزان به طور قابل توجهی کوتاه‌تر یا بلندتر از میانگین قد افراد کلاس باشند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای اهدافمان، معیارهای مربوط به پراکندگی را یک بار دستی و بار دوم با استفاده از توابع موجود در ماژول 
+    statistics
+    محاسبه خواهیم کرد. جمعیت آماری ما اعداد روی وجوه یک تاس ۶ وجهی است و این تاس ۱۰ بار پرتاب شده است:
+</div>
+<p><span class="math notranslate nohighlight">\( 1,\ 3,\ 4,\ 2,\ 6,\ 5,\ 3,\ 4,\ 5,\ 2 \)</span></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">واریانس
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تعیین واریانس با میانگین این مقادیر یعنی ۳.۵ شروع می‌کنیم. این نتیجه با تقسیم مجموع مقادیر یعنی ۳۵، بر تعداد آنها یعنی ۱۰ به دست می‌آید. در مرحله بعد، میانگین را از هر مقدار کم می‌کنیم (که برخی نتایج منفی تولید می‌کنند):
+</div>
+$ -2.5,\ -0.5,\ 0.5,\ -1.5,\ 2.5,\ 1.5,\ -0.5,\ 0.5,\ 1.5,\ -1.5 $
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ادامه، هر یک از این نتایج را به توان ۲ می‌رسانیم (نتیجه حاصل شده فقط اعداد مثبت هستند).
+</div>
+<p><span class="math notranslate nohighlight">\( 6.25,\ 0.25,\ 0.25,\ 2.25,\ 6.25,\ 2.25,\ 0.25,\ 0.25,\ 2.25,\ 2.25 \)</span></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای سادگی، واریانس جمعیت را محاسبه می‌کنیم. تفاوت ظریفی بین واریانس جمعیت و واریانس نمونه وجود دارد. واریانس نمونه به جای تقسیم کردن بر 
+    n
+    (تعداد پرتاب تاس در مثال ما) بر 
+    n - 1
+    تقسیم می‌شود. این تفاوت برای نمونه‌های کوچک مشهود است و با افزایش تعداد نمونه‌ها ‌بی‌اهمیت می‌شود. دو تابع 
+    pvariance
+    و 
+    variance
+    در ماژول 
+    statistics
+    به ترتیب برای محاسبه واریانس جمعیت و واریانس نمونه به کار می‌روند. به طور مشابه، در ماژول 
+    statistics
+    توابع 
+    pstdev
+    و 
+    stdev
+    برای محاسبه انحراف معیار جمعیت و انحراف معیار نمونه استفاده می‌شوند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در نهایت برای محاسبه واریانس جمعیت، میانگین اعداد بالا را 
+   ( $ {22.5} / {10} = {2.25} $ )
+    محاسبه می‌کنیم. مربع کردن تفاضلات اختلاف هر مقدار با میانگین، بر داده‌های پرت تاکید می‌کند. داده‌های پرت مقادیری هستند که از میانگین فاصله زیادی دارند. هرچه بیشتر به تحلیل داده‌ها می‌پردازیم، گاهی اوقات می‌خواهیم به داده‌های پرت دقیق توجه کنیم و گاهی اوقات آن‌ها را نادیده می‌گیریم. کد زیر برای تایید محاسبه دستی ما از تابع 
+    pvariance
+    در ماژول 
+    statistics
+    استفاده می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="o">.</span><span class="n">pvariance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.25
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">انحراف معیار
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">انحراف استاندارد جذر واریانس است (در این حالت ۱.۵) و تاثیر داده‌های پرت را کاهش می‌دهد. هرچه واریانس و انحراف استاندارد کوچک‌تر باشد، داده‌ها به میانگین نزدیک‌ترند و پراکندگی کلی (یعنی گسترش) بین مقادیر و میانگین کمتر است. کد زیر انحراف معیار جمعیت را با تابع 
+    pstdev
+    در ماژول 
+    statistics
+    محاسبه می‌کند و صحت نتیجه دستی ما را تایید می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="o">.</span><span class="n">pstdev</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ارسال نتیجه تابع 
+    pvariance
+    به تابع 
+    sqrt
+    در ماژول 
+    math
+    نتیجه ۱.۵ را تایید می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">pvariance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مزیت انحراف معیار جمعیت در مقابل واریانس جمعیت
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فرض کنید دمای ماه مارس منطقه خود را بر حسب فارنهایت ثبت کرده‌اید. ممکن است اعدادی مانند ۱۹، ۳۱، ۳۲، ۲۸ و ۳۵ داشته باشید. واحد این اعداد فارنهایت است. هنگامی که برای محاسبه واریانس جمعیت این اعداد را به توان ۲ می‌رسانید، واحد جمعیت شما فارنهایت به توان ۲ می‌شود. وقتی برای محاسبه انحراف معیار جمعیت، از واریانس جمعیت جذر می‌گیرید، واحدها مجددا به فارنهایت تبدیل می‌شوند و این نتیجه با مقادیر جمعیت شما هم واحد هستند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">4.19 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='20'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، توابع سفارشی ایجاد کردیم. از ماژول‌های 
+    random
+    و 
+    math
+    قابلیت‌هایی را 
+    import
+    کردیم. مولد اعداد تصادفی را معرفی کردیم و از آن برای شبیه سازی پرتاب یک تاس شش وجهی استفاده کردیم. مقادیر متعددی را در یک 
+    tuple
+    فشرده کردیم تا یک تابع بتواند چند مقدار را برگرداند. همچنین برای دسترسی به مقادیر یک 
+    tuple
+    آن را از حالت فشرده خارج کردیم. در مورد استفاده از ماژول‌های کتابخانه استاندارد پایتون بحث کردیم تا از کد نویسی مجدد اجتناب کنیم.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توابعی با مقادیر پارامتر پیش فرض ایجاد کردیم و توابع را با آرگومان‌های کلیدی فراخوانی کردیم. همچنین توابع را با آرگومانی از لیست‌های دلخواه تعریف کردیم. متدهای اشیاء را فراخوانی کردیم. در این مورد صحبت کردیم که چگونه حوزه یک شناسه تعیین می‌کند در کجای برنامه می‌توان از آن شناسه استفاده کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اطلاعات بیشتری در مورد 
+    import
+    کردن ماژول‌ها ارائه دادیم. ملاحظه کردید که چگونه آرگومان‌ها با روش ارجاع به توابع منتقل می‌شوند و دیدید که چگونه پشته فراخوانی تابع و پشته فریم‌ها از مکانیزم فراخوانی و بازگشت توابع پشتیبانی می‌کنند. همچنین یک تابع بازگشتی شرح دادیم و معرفی قابلیت‌های برنامه نویسی به سبک تابعی در پایتون را آغاز کردیم. در دو فصل گذشته مبانی لیست‌ها و قابلیت‌های 
+    tuple
+    را معرفی کردیم و در فصل بعدی، در مورد آن‌ها به طور کامل بحث خواهیم کرد.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در انتها، با معرفی واریانس و انحراف معیار به عنوان معیارهای پراکندگی و محاسبه آنها با توابع موجود در ماژول 
+    statistics
+    از کتابخانه استاندارد پایتون بحث خود را در مورد آمار توصیفی ادامه دادیم.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای برخی از انواع مسائل، این امکان که تابع خود را فراخوانی کند، مفید واقع می‌گردد. یک تابع بازگشتی خود را به طور مستقیم یا غیرمستقیم از طریق یک تابع دیگر فراخوانی می‌کند.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/04 - Functions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../03%20-%20Control-Statements/Chapter3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../05%20-%20Sequences-%28Lists-and-Tuples%29/Chapter5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

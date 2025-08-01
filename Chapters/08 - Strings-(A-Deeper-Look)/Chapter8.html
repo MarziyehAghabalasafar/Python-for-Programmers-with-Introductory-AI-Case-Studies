@@ -1,0 +1,3373 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/08 - Strings-(A-Deeper-Look)/Chapter8';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../09%20-%20Files-and-Exceptions/Chapter9.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../07%20-%20Array-Oriented-Programming-with-NumPy/Chapter7.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/08 - Strings-(A-Deeper-Look)/Chapter8.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/08 - Strings-(A-Deeper-Look)/Chapter8.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۸: رشته‌ها - نگاهی عمیق‌تر</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>پردازش متن را درک خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>از متدهای رشته استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>محتوای رشته را فرمت خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>رشته‌ها را به یکدیگر الصاق کرده و آن‌ها را تکرار خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>فضای خالی موجود در انتهای رشته‌ها را حذف خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>کاراکترها را از حروف کوچک به بزرگ و بالعکس تغییر خواهید داد.<br>
+    <span style="color:#F50057;">■ </span>با عملگرهای مقایسه‌ای، رشته‌ها را با یکدیگر مقایسه خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>رشته‌ها را برای یافتن زیررشته‌ها جست‌وجو کرده و زیررشته‌ها را در رشته جایگزین خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>رشته‌ها را به چند توکن تقسیم خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>چند رشته که با یک جداکننده خاص از هم تفکیک شده‌اند را در یک رشته الصاق خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>عبارات منظم را ایجاد کرده و برای مطابقت الگوها با رشته‌ها، جایگزین کردن زیررشته‌ها و اعتبارسنجی داده‌ها از آن‌ها استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>از 
+        metacharacter
+        های عبارات منظم، 
+        quantifier
+        ها، 
+        character class
+        ها و گروه‌بندی استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>درک خواهید کرد که دستکاری رشته‌ها چقدر برای پردازش زبان طبیعی حیاتی هستند.<br>
+    <span style="color:#F50057;">■ </span>با اصطلاحات علم داده مانند 
+        data munging
+        و پاک‌سازی داده‌ها آشنا شده و از عبارات منظم برای آماده‌سازی داده‌ها در فرمت موردنظر استفاده خواهید کرد.<br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="8">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">فصل ۸: رشته‌ها - نگاهی عمیق‌تر</span></a></p>
+<ul class="simple">
+<li><p>8.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>8.2 <a class="reference internal" href="#3"><span class="xref myst">فرمت کردن رشته‌ها</span></a></p>
+<ul>
+<li><p>8.2.1 <a class="reference internal" href="#4"><span class="xref myst">نمایش نوع داده</span></a></p></li>
+<li><p>8.2.2 <a class="reference internal" href="#5"><span class="xref myst">عرض فیلد و تراز کردن</span></a></p></li>
+<li><p>8.2.3 <a class="reference internal" href="#6"><span class="xref myst">فرمت کردن عددی</span></a></p></li>
+<li><p>8.2.4 <a class="reference internal" href="#7"><span class="xref myst">متد format در رشته</span></a></p></li>
+</ul>
+</li>
+<li><p>8.3 <a class="reference internal" href="#8"><span class="xref myst">الصاق و تکرار رشته‌ها</span></a></p></li>
+<li><p>8.4 <a class="reference internal" href="#9"><span class="xref myst">حذف فضای خالی از رشته‌ها</span></a></p></li>
+<li><p>8.5 <a class="reference internal" href="#10"><span class="xref myst">تغییر بزرگی و یا کوچکی حروف</span></a></p></li>
+<li><p>8.6 <a class="reference internal" href="#11"><span class="xref myst">عملگرهای مقایسه‌ای برای رشته‌ها</span></a></p></li>
+<li><p>8.7 <a class="reference internal" href="#12"><span class="xref myst">جست‌وجو برای زیررشته‌ها</span></a></p></li>
+<li><p>8.8 <a class="reference internal" href="#13"><span class="xref myst">جایگزین کردن زیررشته‌ها</span></a></p></li>
+<li><p>8.9 <a class="reference internal" href="#14"><span class="xref myst">تفکیک و اتصال رشته‌ها</span></a></p></li>
+<li><p>8.10 <a class="reference internal" href="#15"><span class="xref myst">متدهای مربوط به کاراکترها</span></a></p></li>
+<li><p>8.11 <a class="reference internal" href="#16"><span class="xref myst">Raw Strings</span></a></p></li>
+<li><p>8.12 <a class="reference internal" href="#17"><span class="xref myst">مقدمه‌ای بر عبارات منظم</span></a></p>
+<ul>
+<li><p>8.12.1 <a class="reference internal" href="#18"><span class="xref myst">ماژول re و تابع fullmatch</span></a></p></li>
+<li><p>8.12.2 <a class="reference internal" href="#19"><span class="xref myst">جایگذاری زیررشته‌ها و تفکیک رشته‌ها</span></a></p></li>
+<li><p>8.12.3 <a class="reference internal" href="#20"><span class="xref myst">سایر توابع جست‌جو؛ دسترسی به مطابقت‌ها</span></a></p></li>
+</ul>
+</li>
+<li><p>8.13 <a class="reference internal" href="#21"><span class="xref myst">مقدمه‌ای بر علم داده: Pandas، عبارات منظم و Data
+Munging </span></a></p></li>
+<li><p>8.14 <a class="reference internal" href="#22"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تا اینجای کار، رشته‌ها، فرمت کردن اولیه آن‌ها و چندین عملگر و متد رشته را معرفی کردیم. مشاهده کردید که رشته‌ها از تعداد زیادی عملگرهای دنباله‌ای نظیر لیست‌ها و تاپل‌ها پشتیبانی می‌کنند و همانند تاپل‌ها غیرقابل تغییر هستند. در این فصل نگاه عمیق‌تری به رشته‌ها و عبارات منظم می‌اندازیم و ماژول 
+    re
+    را معرفی می‌کنیم. از این ماژول برای تطابق الگوها با متن استفاده خواهیم کرد. عبارات منظم در برنامه‌های غنی از داده‌های امروزی اهمیت ویژه‌ای دارند. قابلیت‌های ارائه شده در این قسمت به شما کمک می‌کنند تا برای فصل پردازش زبان طبیعی 
+    (NLP)
+    و سایر فصل‌های اصلی علم داده آماده شوید. در فصل 
+    NLP
+    سایر روش‌های تغییر متن و درک متن به وسیله کامپیوترها را شرح خواهیم داد. جدول زیر بسیاری از برنامه‌های مربوط به پردازش رشته و 
+    NLP
+    را نشان می‌دهد.در بخش مقدمه‌ای بر علم داده، به طور خلاصه پاک‌سازی داده‌ها و 
+    data cleaning/munging/wrangling
+    را با کمک 
+    Series
+    و 
+    DataFrame
+    در 
+    Pandas
+    معرفی می‌کنیم. در فصل‌های مطالعه موردی در زمینه علم داده، خواهیم دید که جست‌وجوی الگوها در متن یک قسمت مهم در یادگیری ماشین محسوب می‌شود.
+</div><p><img alt="Screenshot (73).png" src="Chapters/08 - Strings-(A-Deeper-Look)/attachment:c0691e57-c214-46f3-a150-a8b24778eb86.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.2 <span style="color:#F50057;">فرمت کردن رشته‌ها</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فرمت کردن مناسب متن، خواندن و فهم داده‌ها را آسان‌تر می‌کند. در اینجا، بسیاری از قابلیت‌های فرمت کردن متن را نشان می‌دهیم.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.2.1 <span style="color:#8e24aa;">نمایش نوع داده</span></h2> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فرمت کردن ابتدایی رشته را با 
+    f-string
+    مشاهده کرده‌اید. هنگامی که یک 
+    placeholder
+    را برای  یک مقدار در یک 
+    f-string
+    تعیین می‌کنید، پایتون فرض می‌کند آن مقدار باید به عنوان یک رشته نمایش داده شود مگر اینکه نوع دیگری را مشخص کنید. در برخی موارد، نوع داده مورد نیاز است. به عنوان مثال، قصد داریم مقدار اعشاری ۱۷.۴۸۹ را تا صدم اعشار گرد کنیم: 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mf">17.489</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;17.49&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون از این دقت فقط برای مقادیر اعشاری و دسیمال پشتیبانی می‌کند. فرمت کردن به نوع داده بستگی دارد. بنابراین اگر بخواهید از 
+    2f.
+    برای فرمت کردن یک رشته مانند 
+    'hello'
+    استفاده کنید یک خطای 
+    ValueError
+    رخ می‌دهد؛ بنابراین نمایش 
+    f
+    در مشخص کننده فرمت 
+    2f.
+    لازم است. این پارامتر نشان می‌دهد چه نوع داده‌ای فرمت خواهد شد و به همین دلیل پایتون می‌تواند تعیین کند که آیا سایر اطلاعات فرمت کردن برای این نوع داده مجاز است یا خیر. در اینجا، انواع مختلفی از نمایش نوع داده را نشان می‌دهیم. برای مشاهده لیست کامل به آدرس زیر مراجعه کنید:
+    <br>
+    <a href="https://docs.python.org/3/library/string.html#formatspec">
+https://docs.python.org/3/library/string.html#formatspec</a>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اعداد صحیح</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"> نوع نمایشی 
+     d 
+    اعداد صحیح را به صورت رشته فرمت می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">10</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;10&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع داده‌های نمایشی 
+    (b, o, x or X)
+    برای فرمت‌کردن اعداد صحیح در سیستم‌های اعداد باینری، اکتال و هگزادسیمال به کار می‌روند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">کاراکترها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع داده نمایشی 
+    c
+    ، کد (عدد صحیح) یک کاراکتر را به کاراکتر مربوطه فرمت می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">65</span><span class="si">:</span><span class="s1">c</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="mi">97</span><span class="si">:</span><span class="s1">c</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">رشته‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع داده نمایشی 
+     s
+    ، نوع داده پیش‌فرض محسوب می‌شود. اگر همانند اولین 
+    placeholder
+    در کد زیر 
+     s
+    را به طور صریح مشخص کنید، مقدار فرمت‌شده باید متغیری باشد که به یک رشته ارجاع  داده می‌شود، یا عبارتی باشد که یک رشته تولید کند و یا یک لیترال رشته‌ای باشد. اگر همانند 
+    placeholder
+    دوم در کد زیر، نوع داده نمایشی 
+    (presentation type)
+    را مشخص نکنید، مقادیر غیررشته‌ای همانند عدد صحیح ۷ به رشته تبدیل می‌شوند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;hello&quot;</span><span class="si">:</span><span class="s1">s</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="mi">7</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello 7&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این اسنیپت، رشته 
+    "hello"
+    میان دو کاراکتر نقل‌قول مضاعف محصور شده است. به یاد بیاورید که نمی‌توانید نقل‌قول‌های تکی را در داخل یک رشته که با نقل‌قول‌های تکی محصور شده است، قرار دهید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مقادیراعشاری و دسیمال</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از نوع داده نمایشی 
+    f
+    برای فرمت کردن مقادیراعشاری و دسیمال استفاده کرده‌اید. برای مقادیر بسیار بزرگ و کوچک از این نوع، می‌توان از نماد نمایی (نماد علمی) برای فرمت کردن مقادیر به صورت فشرده استفاده کرد. در این قسمت تفاوت بین 
+    f
+    و 
+    e
+    برای یک مقدار بزرگ را با دقت سه رقم بعد از نقطه اعشار نشان می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Decimal</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;10000000000000000000000000.0&quot;</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;10000000000000000000000000.000&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;10000000000000000000000000.0&quot;</span><span class="p">)</span><span class="si">:</span><span class="s1">.3e</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.000e+25&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نوع داده نمایشی 
+    e
+    مقدار فرمت‌شده 
+    $1.000e+25$
+    معادل مقدار 
+    $1.000 \times 10^{25}$
+    می‌باشد. اگر حرف 
+    E
+    را برای استفاده ترجیح می‌دهید، می‌توانید در نوع داده نمایشی به جای 
+    e
+    از 
+    E
+    استفاده کنید.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.2.2 <span style="color:#8e24aa;">عرض فیلد و تراز</span></h2> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قبلا از
+    field widths
+    ها برای فرمت کردن متن در تعداد مشخصی از 
+    موقعیت‌های کاراکترها
+    استفاده کردید. به طور پیش‌فرض، پایتون مقادیر عددی را از سمت راست و سایر مقادیر مانند رشته‌ها را از چپ تراز می‌کند؛ نتایج زیر را در میان یک جفت کروشه قرار می‌دهیم ([ ]) و به همین دلیل می‌توانید نحوه تراز شدن مقادیر را در فیلد مشاهده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">10d</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[        27]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mf">3.5</span><span class="si">:</span><span class="s1">10f</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[  3.500000]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="s2">&quot;hello&quot;</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[hello     ]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [۲] نشان می‌دهد که پایتون به طور پیش‌فرض مقادیر اعشاری را با شش رقم دقت در سمت راست نقطه اعشار فرمت می‌کند. برای مقادیری که کاراکترهای کمتری از عرض فیلد داشته باشند، باقی‌مانده کاراکترها با فاصله خالی پر می‌شوند. مقادیری که تعداد کاراکترهای بیشتری از عرض فیلد دارند، از فضای بیشتری برحسب نیاز استفاده می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مشخص نمودن تراز چپ‌چین و راست‌چین در یک فیلد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کمک نمادهای < و > می‌توانید چپ‌چین و یا راست‌چین بودن را مشخص کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">&lt;15d</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[27             ]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mf">3.5</span><span class="si">:</span><span class="s1">&lt;15f</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[3.500000       ]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="s2">&quot;hello&quot;</span><span class="si">:</span><span class="s1">&gt;15</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[          hello]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">وسط چین کردن یک مقدار در یک فیلد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">علاوه‌براین می‌توانید مقادیر را از وسط تراز کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">^7d</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[  27   ]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mf">3.5</span><span class="si">:</span><span class="s1">^7f</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[3.500000]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="s2">&quot;hello&quot;</span><span class="si">:</span><span class="s1">^7</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[ hello ]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تراز از وسط سعی می‌کند باقی‌مانده کاراکترهای اشغال نشده را به طور مساوی در سمت چپ و راست مقدار مورد نظر فرمت کند. اگر تعداد فردی از موقعیت‌های کاراکترها باقی بماند، پایتون یک فضای خالی در سمت راست قرار می‌دهد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.2.3 <span style="color:#8e24aa;">فرمت کردن اعداد</span></h2> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای فرمت کردن مقادیرعددی قابلیت‌های متعددی وجود دارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرمت کردن اعداد مثبت با علامت</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات مطلوب است که علامت + را کنار یک عدد مثبت قرار دهید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">+10d</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[       +27]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">علامت + قبل از عرض فیلد مشخص می‌کند که باید یک عدد مثبت بعد از یک علامت + قرار گیرد. یک عدد منفی همیشه با - شروع می‌شود. برای پر کردن کاراکترهایی با رقم صفر به جای کاراکتر 
+    space
+    ، یک صفر قبل از عرض فیلد قرار دهید (و اگر علامت + وجود دارد، بعد از +):
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">+010d</span><span class="si">}</span><span class="s1">]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;[+000000027]&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استفاده از فضای خالی به جای علامت + در یک مقدار مثبت</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک فضای خالی در اعداد مثبت معرف آن است که کاراکتر 
+    space
+    به جای علامت + قرار گرفته است. این کار برای تراز کردن مقادیر مثبت و منفی هنگام نمایش مفید است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="mi">27</span><span class="si">:</span><span class="s1"> d</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="o">-</span><span class="mi">27</span><span class="si">:</span><span class="s1"> d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27
+ 27
+-27
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توجه داشته باشید که این دو عدد با کاراکتر
+    space
+    در مشخص‌کننده‌های فرمت خود تراز می‌شوند. اگر عرض فیلد مشخص شده باشد، کاراکتر 
+    space
+    باید قبل از عرض فیلد قرارگیرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">گروه‌بندی ارقام</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از کاراکتر کاما (,) می‌توانید ارقام را سه رقم سه رقم جدا کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">12345678</span><span class="si">:</span><span class="s1">,d</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;12,345,678&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mf">123456.78</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;123,456.78&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.2.4 <span style="color:#8e24aa;">متد 
+    format
+    در رشته‌ها</span></h2> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">f-string
+    در نسخه ۳.۶ به زبان پایتون اضافه شد. قبل از آن، فرمت کردن با متد 
+    format
+    در رشته‌ها انجام می‌شد. در واقع فرمت کردن با 
+    f-string
+    بر اساس قابلیت‌های متد 
+    format
+    بنا نهاده شده است. در اینجا متد 
+    format
+    را به شما نشان می‌دهیم زیرا در کدهایی که قبل از پایتون ۳.۶ نوشته شده است با این متد روبرو خواهید شد. متد 
+    format
+    را در مستندات پایتون، در بسیاری از کتاب‌ها و مقالات پایتون که قبل از معرفی 
+    f-string
+    نوشته شده‌اند، مشاهده خواهید کرد. با این حال، توصیه می‌کنیم از فرمت کردن جدید 
+    f-string
+    که در این قسمت ارائه کرده‌ایم استفاده کنید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    format
+    را روی یک 
+    format string
+    حاوی  
+    placeholder
+    با یک جفت آکولاد 
+    ({})
+    و احتمالا با 
+    format specifierهای
+    مرتبط فراخوانی می‌کنید.متد 
+    format
+    مقداری که می‌بایست فرمت شود را به عنوان آرگومان دریافت می‌کند. در این قسمت مقدار اعشاری ۴۷۹.۱۷ را با صدم اعشار فرمت می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">17.489</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;17.49&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر در
+    placeholder
+    یک 
+    format specifier
+    وجود داشته باشد، باید همانند 
+    f-string
+    قبل از آن کاراکتر 
+    (:)
+    قرار گیرد. نتیجه فراخوانی 
+    format
+    یک رشته جدید حاوی نتایج فرمت‌شده می‌باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Multiple Placeholders</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک 
+    format string
+    ممکن است حاوی چندین 
+    placeholder
+    باشد، در این صورت آرگومان‌های متد 
+    format
+    با 
+    placeholder
+    ها از چپ به راست مطابقت دارند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Amanda&#39;</span><span class="p">,</span> <span class="s1">&#39;Cyan&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Amanda Cyan&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارجاع به آرگومان‌ها بر اساس شماره موقعیت</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">format string
+    می‌تواند به آرگومان‌های خاص با توجه به موقعیت آن‌ها در لیست آرگومان متد 
+    format
+    دسترسی پیدا کند. شماره موقعیت آرگومان‌ها از صفر شروع می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1"> </span><span class="si">{0}</span><span class="s1"> </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Happy&#39;</span><span class="p">,</span> <span class="s1">&#39;Birthday&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Happy Happy Birthday&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توجه داشته باشید که از موقعیت صفر 
+    ('Happy')
+    دوبار استفاده کردیم؛ شما می‌توانید هر آرگومان را به دفعات دلخواه و به هر ترتیب ارجاع دهید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارجاع به آرگومان‌های کلیدی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از 
+    key
+    ها در 
+     placeholder
+    می‌توانید آرگومان‌های کلیدی را ارجاع دهید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">{first}</span><span class="s1"> </span><span class="si">{last}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="s1">&#39;Amanda&#39;</span><span class="p">,</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;Gray&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Amanda Gray&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;</span><span class="si">{last}</span><span class="s1"> </span><span class="si">{first}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="s1">&#39;Amanda&#39;</span><span class="p">,</span> <span class="n">last</span><span class="o">=</span><span class="s1">&#39;Gray&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Gray Amanda&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.3 <span style="color:#F50057;">الصاق و تکرار رشته‌ها</span></h1> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل‌های قبلی از عملگر + برای اتصال رشته‌ها و از عملگر * برای تکرار رشته‌ها استفاده کردیم. علاوه‌براین می‌توانید این کارها را با عملگرهای مربوطه
+    و دستور انتساب 
+    (augmented assignments)
+    انجام دهید. رشته‌ها 
+    immutable
+    هستند، بنابراین هر عملگر، یک رشته جدید را به متغیر اختصاص می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;happy&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;birthday&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">s2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;happy birthday&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">symbol</span> <span class="o">=</span> <span class="s1">&#39;&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">symbol</span> <span class="o">*=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">symbol</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&gt;&gt;&gt;&gt;&gt;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.4 <span style="color:#F50057;">حذف فضای خالی از رشته‌ها</span></h1> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در رشته چندین متد برای از بین بردن فضای خالی از دو طرف یک رشته وجود دارد. هر یک از این متدها رشته جدیدی را برمی‌گرداند و تغییری در رشته اصلی ایجاد نمی‌کنند. رشته‌ها تغییرناپذیر هستند، بنابراین هر متدی که به نظر می‌رسد یک رشته را تغییر می‌دهد، در حقیقت یک رشته جدید را برمی‌گرداند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حذف فضای خالی از دو طرف رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت با کمک متد 
+     strip
+    فضاهای خالی از دوطرف یک رشته را حذف می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">  </span><span class="se">\n</span><span class="s1">  This is a test string. </span><span class="se">\t\t</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is a test string.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حذف فضای خالی از ابتدای رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با متد
+    lstrip
+    فضاهای خالی را از ابتدای رشته حذف می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is a test string. \t\t \n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حذف فضای خالی از انتهای رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با متد
+    rstrip
+    فضاهای خالی را از انتهای رشته حذف می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\t  \n  This is a test string.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همان‌طور که خروجی‌ها نشان می‌دهند، این متدها انواع فضاهای خالی نظیر 
+    space
+    ها، 
+    newline
+    ها و 
+    tab
+    ها را از بین می‌برند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.5 <span style="color:#F50057;">تغییر بزرگی و یا کوچکی حروف</span></h1> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل‌های قبلی، از متدهای 
+    lower
+    و 
+    upper
+    در رشته برای تبدیل تمامی کاراکترهای یک رشته به حروف کوچک یا حروف بزرگ استفاده کرده‌اید. با استفاده از متدهای 
+    capitalize
+    و 
+    title
+    می‌توانید اولین حرف یک رشته و یا اولین حرف تمامی کلمات یک رشته را به حرف بزرگ تغییر دهید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تبدیل اولین کاراکتر رشته به حرف بزرگ</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+     capitalize
+    یک کپی از رشته اصلی تهیه می‌کند، سپس فقط اولین حرف آن را به حرف بزرگ تبدیل کرده و در انتها رشته جدید را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;happy birthday&#39;</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Happy birthday&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تبدیل اولین کاراکتر هر کلمه در رشته به حرف بزرگ</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    title
+    یک کپی از رشته اصلی تهیه می‌کند، سپس اولین حرف هر کلمه در رشته را به حرف بزرگ تبدیل کرده و در انتها رشته جدید را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;strings: a deeper look&#39;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Strings: A Deeper Look&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.6 <span style="color:#F50057;">عملگرهای مقایسه‌ای برای رشته‌ها</span></h1> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عملگرهای مقایسه می‌توان رشته‌ها را مقایسه کرد. به یاد بیاورید که رشته‌ها بر اساس مقادیر صحیح عددی آن‌ها مقایسه می‌شوند. حروف بزرگ از حروف کوچک، کمتر هستند؛ به دلیل آن‌که حروف بزرگ مقادیر عددی کمتری دارند. به عنوان مثال، کد کاراکتر 
+    a
+    برابر ۹۷ و کد کاراکتر 
+    A
+    برابر ۶۵ است. همانطوری‌که قبلا هم مشاهده کرده‌اید با تابع 
+    ord
+    می‌توان کد هر کاراکتر را مشخص کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;A: </span><span class="si">{</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">; a: </span><span class="si">{</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A: 65; a: 97
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد زیر با استفاده از عملگرهای مقایسه، دو رشته 
+    'Orange'
+    و 
+    'orange'
+    را با یکدیگر مقایسه می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">==</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">!=</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">&lt;=</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">&gt;</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Orange&#39;</span> <span class="o">&gt;=</span> <span class="s1">&#39;orange&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.7 <span style="color:#F50057;">جست‌وجو برای زیررشته‌ها</span></h1> <a id='12'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک یا چند کاراکتر مجاور در یک رشته، زیررشته نامیده می‌شود. در این قسمت می‌توانید تعداد دفعات وجود یک زیررشته را شمارش کنید، می‌توانید تعیین کنید آیا رشته حاوی یک زیررشته می‌باشد و یا اندیسی که زیررشته در آن قرار دارد را تعیین کنید. تمامی متدهایی که در این بخش نشان داده شده‌اند، کاراکترها را با استفاده از مقادیرعددی و از لحاظ لغوی مقایسه می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">شمارش دفعات تکرار یک زیررشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    count
+    تعداد دفعات تکرار آرگومان خود در رشته‌ای که این متد را فراخوانی کرده، برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;to be or not to be that is the question&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;to&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر 
+    start_index
+    را به عنوان آرگومان دوم وارد کنید، متد 
+    count
+    جست‌وجو را در برش 
+    string[start_index:]
+    انجام می‌دهد، یعنی از اندیس 
+    start_index
+    تا انتهای رشته:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر 
+    start_index
+    و 
+    end_index
+    را به عنوان آرگومان دوم و سوم وارد کنید، متد 
+    count
+    جست‌وجو را در برش 
+    string[start_index:end_index]
+    انجام می‌دهد، یعنی از اندیس 
+    start_index
+    تا یک اندیس کمتر از 
+    end_index
+    :
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;that&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تمام متدهای رشته که در این قسمت ارائه شده‌اند همانند متد 
+    count
+    دارای آرگومان‌های 
+    start_index
+    و 
+    end_index
+    هستند. این دو آرگومان برای جست‌وجو در قسمتی از رشته اصلی به کار می‌روند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین اندیس یک زیررشته در رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    index
+    یک زیررشته را در رشته جست‌وجو می‌کند و اولین اندیس پیدا شدن زیررشته را برمی‌گرداند. در صورت پیدا نشدن زیررشته، یک خطای 
+    ValueError
+    رخ می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    rindex
+    شبیه متد 
+    index
+    عمل می‌کند اما عمل جست‌وجوی زیررشته را از انتهای رشته انجام می‌دهد و آخرین پیدا شدن زیررشته را برمی‌گرداند. در صورت پیدا نشدن زیررشته، یک خطای 
+    ValueError
+    رخ می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متدهای رشته‌ای 
+    find
+    و 
+    rfind
+    همان وظایف 
+    index
+    و 
+    rindex
+    را انجام می‌دهند اما در صورت پیدا نشدن زیررشته به جای بروز خطای 
+     ValueError
+    مقدار ۱- را برمی‌گردانند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین آن‌که یک رشته حاوی زیررشته هست و یا خیر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر فقط باید بدانید که آیا یک رشته حاوی یک زیررشته هست و یا خیر، از عملگرهای 
+    in
+    و 
+    not in
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;that&#39;</span> <span class="ow">in</span> <span class="n">sentence</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;THAT&#39;</span> <span class="ow">in</span> <span class="n">sentence</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;THAT&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sentence</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پیدا کردن یک زیررشته در ابتدا یا انتهای یک رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر یک رشته با زیررشته مشخصی شروع شود و یا پایان یابد دو متد 
+    startswith
+    و 
+    endswith
+    در رشته مقدار 
+    True
+    برمی‌گردانند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;to&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;be&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;question&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;quest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.8 <span style="color:#F50057;">جایگزین کردن زیررشته‌ها</span></h1> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک روش معمول تغییر در متن، یافتن یک زیررشته و جایگزین کردن آن با یک مقدار دیگر است. متد 
+    replace
+    دو زیررشته را می‌گیرد. این متد، اولین آرگومان خود را در رشته جست‌وجو می‌کند و در هر زمان که عمل جست‌وجو موفقیت‌آمیز بود، آرگومان دوم خود را در رشته جایگزین می‌کند. متد 
+    replace
+    نتیجه را به صورت یک رشته جدید برمی‌گرداند. در کد زیر کاراکترهای 
+     tab
+    را با کاما جایگزین می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="s1">&#39;1</span><span class="se">\t</span><span class="s1">2</span><span class="se">\t</span><span class="s1">3</span><span class="se">\t</span><span class="s1">4</span><span class="se">\t</span><span class="s1">5&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1,2,3,4,5&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">علاوه‌براین متد 
+    replace
+    می‌تواند یک آرگومان سوم اختیاری دریافت کند. این آرگومان حداکثر دفعات جایگزینی را مشخص می‌کند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.9 <span style="color:#F50057;">تفکیک و اتصال رشته‌ها</span></h1> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی جمله‌ای را می‌خوانید، مغز شما آن جمله را به کلمات یا توکن‌های جداگانه تقسیم می‌کند و به هر یک از آن‌ها معنا می‌دهد. مفسرهایی مانند 
+    IPython
+    دستورات را به توکن تبدیل می‌کنند و آن‌ها را به اجزای جداگانه‌ای مانند کلمات کلیدی، شناسه‌ها، عملگرها و سایر اجزای زبان برنامه نویسی تقسیم می‌کنند. معمولا توکن‌ها با کاراکترهای فضای خالی مانند 
+    blank, tab 
+    و 
+    newline
+    از هم جدا می‌شوند ولی ممکن است برای این کار از کاراکترهای دیگری که به عنوان جداکننده شناخته می‌شوند، استفاده کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تفکیک کردن رشته‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قبلا نشان دادیم که 
+    split
+    در رشته بدون هیچ آرگومانی، یک رشته را در موقعیت کاراکترهای فضای خالی، به چند زیررشته تقسیم می‌کند و سپس لیستی از توکن‌ها را برمی‌گرداند. برای تقسیم یک رشته با یک جداکننده دلخواه مانند جفت کاما و فاصله، رشته جداکننده را برای تابع 
+    split
+    مشخص کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span> <span class="o">=</span> <span class="s1">&#39;A, B, C, D&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر یک عدد صحیح را به عنوان آرگومان دوم تخصیص دهید، حداکثر تعداد تقسیم‌ها را مشخص می‌کند. پس از تقسیم رشته اصلی به تعداد آرگومان دوم، مابقی رشته در آخرین توکن قرار می‌گیرند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A&#39;, &#39;B&#39;, &#39;C, D&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همچنین یک متد به نام 
+    rsplit
+    وجود دارد که همان وظیفه 
+    split
+    را انجام می‌دهد اما حداکثر تعداد تقسیم‌ها را از انتهای رشته به سمت ابتدای رشته پردازش می‌کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اتصال رشته‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    join
+    رشته‌های موجود در آرگومان خود را به یکدیگر متصل می‌کند. این آرگومان باید یک داده از نوع 
+    iterable
+    بوده و فقط از مقادیر رشته‌ای تشکیل شود، در غیر این صورت، یک خطای 
+     TypeError
+    رخ می‌دهد. جداکننده بین آرگومان‌ها، همان رشته‌ای است که متد 
+    join
+    را برای آن فراخوانی کرده‌اید. کد زیر از مقادیر یک لیست که با کاما از یکدیگر جدا شده‌اند، یک رشته تولید می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letters_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">letters_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;A,B,C,D&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد زیر در ابتدا با روش 
+    list comprehension
+    یک لیست از داده‌های رشته‌ای ایجاد می‌کند و سپس با متد 
+    join
+    اجزای این لیست را به یکدیگر متصل می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0,1,2,3,4,5,6,7,8,9&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل فایل‌ها و استثناها، با نحوه کار با فایل‌هایی که حاوی مقادیر جداشده با کاما هستند، آشنا خواهید شد. این فایل‌ها به عنوان فایل‌های
+    CSV
+    شناخته می‌شوند و یک فرمت رایج برای ذخیره داده‌هایی هستند که توسط برنامه‌های 
+    spreadsheet
+    مانند 
+    Microsoft Excel
+    یا 
+    Google Sheets
+    قابل بارگذاری هستند. در بخش‌های مطالعه موردی در خصوص علم داده، خواهید دید که بسیاری از کتابخانه‌های کلیدی، مانند 
+    NumPy, Pandas 
+    و
+    Seaborn
+    قابلیت‌های داخلی برای کار با داده‌های 
+    CSV
+    را فراهم می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متدهای 
+    partition
+    و 
+    rpartition
+    در رشته‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    partition
+    در رشته بر اساس آرگومان جداکننده خود، یک رشته را به یک تاپل تقسیم می‌کند. این تاپل حاوی سه رشته به شرح زیر می‌باشد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>قسمتی از رشته اصلی قبل از جداکننده<br>
+    <span style="color:#8e24aa;">• </span>خود جداکننده<br>
+    <span style="color:#8e24aa;">• </span>قسمتی از رشته اصلی بعد از جداکننده<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این متد برای تقسیم رشته‌های پیچیده مفید است. رشته‌ای را در نظر بگیرید که نشان‌دهنده نام و نمرات یک دانش‌آموز است:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Amanda: 89, 97, 92&#39;</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد زیر رشته اصلی را به نام دانش‌آموز، جداکننده 
+    ' :'
+    و رشته‌ای حاوی لیست نمرات تقسیم می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Amanda: 89, 97, 92&#39;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s1">&#39;: &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Amanda&#39;, &#39;: &#39;, &#39;89, 97, 92&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای جست‌وجوی جداکننده و عمل جداکردن از انتهای رشته، از متد 
+    rpartition
+    استفاده کنید. به عنوان مثال، رشته 
+    URL
+    زیر را درنظر بگیرید:
+    <br>
+    <a href="http://www.deitel.com/books/PyCDS/table_of_contents.html">'http://www.deitel.com/books/PyCDS/table_of_contents.html'</a>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد زیر با متد 
+    rpartition
+    رشته 
+    'table_of_contents.html'
+    را از مابقی 
+    URL
+    جدا می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.deitel.com/books/PyCDS/table_of_contents.html&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rest_of_url</span><span class="p">,</span> <span class="n">separator</span><span class="p">,</span> <span class="n">document</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">document</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;table_of_contents.html&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rest_of_url</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;http://www.deitel.com/books/PyCDS&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متد 
+    splitlines
+    در رشته‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل فایل‌ها و استثناها متنی را از یک فایل خواهید خواند. اگر متن بزرگی را به صورت یک رشته بخوانید، ممکن است بخواهید بر اساس کاراکترهای 
+    newline
+    رشته را به لیستی از خطوط تقسیم کنید. متد 
+    splitlines
+    لیستی از رشته‌های جدید را برمی‌گرداند. هر رشته در این لیست معرف یک خط از رشته اصلی است که در موقعیت کاراکتر 
+    newline
+    در این رشته شکسته شده است. به یاد داشته باشید که مطابق اسنیپت [۱۳]، پایتون رشته‌های چندخطی را با کاراکترهای 
+    newline
+    تعبیه شده ذخیره می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is line 1</span>
+<span class="s2">This is line2</span>
+<span class="s2">This is line3&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is line 1\nThis is line2\nThis is line3&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is line 1&#39;, &#39;This is line2&#39;, &#39;This is line3&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ارسال مقدار 
+    True
+    به متد 
+    splitlines
+    باعث حفظ کاراکتر 
+    newline
+    در انتهای هر رشته می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This is line 1\n&#39;, &#39;This is line2\n&#39;, &#39;This is line3&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.10 <span style="color:#F50057;">متدهای مربوط به کاراکترها</span></h1> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بسیاری از زبان‌های برنامه‌نویسی رشته‌ها و کاراکترها نوع داده‌های متفاوتی محسوب می‌شوند. در پایتون، یک کاراکتر به سادگی یک رشته تک کاراکتری است. در پایتون متدهای رشته‌ای مختلفی برای آزمایش انطباق یک رشته با ویژگی‌های خاص وجود دارد. به عنوان مثال متد 
+    isdigit
+    زمانی مقدار 
+    True
+    برمی‌گرداند که رشته‌ای آن را فراخوانی کرده، فقط شامل کاراکترهای رقمی (۰ - ۹) باشد. ممکن است برای مواردی که ورودی کاربر باید فقط از ارقام تشکیل شده باشد، این متد برای اعتبارسنجی ورودی کاربر به کار می‌رود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;-27&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;27&#39;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و متد
+    isalnum
+    زمانی مقدار 
+    True
+    را برمی‌گرداند که رشته‌ای آن را فراخوانی کرده و فقط شامل کاراکترهای رقمی (۰ - ۹) و حروف الفبا باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;A9876&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;123 Main Street&#39;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول زیر بسیاری از متدهای 
+    character-testing
+    را نشان می‌دهد. اگر شرط توصیف شده برقرار نباشد، متد مربوطه مقدار 
+    False
+    را برمی‌گرداند:
+</div><p><img alt="Screenshot (84).png" src="Chapters/08 - Strings-(A-Deeper-Look)/attachment:2b9be77c-bedc-4ba0-996e-b25c952fa975.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.11 <span style="color:#F50057;">Raw Strings</span></h1> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به یاد بیاورید که کاراکتر بک‌اسلش در رشته‌ها کاراکترهای ویژه
+    (escape sequence)
+    را معرفی می‌کنند؛ برای مثال 
+    $\n$
+    برای خط جدید و 
+    $\t$
+    برای کاراکتر 
+    tab
+    به کار می‌روند. اگر می‌خواهید یک کاراکتر بک‌اسلش در یک رشته قرار دهید، باید از دو کاراکتر بک‌اسلش 
+    <code>\\</code>
+    استفاده کنید. این روش، خواندن برخی از رشته‌ها را دشوار می‌کند. به عنوان مثال، مایکروسافت ویندوز هنگام تعیین مکان یک فایل، از کاراکترهای بک‌اسلش برای جداکردن نام پوشه‌ها استفاده می‌کند. برای نشان دادن مکان یک فایل در ویندوز، می‌توانید از کد زیر استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">MyFolder</span><span class="se">\\</span><span class="s1">MySubFolder</span><span class="se">\\</span><span class="s1">MyFile.txt&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\MyFolder\\MySubFolder\\MyFile.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای چنین مواردی کار با 
+    raw string
+    ها که قبل از آن حرف 
+    r
+    قرار دارد، راحت‌تر می‌باشد. 
+    raw string
+    ها با کاراکتر بک‌اسلش به عنوان یک کاراکتر معمولی رفتار می‌کنند و دیگر آن را قسمتی از یک 
+    کاراکتر ویژه
+    (escape sequence)
+    قلمداد نمی‌کنند: 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\MyFolder\MySubFolder\MyFile.txt&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\MyFolder\\MySubFolder\\MyFile.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همان طور که در آخرین اسنیپت نشان داده شده است، پایتون 
+    raw string
+    را به یک رشته معمولی تبدیل می‌کند و در نمایش داخلی از دو کاراکتر بک‌اسلش متوالی استفاده می‌کند. 
+    raw string
+    ها به‌ویژه هنگام استفاده از عبارات منظم که در بخش بعدی بحث می‌کنیم، می‌تواند کد شما را خواناتر کند. عبارات منظم اغلب حاوی کاراکترهای بک‌اسلش زیادی هستند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.12 <span style="color:#F50057;">مقدمه‌ای بر عبارات منظم</span></h1> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات باید الگوهایی مانند شماره تلفن، آدرس ایمیل، کد پستی، آدرس صفحات وب، کد ملی و موارد دیگر را در متن شناسایی کنید. یک رشته منظم یک الگوی جست‌وجو را برای مطابقت با کاراکترها در رشته‌های دیگر توصیف می‌کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارات منظم می‌توانند به شما کمک کنند داده‌ها را از متن بدون ساختار، مانند پست‌های شبکه اجتماعی استخراج کنید. عبارات منظم می‌توانند قبل از پردازش داده‌ها درستی فرمت داده‌ها را تضمین کنند و از این منظر بسیار حائز اهمیت هستند. مبحث عبارات منظم ممکن است از بیشتر ویژگی‌های پایتون که استفاده کرده‌اید چالش‌برانگیزتر باشد. پس از تسلط بر این موضوع، معمولا کد مختصرتری را نسبت به تکنیک‌های معمولی پردازش رشته می‌نویسید و این رویکرد روند توسعه کد را تسریع می‌کند. همچنین با موارد حاشیه‌ای که ممکن است به طور معمول به آن‌ها فکر نکنید، مقابله می‌کنید و احتمالا از اشکالات ظریف جلوگیری خواهید کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اعتبارسنجی داده‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قبل از کار با داده‌های متنی، اغلب از عبارات منظم برای اعتبارسنجی داده‌ها استفاده می‌کنید. به عنوان مثال، می‌توانید موارد زیر را بررسی کنید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>کدپستی ایالات‌متحده از پنج رقم (مانند ۰۲۲۱۵) یا پنج رقم و به دنبال آن خط تیره و چهار رقم دیگر (مانند ۴۷۷۵-۰۲۲۱۵) تشکیل شده است.<br>
+    <span style="color:#8e24aa;">• </span>نام‌خانوادگی رشته‌ای است که فقط شامل حروف، فاصله، 
+    apostrophe
+    و خط تیره می‌باشد.<br>
+    <span style="color:#8e24aa;">• </span>یک آدرس ایمیل فقط شامل کاراکترهای مجاز و با ترتیب مجاز است.<br>
+    <span style="color:#8e24aa;">• </span>کدملی ایالات‌متحده شامل سه رقم، یک خط تیره، دو رقم، یک خط تیره و چهاررقم دیگر است. علاوه‌براین هر گروه از اعداد از قواعد خاصی پیروی می‌کنند.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به‌ندرت لازم است برای موارد این چنینی عبارات منظم خود را ایجاد کنید. وب‌سایت‌هایی مانند:
+    <br><br>
+    <a href="https://regex101.com">https://regex101.com</a>
+    <br>
+    <a href="http://www.regexlib.com">http://www.regexlib.com</a>
+    <br>
+    <a href="https://www.regular-expressions.info">https://www.regular-expressions.info</a>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و وب‌سایت‌های دیگر نمونه‌هایی از عبارات منظم موجود ارائه می‌دهند که می‌توانید آن‌ها را کپی کرده و استفاده کنید. بسیاری از سایت‌ها رابط‌هایی نیز ارائه می‌دهند که می‌توانید عبارات منظم را تست کنید و ببینید آیا پاسخگوی نیازهای شما هستند و یا خیر.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سایر کاربردهای عبارات منظم</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از عبارات منظم علاوه‌بر اعتبارسنجی داده‌ها، اغلب برای موارد زیر استفاده می‌شود:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>استخراج داده‌ها از متن (گاهی اوقات به عنوان 
+        scraping
+        شناخته می‌شود)</b> 
+    - به عنوان مثال، پیداکردن همه 
+    URL
+    ها در یک صفحه وب (ممکن است شما ابزارهایی مانند 
+    BeautifulSoup, XPath 
+    و
+    lxml
+    را ترجیح دهید).<br>
+    <span style="color:#8e24aa;">• </span><b>پاکسازی داده‌ها</b>
+    - به عنوان مثال، حذف داده‌هایی که مورد نیاز نیستند، حذف داده‌های تکراری، مدیریت داده‌های ناقص، رفع اشتباه تایپی، اطمینان از سازگاری فرمت داده، برخورد با داده‌های پرت و سایر موارد دیگر.<br>
+    <span style="color:#8e24aa;">• </span><b>تبدیل داده‌ها به فرمت‌های دیگر</b>
+    - به عنوان مثال ممکن است مجبور شوید داده‌های جداشده با کاراکتر 
+    tab
+    را به فرمت داده‌های جداشده با کاراکتر کاما تبدیل کنید، چرا که برنامه مدنظر شما با داده‌هایی که در فرمت 
+    CSV
+    هستند کار می‌کند.<br>
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.12.1 <span style="color:#8e24aa;">ماژول re و تابع fullmatch</span></h2> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای استفاده از عبارات منظم، ماژول 
+    re
+    از کتابخانه استاندارد پایتون را 
+    import
+    کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+     fullmatch
+    یکی از ساده‌ترین توابع عبارات منظم محسوب می‌شود و بررسی می‌کند آیا کل رشته در آرگومان دوم با الگوی موجود در آرگومان اول مطابقت دارد یا خیر.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تطابق کاراکترهای لیترال</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت، تطابق کاراکترهای لیترال یعنی کاراکترهایی که با خود مقدار مطابقت دارند بررسی می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;02215&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;02215&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;51220&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اولین آرگومان تابع الگویی از نوع یک عبارت منظم است که برای مطابقت به کار می‌رود. هر رشته می‌تواند یک عبارت منظم باشد. مقدار متغیر 
+    pattern
+    برابر 
+    '02215'
+    می‌باشد و فقط از ارقام لیترال تشکیل شده است و باید به همین ترتیب فعلی مطابقت داده شود. آرگومان دوم رشته‌ای است که باید  تطابق کامل آن با الگو بررسی شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر آرگومان دوم با الگوی موجود در آرگومان اول مطابقت داشته باشد، تابع 
+    fullmatch
+    یک شیء 
+    text
+    حاوی متن تطابق یافته را برمی‌گرداند و مقدار 
+    True
+    ارزیابی می‌شود. بعدا در مورد این شیء بیشتر خواهیم گفت. در اسنیپت [۴] آرگومان دوم همان ارقام عبارت منظم را دارد، ولی ترتیب کاراکترهای این دو آرگومان تابع یکی نیست؛ بنابراین هیچ تطابقی وجود ندارد و تابع 
+    fullmatch
+    مقدار 
+    None
+    را برمی‌گرداند و 
+    False
+    ارزیابی می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Metacharacters, Character Classes and Quantifiers</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارات منظم به طور معمول حاوی نمادهای مختلفی به نام متاکاراکترها هستند ک در جدول زیر نشان داده شده‌اند:
+</div><p><img alt="Screenshot (85).png" src="Chapters/08 - Strings-(A-Deeper-Look)/attachment:4d208306-cc1c-4a0d-a0ae-5a4a30817ad9.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قبل از تمامی 
+    character class
+    ها، متاکاراکتر بک‌اسلش 
+    (\)
+    قرار می‌گیرد و هر کدام از این کلاس‌ها با یک مجموعه خاص از کاراکترها مطابقت دارند. کد زیر کدپستی پنج رقمی را اعتبارسنجی می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{5}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;02215&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Valid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{5}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;9876&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Invalid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در عبارت منظم 
+    <code>d{5}\</code>
+    ،
+    $\d$
+    یک 
+    character class
+    است که یک رقم (۹ - ۰) را نمایش می‌دهد. 
+    character class
+    یک 
+     regular expression escape sequence
+    است که با یک کاراکتر مطابقت دارد. برای مطابقت بیش از یک کاراکتر، بعد از 
+    character class
+    یک 
+    quantifier
+    قراردهید. 
+    quantifier {5}
+    کلاس کاراکتری 
+    $\d$
+    را ۵ بار تکرار می‌کند و معادل آن است که از عبارت 
+     $\d\d\d\d\d$
+    برای مطابقت با پنج رقم متوالی استفاده شود. در اسنیپت [۶] تابع 
+    fullmatch
+    مقدار 
+    None
+    را برمی‌گرداند زیرا رشته 
+    '9876'
+    فقط شامل چهار کاراکتر رقمی متوالی است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سایر 
+    Character Class
+    های از پیش تعیین شده</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جدول زیر برخی از کلاس‌های کاراکتر از پیش تعریف شده و گروهی از کاراکترها منطبق با کلاس مربوطه را نشان می‌دهد. برای مطابقت با هر متاکاراکتر با مقدار لیترال آن، قبل از مقدار لیترال یک بک‌اسلش 
+    (\)
+    قرار دهید. به عنوان مثال 
+    (\\\)
+    با یک بک‌اسلش 
+    (\)
+    مطابقت دارد. 
+</div><p><img alt="Screenshot (86).png" src="Chapters/08 - Strings-(A-Deeper-Look)/attachment:9e05fb09-ef8e-4d99-bbbe-454423c52afd.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Custom Character Classes</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک جفت براکت [] یک کلاس کاراکتر سفارشی تعریف می‌کند که با یک کاراکتر مطابقت دارد. به عنوان مثال، 
+    [aeiou]
+    با یک حرف صدادار کوچک، 
+    [A-Z]
+    با یک حرف بزرگ، 
+    [a-z]
+    با یک حرف کوچک و 
+     [a-zA-Z] 
+    با هر حرف کوچک یا بزرگ مطابقت دارد. در این قسمت یک نام را با این شرط اعتبارسنجی می‌کنیم که فقط از حروف الفبا تشکیل شده باشد و در آن فضای خالی و علائم نگارشی نباشد. از کد زیر استفاده می‌کنیم تا مطمئن شویم که نام با یک حرف بزرگ شروع می‌شود 
+    (A–Z)
+    و به دنبال آن حرف کوچک 
+    (a–z)
+    به تعداد دلخواه قرار می‌گیرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[A-Z][a-z]*&#39;</span><span class="p">,</span> <span class="s1">&#39;Wally&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Valid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[A-Z][a-z]*&#39;</span><span class="p">,</span> <span class="s1">&#39;eva&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Invalid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نام ممکن است حروف زیادی داشته باشد. 
+    quantifier *
+    با صفر یا تعداد بیشتری از رخداد عبارت سمت چپ خود مطابقت دارد (در این حالت 
+    [a-z]
+    )، بنابراین 
+     *[a-z][A-Z]
+    با یک حرف بزرگ و به دنبال آن صفر یا تعداد بیشتری از حروف کوچک مانند 
+    'Amanda', 'Bo'
+    یا حتی 
+    'E'
+    مطابقت دارد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که یک کلاس کاراکتر سفارشی با یک 
+    (^) caret
+    شروع می‌شود، کلاس با هر کاراکتری که مشخص نشده باشد مطابقت دارد؛ بنابراین 
+    [a-z^]
+    با هر کاراکتری که یک حرف کوچک نیست مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[^a-z]&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[^a-z]&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در یک کلاس کاراکتر سفارشی با متا کاراکتر به عنوان یک لیترال یعنی با مقدار واقعی‌اش رفتار می‌شود؛ بنابراین 
+    [*+\$]
+    با یک کاراکتر 
+    *, +, \$
+    مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[*+$]&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[*+$]&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;"> vs. + Quantifier *</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر بخواهید حداقل به یک حرف کوچک در رشته نام احتیاج داشته باشید، می‌توانید 
+     * quantifier
+    در اسنیپت [۷] را با 
+    + quantifier
+    جایگزین کنید. 
+    + quantifier
+    حداقل با یک تکرار در یک زیرعبارت مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[A-Z][a-z]+&#39;</span><span class="p">,</span> <span class="s1">&#39;Wally&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Valid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Valid&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;[A-Z][a-z]+&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Invalid&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Invalid&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    quantifier
+    های * و + حریصانه عمل می‌کنند و همیشه سعی می‌کنند با بیشترین کاراکتر ممکن مطابقت داشته باشند؛ بنابراین عبارت منظم 
+    +[a-z][A-Z]
+    با رشته‌های 
+    'Al', 'Eva', 'Samantha', 'Benjamin'
+    و هر کلمه دیگری که با یک حرف بزرگ شروع شده و حداقل با یک حرف کوچک دنبال شود، مطابقت دارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">سایر 
+Quantifier
+ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">? quantifier
+    با صفر یا یک مورد از یک زیرعبارت مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;labell?ed&#39;</span><span class="p">,</span> <span class="s1">&#39;labelled&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;labell?ed&#39;</span><span class="p">,</span> <span class="s1">&#39;labeled&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">&#39;labell?ed&#39;</span><span class="p">,</span> <span class="s1">&#39;labellled&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارت منظم 
+    labell?ed
+    با رشته 
+    labelled
+    (بریتیش) و با رشته 
+    labeled
+    (امریکن) مطابقت دارد ولی با رشته 
+    labellled
+    که غلط املایی هم دارد، مطابق نیست. در اسنیپت بالا، پنج حرف اول لیترال 
+    (label)
+    در عبارت منظم با پنج کاراکتر اول آرگومان دوم مطابقت دارند. عبارت 
+    ?l
+    نشان می‌دهد قبل از کاراکترهای 
+    ed
+    تعداد صفر یا یک کاراکتر 
+    l
+    می‌تواند وجود داشته باشد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کمک
+    { ,n} quantifier
+    می‌توانید حداقل وقوع 
+    n
+    بار یک زیرعبارت را مطابقت دهید. عبارت منظم زیر با رشته‌های حاوی حداقل سه رقم مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,}&#39;</span><span class="p">,</span> <span class="s1">&#39;123&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,}&#39;</span><span class="p">,</span> <span class="s1">&#39;1234567890&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,}&#39;</span><span class="p">,</span> <span class="s1">&#39;12&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کمک
+    {n,m} quantifier
+    می‌توانید وقوع یک زیرعبارت را حداقل 
+    n
+    و حداکثر 
+    m
+    (شامل 
+    m
+    هم می‌شود) بار مطابقت دهید. عبارت منظم زیر با رشته‌های حاوی حداقل سه رقم و حداکثر شش رقم مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,6}&#39;</span><span class="p">,</span> <span class="s1">&#39;123&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,6}&#39;</span><span class="p">,</span> <span class="s1">&#39;123456&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,6}&#39;</span><span class="p">,</span> <span class="s1">&#39;1234567&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Match&#39;</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d{3,6}&#39;</span><span class="p">,</span> <span class="s1">&#39;12&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;No match&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;No match&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.12.2 <span style="color:#8e24aa;">جایگذاری زیررشته‌ها و تفکیک رشته‌ها</span></h2> <a id='19'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ماژول
+    re
+    برای جایگزین کردن الگوها در یک رشته تابع 
+    sub
+    و برای شکستن یک رشته به چند زیررشته بر اساس الگوها، تابع 
+    split
+    را ارائه می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    sub
+    برای جایگزین کردن الگوها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور پیش‌فرض، تابع 
+    sub
+    در ماژول 
+    re
+    تمام رخدادهای یک الگو را با متن ثانویه‌ای که شما تعیین کرده‌اید، جایگزین می‌کند. کد زیر، رشته‌ای که با کاراکتر 
+    tab
+    جداشده را به رشته‌ای که با کاما جداشده تبدیل می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\t&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="s1">&#39;1</span><span class="se">\t</span><span class="s1">2</span><span class="se">\t</span><span class="s1">3</span><span class="se">\t</span><span class="s1">4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1, 2, 3, 4&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    sub
+    سه آرگومان موردنیاز را دریافت می‌کند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>الگوی مطابقت (کاراکتر 
+    '$\t$'
+    )<br>
+    <span style="color:#8e24aa;">• </span>متن جایگزین 
+    (' ,')
+    <br>
+    <span style="color:#8e24aa;">• </span>رشته مورد جست‌وجو 
+    ('1\t2\t3\t4')
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و یک رشته جدید برمی‌گرداند. با آرگومان کلیدی 
+    count
+    می‌توان حداکثر تعداد جایگزینی‌ها را تعیین کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\t&#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="s1">&#39;1</span><span class="se">\t</span><span class="s1">2</span><span class="se">\t</span><span class="s1">3</span><span class="se">\t</span><span class="s1">4&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1, 2, 3\t4&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    split
+    </h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    split
+    با استفاده از یک عبارت منظم به عنوان جداکننده، یک رشته را به توکن تبدیل کرده و لیستی از رشته‌ها را برمی‌گرداند. کد زیر یک رشته را با تقسیم آن در هر اندیسی که یک ویرگول و بعد آن صفر یا چند کاراکتر 
+    whitespace
+    قرار داشته باشد، به توکن تبدیل می‌کند. 
+    $\s$
+    کلاس کاراکتر 
+    whitespace
+    بوده و * نشان دهنده صفر یا چند رخداد زیرعبارت قبل آن است:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;,\s*&#39;</span><span class="p">,</span> <span class="s1">&#39;1,  2,  3,4,    5,6,7,8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تعیین حداکثر تقسیم‌ها از آرگومان کلیدی 
+    maxsplit
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;,\s*&#39;</span><span class="p">,</span> <span class="s1">&#39;1,  2,  3,4,    5,6,7,8&#39;</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4,    5,6,7,8&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این حالت، پس از سه تقسیم، رشته چهارم شامل مابقی رشته اصلی خواهد بود.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">8.12.3 <span style="color:#8e24aa;">سایر توابع جست‌جو؛ دسترسی به مطابقت‌ها</span></h2> <a id='20'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پیش از این از تابع 
+    fullmatch
+    استفاده کردیم تا تعیین کنیم آیا کل یک رشته با یک عبارت منظم مطابقت دارد و یا خیر. چند تابع جست‌وجوی دیگر نیز وجود دارد. در این قسمت، در مورد توابع 
+    search, match, findall و finditer
+    توضیح می‌دهیم و نحوه دستیابی به زیررشته‌های تطابق یافته را نشان می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تابع 
+    search
+    - یافتن اولین تطابق در هر مکان از یک رشته</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    search
+    یک رشته را برای یافتن اولین مطابقت یک زیررشته با عبارت منظم جست‌وجو می‌کند و یک شیء 
+    match
+    (از نوع 
+    SRE_Match
+    ) 
+    برمی‌گرداند، این شیء حاوی زیررشته منطبق می‌باشد. متد 
+    group
+    در شیء 
+    match
+    این رشته را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر رشته فاقد الگوی مورد نظر باشد، تابع 
+    search
+    مقدار 
+    None
+    را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result2</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;fun!&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result2</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result2</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;not found&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای جست‌وجو فقط از ابتدای رشته می‌توانید از تابع 
+    match
+    استفاده کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نادیده گرفتن بزرگ و یا کوچک بودن حروف با آرگومان کلیدی و اختیاری 
+    flags
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بسیاری از توابع ماژول 
+    re
+    یک آرگومان کلیدی و اختیاری 
+    flags
+    را دریافت می‌کنند تا نحوه مطابقت عبارات منظم را تغییر دهند. به عنوان مثال، مطابقت‌ها به صورت پیش‌فرض به حروف کوچک و بزرگ حساس هستند اما با استفاده از ثابت 
+    IGNORECASE
+    در ماژول 
+    re
+    می‌توانید جست‌وجو را بدون توجه به بزرگی و یا کوچکی حروف انجام دهید.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result3</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="s1">&#39;SAM WHITE&#39;</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result3</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result3</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;SAM&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در اسنیپت بالا، با اینکه 
+    'SAM'
+    فقط از حروف بزرگ تشکیل شده ولی 
+    'SAM'
+    با الگوی 
+    'Sam'
+    مطابقت دارد زیرا هردو حروف یکسانی دارند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متاکاراکترهایی که فرآیند تطابق را به ابتدا و یا انتهای رشته محدود می‌کنند
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متاکاراکتر 
+    ^
+    در ابتدای عبارت منظم (و نه در داخل یک جفت براکت) یک 
+    لنگر
+    (anchor)
+    است و نشان می‌دهد این عبارت منظم فقط با ابتدای یک رشته مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Python&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^fun&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;not found&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور مشابه متاکاراکتر 
+    $
+    در انتهای عبارت منظم یک لنگر است و نشان می‌دهد این عبارت منظم فقط با انتهای یک رشته مطابقت دارد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Python$&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;not found&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;fun$&#39;</span><span class="p">,</span> <span class="s1">&#39;Python is fun&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="s1">&#39;not found&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;fun&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">توابع 
+    findall
+    و 
+    finditer
+    - یافتن همه موارد تطابق در یک رشته
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    findall
+    هر زیررشته منطبق را در یک رشته پیدا می‌کند و لیستی از زیررشته‌های منطبق را برمی‌گرداند. فرض کنید قصد داریم همه شماره تلفن‌های ایالات‌متحده را از یک رشته استخراج کنیم. برای سادگی فرض می‌کنیم شماره تلفن‌های ایالات‌متحده به شکل ####-###-### هستند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact</span> <span class="o">=</span> <span class="s1">&#39;Wally White, Home: 555-555-1234, Work: 555-555-4321&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{4}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">contact</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;555-555-1234&#39;, &#39;555-555-4321&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع
+    finditer
+    مانند 
+    findall
+    کار می‌کند، اما یک شیء 
+     lazy iterable
+    از اشیای منطبق برمی‌گرداند. اگر انطباق‌ها زیاد باشد، استفاده از 
+    finditer
+    می‌تواند در مصرف حافظه صرفه‌جویی کند زیرا این تابع هر بار یک تطابق را برمی‌گرداند، درحالی که تابع 
+    findall
+    همه انطباق‌ها را یک‌باره برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{4}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">contact</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">phone</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>555-555-1234
+555-555-4321
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استخراج زیررشته‌ها از یک تطابق
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از متاکاراکترهای پرانتز ( و ) می‌توانید زیررشته‌های یک تطابق را استخراج کنید. برای مثال اجازه دهید در رشته 
+    text
+    زیررشته‌های نام و آدرس ایمیل را به طور جداگانه استخراج کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Charlie Cyan, e-mail: demo1@deitel.com&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;([A-Z][a-z]+ [A-Z][a-z]+), e-mail: (\w+@\w+\.\w</span><span class="si">{3}</span><span class="s1">)&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارت منظم دو زیررشته که هرکدام با متاکاراکترهای ( و ) مشخص شده‌اند را برای استخراج مشخص می‌کند. این متاکاراکترها بر یافتن الگو در رشته 
+    text
+    هیچ تأثیری ندارند. تابع 
+    match
+    فقط درصورتی‌که کل الگو در رشته 
+    text
+    پیدا شود، یک شیء 
+    match
+    را برمی‌گرداند. اجازه دهید عبارت منظم را با جزئیات بیشتر بررسی کنیم:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><code>'(+[a-z][A-Z] +[a-z][A-Z])'</code>
+    با دو کلمه که با 
+    space
+    جدا شده‌اند مطابقت دارد. هر کلمه باید با حرف بزرگ شروع شود.<br>
+    <span style="color:#8e24aa;">• </span><code>' e-mail: , '</code>
+    حاوی کاراکترهای لیترال است که با خودشان مطابقت دارند.<br>
+    <span style="color:#8e24aa;">• </span><code style="direction:ltr;">(\w+@\w+\.\w{3})</code>
+    با یک آدرس ایمیل ساده متشکل از یک یا چند کاراکتر حرفی - عددی 
+    (+w\)
+    کاراکتر @ یک یا چند کاراکتر حرفی - عددی 
+    (+w\)
+    نقطه 
+    (.\)
+    و سه کاراکتر حرفی - عددی 
+    (w{3}\)
+    مطابقت دارد. قبل از نقطه کاراکتر \ قرار داده‌ایم، زیرا یک نقطه (.) یک عبارت منظم است و با یک کاراکتر مطابقت دارد.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    groups
+    از شیء 
+    match
+    یک تاپل حاوی زیررشته‌های استخراج شده برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Charlie Cyan&#39;, &#39;demo1@deitel.com&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    group
+    از شیء 
+    match
+    ، کل تطابق را به صورت یک رشته برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Charlie Cyan, e-mail: demo1@deitel.com&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با ارسال یک عدد صحیح به متد 
+    group
+    می‌توانید به هر زیررشته استخراج شده دسترسی پیدا کنید. زیررشته‌های استخراج شده از یک شماره‌گذاری می‌شوند (برخلاف اندیس‌های لیست که از صفر شروع می‌شوند):
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Charlie Cyan&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;demo1@deitel.com&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.13 <span style="color:#F50057;">مقدمه‌ای بر علم داده: Pandas، عبارات منظم و Data 
+Munging</span></h1> <a id='21'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داده‌ها همیشه آماده تجزیه و تحلیل نیستند. برای مثال، می‌توانند در فرمت نادرست، مقدار نادرست یا حتی گم‌شده باشند. تجربه صنعت نشان داده است که دانشمندان علم داده قبل از شروع مطالعات تا سقف ۷۵% از وقت خود را صرف آماده‌سازی داده‌ها می‌کنند. آماده‌سازی داده‌ها برای تجزیه و تحلیل اطلاعات، 
+    data munging
+    یا
+    data wrangling
+    نامیده می‌شود. پاک‌سازی داده‌ها و تبدیل داده‌ها به فرمت‌های مطلوب برای سیستم‌های پایگاه داده و نرم‌افزار تجزیه و تحلیل دو مورد از مهم‌ترین مراحل در 
+    data munging
+    محسوب می‌شوند. برخی از نمونه‌های معمول پاک‌سازی داده عبارت‌اند از:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>حذف مشاهدات با مقادیر از دست رفته<br>
+    <span style="color:#8e24aa;">• </span>جایگزینی مقادیر از دست رفته با مقادیر معقول<br>
+    <span style="color:#8e24aa;">• </span>حذف مشاهدات با مقادیر بد<br>
+    <span style="color:#8e24aa;">• </span>جایگزینی مقادیر بد با مقادیر مناسب<br>
+    <span style="color:#8e24aa;">• </span>حذف داده‌های پرت (اگرچه گاهی اوقات می‌خواهید آن‌ها را نگه دارید)<br>
+    <span style="color:#8e24aa;">• </span>حذف داده‌های تکراری (اگرچه گاهی اوقات داده‌های تکراری معتبر هستند)<br>
+    <span style="color:#8e24aa;">• </span>مدیریت داده‌های ناسازگار<br>
+    <span style="color:#8e24aa;">• </span>موارد دیگر<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">احتمالا فکر کرده‌اید که پاک‌سازی داده‌ها فرآیندی دشوار و پیچیده است و ممکن است به راحتی تصمیمات بدی بگیرید  و این تصمیمات بر نتایج شما تأثیر منفی بگذارند. این مطلب درست است. زمانی‌که در بخش‌های بعدی به مطالعه موردی علم داده برسید، خواهید دید که علم داده بیشتر یک علم تجربی، مانند پزشکی است و کمتر یک علم نظری مانند فیزیک تلقی می‌شود. علوم تجربی نتیجه‌گیری‌های خود را براساس مشاهدات و تجربه قرار می‌دهند. به عنوان مثال، بسیاری از داروها که امروزه به طور موثر مشکلات پزشکی را حل می‌کنند با مشاهده تأثیراتی که نسخه‌های ابتدایی این داروها بر روی حیوانات آزمایشگاهی و درنهایت انسان‌ها داشته‌اند و با پالایش تدریجی مواد اولیه و تصحیح دوزهای مصرفی توسعه پیدا کردند. اقداماتی که دانشمندان داده در هر پروژه انجام می‌دهند، بر اساس کیفیت و ماهیت داده‌ها تفاوت دارند. این اقدامات برمبنای کیفیت و ماهیت داده‌ها، پی‌ریزی می‌شوند و تحت‌تأثیر سازمان‌های در حال تحول و استانداردهای حرفه‌ای قرار می‌گیرند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برخی از تبدیلات رایج داده‌ها شامل:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>حذف داده‌ها و ویژگی‌های غیرضروری (در مطالعات موردی در بخش علم داده در مورد ویژگی‌ها بیشتر توضیح خواهیم داد)<br>
+    <span style="color:#8e24aa;">• </span>ترکیب ویژگی‌های مرتبط<br>
+    <span style="color:#8e24aa;">• </span>نمونه‌برداری از داده‌ها برای به دست آوردن زیرمجموعه نماینده (در مطالعات موردی علم داده خواهیم دید که نمونه‌گیری تصادفی به ویژه برای این کار موثرتر است و دلیل آن را نیز توضیح خواهیم داد)<br>
+    <span style="color:#8e24aa;">• </span>استاندارد کردن فرمت‌های داده<br>
+    <span style="color:#8e24aa;">• </span>گروه‌بندی داده‌ها<br>
+    <span style="color:#8e24aa;">• </span>موارد دیگر<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نگه‌داشتن اطلاعات اصلی همیشه عاقلانه است. نمونه‌های ساده‌ای از پاک‌سازی و تبدیل داده‌ها را در محیط 
+    Pandas
+    با
+    Series 
+    و 
+    DataFrames
+    نشان خواهیم داد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پاک‌سازی داده‌های شما
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مقادیر بد داده و مقادیر از دست‌رفته می‌توانند به طور قابل‌توجهی بر تجزیه و تحلیل داده‌ها تأثیر بگذارند. برخی از دانشمندان داده‌ها، با هرگونه تلاش برای درج مقادیر معقول مخالفت می‌کنند. در عوض، آن‌ها براین عقیده‌اند که باید داده‌های از دست رفته به روشنی علامت‌گذاری شوند و سپس آن‌ها را در اختیار پکیج نرم‌افزاری تجزیه و تحلیل داده‌ها قرار دهند تا مشکل برطرف شود. برخی دیگر احتیاط‌های شدیدی را توصیه می‌کنند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیمارستانی را درنظر بگیرید که درجه حرارت بیماران (و احتمالا سایر علائم حیاتی) را چهاربار در روز ثبت می‌کند. فرض کنید داده‌ها از یک نام و چهار مقدار اعشاری تشکیل شده باشد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Brown, Sue&#39;</span><span class="p">,</span> <span class="mf">98.6</span><span class="p">,</span> <span class="mf">98.4</span><span class="p">,</span> <span class="mf">98.7</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سه درجه حرارت ثبت‌شده برای بیمار بالا ۹۸.۷، ۹۸.۴، ۹۸.۶ می‌باشند. آخرین درجه حرارت، درست اندازه‌گیری نشده و برای آن مقدار ۰.۰ ثبت شده است، ممکن است این اتفاق به دلیل خرابی سنسور روی داده باشد. میانگین سه مقدار اول ۹۸.۵۷ است که نزدیک به حد نرمال است. با این حال، اگر شما میانگین دما را همراه با مقدار ازدست‌رفته‌ای که ۰.۰ برای آن جایگزین شده محاسبه کنید، میانگین ۷۳.۹۳ به‌دست می‌آید و واضح است که یک نتیجه سوال برانگیز است. مطمئنا پزشکان نمی‌خواهند برای این بیمار اقدامات درمانی جدی انجام دهند - به همین دلیل دریافت درست داده‌ها حیاتی است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک روش معمول برای پاک‌سازی داده‌ها، جایگزینی مقدار معقولی برای دمای ازدست‌رفته است، برای مثال میانگین سایر دماهای قرائت شده بیمار گزینه مناسبی محسوب می‌شود. اگر این کار را در بالا انجام می‌دادیم، میانگین دمای بیمار ۹۸.۵۷ باقی می‌ماند و براساس داده‌های از قبل خوانده‌شده به دمای متوسط نزدیک‌تر است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اعتبارسنجی داده‌ها
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت با استفاده از یک دیکشنری، یک 
+    Series
+    حاوی نام شهر و کدپستی ایجاد می‌کنیم. دیکشنری از زوج‌های کلید-مقدار تشکیل شده و نام شهر کلید و کدهای پنج‌رقمی مقدار محسوب می‌شوند. در زیر، برای 
+    Miami
+    عمدا یک کدپستی نامعتبر وارد کرده‌ایم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">139</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Boston&#39;</span><span class="p">:</span> <span class="s1">&#39;02215&#39;</span><span class="p">,</span> <span class="s1">&#39;Miami&#39;</span><span class="p">:</span> <span class="s1">&#39;3310&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">140</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">zips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Boston&#39;</span><span class="p">:</span> <span class="s1">&#39;02215&#39;</span><span class="p">,</span> <span class="s1">&#39;Miami&#39;</span><span class="p">:</span> <span class="s1">&#39;3310&#39;</span><span class="p">})</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zips</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">141</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">zips</span>
+
+<span class="ne">NameError</span>: name &#39;zips&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگرچه
+    zips
+    مانند یک آرایه دوبعدی به نظر می‌رسد، اما در واقع یک آرایه یک‌بعدی محسوب می‌شود. ستون دوم نشان‌دهنده مقادیر 
+    Series
+    یا همان کدهای پستی (از مقادیر دیکشنری) است و ستون اول اندیس‌های آن‌ها را نشان می‌دهد (از کلیدهای دیکشنری).
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای اعتبارسنجی داده‌ها می‌توانیم از عبارات منظم در 
+    Pandas
+    استفاده کنیم. 
+    str attribute
+    در
+    Series
+    متدهای مختلفی برای پردازش رشته و عبارات منظم فراهم می‌کند. برای بررسی صحت هر کدپستی از متد 
+    match
+    در 
+    str attribute
+    استفاده می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zips</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{5}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">142</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">zips</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{5}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;zips&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    match
+    عبارت منظم 
+     d{5}\
+    را برای هر عنصر 
+    Series
+    اعمال می‌کند و سعی می‌کند اطمینان حاصل کند که هر عنصر دقیقا از پنج رقم تشکیل شده باشد. نیازی نیست که تمامی مقادیر کدهای پستی را پیمایش کنید، چرا که متد 
+    match
+    این کار را برای شما انجام می‌دهد. این اسنیپت مثال دیگری از برنامه‌نویسی به سبک تابعی است که در آن به جای استفاده از حلقه تکرار خارجی از حلقه تکرار داخلی استفاده شده است. متد 
+    match
+    یک 
+    Series
+    جدید را برمی‌گرداند که برای هر عنصر معتبر حاوی مقدار 
+    True
+    است. در این حالت، کد پستی برای 
+    Miami
+    مطابقت ندارد و به همین دلیل عنصر مربوط به آن 
+    False
+    است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روش‌های مختلفی برای مدیریت داده‌های نامعتبر وجود دارد. در یکی از این روش‌ها باید در منبع داده خود جست‌وجو کنید و برای اصلاح مقدار با منبع داده تعامل داشته باشید. این روش همیشه ممکن نیست. به عنوان مثال، داده‌ها می‌توانند از سنسورهای سرعت بالا در اینترنت اشیاء به دست بیایند؛ در این صورت نمی‌توانیم آن‌ها را در منبع داده اصلاح کنیم، بنابراین می‌توانیم از روش‌های پاک‌سازی داده‌ها استفاده کنیم. در مورد کدپستی نامناسب ۳۳۱۰ برای 
+    Miami
+    ممکن است به دنبال کدپستی 
+    Miami
+    باشیم که با ۳۳۱۰ شروع شود. دو مورد وجود دارد - ۳۳۱۰۱ و ۳۳۱۰۹ - و می‌توانیم یکی از این دو مورد را انتخاب کنیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات، به جای تطبیق کل یک مقدار با یک الگو می‌خواهید بدانید که آیا آن مقدار حاوی زیررشته‌ای است که با الگو مطابقت دارد یا خیر. در این حالت، به جای متد 
+    match.
+    از متد 
+    contains
+    استفاده کنید. در این قسمت یک 
+    Series
+    از رشته‌ها ایجاد می‌کنیم به‌طوری‌که هر رشته حاوی نام یک شهر ایالات‌متحده، ایالت و کدپستی باشد، سپس تعیین می‌کنیم که آیا هر رشته شامل یک زیررشته مطابق با الگوی 
+    ' {2}[A-Z] '
+    (یک فاصله، به دنبال آن دو حرف بزرگ و به دنبال آن یک فاصله) است و یا خیر:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Boston, MA 02215&#39;</span><span class="p">,</span> <span class="s1">&#39;Miami, FL 33101&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">143</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cities</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Boston, MA 02215&#39;</span><span class="p">,</span> <span class="s1">&#39;Miami, FL 33101&#39;</span><span class="p">])</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">144</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cities</span>
+
+<span class="ne">NameError</span>: name &#39;cities&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; [A-Z]</span><span class="si">{2}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">145</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; [A-Z]</span><span class="si">{2}</span><span class="s1"> &#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;cities&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; [A-Z]</span><span class="si">{2}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">146</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; [A-Z]</span><span class="si">{2}</span><span class="s1"> &#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;cities&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از آنجایی‌که مقادیر اندیس را مشخص نکردیم 
+    Series
+    به‌طور پیش‌فرض اندیس‌ها را از صفر شروع می‌کند (اسنیپت [۶]). اسنیپت [۷] از متد 
+    contains
+    استفاده می‌کند تا نشان دهد هر دو عنصر 
+    Series
+    شامل زیررشته‌هایی هستند که با الگوی 
+    ' {2}[A-Z] '
+    مطابقت دارند. اسنیپت [۸] از متد 
+    match
+    استفاده می‌کند تا نشان دهد که هیچ یک از عناصر 
+    Series
+    به طور کامل با آن الگو مطابقت ندارد، زیرا هر یک از آن‌ها حاوی کاراکترهای دیگر هستند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرمت مجدد داده‌ها
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مورد پاک‌سازی داده‌ها توضیح داده‌ایم. در این قسمت با 
+    data munging
+    داده‌ها را به فرمت دیگری تبدیل می‌کنیم. به عنوان یک مثال ساده فرض کنید که یک برنامه به شماره تلفن‌های ایالات‌متحده با فرمت ####-###-### نیاز دارد. در این فرمت از خط تیره برای گروه‌بندی ارقام استفاده می‌شود. شماره تلفن‌ها به صورت رشته‌های ۱۰ رقمی و بدون خط تیره در اختیار ما قرار گرفته است. در ابتدا یک 
+    DataFrame
+    ایجاد می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contacts</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Mike Green&#39;</span><span class="p">,</span> <span class="s1">&#39;demo1@deitel.com&#39;</span><span class="p">,</span> <span class="s1">&#39;5555555555&#39;</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">&#39;Sue Brown&#39;</span><span class="p">,</span> <span class="s1">&#39;demo2@deitel.com&#39;</span><span class="p">,</span> <span class="s1">&#39;5555551234&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contactsdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">contacts</span><span class="p">,</span> 
+                          <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">,</span> <span class="s1">&#39;Phone&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">148</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">contactsdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">contacts</span><span class="p">,</span> 
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                           <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">,</span> <span class="s1">&#39;Phone&#39;</span><span class="p">])</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contactsdf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">149</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">contactsdf</span>
+
+<span class="ne">NameError</span>: name &#39;contactsdf&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این
+    DataFrame
+    ، اندیس‌های ستون را با آرگومان کلیدی 
+    columns
+    مشخص کردیم اما برای سطرها اندیسی تعیین نکردیم، بنابراین سطرها از صفر 
+    اندیس‌گذاری می‌شوند. خروجی نشان می‌دهد که مقادیر ستون به طور پیش‌فرض از راست تراز می‌شوند. این فرمت‌بندی با فرمت‌بندی پایتون تفاوت دارد. در پایتون به طور پیش‌فرض اعداد از سمت راست تراز می‌شوند و مقادیرغیرعددی از سمت چپ تراز می‌شوند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت با روش برنامه نویسی به سبک تابعی فرآیند 
+    data munging
+    را انجام می‌دهیم. با فراخوانی متد 
+    map
+    در 
+    Series
+    می‌توانیم هر شماره تلفن در ستون 
+    'Phone'
+    در 
+    DataFrame
+    را به فرمت موردنظرمان نگاشت کنیم. آرگومان متد 
+    map
+    تابعی است که مقداری را دریافت کرده و مقدار نگاشت شده را برمی‌گرداند. تابع 
+    get_formatted_phone
+    ده رقم متوالی را به فرمت ####-###-### نگاشت می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_formatted_phone</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{3}</span><span class="s1">)(\d</span><span class="si">{3}</span><span class="s1">)(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارت منظم در اولین دستور بلوک فقط با ده رقم متوالی مطابقت دارد. این دستور زیررشته‌هایی حاوی سه رقم اول، سه رقم بعدی و چهار رقم آخر استخراج می‌کند. دستور 
+    return
+    به شرح زیر عمل می‌کند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اگر 
+    result
+    برابر 
+    None
+    باشد، به سادگی مقدار تغییرنیافته 
+    value
+    را برمی‌گردانیم.<br>
+    <span style="color:#8e24aa;">• </span>درغیراین‌صورت 
+    result.groups()
+    را برای دریافت یک تاپل حاوی چند زیررشته فراخوانی می‌کنیم و این تاپل را به متد 
+    join
+    در رشته ارسال می‌کنیم تا اعضای آن را به یکدیگر متصل کند. برای تطابق با فرمت موردنظر ما، هر زیررشته با کاراکتر - از زیررشته بعدی تفکیک می‌شود.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    map
+    در 
+    Series
+    یک 
+    Series
+    جدید برمی‌گرداند که شامل نتایج فراخوانی آرگومان تابع این متد برای هر مقدار در ستون است. اسنیپت [۱۵] نتیجه را همراه با نام ستون و نوع آن نشان می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">formatted_phone</span> <span class="o">=</span> <span class="n">contactsdf</span><span class="p">[</span><span class="s1">&#39;Phone&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_formatted_phone</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">152</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">formatted_phone</span> <span class="o">=</span> <span class="n">contactsdf</span><span class="p">[</span><span class="s1">&#39;Phone&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_formatted_phone</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;contactsdf&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">formatted_phone</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">153</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">formatted_phone</span>
+
+<span class="ne">NameError</span>: name &#39;formatted_phone&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که درستی فرمت داده‌ها را تأیید کردید، می‌توانید با انتساب 
+    Series
+    جدید به ستون 
+    'Phone'
+    در 
+    DataFrame
+    اولیه، آن را به‌روزرسانی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contactsdf</span><span class="p">[</span><span class="s1">&#39;Phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">formatted_phone</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">154</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">contactsdf</span><span class="p">[</span><span class="s1">&#39;Phone&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">formatted_phone</span>
+
+<span class="ne">NameError</span>: name &#39;formatted_phone&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contactsdf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">155</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">contactsdf</span>
+
+<span class="ne">NameError</span>: name &#39;contactsdf&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل بعدی و در بخش مقدمه‌ای بر علم داده، بحث در مورد 
+    pandas
+    را ادامه خواهیم داد و در چند فصل بعدی از 
+    pandas
+    استفاده خواهیم کرد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">8.14 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='22'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، قابلیت‌های مختلف فرمت کردن و پردازش رشته را ارائه داده‌ایم. با کمک 
+    f-string
+    و متد 
+    format
+    در رشته‌ها، داده‌ها را فرمت کردید. با روش 
+    augmented assignment
+    نحوه اتصال و تکرار رشته‌ها را نشان دادیم. با متدهای رشته، فضای خالی را از ابتدا و انتهای رشته‌ها حذف کردید و حروف بزرگ را به کوچک و بالعکس تغییر دادید. در مورد سایر متدها برای 
+    split
+    کردن رشته‌ها و 
+    join
+    کردن یک 
+    iterable
+    از رشته‌ها صحبت کردیم. متدهای مختلف سنجش کاراکترها را معرفی کردیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نشان دادیم که 
+    raw string
+    ها با کاراکتر بک‌اسلش (\) به عنوان شروع یک 
+    escape sequence
+    رفتار نمی‌کنند و آن را یک کاراکتر لیترال قلمداد می‌کنند. این رویکرد برای تعریف عبارات منظم که غالبا شامل تعداد زیادی کاراکتر بک‌اسلش هستند، مفید می‌باشد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مرحله بعد، با استفاده از توابع موجود در ماژول 
+    re
+    ، قابلیت‌های قدرتمند تطبیق الگو در عبارات منظم را معرفی کردیم. از تابع 
+    fullmatch
+    استفاده کردیم تا اطمینان حاصل کنیم که کل یک رشته با یک الگو مطابقت دارد، این روش برای اعتبارسنجی داده‌ها مفید می‌باشد. نشان دادیم که چگونه از تابع 
+    replace
+    برای جست‌وجو و جایگزینی زیررشته‌ها استفاده کنیم. از تابع 
+    split
+    برای توکن کردن رشته‌ها بر اساس جداکننده‌هایی که با یک الگو از نوع عبارت منظم مطابقت دارند استفاده کردیم. سپس روش‌های مختلفی را برای جست‌وجوی الگوها در رشته‌ها و دسترسی به تطابق‌های حاصل نشان دادیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش مقدمه‌ای بر علم داده، فرآیند 
+    data munging و
+    data wrangling
+    را معرفی کردیم و مثال کوچکی از 
+    data munging
+    یعنی تبدیل داده را ارائه کردیم. بحث خود را در مورد 
+    Series و DataFrames
+    در 
+    Pandas
+    با استفاده از عبارات منظم برای اعتبارسنجی داده‌ها ادامه دادیم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل بعدی زمانی که خواندن متن از فایل‌ها و نوشتن متن در فایل‌ها را معرفی کردیم، استفاده از قابلیت‌های مختلف پردازش رشته را ادامه خواهیم داد. برای کار با فایل‌هایی که مقادیر آن با کاما از یکدیگر جدا شده‌اند (فایل 
+    CSV
+    ) از ماژول 
+    csv
+    استفاده خواهیم کرد. همچنین مدیریت استثناها را معرفی خواهیم کرد و هنگام بروز استثناها به جای نشان دادن یک 
+    traceback
+    استثناها را پردازش می‌کنیم.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/08 - Strings-(A-Deeper-Look)"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../07%20-%20Array-Oriented-Programming-with-NumPy/Chapter7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../09%20-%20Files-and-Exceptions/Chapter9.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

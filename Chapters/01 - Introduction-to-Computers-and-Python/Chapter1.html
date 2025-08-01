@@ -1,0 +1,1697 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/01 - Introduction-to-Computers-and-Python/Chapter1';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../02%20-%20Introduction-to-Python-Programming/Chapter2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/01 - Introduction-to-Computers-and-Python/Chapter1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/01 - Introduction-to-Computers-and-Python/Chapter1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">مقدمه‌ای بر کامپیوترها و پایتون</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■</span> مطالبی در مورد توسعه‌های جدید و هیجان‌انگیز محاسبات کامپیوتری یاد خواهید گرفت.<br>
+    <span style="color:#F50057;">■</span> اصوال برنامه‌نویسی شیء‌گرا را مرور می‌کنید.<br>
+    <span style="color:#F50057;">■</span> نقاط قوت پایتون را درک خواهید کرد.<br>
+    <span style="color:#F50057;">■</span> با کلمات کلیدی پایتون و کتابخانه‌های علوم داده که در این کتاب مورد استفاده قرار می‌گیرد، آشنا می‌شوید.<br>
+    <span style="color:#F50057;">■</span> برای اجرای کدهای پایتون به‌طور آزمایشی مفسر IPython را در وضعیت تعاملی اجرا می‌کنید.<br>
+    <span style="color:#F50057;">■</span> برای رسم نمودار میله‌ای متحرک یک اسکریپت پایتون اجرا می‌کنید.<br> 
+    <span style="color:#F50057;">■</span> ایجاد و اجرای تستی برنامه تحت وب ژوپیتر نوت‌بوک برای اجرای کدهای پایتون.<br> 
+    <span style="color:#F50057;">■</span> یاد می‌گیرید که کلان‌داده‌ها تا چه اندازه بزرگ هستند و با چه سرعتی رشد می‌کنند.<br>
+    <span style="color:#F50057;">■</span> به عنوان یک مطالعه موردی درباره کلان داده یک برنامه مشهور مسیریاب تلفن‌همراه مورد بررسی قرار می‌گیرد.<br> 
+    <span style="color:#F50057;">■</span> هوش مصنوعی به شما معرفی می‌گردد، این موضوع فصل اشتراک علوم کامپیوتر و علوم داده می‌شود.<br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">مقدمه‌ای بر کامپیوترها و پایتون</span></a></p>
+<ul class="simple">
+<li><p>1.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>1.2 <a class="reference internal" href="#3"><span class="xref myst">مرور سریع اصول فناوری اشیاء</span></a></p></li>
+<li><p>1.3 <a class="reference internal" href="#4"><span class="xref myst">پایتون</span></a></p></li>
+<li><p>1.4 <a class="reference internal" href="#5"><span class="xref myst">کتابخانه‌ها</span></a></p>
+<ul>
+<li><p>1.4.1 <a class="reference internal" href="#6"><span class="xref myst">کتابخانه‌های استاندارد پایتون</span></a></p></li>
+<li><p>1.4.2 <a class="reference internal" href="#7"><span class="xref myst">کتابخانه‌های علوم داده</span></a></p></li>
+</ul>
+</li>
+<li><p>1.5 <a class="reference internal" href="#8"><span class="xref myst">اجرای آزمایشی با استفاده از IPython و ژوپیتر نوت‌بوک</span></a></p>
+<ul>
+<li><p>1.5.1 <a class="reference internal" href="#9"><span class="xref myst">استفاده از IPython در وضعیت محاوره‌ای به عنوان یک ماشین‌حساب</span></a></p></li>
+<li><p>1.5.2 <a class="reference internal" href="#10"><span class="xref myst">اجرای برنامه پایتون با استفاده از مفسر IPython</span></a></p></li>
+<li><p>1.5.3 <a class="reference internal" href="#11"><span class="xref myst">نوشتن و اجرای کد با ژوپیتر نوت‌بوک</span></a></p></li>
+</ul>
+</li>
+<li><p>1.6 <a class="reference internal" href="#12"><span class="xref myst">رایانش ابری و اینترنت اشیاء</span></a></p>
+<ul>
+<li><p>1.6.1 <a class="reference internal" href="#13"><span class="xref myst">رایانش ابری</span></a></p></li>
+<li><p>1.6.2 <a class="reference internal" href="#14"><span class="xref myst">اینترنت اشیاء</span></a></p></li>
+</ul>
+</li>
+<li><p>1.7 <a class="reference internal" href="#15"><span class="xref myst">کلان‌داده‌ها تا چه حد بزرگ هستند؟</span></a></p>
+<ul>
+<li><p>1.7.1 <a class="reference internal" href="#16"><span class="xref myst">تجزیه و تحلیل کلان‌داده</span></a></p></li>
+<li><p>1.7.2 <a class="reference internal" href="#17"><span class="xref myst">آیا علوم‌داده و کلان‌داده یکی هستند؟ بررسی موارد کاربرد هر یک</span></a></p></li>
+</ul>
+</li>
+<li><p>1.8 <a class="reference internal" href="#18"><span class="xref myst">مطالعه موردی کلان‌داده در برنامه تلفن همراه </span></a></p></li>
+<li><p>1.9 <a class="reference internal" href="#19"><span class="xref myst">معرفی علم‌داده، هوش مصنوعی فصل اشتراک علوم کامپیوتر و علم‌داده</span></a></p></li>
+<li><p>1.10 <a class="reference internal" href="#20"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"> 
+به پایتون خوش آمدید،
+    یکی از پرکاربردترین زبان های برنامه نویسی کامپیوتری در جهان و بر اساس شاخص محبوبیت زبان های برنامه نویسی 
+    (PYPL)
+    ، محبوب ترین زبان های جهان است.
+ در این فصل، اصطلاحات و مفاهیمی را معرفی می‌کنیم که پایه و اساس یادگیری برنامه‌نویسی پایتون محسوب می‌شوند.
+در فصل‌های 2 تا 10 برنامه‌نویسی و در فصل‌های 11 تا 16 موارد مطالعاتی بر مبنای داده، هوش مصنوعی و رایانش ابری ارائه می‌شود.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"> 
+اصطلاحات و مفاهیم برنامه نویسی شیء‌گرا را بررسی خواهیم کرد. خواهید آموخت که چرا پایتون تا این حد محبوب شده است. کتابخانه استاندارد پایتون و کتابخانه‌های مختلف علوم داده را معرفی خواهیم کرد که به شما کمک می‌کنند از نوشتن مجدد کد اجتناب کنید. از این کتابخانه‌ها برای ایجاد اشیاء نرم‌افزاری استفاده خواهید کرد و با کمک این اشیاء کارهای زیادی را با حداقل دستورات انجام خواهید داد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در ادامه با سه روش اجرای کدهای پایتون آشنا خواهید شد :
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">■ </span>در روش اول، از IPython برای اجرای تعاملی دستورالعمل‌های پایتون استفاده کرده و بلافاصله نتایج آن‌ها را مشاهده خواهید کرد.<br>
+    <span style="color:#8e24aa;">■ </span>در روش دوم، یک برنامه نسبتا بزرگ خواهید نوشت و این برنامه خلاصه نتایج 6 عدد در پرتاب تاس را به صورت نمودار میله‌ای متحرک نشان می‌دهد. در این برنامه با قانون اعداد بزرگ در عمل آشنا خواهید شد. در فصل 6 این برنامه را با استفاده از کتابخانه  matplotlib ایجاد خواهید کرد.<br>
+    <span style="color:#8e24aa;">■ </span>در آخرین روش ژوپیتر نوت‌بوک را معرفی خواهیم کرد. با استفاده از JupyterLab که یک ابزار تحت وب محسوب می‌شود به‌راحتی می‌توانید برنامه خود را نوشته و دستورات پایتون را اجرا کنید. ژوپیتر نوت‌بوک به شما این امکان را می‌دهد که در برنامه خود متن، عکس، صدا، فیلم، انیمیشن، و کد بگنجانید.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در گذشته، بیش‌تر برنامه‌های کامپیوتری روی کامپیوترهای مستقل اجرا می‌شدند
+    (یعنی باهم شبکه نبودند). 
+    برنامه‌های امروزی را می‌توان باهدف برقراری ارتباط بین میلیاردها کامپیوتر از طریق اینترنت نوشت. مفاهیم رایانش ابری و اینترنت اشیاء را معرفی خواهیم کرد و زمینه لازم برای نوشتن برنامه‌های امروزی در فصول 11 تا 16 را برای شما ایجاد خواهیم کرد.
+        در ادامه یاد می‌گیرید که کلان‌داده‌ها چقدر بزرگ هستند و با چه سرعتی رشد می‌کنند. در مرحله بعدی، یک مطالعه موردی کلان‌داده‌ها را در مورد برنامه مسیریاب ویز تلفن همراه ارائه خواهیم داد.این برنامه با استفاده از بسیاری از فن‌آوری‌های مدرن، یک مسیر رانندگی پویا را ارائه می‌دهد که با سریع‌ترین زمان و بهترین حالت به مقصد برسید. همان‌طور که در مورد این فناوری‌ها صحبت می‌کنیم، موارد استفاده آن‌ها در این کتاب را ذکر خواهیم کرد. این فصل با اولین آشنایی ما به بخش علوم‌داده که در حقیقت یک فصل اشتراک کلیدی بین علوم کامپیوتر و هوش مصنوعی محسوب می‌شود، خاتمه می‌یابد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.2 <span style="color:#F50057;">مرور سریع اصول فناوری اشیاء</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    از آن‌جایی که تقاضا برای نرم‌افزارهای جدید و قدرت‌مند در حال افزایش است، ساختن نرم‌افزار با سرعت، با عملکرد صحیح و البته اقتصادی اهمیت زیادی دارد. اشیاء و یا به عبارت دقیق‌تر، کلاس‌هایی که اشیاء از آن‌ها ایجاد می‌شوند، اساسا اجزای نرم‌افزاری قابل‌استفاده مجدد هستند. اشیاء تاریخ، اشیاء زمان، اشیاء صدا، اشیاء ویدئو، اشیاء اتومبیل، اشیاء افراد، و غیره نمونه‌هایی از اشیاء هستند. تقریبا هر اسمی از‌نظر ویژگی‌ها (به‌عنوان مثال: نام، رنگ و اندازه) و رفتارها (به‌عنوان مثال: محاسبه، جابجایی و برقراری ارتباط) می‌تواند به‌طور معقول به‌عنوان یک شیء نرم‌افزاری نشان داده شود. گروه‌های توسعه‌دهنده نرم‌افزار می‌توانند از رویکرد ماژولار طراحی و پیاده‌سازی شیء‌گرا استفاده کنند. رویکرد اخیر از روش‌های معروف قبلی مانند برنامه‌نویسی ساخت‌یافته بسیار کارآمدتر می‌باشد. درک، برطرف کردن خطا و اصلاح برنامه‌های شیء‌گرا اغلب آسان‌تر است. 
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اتومبیل به‌عنوان یک شیء</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    برای کمک به شما در درک اشیاء و محتوای آن‌ها، بیایید با یک قیاس ساده شروع کنیم. فرض کنید با اتومبیل رانندگی کرده و با فشار دادن پدال گاز سرعت آن را بیش‌تر کنید. قبل از انجام این کار چه اتفاقی می‌افتد؟ خوب، قبل از راندن یک ماشین، باید یک شخص اتومبیل را طراحی کند. یک اتومبیل به‌طور‌معمول با عنوان نقشه‌های مهندسی شبیه نقشه‌های طراحی خانه شروع می‌شود. پدال گاز جزئیات پیچیده مکانیسم افزایش سرعت اتومبیل را از راننده پنهان می‌کند، به همین نحو پدال ترمز و فرمان اتومبیل جزئیات مکانسیم‌های کاهش سرعت و پیچیدن اتومبیل را از راننده پنهان می‌کند. این رویکرد برای افرادی که دانشی کم و یا کسانی که هیچ‌گونه دانشی در مورد موتور، ترمز و فرمان اتومبیل ندارند، این امکان را فراهم می‌کند تا با اتومبیل به‌راحتی رانندگی کنند.
+        همان‌طور که نمی‌توانید وعده‌های غذایی را در طرح اولیه آشپزخانه بپزید، نمی‌توانید با نقشه‌های مهندسی اتومبیل رانندگی کنید. قبل از این‌که بتوانید با ماشین رانندگی کنید، باید از نقشه‌های مهندسی که ماشین را توصیف می‌کنند یک اتومبیل ساخته شود. یک اتومبیل کامل یک پدال گاز واقعی برای افزایش سرعت دارد، اما حتی این هم کافی نیست و اتومبیل به‌خودی‌خود شتاب نمی‌گیرد (امیدوارم!) بنابراین راننده باید پدال را فشار دهد تا ماشین شتاب بگیرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متدها و کلاس‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    بیایید از مثال اتومبیل برای معرفی برخی مفاهیم کلیدی برنامه‌نویسی شیء‌گرا استفاده کنیم. انجام یک کار در یک برنامه به یک متد نیاز دارد. در این متد کدهایی قرار دارند تا وظیفه آن متد را انجام دهند. همان‌طور که پدال گاز یک ماشین مکانیسم‌های افزایش سرعت اتومبیل را از دید راننده پنهان می‌کند، یک متد این دستورات را از کاربر پنهان می‌کند. در پایتون، یک واحد برنامه به نام کلاس، مجموعه‌ای از متدها دارد که وظایف کلاس را انجام می‌دهند. به‌عنوان‌مثال، کلاسی که نشان‌دهنده یک حساب بانکی است ممکن است حاوی یک متد برای واریز پول به حساب، متد دیگری برای برداشت پول از حساب و متد سومی برای تعیین موجودی حساب باشد. یک کلاس از‌نظر مفهومی مشابه نقشه‌های مهندسی اتومبیل است که طراحی پدال گاز، فرمان و ... را در خود جای‌داده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نمونه‌سازی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    همان‌طور که قبل از راندن یک اتومبیل باید شخصی، از نقشه‌های مهندسی اتومبیل یک اتومبیل بسازد، قبل از این‌که برنامه‌ای بتواند وظایفی را که متدهای کلاس تعریف می‌کنند اجرا کند، باید یک شیء از کلاس ایجاد شود. فرآیند انجام این کار را نمونه‌سازی می‌نامند. از آن به بعد به یک شیء به‌عنوان نمونه‌ای از کلاس مربوطه محسوب می‌شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">استفاده مجدد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">درست همان‌طور که می‌توان از نقشه‌های مهندسی اتومبیل برای تولید تعداد زیادی از ماشین‌ها استفاده مجدد کرد، شما هم می‌توانید بارها از یک کلاس به‌راحتی برای ساخت بسیاری از اشیاء استفاده کنید. استفاده مجدد از کلاس‌های موجود در زمان ساخت کلاس‌ها و برنامه‌های جدید، موجب صرفه‌جویی در زمان و کار می‌شود. از آن‌جایی که کلاس‌ها و اجزای نرم‌افزاری موجود اغلب تحت آزمون‌های زیاد، عیب‌یابی و تنظیم کارایی قرار گرفته‌اند به شما کمک می‌کنند تا سیستم‌های قابل اطمینان و کارآمدتر ایجاد کنید. درست همان‌طور که مفهوم قطعات قابل تعویض برای انقلاب صنعتی بسیار حیاتی بودند، مفهوم کلاس‌های با قابلیت استفاده مجدد برای انقلاب نرم‌افزاری بسیار مهم تلقی می‌شوند و در حقیقت ماحصل فناوری شی‌ء‌گرا هستند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پیام‌ها و فراخوانی متدها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که حین رانندگی با اتومبیل پدال گاز را فشار می‌دهید، در حقیقت پیامی را برای انجام یک وظیفه و یا افزایش سرعت به اتومبیل ارسال می‌کنید. به همین ترتیب، به یک شیء پیام ارسال می‌کنید. هر پیام به‌صورت فراخوانی یک متد اجرا می‌شود و به متد آن شیء می‌گوید تا وظیفه خود را انجام دهد. به‌عنوان‌مثال، ممکن است یک برنامه برای افزایش موجودی شیء
+    bank-account
+    ، 
+    متد
+    deposit
+    آن را فراخوانی کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">صفت‌ها و متغیرهای نمونه‌سازی شده</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک اتومبیل علاوه‌بر داشتن قابلیت‌هایی برای انجام وظایف خود، دارای ویژگی‌هایی نظر رنگ، تعداد در، مقدار سوخت موجود در باک، سرعت فعلی آن و ثبت کل مسافت طی شده(به‌عنوان‌مثال، خواندن کیلومتر شمار) است. ویژگی‌های خودرو مانند قابلیت‌های آن به‌عنوان بخشی از طراحی خودرو در نقشه‌های مهندسی نشان داده می‌شوند (به‌عنوان‌مثال شامل کیلومتر شمار و شاخص سوخت است). علاوه‌بر این، هنگامی که با اتومبیل واقعی رانندگی می‌کنید، این ویژگی‌ها همراه با ماشین حمل می‌شوند. هر اتومبیل ویژگی‌های خاص خود را حفظ می‌کند. به‌عنوان‌مثال، هر اتومبیل می‌داند که در باک خود چه مقدار سوخت دارد، اما در مورد مقدار سوخت موجود در باک سایر اتومبیل‌ها چیزی نمی‌داند.
+        به همین نحو یک شیء دارای ویژگی‌هایی است که همراه با آن در یک برنامه استفاده می‌شود. این ویژگی‌ها به‌عنوان بخشی از کلاس شیء مشخص می‌شوند. برای مثال، یک شیء حساب بانکی، دارای ویژگی موجودی است که مقدار پول در آن حساب را نشان می‌دهد. هر شیء حساب بانکی موجود خود را می‌داند، اما دو مورد موجودی دیگر حساب‌ها چیزی نمی‌داند. این ویژگی‌ها توسط متغیرهای نمونه‌سازی شده کلاس مشخص می‌شوند. ویژگی‌ها و متدهای یک کلاس (واشیای آن) ارتباط تنگاتنگی با یکدیگر دارند و به همین دلیل کلاس‌ها ویژگی‌ها و متدهای خود را بسته‌بندی می‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">وراثت</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از وراثت به‌راحتی می‌توان یک کلاس جدید(به نام کلاس فرزند) را ایجاد کرد. این فرآیند با ویژگی‌های یک کلاس موجود (به نام کلاس والد) شروع شده، احتمالا آن‌ها را شخصی‌سازی کرده و ویژگی‌های منحصربه‌فرد خود را با آن اضافه می‌کند. در مثال اتومبیل، مطمئنا یک شیء از کلاس
+    convertible
+    یک شیء از کلاس عمومی اتومبیل است، اما به‌طور خاص‌تر، سقف این خودرو قابلیت باز و بسته شدن دارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تحلیل و طراحی شیء‌گرا</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به‌زودی برنامه‌هایی به زبان پایتون خواهید داشت اما چگونه کد برنامه‌های خود را آماده می‌کنید؟
+    شاید مانند بسیاری از برنامه‌نویسان به‌سادگی کامپیوتر خود را روشن کرده و شروع به تایپ کردن کنید. ممکن است این روش برای برنامه‌های کوچک (مانند برنامه‌هایی که در فصل‌های اول کتاب ارائه‌شده‌اند) کارساز باشد، اما اگر از شما خواسته شد یک سیستم نرم‌افزاری ایجاد کنید تا هزاران دستگاه خودپرداز را برای یک بانک بزرگ کنترل کند؟ یا فرض کنید که از شما خواسته شد روی گروهی متشکل از 1000 توسعه‌دهنده نرم‌افزار کار کنید که تا نسل بعدی سیستم کنترل ترافیک هوایی ایالت متحده را بسازند؟ برای پروژه‌های بزرگ و پیچیده، نباید به‌سادگی بنشینید و شروع به نوشتن برنامه کنید.
+        برای ایجاد بهترین راه‌حل‌ها، باید یک فرآیند تجزیه‌و‌تحلیل دقیق برای تعیین نیازمندی‌های پروژه خود دنبال کنید(به‌عنوان‌مثال، تعیین کنید که قرار است سیستم چه کاری انجام دهد)، سپس طرحی را تهیه کنید که این نیازمندی‌ها را برآورده می‌کند(به‌عنوان‌مثال، مشخص کنید که سیستم چگونه باید این‌کار را انجام دهد). در حالت ایده‌آل، می‌بایست قبل از نوشتن هر کد، این مراحل را طی کرده و با دقت طراحی را بررسی کنید(و طرح خود را با متخصصان دیگر نرم‌افزار هم مورد بررسی قرار دهید). اگر این فرآیند شامل تجزیه‌و‌تحلیل و طراحی سیستم از دیدگاه شیء‌گرا باشد، فرآیند تحلیل و طراحی شیء‌گرا
+    OOAD
+    نامیده می‌شود.
+    زبان‌هایی مانند پایتون شیء‌گرا هستند. برنامه‌نویسی در چنین زبانی که برنامه‌نویسی شیء‌گرا
+    OOP 
+    نامیده می‌شود، به شما امکان می‌دهد یک طرح شیء‌گرا را به‌عنوان یک سیستم کاری پیاده‌سازی کنید.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.3 <span style="color:#F50057;">پایتون</span></h1> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون یک زبان برنامه‌نویسی است که در سال 1991 به‌صورت عمومی منتشر شد. این زبان توسط خودو فان روسوم از موسسه ملی تحقیقات ریاضیات و علوم‌کامپیوتر آمستردام توسعه یافت. زبان پایتون به یکی از رایج‌ترین زبان‌های برنامه‌نویسی دنیا تبدیل شده است. این زبان در حال حاضر به‌طور خاصی برای مصارف آموزشی و علمی محبوب است و به‌تازگی از زبان برنامه‌نویسی 
+    R 
+    به عنوان محبوب‌ترین زبان برنامه‌نویسی پیشی گرفته است. در این‌جا دلایلی چند وجود دارد که چرا پایتون محبوب است و همه باید آن را یاد بگیرند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">■ </span>این زبان متن‌باز و رایگان بوده و به‌طور گسترده‌ای از طریق انجمن‌های متن‌باز قابل‌دسترسی است.<br>
+    <span style="color:#8e24aa;">■ </span>یادگیری این زبان نسبت به زبان‌های
+    C
+    ،
+    C++
+    ،
+    C#
+    و جاوا راحت‌تر بوده و این امکان را به توسعه‌دهنده‌ای مبتدی و حرفه‌ای می‌دهد تا سریع‌تر راه بیفتند.<br>
+    <span style="color:#8e24aa;">■ </span>این زبان در قیاس با سایر زبان‌ها از خوانایی بیش‌تری برخوردار است.<br>
+    <span style="color:#8e24aa;">■ </span>به‌طور گسترده‌ای در آموزش استفاده می‌شود.<br>
+    <span style="color:#8e24aa;">■ </span>این زبان با کتابخانه‌های استاندارد گسترده و کتابخانه‌های منبع باز ثالث، بهره‌وری توسعه‌دهنده را افزایش می‌دهد، به همین دلیل برنامه‌نویسان می‌توانند سریع‌تر کد بنویسند و کارهای پیچیده را با حداقل کد انجام دهند. در این مورد در بخش 1.4 بیشتر صحبت خواهیم کرد.<br>
+    <span style="color:#8e24aa;">■ </span>برنامه‌های متن‌باز و رایگان زیادی به زبان پایتون وجود دارد.<br>
+    <span style="color:#8e24aa;">■ </span>در توسعه وب محبوب است (برای مثال 
+    Django
+    و 
+    Flask).<br>
+    <span style="color:#8e24aa;">■ </span>این زبان از الگوی برنامه‌نویسی رایج نظیر رویه‌ای، سبک تابعی و شیء‌گرا پشتیبانی می‌کند. در فصل 4 معرفی ویژگی‌های برنامه‌نویسی تابعی را شروع می‌کنیم و در فصل‌های بعدی از آن‌ها استفاده می‌کنیم.<br>
+    <span style="color:#8e24aa;">■ </span>این زبان برنامه‌نویسی هم‌زمانی را با استفاده از 
+    async/await
+    و 
+    asyncio 
+    آسان کرده و به‌راحتی می‌توانید کدهای هم‌زمانی تک‌نخی بنویسید. این زبان فرایندهای پیچیده ذاتی کدنویسی، اشکال‌زدایی و نگهداری چنین برنامه‌هایی را آسان می‌کند.<br>
+    <span style="color:#8e24aa;">■ </span>قابلیت‌های زیادی برای افزایش کارایی پایتون وجود دارد.<br>
+    <span style="color:#8e24aa;">■ </span>از این زبان برای نوشتن اسکریپت‌های ساده تا برنامه‌های پیچیده‌ای با تعداد زیادی کاربر نظیر 
+    YouTube
+    ،
+    Reddit
+    ،
+    Dropbox
+    و 
+    Quora
+    استفاده می‌شود.<br>
+    <span style="color:#8e24aa;">■ </span>این زبان در شاخه هوش‌مصنوعی که در حال رشد انفجاری است محبوبیت زیادی دارد. بخشی از آن به دلیل ارتباط ویژه آن با علم‌داده است.<br>
+    <span style="color:#8e24aa;">■ </span>پایتون به‌طور گسترده‌ای در مجامع مالی استفاده می‌شود.<br>
+    <span style="color:#8e24aa;">■ </span>بازار کار گسترده‌ای برای برنامه‌نویسان پایتون در بسیاری از شاخه‌ها به‌ویژه در موقعیت‌های مرتبط با علم‌داده وجود دارد و برنامه‌نویسان پایتون بالاترین دریافتی را دارند.<br>
+    <span style="color:#8e24aa;">■ </span>R
+     یک زبان برنامه‌نویسی متن‌باز محبوب برای برنامه‌های آماری و تصویرسازی است. پایتون و 
+    R
+     دو زبان بسیار گسترده علم‌داده هستند.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">توزیع آناکوندا پایتون</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از توزیع آناکوندا پایتون استفاده می‌کنیم زیرا نصب آن در ویندوز، 
+    macOS
+    و
+    Linux
+    آسان است و از آخرین نسخه‌های 
+    Python
+    ،
+    یعنی مفسر 
+    IPython
+    ( در بخش 1.5.1 معرفی می‌شود)
+    و 
+    Jupyter Notebook
+    (در بخش 1.5.3 معرفی می‌شود)
+    پشتیبانی می‌کند. علاوه‌بر این، آناکوندا شامل بسته‌های نرم‌افزاری و کتابخانه‌های دیگری است که معمولا در برنامه‌نویسی پایتون و علم‌داده، به شما اجازه می‌دهد تا به‌جای مسائل نصب نرم‌افزار، روی پایتون و علم‌داده تمرکز کنید. مفسر 
+    IPython
+     دارای ویژگی‌هایی است که به شما کمک می‌کند پایتون، کتابخانه استاندارد پایتون و مجموعه گسترده کتابخانه‌های شخص ثالث را کشف، تجربه و آزمایش کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ذن پایتون</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">ما به ذن پایتون پایبند هستیم، ذن پایتون اصولی است که توسط خالق این زبان ایجاد‌شده و توسط تیم پیترز نوشته‌شده است. با اجرای دستور 
+    <code>import this</code>
+    در محیط
+    IPython
+    می‌توان این لیست را مشاهده کرد. ذن پایتون در پروپوزال بهینه‌سازی پایتون و یا 
+    PEP
+    تعریف شده است.
+    PEP 
+    یک سند طراحی است که اطلاعاتی را برای جامعه پایتون ارائه می‌دهد، یک ویژگی جدید در پایتون، فرآیندها و یا محیط آن را توصیف می‌کند.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.4 <span style="color:#F50057;">کتابخانه‌ها</span></h1> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در طول این کتاب، به استفاده از کتابخانه‌های موجود در پایتون تمرکز می‌کنیم تا از کدنویسی دوباره اجتناب کنید و با این کار تلاش شما در توسعه برنامه بهینه می‌شود. غالبا به‌جای نوشتن کد از ابتدا‌به‌ساکن که فرآیندی زمان‌بر و پرهزینه است، بهتر است برای ایجاد یک شیء، از کلاس‌های از قبل تعریف‌شده در کتابخانه این زبان استفاده کنید. این کار فقط با یک دستور در پایتون انجام می‌شود؛ بنابراین، کتابخانه‌ها به شما کمک می‌کنند تا با حداقل کد، کارهای قابل‌توجهی انجام دهید. در این کتاب از طیف گسترده‌ای از کتابخانه‌های استاندارد پایتون، کتابخانه‌های علم‌داده و کتابخانه‌های ثالث استفاده خواهید کرد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.4.1 <span style="color:#8e24aa;">کتابخانه‌های استاندارد پایتون</span></h2> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کتابخانه استاندارد پایتون قابلیت‌های غنی برای پردازش داده‌های متن / دودویی، ریاضیات، برنامه‌نویسی به سبک تابعی، دسترسی به فایل / دایرکتوری، ماندگاری داده‌ها، فشرده‌سازی / بایگانی داده‌ها، رمزنگاری، سرویس‌های سیستم‌عامل، برنامه‌نویسی هم‌زمانی، ارتباطات بین پردازش‌ها، پروتکل‌های شبکه، 
+    JSON / XML
+     و سایر فرمت‌های داده اینترنتی، چندرسانه‌ای، بین‌المللی سازی، رابط کاربری گرافیکی، اشکال‌زدایی، پروفایل و موارد دیگر فراهم می‌کند. در جدول زیر برخی از ماژول‌های کتابخانه استاندارد پایتون ذکر شده است و در مثال‌ها استفاده می‌کنیم.
+</div><p><img alt="Screenshot%20%282%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%282%29.png" /></p>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.4.2 <span style="color:#8e24aa;">کتابخانه‌های علم‌داده</span></h2> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون دارای یک انجمن بزرگ و رو به رشد از توسعه‌دهندگان متن‌باز در بسیاری از زمینه‌ها است. کتابخانه‌های متن‌باز که توسط انجمن متن‌باز پایتون توسعه‌یافته‌اند، یکی از بزرگ‌ترین دلایل محبوبیت این زبان به شمار می‌روند. یکی از اهداف ما ایجاد نمونه‌ها و مطالعات موردی در زمینه پیاده‌سازی است. این کار برای شما یک معرفی جذاب، چالش‌برانگیز و سرگرم‌کننده‌ای در زمینه برنامه‌نویسی پایتون به‌ارمغان می‌آورد و در عین‌حال شما را با علم‌داده، کتابخانه‌های مهم علم‌داده و موارد دیگر درگیر می‌کند. از کارهای اساسی که می‌توانید با چند خط کد انجام دهید شگفت‌زده خواهید شد. در جدول زیر کتابخانه‌های رایج علم‌داده لیست شده‌اند. بسیاری از این کتابخانه‌ها را هنگام کار با مثال‌های علم‌داده مورداستفاده قرار خواهید داد. برای گرافیکی کردن داده‌ها از 
+    Matplotlib
+    ،
+    Seaborn
+    و 
+    Folium 
+    استفاده خواهیم کرد ولی کتابخانه‌های متعددی در این خصوص وجود دارد. برای مشاهده یک لیست خوب و مختصر در مورد کتابخانه‌های گرافیکی پایتون به آدرس 
+    <a href="http://pyviz.org/">http://pyviz.org</a>
+    مراجعه کنید.
+</div><p><img alt="Screenshot%20%283%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%283%29.png" /></p>
+<p><img alt="Screenshot%20%285%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%285%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.5 <span style="color:#F50057;">اجرای آزمایشی با استفاده از آی‌پایتون و ژوپیتر نوت‌بوک</span></h1> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این بخش، مفسر 
+    IPython 
+    را در دو حالت آزمایش خواهید کرد. قبل از خواندن این بخش، برای نصب توزیع 
+    Anaconda Python
+    که شامل مفسر
+    IPython 
+    است، دستورالعمل‌های قبل از شروع را دنبال کنید.
+    <br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+        <span style="color:#8e24aa;">• </span>حالت تعاملی: در این حالت کدهای کوتاه پایتون به نام اسنیپت را وارد خواهید کرد و بلافاصله نتایج آن‌ها را مشاهده خواهید کرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+         <span style="direction:rtl;color:#8e24aa;">• </span>حالت اسکریپت:در این حالت کدهای اجرایی از یک فایل با پسوند $.py$ خوانده می‌شوند و معمولا این کدها از اسنیپت‌ها طولانی‌تر هستند.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    در ادامه یاد می‌گیرید چطور از محیط مبتنی بر مرورگر نظیر
+    Jupyter
+    برای نوشتن و اجرای کد پایتون استفاده کنید.
+    Jupyter 
+    زبان‌های برنامه‌نویسی زیادی را به‌شرط آنکه هسته آن‌ها را نصب کنید، پشتیبانی می‌کند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.5.1 <span style="color:#8e24aa;">استفاده از 
+    IPython
+    در وضعیت محاوره‌ای به‌عنوان یک ماشین‌حساب</span></h2> <a id='9'></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بیایید از حالت تعاملی 
+    IPython 
+    برای ارزیابی عبارات ریاضی ساده استفاده کنیم.
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">وارد شدن به 
+IPython 
+در حالت تعاملی</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ابتدا یک پنجره خط فرمان در سیستم‌تان باز کنید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در سیستم 
+    macOS
+    از پوشه 
+    Applications
+    و زیرپوشه 
+    Utilities 
+    آیتم 
+    Terminal 
+    را باز کنید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در ویندوز از منوی شروع
+    Anaconda Command Prompt
+    را باز کنید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در لینوکس،
+    Terminal
+    و یا 
+    Shell
+    سیستم را باز کنید (این مطلب به توزیع لینوکس بستگی دارد).<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در خط فرمان ویندوز کلمه
+    <code>ipython</code>
+    را تایپ کرده و سپس 
+    $Enter$
+    کنید. بسته به پلتفرم و ورژن پایتون، پیامی مشابه پیام ذیل را خواهید دید:
+</div><p><code>Python 3.7.0 | packaged by conda-forge | (default, Jan 20 2019, 17:24:52)
+Type ‘copyright’, ‘credits’ or ‘license’ for more information
+IPython 6.5.0 – An enhanced Interactive Python. Type ‘?’ for help.<br>
+In [1]:</code></p>
+<p><img alt="Screenshot%20%286%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%286%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عبارت
+    ":In [1]"
+    اعلان است و نشان می‌دهد که 
+    IPython 
+    منتظر ورودی شما است. می‌توانید کاراکتر 
+    $?$ 
+    را وارد کنید تا راهنمای سیستم شروع شود و یا آنکه اسنیپت‌ها را وارد کنید و البته به‌زودی این کار را خواهید کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارزیابی عبارات ریاضی</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در حالت تعاملی می‌توانید عبارات ریاضی را محاسبه کنید:
+</div><p><code>In [1]: 45 + 72
+Out[1]: 117<br>
+In [2]:</code></p>
+<p><img alt="Screenshot%20%287%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%287%29.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span> <span class="o">+</span> <span class="mi">72</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>117
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بعد از تایپ 
+    $ 45 + 72 $
+    ، 
+    IPython
+    اسنیپت را می‌خواند، آن را ارزیابی کرده و نتیجه را در 
+    $Out[1]$
+    نشان می‌دهد. در ادامه 
+    IPython
+    عبارت 
+    $In [2]$
+    را نشان می‌دهد و معرف آن است که منتظر ورود اسنیپت دوم از جانب شما است. 
+    IPython 
+    برای هر اسنیپت به عدد داخل براکت یک واحد اضافه می‌کند. در این کتاب هر 
+    $In [1]$ 
+    معرف آن است که یک نشست تعاملی جدید آغاز کرده‌اید. این روش را برای هر قسمت یک فصل انجام می‌دهیم. در فصل بعدی خواهید دید که در مواردی عبارت 
+    $Out[\ ]$
+    نشان داده نمی‌شود. اجازه دهید عبارت‌های پیچیده‌تری را ارزیابی کنیم:
+</div><p><img alt="Screenshot%20%289%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%289%29.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mf">12.7</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.75
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون از کاراکتر * برای عمل ضرب و از کاراکتر / برای عمل تقسیم استفاده می‌کند. مشابه ریاضی عبارت داخل پرانتز در ابتدا ارزیابی می‌شوند و به همین دلیل عبارت 
+    $ 12.7 - 4 $
+    که داخل پرانتز قرار دارد ابتدا محاسبه‌شده نتیجه 
+    $ 8.7 $
+    را تولید می‌کند. در ادامه عبارت 
+    $ 8.7 * 5 $
+    محاسبه‌شده و نتیجه 
+    $ 43.5 $
+    حاصل می‌شود. در انتها عبارت 
+    $ 43.5 / 2 $
+    محاسبه و نتیجه 
+    $ 21.75 $
+    به‌دست‌آمده و 
+    IPython 
+    آن را در 
+    Out[2]
+     نشان می‌دهد. اعداد 
+    $ 5 $
+    ، 
+    $ 4 $
+    و 
+    $ 2 $
+    اعداد صحیح نامیده می‌شوند. اعدادی نظیر 
+    $ 12.7 $
+    ، 
+    $ 43.5 $
+    و 
+    $ 21.75 $
+    اعداد ممیز شناور نامیده می‌شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">خروج از محیط تعاملی</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای خروج از حالت تعاملی می‌توانید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در کنار اعلان 
+    $In [\ ]$ 
+    عبارت 
+    $exit$
+    را تایپ کنید و با 
+    $Enter$ 
+    کردن فورا از این محیط خارج شوید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>دکمه 
+    $Ctrl + d\ (or\ control + d)$
+        را فشار دهید. سیستم عبارت ذیل را نشان می‌دهد:
+        $"Do\ you\ really\ want\ to\ exit\ ([y]/n)?"$
+        کروشه‌های دو طرف 
+        $y$ 
+        معرف پاسخ پیش‌فرض بوده و با 
+        $Enter$ 
+        کردن این پاسخ را تائید کرده و از محیط خارج می‌شوید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>دکمه 
+    $Ctrl + d \ (or\ control + d)$
+        را دوبار فشار دهید (فقط در 
+        macOS
+        و لینوکس).<br>
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.5.2 <span style="color:#8e24aa;">اجرای یک برنامه پایتون با استفاده از
+    IPython</span></h2> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت یک اسکریپت به‌نام 
+    RollDieDynamic.py
+    را اجرا خواهید کرد و در فصل 6 این برنامه را می‌نویسید. پسوند 
+    $.py$
+    فایل فوق معرف آن است که این فایل، کد منبع یک برنامه پایتون است. اسکریپت 
+    RollDieDynamic.py 
+    پرتاب یک تاس شش‌وجهی را شبیه‌سازی کرده و نمودار تعداد دفعات رخداد هر وجه تاس را به صورت پویا رسم می‌کند. این برنامه، اعداد و نمودار آن‌ها را به‌صورت رنگی نشان می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تغییر مسیر کاری به پوشه مثال‌های این فصل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در پوشه 
+    ch01 
+    این کتاب کدهای مربوط به این اسکریپت را پیدا خواهید کرد. قبل از شورع این قسمت پوشه 
+    $examples$ 
+    را در پوشه 
+     $Documents$ 
+    حساب کاربری خود منتقل کنید. هر فصل دارای یک پوشه مربوط به کدهای منبع مربوطه است. هر فصل با فرمت 
+     $ ch## $
+    نام‌گذاری شده و 
+    $ ## $
+    معرف یک عدد دورقمی از 
+    01
+    تا
+    17 
+    می‌باشد.
+    در ابتدا پنجره خط فرمان را باز کنید و سپس با دستور 
+    $cd$
+    به مسیر پوشه 
+    $ch01$ 
+    بروید:
+</div><p><img alt="Screenshot%20%2810%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2810%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اجرای اسکریپت</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای اجرای یک اسکریپت دستور ذیل را در خط فرمان تایپ کرده و 
+    $Enter$
+    کنید:
+</div><p><code>ipython <a class="reference external" href="http://RollDieDynamic.py">RollDieDynamic.py</a> 6000 1</code></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با این دستور اسکریپت پنجره‌ای باز کرده و نمودار مربوطه را رسم می‌کند. اعداد 
+    1 
+    و 
+    6000 
+    تعداد تاس‌ها و تعداد پرتاب تاس را مشخص می‌کنند. در دستور بالا نمودار را 
+    6000 
+    بار برای یک تاس به‌روزرسانی کرده‌ایم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روی وجوه یک تاس 
+    6 
+    وجهی اعداد 
+    1
+    تا 
+    6 
+    نقش بسته و احتمال رخداد هر عدد 
+    1/6 
+    و یا 
+    16.667%
+    می‌باشد. 
+    اگر تاسی را 
+    6000 
+    بار پرتاب کنیم انتظار داریم هر وجه آن در حدود 
+    1000 
+    بار روی دهد. پرتاب تاس همانند پرتاب یک سکه یک پیشامد کاملا تصادفی است و به‌همین دلیل انتظار داریم تعداد دفعات بعضی اعداد کمتر از 
+    1000
+    و برخی بیش‌تر از 
+    1000 
+    باشند. در هنگام اجرای اسکریپت از صفحه‌نمایش یک عکس گرفته‌ایم. این اسکریپت از اعدادی که به‌صورت تصادفی تولیدشده‌اند استفاده می‌کند و به‌همین دلیل نتایج آن با نتایج شما تفاوت دارد. اسکریپت را با تغییر عدد 
+    1 
+    به 
+    100
+    ،
+     1000
+     و 
+    10000 
+    اجرا کنید. زمانی که تعداد دفعات پرتاب بزرگ می‌شوند، عدد مربوط به هر وجه به سمت 
+    16.667% 
+    میل می‌کند، به این خاصیت قانون اعداد بزرگ می‌گویند.
+</div><p><img alt="Screenshot%20%2811%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2811%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ایجاد اسکریپت‌ها</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به‌طور معمول، کد منبع پایتون خود را در یک ویرایشگر ایجاد می‌کنید که به شما امکان می‌دهد متن را تایپ کنید. با استفاده از ویرایشگر، یک برنامه را تایپ می‌کنید، اصلاحات لازم را انجام می‌دهید و آن را در رایانه خود ذخیره می‌کنید. محیط‌های توسعه یکپارچه
+    (IDEs) 
+    ابزاری را فراهم می‌کنند که از کل روند توسعه نرم‌افزار مانند ویرایشگرها، اشکال‌زدایی برای تعیین خطاهای منطقی که موجب اجرای نادرست برنامه می‌شوند، پشتیبانی می‌کنند.
+    Spyder (which comes with Anaconda), 
+    PyCharm 
+    و
+     Visual Studio Code 
+    تعدادی از 
+     IDE
+    های رایج پایتون به‌شمار می‌روند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مشکلاتی که ممکن است در زمان اجرا روی دهند</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه‌ها معمولا برای اولین بار کار نمی‌کنند. برای مثال ممکن است یک برنامه در حال اجرا عددی را بر صفر تقسیم کند (یک عمل غیرمجاز در پایتون). این مسئله موجب می‌شود برنامه یک پیام خطا را نشان دهد. اگر در حین اجرای اسکریپت با چنین مشکلاتی مواجه شدید، به ویرایشگر برگردید، تغییرات را اعمال و دوباره اسکریپت را اجرا کنید و ببینید که آیا مشکل برطرف شده و یا خیر. به خطاهایی مظیر تقسیم‌بر صفر که حین اجرای برنامه رخ می‌دهند، خطاهای زمان اجرا گویند. خطاهای بحرانی موجب می‌شوند پیش از آنکه برنامه وظایف خود را به‌درستی انجام‌دهد، خاتمه یابند. خطاهای غیربحرانی به برنامه‌ها اجازه می‌دهند به پایان برسند، ولی اغلب نتایج نادرستی تولید می‌کنند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.5.3 <span style="color:#8e24aa;">نوشتن و اجرای کد در 
+    Jupyter Notebook</span></h2> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در نسخه پایتون آناکوندایی که در مرحله قبل نصب‌کرده‌اید، 
+    Jupyter Notebook 
+    هم وجود دارد، 
+    Jupyter Notebook 
+    یک محیط تعاملی و مبتنی بر مرورگر است که می‌توانید  در آن کد نوشته، آن را اجرا کنید و به کد نوشته‌شده متن، عکس و فیلم اضافه کنید. 
+    Jupyter Notebook 
+    به‌طور ویژه‌ای در جامعه علوم داده و در سطحی گسترده در مجامع علمی استفاده می‌شود. این دو ابزار رایج‌ترین ابزاری هستند که برای مطالعات تحلیل داده‌های مبتنی بر پایتون و اشتراک نتایج آن‌ها به کار می‌روند. محیط 
+    Jupyter Notebook
+     از تعداد فزاینده‌ای زبان‌های برنامه‌نویسی پشتیبانی می‌کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای راحتی شما، تمامی کد منبع کتاب نیز در 
+    Jupyter Notebooks 
+    ارائه شده است و شما می‌توانید به‌سادگی آن‌ها را بارگیری و اجرا کنید. در این بخش، از رابط 
+    JupyterLab 
+    استفاده خواهید کرد که به شما امکان می‌دهد پرونده‌های 
+    Notebooks 
+    و سایر پرونده‌هایی را که 
+    Notebooks 
+    از آن استفاده می‌کنید را مدیریت کنید (مانند تصاویر و فیلم‌ها). همان‌طور که مشاهده خواهید کرد، 
+    Jupyterlab 
+    به شما این امکان را می‌دهد به‌راحتی کد بنویسید، آن‌را اجرا کنید، نتایج را مشاهده کنید، کد را اصلاح کرده و دوباره آن را اجرا کنید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خواهید دید که کدنویسی در 
+    Jupyter Notebook 
+    مشابه کار با 
+    IPython 
+    است و در واقع، 
+    Jupyter Notebook 
+    به‌طور پیش‌فرض از 
+    IPython 
+    استفاده می‌کند. در این بخش، یک 
+    Notebook 
+    ایجاد می‌کنید، کد را از بخش 1.5.1 به آن اضافه کرده و آن کد را اجرا می‌کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">باز کردن 
+JupyterLab 
+در مرورگر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای بازکردن 
+    JupyterLab 
+    در محیط ترمینال، 
+    Shell 
+    و یا خط فرمان آناکوندا دستور 
+    jupyter lab 
+    را در خط فرمان تایپ کرده و 
+    Enter 
+    کنید. این فرمان سرور 
+    Jupyter Notebook 
+    را روی کامپیوتر شما اجرا می‌کند، 
+    JupyterLab 
+    را در مرورگر شما بازکرده، محتویات پوشه 
+    ch01 
+    را در برگه مرورگر فایل نشان داده و در سمت چپ رابط 
+    JupyterLab 
+    را نشان می‌دهد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سرور 
+    Jupyter Notebook 
+    به شما این امکان را می‌دهد تا 
+    Jupyter Notebooks
+    را بارگذاری کرده و اجرا کنید. با دبل کلیک کردن بر روی فایل‌ها می‌توانید آن‌ها را در سمت راست باز کنید. برای مثال در تصویر زیر، فایل‌ها در برگه 
+    Launcher 
+    نشان داده شده‌اند. هر فایلی را که باز می‌کنید در یک برگه جدید و در این قسمت به نمایش درمی‌آید. اگر به‌طور اتفاقی پنجره مرورگرتان را بستید با تایپ 
+    <a href="http://localhost:8888/lab">http://localhost:8888/lab</a>
+     در قسمت نوار آدرس مرورگر موجب می‌شود 
+     JupyterLab
+     دوباره باز شود.
+</div><p><img alt="Screenshot%20%2812%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2812%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ایجاد کردن یک 
+Jupyter Notebook 
+جدید</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای ایجاد یک 
+    Jupyter Notebook 
+    جدید، در برگه 
+    Launcher 
+    روی دکمه 
+    Python 3 
+    زیر 
+     Notebook 
+    کلیک کنید تا یک فایل جدید به‌نام 
+    Untitled.ipynb 
+    ایجاد شود و می‌‍توانید کدهای 
+    Python 3
+    را در آن تایپ و اجرا کنید. پسوند فایل‌ها 
+    $.ipynb$ 
+    بوده و کوتاه شده 
+    IPython Notebook 
+    می‌باشد. این عبارت نام اولیه 
+    Jupyter Notebook 
+    بوده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تغییر نام 
+Notebook</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای تغییر نام  
+     Untitled.ipynb 
+    به 
+    TestDrive.ipynb 
+    مراحل ذیل را انجام دهید: 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#D50000;">1. </span>بر روی برگه 
+    Untitled.ipynb 
+    کلیک راست کرده و گزینه 
+    Rename Notebook 
+    را انتخاب کنید.<br>
+    <span style="color:#D50000;">2. </span>نام فعلی را به‌نام 
+    TestDrive.ipynb 
+    تغییر دهید و روی 
+    RENAME 
+    کلیک کنید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">قسمت بالایی 
+    JupyterLab
+    مطابق شکل ذیل تغییر خواهد کرد:
+</div><p><img alt="Screenshot%20%2813%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2813%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ارزیابی یک عبارت</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">واحد کار در 
+    Notebook 
+    سلول نامیده می‌شود و در واقع سلول جایی است که کدهای اسنیپت را وارد و اجرا می‌کنید. هر 
+    Notebook 
+    جدید شامل یک سلول و یا همان کادر مستطیل شکل در 
+    TestDrive.ipynb 
+    است ولی می‌توانید سلول‌های بیشتری هم اضافه کنید. نماد 
+    $ [ ]: $ 
+    در سمت چپ سلول مکانی است که 
+    Notebook 
+    برای نمایش شماره سلول اسنیپت بعد اجرای کد استفاده می‌کند. روی سلول کلیک کرده و عبارت 
+    $ 45 + 72 $
+    را تایپ کنید. برای اجرای کد سلول فعلی 
+    $Ctrl + Enter$ 
+    را فشار دهید.
+     JupyterLab 
+    کد را در 
+    IPython 
+    اجرا کرده و نتیجه را زیر سلول نشان می‌دهد:
+</div><p><img alt="Screenshot%20%2814%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2814%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اضافه کردن و اجرای یک سلول دیگر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجازه دهید عبارت پیچیده‌تری را ارزیابی کنیم. در ابتدا بر روی دکمه 
+    + 
+    در قسمت نوارابزار که در بالای اولین سلول 
+    notebook 
+    قرار دارد کلیک کنید. این کار موجب می‌شود یک سلول جدید زیر سلول فعلی اضافه شود:
+</div><p><img alt="Screenshot%20%2815%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2815%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داخل سلول جدید کلیک کرده و عبارت 
+    $ 5 * (12.7 - 4) / 2 $
+    را داخل آن تایپ کنید و برای اجرا 
+    $Ctrl + Enter$ 
+    را فشار دهید.
+</div><p><img alt="Screenshot%20%2817%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2817%29.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ذخیره کردن 
+Notebook</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر تغییرات 
+    Notebook 
+    شما ذخیره نشده باشد، آیتم 
+     $X$ 
+    در برگه 
+    Notebook 
+    شما نیز تغییر خواهد کرد. برای ذخیره کردن 
+    Notebook 
+    در منوی 
+    $File$ 
+    در 
+    JupyterLab 
+    گزینه 
+    Save Notebook 
+    را انتخاب کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Notebook 
+ارائه‌شده با مثال‌های هر فصل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای راحتی شما، مثال‌های هر فصل نیز با قابلیت خواندن، اجرا و بدون خروجی ارائه شده‌اند. این شما روش این امکان را به شما می‌دهد تا اسنیپت‌ها را تک‌تک اجرا کرده و خروجی هر یک را مشاهده کنید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای این‌که بتوانیم نحوه بارگذاری یک 
+    notebook 
+    موجود و اجرای سلول‌های آن را به شما نشان دهیم، اجازه دهید نوت‌بوک 
+    TestDrive.ipynb 
+    را مجددا ریست کنیم تا خروجی‌ها و شماره‌های مربوط به اسنیپت‌ها حذف شوند. این کار موجب می‌شود به وضعیتی که برای فصل‌های بعدی تنظیم کرده‌ایم بازگردد. برای این کار از منوی 
+    $Kernel$ 
+    گزینه 
+    $Restart\ Kernel\ and\ Clear\ All\ Outputs$
+    را انتخاب و سپس روی دکمه 
+    $RESTART$
+    کلیک کنید. 
+    روش قبلی برای مواقعی که بخواهید اسنیپت‌های یک 
+    notebook 
+    را مجددا اجرا کنید، مفید واقع می‌شود. 
+    اکنون 
+    notebook 
+    مطابق شکل ذیل شده است:
+</div><p><img alt="Screenshot%20%2818%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2818%29.png" /></p>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از منوی 
+    $File$
+    گزینه 
+    $Save\ Notebook$
+    را انتخاب کرده و سپس روی دکمه 
+    $X$ 
+    در برگه 
+    TestDrive.ipynb
+    کلیک کنید تا 
+    notebook 
+    بسته شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">باز کردن و اجرای یک 
+Notebook</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی 
+    JupyterLab 
+    را از پوشه مثال‌های یک فصل مشخص و راه‌اندازی می‌کنید، می‌توانید 
+    notebook 
+    را از آن پوشه یا زیرپوشه‌های آن باز کنید. پس از انتخاب یک 
+    notebook
+    ، 
+    روی آن دبل کلیک کنید تا باز شود. دوباره نوت‌بوک 
+    TestDrive.ipynb 
+    را باز کنید. هنگامی‌که یک 
+    notebook 
+    باز شد، مطابق روشی که در این بخش انجام دادید، هر سلول را به صورت جداگانه اجرا و یا کل 
+    notebook 
+    را یک‌جا اجرا کنید. برای این کار، از منوی 
+    Run 
+    گزینه 
+    Run All Cells 
+    را انتخاب کنید. 
+    notebook 
+    به ترتیب هر سلول را اجرا کنید و نتیجه را در زیر آن سلول نمایش می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بستن 
+JupyterLab</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">زمانی‌که کارتان با 
+    JupyterLab 
+    تمام شد، می‌توانید برگه مرورگر آن را ببندید و سپس در محیط ترمینال، 
+    shell 
+    و خط فرمان و بسته به محیطی که 
+    JupyterLab 
+    را شروع کرده‌اید دوبار دکمه 
+    $Ctrl + c$
+    را تایپ کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نکاتی در مورد 
+JupyterLab</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی‌که با 
+    JupyterLab 
+    کار می‌کنید، ممکن است نکات ذیل برای شما مفید واقع شود:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>زمانی‌که نیاز دارید تعداد زیادی اسنیپت را وارد کرده و اجرا کنید، بعد از اجرای اسنیپت فعلی می‌توانید با فشردن کلید 
+    $Shift + Enter$
+    به‌جای 
+     $Ctrl + Enter$
+    یک سلول جدید ایجاد کنید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>همان‌طور که در ادامه خواهید آموخت، در پاره‌ای از اوقات اسنیپتی که وارد می‌کنید، ممکن است از تعداد زیادی خط کد تشکیل شده باشد؛ برای نشان دادن شماره هر سلول کافی است گزینه 
+    Show line numbers 
+    را از منوی 
+    View 
+    انتخاب کنید.<br>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اطلاعات بیشتر برای کار با  
+JupyterLab</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">JupyterLab 
+    دارای ویژگی‌های بیشتری است که برای شما مفید خواهد بود. توصیه می‌کنیم مقدمه تیم 
+    Jupyter 
+    در مورد 
+    JupyterLab 
+    در آدرس ذیل را بخوانید:
+    <a href="https://jupyterlab.readthedocs.io/en/stable/index.html">https://jupyterlab.readthedocs.io/en/stable/index.html</a><br>
+    برای مرور سریع در زیر 
+    GETTING STARTED 
+    روی 
+    Overview 
+    کلیک کنید. در زیر قسمت 
+    USER GUIDE 
+    مطالب زیادی برای مطالعه در مورد رابط 
+    JupyterLab 
+    ، 
+    کار با فایل‌ها، ویرایشگر متن و سایر ویژگی‌ها وجود دارد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.6 <span style="color:#F50057;">ابر و اینترنت اشیاء</span></h1> <a id='12'></a><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.6.1 <span style="color:#8e24aa;">ابر</span></h2> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">امروزه قسمت عمده محاسبات در ابر انجام می‌شود، یعنی محاسبات در سراسر جهان از طریق اینترنت توزیع می‌گردد. بسیاری از برنامه‌هایی که روزانه استفاده می‌کنید وابسته به سرویس‌های مبتنی بر ابر هستند که از خوشه‌های عظیم منابع محاسباتی (رایانه‌ها، پردازنده‌ها، حافظه، درایوهای دیسک و غیره) و پایگاه‌های داده‌ای که از طریق اینترنت با یکدیگر و برنامه‌های مورداستفاده شما ارتباط برقرار می‌کنند، استفاده می‌کنند. سرویسی که دسترسی خود را از طریق اینترنت فراهم می‌کند به‌عنوان وب سرویس شناخته می‌شود. همان‌طور که مشاهده خواهید کرد، استفاده از سرویس‌های مبتنی بر ابر در پایتون اغلب به‌سادگی ایجاد یک شیء نرم‌افزاری و تعامل با آن است. در ادامه این شیء از وب سرویس‌هایی که از طرف شما به ابر متصل می‌شوند، استفاده می‌کند. در مثال فصول 11 تا 16 با سرویس‌های مبتنی بر وب زیادی کار خواهید کرد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصول 12 و 16 می‌توانید از وب‌سرویس‌های توییتر (از طریق کتابخانه 
+    Tweepy 
+    پایتون) استفاده کنید تا اطلاعات مربوط به کاربران خاص توییتر را به‌دست آورید، توییت‌های هفت روز اخیر را جستجو کنید و جریان‌های توییت را در زمان وقوع و یا بلادرنگ دریافت کنید.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصل 12، از کتابخانه 
+    TextBlob 
+    پایتون برای ترجمه متن استفاده خواهید کرد. 
+    TextBlob 
+    در پشت‌صحنه از سرویس وب 
+    Google Translate 
+    برای انجام ترجمه‌ها استفاده می‌کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصل 13 از سرویس آی‌بی‌ام واتسون استفاده خواهید کرد، این سرویس یک سرویس تبدیل متن به گفتار و گفتار به متن است. شما یک مترجم همراه خواهید نوشت، این برنامه این امکان را به شما می‌دهد سوالی را به انگلیسی بیان کنید، برنامه گفتار را به متن تبدیل کرده، متن اخیر را به اسپانیایی ترجمه کرده و درنهایت این متن را به زبان اسپانیایی بیان می‌کند. همچنین این برنامه این امکان را به شما می‌دهد سوالی را به اسپانیایی بیان کنید (اگر زبان اسپانیایی نمی‌دانید، یک فایل صوتی به زبان اسپانیایی برای شما فراهم‌شده است)، برنامه گفتار را به متن اسپانیایی تبدیل کرده، متن اخیر را به انگلیسی ترجمه کرده و در نهایت این متن را به زبان انگلیسی بیان می‌کند. هنگام کار با دمو‌های آی‌بی‌ام واتسون، تجربه‌های زیادی در خصوص سایر سرویس‌های مبتنی بر ابر واتسون کسب خواهید کرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصل 16 هنگام استفاده از 
+    Spark 
+    و 
+    Apache Hadoop 
+    برای پیاده‌سازی برنامه‌های کلان‌داده، با سرویس 
+    Microsoft Azure's HDInsight 
+    و دیگر وب‌سرویس‌های 
+    Azure 
+    کار خواهید کرد. 
+    Azure 
+    در حقیقت مجموعه‌ای از سرویس‌های مبتنی بر ابر مایکروسافت محسوب می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصل 16 از وب سرویس 
+    Dweet.io 
+    برای شبیه‌سازی ترموستات متصل به اینترنت استفاده می‌کنید، این ترموستات دمای خوانده‌شده را به‌صورت آنلاین منتشر می‌کند. همچنین از یک وب‌سرویس برای ایجاد داشبورد استفاده خواهید کرد. این داشبورد، دمای خوانده‌شده را برحسب زمان نشان می‌دهد و اگر دما خیلی‌کم یا زیاد شود به شما هشدار می‌دهد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فصل 16 داده‌های زنده یک حسگر که با سرویس 
+    PubNub 
+    شبیه‌سازی شده است را با یک داشبورد مبتنی بر وب به‌صورت گرافیکی نشان خواهد داد. علاوه‌براین برنامه‌ای خواهید نوشت که تغییرات قیمت یک سهام که با 
+    PubNub 
+    شبیه‌سازی شده، به‌صورت گرافیکی نشان دهد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بیشتر موارد، اشیای پایتون را ایجاد می‌کنید که با وب‌سرویس‌ها تعامل دارند و جزئیات نحوه دسترسی به این سرویس‌ها از طریق اینترنت را پنهان می‌کنید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Mashups</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روش توسعه نرم‌افزار مش‌آپ، روشی است که با تلفیق وب‌سرویس‌های مختلف (اغلب رایگان) و سایر منابع فراهم‌کننده اطلاعات، امکان تولید یک نرم‌افزار قدرتمند را به‌سرعت فراهم می‌کند. این کار مشابه برنامه دستیار مترجمی است که قرار است با آی‌بی‌ام واتسون ایجاد کنید. یکی از اولین مش‌آپ‌ها، اطلاعات مستقلات و املاک ارائه‌شده در وب‌سایتی به آدرس 
+    <a href="http://www.craigslist.org">http://www.craigslist.org</a>
+    را با اطلاعات نقشه‌خوانی 
+    Google Maps
+    تلفیق کرده و فهرست خانه‌ها برای خرید و یا اجاره در یک منطقه جغرافیایی را نشان می‌دهد. 
+    ProgrammableWeb 
+    فهرستی بالغ‌بر 
+    20750 
+    وب‌سرویس و بیش‌از 
+    8000 
+    مش‌آپ را ارائه می‌کند. همچنین این سایت راهنما و کدهای نمونه برای کار با وب‌سرویس و ایجاد مش‌آپ را ارائه می‌دهد. با استناد به این وب‌سایت، فیس‌بوک، گوگل مپ، توییتر و یوتیوب پرکاربردترین وب‌سرویس‌ها هستند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.6.2 <span style="color:#8e24aa;">اینترنت اشیاء</span></h2> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">امروزه اینترنت فقط شبکه‌ای از کامپیوترها نبوده و در حقیقت اینترنت اشیاء هم هست. یک شیء در این‌جا شیئی است که دارای آدرس آی‌پی بوده و از بستر اینترنت قادر به ارسال و در پاره‌ای از مواقع دریافت داده می‌باشد. برای مثال چنین اشیائی عبارت‌اند از: 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>یک اتومبیل همراه با فرستنده برای پرداخت عوارض<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>یک دستگاه مانیتورینگ برای تعیین فضای قابل پارک در یک پارکینگ<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>دستگاه مانیتور قلب که در بدن انسان کار گذاشته‌شده‌است<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>یک کنتور هوشمند که مصرف انرژی را گزارش می‌دهد<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>آشکارسازهای اشعه<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ردیاب‌های اشیاء در یک انبار<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>برنامه‌های تلفن‌همراه که می‌توانند حرکت و مکان شما را ردیابی کنند<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ترموستات‌های هوشمندی که دمای اتاق را بر اساس پیش‌بینی وضع‌هوا و فعالیت در خانه تنظیم می‌کنند<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>لوازم‌خانگی هوشمند<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">طبق گزارش 
+    <a href="https://www.statista.com/">statista.com</a>
+    ، 
+    در حال حاضر بیش از 23 میلیارد دستگاه از اینترنت اشیاء استفاده می‌کنند و این عدد در سال 2025 بالغ‌بر 75 میلیارد دستگاه خواهد شد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.7 <span style="color:#F50057;">کلان‌داده‌ها تا چه حد بزرگ هستند؟</span></h1> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای دانشمندان کامپیوتر و دانشمندان داده، امروزه داده‌ها به اندازه نوشتن برنامه‌ها حائز اهمیت هستند. طبق گزارش آی‌بی‌ام، روزانه تقریبا 2.5 اگزابایت داده تولید می‌شود و 90% داده‌های جهان در دو سال گذشته ایجادشده‌اند. طبق گزارش 
+    IDC 
+    منبع جهانی داده تا سال 2025  به 175 زتابایت (برابر با 175 تریلیون گیگابایت یا 175 میلیارد ترابایت) می‌رسد. مثال‌های زیر را برای سنجش داده‌های مختلف و معروف در نظر بگیرید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مگابایت 
+(MB)</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک مگابایت در حدود یک میلیون بایت و به‌طور دقیق 
+    $2^{20}$ 
+    بایت است. برای ذخیره فایل‌هایی که به‌صورت روزانه استفاده می‌شوند به یک یا چند مگابایت فضا نیاز می‌باشد. برخی مثال‌ها عبارت‌اند از:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>فایل‌های 
+    MP3 
+    با کیفیت عالی برای هر دقیقه به 1 تا 2.4 مگابایت فضا نیاز دارند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>فایل‌های تصویر با فرمت 
+    JPEG 
+    که با دوربین دیجیتالی گرفته‌شده‌اند به 8 تا 10 مگابایت فضا برای هر عکس نیاز دارند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>گوشی‌های هوشمند فایل‌های ویدئویی را با رزولوشن‌های مختلفی ضبط می‌کنند. هر دقیقه از یک ویدئو به مگابایت‌های زیادی نیاز دارد. به‌عنوان مثال، در یکی از آیفون‌های نویسندگان این کتاب، برنامه تنظیمات دوربین گزارش می‌دهد یک ویدئو 
+    1080p 
+    با 30 فریم در ثانیه به 130 مگابایت در دقیقه و یک فیلم 
+     4K 
+    با سرعت 30 فریم در ثانیه به 350 مگابایت در دقیقه نیاز دارد.<br>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">گیگابایت 
+(GB)</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک گیگابایت در حدود 1000 مگابایت و به طور دقیق 
+    $2^{30}$ 
+    بایت است. یک 
+    DVD 
+    دولایه می‌تواند حداکثر 8.5 گیگابایت ذخیره کند و این به این معنی است:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند 141 ساعت فایل‌های صوتی با فرمت 
+    MP3
+    را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 1000 عکس که با یک دوربین 16 مگاپیکسل گرفته‌شده‌اند را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 7.7 دقیقه ویدئو 
+    1080p 
+    با 30 فریم در ثانیه را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 2.85 دقیقه ویدئو 
+    4K 
+    با سرعت 30 فریم در ثانیه را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">امروزه 
+    DVD
+    های ظرفیت بالا و مشهور به 
+    Ultra HD Blu-ray 
+    قادرند تا 100 گیگابایت فیلم ذخیره کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ترابایت 
+(TB)</h2> <a id=''></a>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک ترابایت در حدود 1000 گیگابایت و به طور دقیق 
+    $2^{40}$ 
+    بایت است. دیسک کامپیوترهای امروزه تا سقف 15 ترابایت ظرفیت دارند 
+     و این به این معنی است:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند 28 سال فایل‌های صوتی با فرمت 
+    MP3
+    را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 1.68 میلیون عکس که با یک دوربین 16 مگاپیکسل گرفته‌شده‌اند را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 226 ساعت ویدئو 
+    1080p 
+    با 30 فریم در ثانیه را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>این فضا می‌تواند در حدود 84 ساعت ویدئو 
+    4K 
+    با سرعت 30 فریم در ثانیه را ذخیره کند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دیسک‌های 
+    SSD 
+    شرکت 
+    Nimbus Data 
+    تا سقف 100 ترابایت ظرفیت دارند. این دیسک 6.67 برابر نسبت به دیسک‌های 15 ترابایتی مثال بالا می‌تواند داده‌های صوتی و ویدئویی ذخیره کند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پتابایت، اگزابایت و زتابایت </h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روزانه تقریبا چهار میلیارد نفر آنلاین هستند و این افراد هرروز در حدود 2500 پتابایت (هر پتابایت حدود 1000 ترابایت است) یا 2.5 اگزابایت (هر اگزابایت حدود 1000 پتابایت) داده ایجاد می‌کنند. براساس مقاله مارس 2016 
+    AnalyticsWeek
+    ،
+     در طی پنج سال بیش از 50 میلیارد دستگاه به اینترنت متصل خواهند شد (بیشتر آن‌ها از طریق اینترنت اشیاء که در بخش‌های 1.6.2 و 16.8 بحث خواهیم کرد) و تا سال 2020 در هر ثانیه 1.7 مگابایت داده جدید برای هر فرد روی کره زمین تولید خواهد شد. با احتساب جمعیت 7.7 میلیارد نفر این اعداد به شرح ذیل خواهند شد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>13 پتابایت داده جدید در هر ثانیه<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>780 پتابایت داده در هر دقیقه<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>46800 پتابایت داده جدید در هر ساعت<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>1123 اگزابایت و یا 1.123 زتابایت در هر روز (یک زتابایت در حدود 1000 اگزابایت است).<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این مقدار تقریبا معادل 5.5 میلیون ساعت (بیش از 600 سال) ویدئوی 
+    4K 
+    در هر روز و یا 116 میلیارد عکس در هر روز است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">آمار بیش‌تر در مورد کلان‌داده </h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای مشاهده آخرین آمار کلان‌داده‌ها به سایت 
+    <a href="https://www.internetlivestats.com">https://www.internetlivestats.com</a>
+    مراجعه کنید، این سایت آمارهای جالبی در خصوص موارد ذیل آمار و ارقام مربوطه تا به امروز را نشان می‌دهد:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>تعداد جستجو در گوگل<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>توئیت‌ها<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>تعداد ویدئوهای مشاهده‌شده در یوتیوب<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>تعداد عکس‌های بارگذاری‌شده در اینستاگرام<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کلیک کردن روی هر آمار، اطلاعات بیشتری نشان داده می‌شود. برای مثال در سال 2018 بیش از 250 میلیارد توئیت ارسال‌شده است.
+    <br>
+    <br>
+    چند واقعیت جدید در مورد کلان‌داده‌ها:
+    <br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>کاربران یوتیوب در هر ساعت 24000 ساعت ویدئو بارگذاری می‎کنند و هرروز در حدود یک میلیارد ساعت ویدئو در یوتیوب دیده می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>هر ثانیه 51773 گیگابایت (یا 51.773 ترابایت) ترافیک اینترنتی، 7894 توییت ارسال، 64332 جستجو در گوگل و 72029 ویدئو در یوتیوب مشاهده می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در فیس‌بوک روزانه 800 میلیون لایک و 60 میلیون ایموجی ارسال می‌شود. از بدو تولد آغاز کار این سایت در میان 2.5 تریلیون پست ردوبدل شده در حدود 2 میلیارد جستجو انجام‌شده است.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در ژوئن 2017، ویل مارشال، مدیرعامل 
+    Planet
+    ، 
+    اظهار داشت که این شرکت 142 ماهواره دارد که هرروز یک‌بار از کل کره زمین عکس می‌گیرند. این شرکت هرروز یک میلیون تصویر و هفت ترابایت داده جدید اضافه می‌کند. این شرکت به همراه شرکای خود با استفاده از یادگیری ماشین بر روی این داده‌ها کار می‌کنند تا خدمات بهتری ارائه کنند. برای مثال در یک بندر خاص و در یک مسیر معین چند کشتی در حال تردد هستند؟ وی در مورد جنگل‌زدایی آمازون گفت: " قبلا بعد از چند سال بیدار می‌شدیم و می‌دیدیم یک حفره بزرگ در آمازون وجود دارد. اکنون می‌توانیم به معنای واقعی تعداد درختان روی کره زمین را هر روز شمارش کنیم."<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">شرکت 
+    Demo 
+    یک طرحواره اطلاعات به‌نام داده‌ها هیچ‌وقت نمی‌خوابند دارد، این طرحواره مقدار داده تولید‌شده در دقیقه را نشان می‌دهد:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>473400 توئیت ارسال می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>2083333 عدد عکس 
+    Snapchat 
+    به اشتراک گذاشته می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>97222 ساعت از ویدئوی نت‌فلیکس مورد بازدید قرار می‌گیرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>12986111 میلیون پیام متنی ارسال می‌گردد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>49380 پست 
+    Instagram 
+    ارسال می‌گردد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>176220 مکالمه اسکایپ انجام می‌گیرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>تعداد 750 هزار آهنگ 
+    Spotify 
+    پخش می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>3877140 جستجو در گوگل انجام می‌شود.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>4333560 ویدئوهای یوتیوب مورد بازدید قرار می‌گیرد.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">توان محاسباتی درگذر زمان</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داده‌ها روزبه‌روز بزرگ‌تر شده و توان محاسباتی موردنیاز برای پردازش آن‌ها نیز افزایش‌یافته است. کارایی پردازنده‌های امروزی غالبا با معیار 
+    FLOPS 
+    (تعداد عملیات ممیز شناور در یک ثانیه)
+     اندازه‌گیری می‌شود. از اوایل دهه 1990 تا اواسط آن، سرعت سریع‌ترین ابرکامپیوتر با واحد گیگافلاپ 
+    (FLOPS $10^9$) 
+    اندازه‌گیری می‌شد. در اواخر دهه 1990، اینتل اولین ابرکامپیوتر ترافلاپ 
+    (FLOPS $10^{12}$) 
+    را تولید کرد. از اوایل دهه 2000 تا اواسط آن، سرعت به صدها ترافلاپ رسید. در سال 2008، آی‌بی‌ام اولین ابرکامپیوتر پتافلاپ 
+    (FLOPS $10^{15}$) 
+    را تولید کرد. در حال حاضر، سریع‌ترین ابرکامپیوتر با نام 
+    Summit 
+    شرکت آی‌بی‌ام، با سرعت 122.3 پتافلاپ می‌باشد. این کامپیوتر در وزارت نیرو 
+    (DOE)
+    و در بخش آزمایشگاه ملی اوک ریج 
+    (ORNL) 
+    قرار دارد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">محاسبات توزیع‌شده می‌تواند هزاران کامپیوتر شخصی را از طریق اینترنت به هم متصل کند و توان محاسباتی را افزایش دهد. در اواخر سال 2016، شبکه 
+    Folding@home 
+    یک شبکه توزیع‌شده بود که افراد داوطلبانه منابع کامپیوترهای شخصی خود را برای استفاده در تحقیقات بیماری‌ها و داروها سهیم می‌کردند و این شبکه قادر به انجام بیش از 100 پتافلاپ بود. امروزه شرکت‌هایی مانند آی‌بی‌ام در حال کار بر روی ابرکامپیوترهایی با کارایی اگزافلاپ 
+    (FLOPS $10^{18}$) 
+    هستند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کامپیوترهای کوانتومی که اکنون از نظر تئوری درحال توسعه هستند، می‌توانند 
+    18,000,000,000,000,000,000 
+    برابر سرعت یک کامپیوتر معمولی امروزی کار کنند! این عدد به‌قدری بزرگ است که یک کامپیوتر کوانتومی در یک ثانیه، می‌تواند محاسبات سرسام‌آوری را انجام دهد، میزان محاسبات این کامپیوتر در یک ثانیه از کل محاسبات انجام‌شده توسط تمامی کامپیوترهای کره‌زمین از بدو ظهور اولین کامپیوتر افزون‌تر است. این قدرت محاسباتی تقریبا غیرقابل‌تصور می‌تواند ارزهای دیجیتال مبتنی بر بلاک‌چین مانند بیت‌کوین را ویران کند. مهندسان در حال بررسی مجدد زنجیره بلوک هستند تا برای چنین افزایش عظیمی در قدرت محاسبات آماده شوند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تاریخچه ابرمحاسبات نشان‌داده که این قدرت محاسباتی عظیم درنهایت راه خود را از آزمایشگاه تحقیقاتی، یعنی جایی که مبالغ فوق‌العاده‌ای پول برای دستیابی به این کارایی قوی صرف‌شده‌است، به سمت سیستم‌های کامپیوتری تجاری با قیمت مناسب و حتی کامپیوترهای رومیزی، لپ‌تاپ‌ها، تبلت‌ها و گوشی‌های هوشمند باز می‌کنند. هزینه‌های توان‌محاسباتی با ظهور رایانش‌ابری به‌طور ویژه‌ای همچنان کاهش می‌یابد. مردم قبلا این سؤال را می‌پرسیدند: "برای انجام سنگین‌ترین پردازش‌ها روی سیستم خودم به چقدر توان‌محاسباتی نیاز دارم؟". امروز، این تفکر به این تفکر که "آیا می‌توانم سریعا آنچه به‌طور موقت برای انجام سخت‌ترین کارهای محاسباتی خود نیاز دارم، از طریق ابر انجام دهم؟" بدل‌شده است. شما فقط هزینه‌ای که برای انجام یک کار معین استفاده کرده‌اید را پرداخت می‌نمایید.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پردازش داده‌های جهان به برق زیادی نیاز دارد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داده‌های دستگاه‌های متصل به اینترنت در جهان به طور فزاینده‌ای در حال افزایش است و پردازش آنها به مقدار زیادی انرژی نیاز دارد. طبق مقاله به روز مصرف انرژی برای پردازش داده‌ها در سال ۲۰۱۵ با ۲۰ درصد در سال در حال رشد بود و تقریباً ۳ تا ۵ مصرف درصد انرژی جهان را به خود اختصاص داد. این مقاله می‌گوید که کل مصرف برق پردازش داده تا سال ۲۰۲۵ می‌تواند به ۲۰ درصد برسد. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%"> ارز دیجیتالی بیت کوین که با فناوری بلاک چین کار می‌کند، یکی از مصرف کننده‌های زیاد انرژی محسوب می‌شود.مقدار انرژی لازم برای پردازش یک تراکنش بیت کوین تقریباً با میزان مصرف برق یک هفته یک خانواده آمریکایی برابری می‌کند. ماینرها از این انرژی برای اثبات درستی یک تراکنش استفاده می‌کنند. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">طبق برخی تخمین‌ها میزان مصرف انرژی تراکنش‌های بیت کوین از انرژی مصرفی سالیانه خیلی کشورها بیشتر است. بیت کوین و اتریوم (یکی دیگر از پلتفرم‌های رایج مبتنی بر بلاک چین و ارز دیجیتال) در سال بیشتر از اسرائیل و تقریباً به اندازه یونان انرژی مصرف می‌کنند. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مورگان استنلی در سال ۲۰۱۸ پیش بینی کرد که مصرف برق مورد نیاز برای ایجاد ارزهای دیجیتالی در سال جاری می‌تواند از مقدار انرژی مورد نیاز جهانی خودروهای الکتریکی که شرکت‌ها برای سال ۲۰۲۵ پیش‌بینی کرده‌اند، بیشتر شود.با توجه به علاقه زیاد به برنامه‌های مبتنی بر بلاک چین که از ارز دیجیتالی هم بیشتر شده این وضعیت پایدار نمی‌ماند. انجمن بلاک چین به دنبال راه‌حلی برای این معضل هستند. 
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فرصت‌های کلان‌داده</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به احتمال زیاد در سال‌های آینده رشد نمایی کلان داده‌ها ادامه خواهد داشت. با وجود ۵۰ میلیارد دستگاه محاسباتی، فقط می‌توانیم تصور کنیم که در طی چند دهه آینده چندین دستگاه دیگر وجود خواهند داشت. مدیریت این داده‌ها برای کسب و کارها دولت‌ها ارتش و حتی اشخاص بسیار حائز اهمیت است. نکته جالب اینجا است که تعدادی از مقاله‌های بسیار خوب در زمینه کلان داده، علم داده و هوش مصنوعی توسط سازمان‌ها ارائه شده است. برای مثال می‌توان به کار مورگان مک کینزی از شرکت 
+    J.P
+    اشاره کرد. جذابیت کلان داده برای کسب و کارهای بزرگ و رو به رشد غیرقابل انکار است. بسیاری از شرکت‌ها در زمینه فناوری‌هایی نظیر کلان داده، یادگیری ماشین، یادگیری عمیق و پردازش زبان طبیعی که در این کتاب مورد بررسی قرار گرفته، سرمایه‌گذاری چشمگیری انجام می‌دهند و نتایج ارزشمندی هم کسب می‌کنند. این امر رقبا را مجبور به سرمایه‌گذاری می‌کند و به‌سرعت نیاز به متخصصان با تجربه در زمینه علم داده و علوم کامپیوتر را افزایش می‌دهد. احتمالاً این رشد سال‌ها ادامه خواهد داشت. 
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.7.1 <span style="color:#8e24aa;">تجزیه و تحلیل کلان‌داده</span></h2> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تجزیه و تحلیل داده‌های یک رشته آکادمیک و حرفه‌ای بالغ و کاملاً پیشرفته است. اگرچه اصطلاح تجزیه و تحلیل داده‌ها در سال ۱۹۶۲ ابداع شد، اما هزاران سال است مردم با استفاده از آمار به تحلیل داده‌ها می‌پردازند و ریشه این کار به مصریان باستان برمی‌گردد. تجزیه و تحلیل کلان‌داده پدیده جدیدتری است و اصطلاح کلان‌داده در حدود سال ۲۰۰۰ ابداع شد. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به چهار مورد از ویژگی‌های کلان داده که در زبان انگلیسی با حرف وی شروع می‌شوند توجه کنید: 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#D50000;">1. </span><b>حجم:</b> حجم داده‌ای که در دنیا تولید می‌شود به صورت نمایی در حال افزایش است.<br>
+    <span style="color:#D50000;">2. </span><b>سرعت:</b> سرعتی که داده‌ها با آن تولید می‌شوند، سرعتی که میان سازمان‌ها حرکت می‌کنند و سرعتی که داده‌ها تغییر می‌کنند، به طور فزاینده‌ای در حال افزایش است.<br>
+    <span style="color:#D50000;">3. </span><b>تنوع:</b> قبلاً داده‌ها به صورت حرف و عددی بودند (یعنی متشکل از حروف الفبا، ارقام، علائم نگارشی و برخی کاراکترهای خاص)، امروزه داده‌ها شامل تصاویر، فایل‌های ویدیویی و فایل‌های صوتی هستند. علاوه بر این داده‌ها، داده‌های بسیار زیادی از جانب سنسور اشیای مختلف در منازل، کسب‌و‌کارها، ماشین‌ها و شهرها ارسال می‌گردد.<br>
+    <span style="color:#D50000;">4. </span><b>درستی:</b> اعتبار داده‌ها - آیا داده‌ها کامل و دقیق هستند؟ آیا می‌توانیم هنگام تصمیم گیری حیاتی به این داده‌ها اعتماد کنیم؟ آیا این داده‌ها واقعی هستند؟<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">امروزه طیف گسترده‌ای از داده‌های دیجیتالی در حجم بسیار زیاد و سرعت انتقال حیرت انگیز تولید می‌شوند. علی رغم رشد نمایی تمام نرخ‌ها، قانون مور و سایر بررسی‌های مربوطه، این امکان را به ما می‌دهد داده‌ها را به صورت اقتصادی ذخیره کرده پردازش کنیم و با سرعت بیشتری آنها را جابجا کنیم. امروزه ظرفیت ابزارهای ذخیره‌سازی داده‌های دیجیتال افزایش یافته ولی ابعاد و قیمت آنها کاهش یافته است و به راحتی می‌توانیم تمام داده‌های دیجیتال را حفظ کنیم. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">جمله زیر در سال ۱۹۶۲ از ریچارد دابلیو همینگ عنوان شده مابقی خط مشی این کتاب را تعیین می‌کند: 
+    <b>"هدف از محاسبات بینش است، نه اعداد"</b>
+    این جمله از کتاب روش‌های محاسبات عددی برای دانشمندان و مهندسین نقل شده است.
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">داده‌ها با سرعت قابل توجهی بینش‌های جدیدتر، عمیق‌تر، ظریف‌تر و ارزشمندتری تولید می‌کنند. این داده‌ها واقعاً تغییر ایجاد می‌کنند. تجزیه و تحلیل داده‌های بزرگ بخش جدایی‌ ناپذیری از پاسخ محسوب می‌شوند. در فصل ۱۶ زیرساخت داده‌های کلان را با استفاده از مطالعات موردی در پایگاه داده‌های
+    NoSQL
+    ، 
+    Hadoop MapReduce programming
+    ، 
+    Spark
+    ، 
+    real-time Internet of Things (IoT) stream programming
+    و موارد دیگر شرح می‌دهیم.
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">1.7.2 <span style="color:#8e24aa;">علوم داده و کلان‌داده نتایج متفاوتی خلق می‌کنند: موارد کاربرد</span></h2> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">رشته علم داده شاخه‌ای است که به سرعت در حال رشد است زیرا نتایج قابل توجهی ایجاد می‌کند و این نتایج به نوبه خود تغییرات مهمی ایجاد می‌کنند. موارد استفاده از علم داده و کلان داده در جدول زیر فهرست شده‌اند. انتظار داریم موارد استفاده و مثال‌های ارائه شده در کل کتاب برای شما الهام بخش باشند و در حرفه خود موارد استفاده جدید را دنبال کنید. تجزیه و تحلیل کلان داده‌ها می‌تواند منجر به افزایش سود، روابط بهتر با مشتری و حتی نتایج مسابقات تیم‌های ورزشی شود. تیم‌های ورزشی با کمک این ابزار و با صرف هزینه کمتر روی بازیکنان، نتیجه بهتری در مسابقات و رقابت‌ها کسب می‌کنند. 
+</div><p><img alt="Screenshot%20%2822%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2822%29.png" /></p>
+<p><img alt="Screenshot%20%2823%29.png" src="Chapters/01 - Introduction-to-Computers-and-Python/attachment:Screenshot%20%2823%29.png" /></p>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.8 <span style="color:#F50057;">مورد مطالعاتی - یک برنامه تلفن‌همراه مبتنی بر کلان‌داده</span></h1> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه ناوبری 
+    GPS
+    ویز از شرکت گوگل، با ۹۰ میلیون کاربر فعال ماهانه، یکی از موفق‌ترین برنامه‌های کلان داده محسوب می‌شود. دستگاه‌ها و برنامه‌های ناوبری 
+    GPS
+    اولیه برای تعیین بهترین مسیر به مقصد، به نقشه‌های ثابت و مختصات 
+    GPS
+    متکی بودند. این ابزار قادر نبودند به صورت پویا با تغییر وضعیت ترافیک تغییر کنند. برنامه ویز، حجم عظیمی از اطلاعات را پردازش می‌کند، این حجم  اطلاعات از جانب کاربران و ابزار آنها تهیه می‌شود. برنامه ویز این داده‌های دریافتی را برای مشخص کردن کوتاه‌ترین مسیر برای رسیدن به مقصد تحلیل می‌کند. برای تحقق این امر، ویز به اتصال اینترنت گوشی هوشمند شما تکیه دارد. این برنامه به طور خودکار به روز رسانی‌های مکان را به سرورهای خود ارسال می‌کند (با این فرض که اجازه دهید).  آنها از این داده‌ها برای تغییر مسیر پویای شما بر اساس شرایط فعلی ترافیک و تنظیم نقشه‌های خود استفاده می‌کنند. کاربران اطلاعات دیگری مانند مسدود بودن مسیر، تعمیرات جاده‌ای، موانع، وسایل نقلیه در مسیرهای خرابی، موقعیت پلیس، قیمت بنزین و موارد دیگر را گزارش می‌کنند. سپس برنامه به سایر رانندگان در آن مکان‌ها هشدار ارسال می‌کند. ما از چگونگی پیاده‌سازی ویز اطلاع نداریم اما در لیست زیر فهرستی از فناوری‌هایی که ما گمان می‌کنیم که احتمالاً از آنها استفاده می‌کند، ارائه شده است. بسیاری از این موارد را در فصل‌های ۱۱ تا ۱۶ استفاده خواهید کرد. برای مثال: 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اکثر برنامه‌های تولید شده امروزی حداقل از تعدادی نرم‌افزارهای متن باز استفاده می‌کنند. در سراسر این کتاب از کتابخانه‌ها و ابزارهای متن باز زیادی استفاده خواهید کرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ویز اطلاعات سرورها و دستگاه‌های تلفن همراه را از بستر اینترنت انتقال می‌دهد. امروز این داده‌ها اغلب در فرمت  JSON  منتقل می‌شوند و در بخش ۹ آنها را معرفی کرده و در فصل‌های بعدی از آنها استفاده خواهیم کرد.  داده‌های JSON  معمولاً توسط کتابخانه‌ای که استفاده می‌کنید از شما پنهان هستند.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ویز از سنتز گفتار برای گفتن مسیرها و هشدارهای رانندگی و از تشخیص گفتار برای درک دستورات صوتی شما استفاده می‌کند. در فصل ۱۳ از قابلیت سنتز گفتار و تشخیص گفتار آی‌بی‌ام واتسون استفاده می‌کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>هنگامی که ویز یک دستور صوتی که با زبان طبیعی بیان شده را دریافت می‌کند، آن را به متن تبدیل کرده و باید واکنش صحیح مورد نظر را تعیین کند و به همین دلیل به پردازش زبان طبیعی نیاز دارد.  در فصل ۱۱ NLP را توضیح می‌دهیم و در فصل‌های بعدی از آن استفاده می‌کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ویز آیتم‌های گرافیکی بصری به روز شده مانند هشدارها و نقشه‌ها را به صورت دینامیکی نمایش می‌دهد. علاوه بر این ویز این امکان را برای شما فراهم می‌کند تا با حرکت نقشه‌ها بزرگ‌نمایی و کوچک کردن نقشه‌ها با آنها ارتباط برقرار کنید. آیتم‌های گرافیکی را با 
+    Matplotlib
+    و 
+    Seaborn
+    در کل این کتاب رسم می‌کنیم و با استفاده از 
+    Folium
+    در فصل‌های ۱۲ و ۱۶  نقشه‌های تعاملی را نمایش می‌دهیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>برنامه ویز از گوشی شما به عنوان یک جریان اینترنت اشیا استفاده می‌کند. هر گوشی در حقیقت یک سنسور 
+    GPS
+    است که به طور مداوم داده‌ها را از طریق اینترنت به ویز منتقل می‌کند. در فصل ۱۶ اینترنت اشیا را معرفی و با سنسورهای جریان اینترنت اشیا شبیه سازی شده کار می‌کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>برنامه ویز به طور همزمان جریان‌های اینترنت اشیا را از میلیون‌ها تلفن دریافت می‌کند. ویز باید بلافاصله این اطلاعات را پردازش ذخیره و تحلیل کند تا بتواند نقشه گوشی شما را به روز کرده، هشدارهای لازم را به صورت بصری و یا صوتی به شما اعلان کند و احتمالاً شما مسیر رانندگی‌تان را تغییر دهید. این کار به قابلیت‌های پردازش موازی قوی نیاز دارد و این قابلیت با کامپیوترهای کلاستر در ابر پیاده‌سازی می‌شود. در فصل ۱۶ فناوری‌های زیرساخت مختلف کلان داده‌ها را برای دریافت داده‌ها، ذخیره کردن آنها در پایگاه داده‌های مناسب و پردازش داده‌ها با نرم‌افزار و  سخت‌افزار که قابلیت پردازش موازی قوی دارند را معرفی خواهیم کرد.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>ویز از قابلیت‌های هوش مصنوعی برای انجام تجزیه و تحلیل داده‌ها استفاده می‌کند و این امکان برای ویز فراهم می‌شود تا بهترین مسیرها را بر اساس اطلاعات دریافتی پیش‌بینی کند. در فصل ۱۴ و ۱۵ از یادگیری ماشین و یادگیری عمیق برای تجزیه و تحلیل کلان داده‌ها استفاده خواهیم کرد و بر اساس این داده‌ها پیش‌بینی می‌کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>احتمالاً ویز اطلاعات مسیریابی خود را در یک پایگاه داده گراف ذخیره می‌کند. چنین پایگاه داده‌هایی می‌توانند به طور موثر کوتاه‌ترین مسیرها را محاسبه کنند. پایگاه داده گراف مانند 
+    Neo4J
+    را در فصل ۱۶ معرفی می‌کنیم.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>امروزه بسیاری از اتومبیل‌ها به دستگاه‌هایی مجهز شده‌اند که به آنها امکان می‌دهد اتومبیل‌ها و موانع اطراف خود را تشخیص دهند. به عنوان مثال، این تجهیزات برای کمک به پیاده‌سازی سیستم‌های ترمز خودکار مورد استفاده قرار می‌گیرند و در حقیقت این ترمزها بخش اصلی فناوری‌های اتومبیل‌های بدون راننده هستند. برنامه‌های ناوبری به جای اعتماد به کاربران برای گزارش موانع و اتومبیل‌های متوقف کنار جاده می‌توانند از مزایای تصاویر در حال حرکت دوربین‌ها و اطلاعات سایر سنسورها بهره ببرند و با استفاده از تکنیک‌های یادگیری عمیق و بینایی ماشین این تصاویر را تحلیل و وجود این موانع را گزارش کنند. در فصل ۱۵ یادگیری عمیق را برای بینایی ماشین معرفی می‌کنیم.<br>
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.9 <span style="color:#F50057;">مقدمه‌ای بر علم داده: هوش مصنوعی فصل اشتراک علوم کامپیوتر و علم داده</span></h1> <a id='19'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">زمانی که نوزاد اولین بار چشم خود را باز می‌کند آیا چهره پدر و مادرش را می‌بیند؟ آیا درکی از تصویر یک چهره دارد؟ و یا حتی یک شکل ساده را درک می‌کند؟ نوزادان باید از جهان اطراف خود یاد بگیرند. این فراگیری در حقیقت همان چیزی است که هوش مصنوعی یا 
+    ai
+    امروزه انجام می‌دهد. هوش مصنوعی به حجم عظیمی از داده‌ها نگاه کرده و از آن‌ها می‌آموزد. هوش مصنوعی برای انجام بازی‌ها، اجرای طیف وسیعی از محاسبات بینایی ماشینی، قادر ساختن ربات‌ها برای انجام وظایف جدید، تشخیص شرایط پزشکی، ترجمه گفتار به زبان‌های دیگر به صورت تقریباً بلادرنگ، ایجاد چت بات‌ها که می‌توانند با استفاده از پایگاه داده‌های بزرگ دانش و چیزهای دیگر به سوالات دلخواه پاسخ دهند، مورد استفاده قرار می‌گیرد. در چند سال گذشته چه کسی حدس می‌زد که خودروهای بدون راننده بتوانند مجوز تردد در جاده‌ها را دریافت کنند و یا حتی رایج هم شوند؟ با همه این تفاسیر، هوش مصنوعی یک رشته فوق العاده رقابتی محسوب می‌شود. هدف نهایی همه این یادگیری خلق یک هوش مصنوعی جامعه است که بتواند وظایف هوشمند را به خوبی انسان انجام دهد. برای بسیاری از مردم این مقوله یک فکر ترسناک است. 
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">نقطه عطف هوش مصنوعی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">چندین نقطه عطف هوش مصنوعی به طور خاص توجه مردم را به خود جلب کرد و باعث شد که عموم مردم فکر کنند که هوش مصنوعی واقعی است و باعث شده تا شرکت‌ها درباره هوش مصنوعی فکر کنند:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در سال ۱۹۹۷ یک مسابقه شطرنج بین سیستم کامپیوتر 
+    DeepBlue 
+    آی‌بی‌ام
+    و استاد بزرگ شطرنج جهان گری کاسپاروف برگزار شد. 
+    DeepBlue
+    اولین کامپیوتری بود که توانست یک قهرمان شطرنج جهان را در شرایط مسابقه‌ای شکست دهد. شرکت 
+    آی‌بی‌ام
+    در این کامپیوتر صدها هزار بازی اساتید بزرگ شطرنج را ذخیره کرد. 
+    DeepBlue
+    با استفاده از روش جستجوی فراگیر قادر به ارزیابی ۲۰۰ میلیون حرکت در ثانیه بود! این حجم در عمل داده عظیمی محسوب می‌شود. آی‌بی‌ام جایزه 
+    Fredkin
+    دانشگاه 
+    Carnegie Mellon
+    به مبلغ ۱۰۰ هزار دلار را دریافت کرد. در سال ۱۹۸۰ این دانشگاه اعلام کرد به اولین کامپیوتری که بتواند قهرمان شطرنج جهان را شکست دهد مبلغ ۱۰۰ هزار دلار اعطا خواهد کرد.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>در سال ۲۰۱۱ کامپیوتر واتسون شرکت 
+    آی‌بی‌ام
+    توانست در یک مسابقه یک میلیون دلاری دو تا از بهترین‌های مسابقه پرسش و پاسخ را شکست دهد. واتسون همزمان از صدها روش تجزیه و تحلیل زبان در ۲۰۰ میلیون صفحه محتوا از جمله تمام ویکی پدیا که به چهار ترابایت ذخیره سازی نیاز دارد، استفاده کرد. واتسون با تکنیک‌های یادگیری ماشین و یادگیری تقویتی آموزش دیده بود. در فصل ۱۳ در مورد واتسون شرکت 
+    آی‌بی‌ام
+    و در فصل ۱۴ در مورد یادگیری ماشین صحبت خواهیم کرد.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>بازی 
+    Go
+    (FLOPS $10^{78}$)
+    که هزاران سال پیش در چین اختراع شده است، یکی از پیچیده‌ترین بازی‌های تخته‌ای در جهان محسوب می‌شود و تعداد حالات مختلف صفحه آن 
+    $10^{170}$
+    است. برای درک بزرگی این عدد بدانید تعداد اتم‌هایی در جهان هستی بین 
+    $10^{78}$
+    و
+    $10^{87}$
+    می‌باشد. در سال ۲۰۱۵ 
+    AlphaGo
+    که با استفاده از یادگیری عمیق با دو شبکه عصبی توسط گروه 
+    Google’s DeepMind
+    ساخته شد توانست 
+    Fan Hui
+    قهرمان 
+    Go
+    اروپا را شکست دهد. بازی 
+    Go
+    از شطرنج بسیار پیچیده‌تر است. در فصل ۱۵ شبکه‌های عصبی و یادگیری عمیق مورد بررسی قرار خواهند گرفت.<br>
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اخیرا شرکت 
+    Google
+    برنامه 
+    AlphaGo
+    خود را تعمیم داده و 
+    AlphaZero
+    را ایجاد کرده است. 
+    AlphaZero
+    با استفاده از هوش مصنوعی سایر بازی‌ها را یاد می‌گیرد و آنها را انجام می‌دهد. در دسامبر ۲۰۱۷ 
+    AlphaZero
+    در کمتر از ۴ ساعت قوانین شطرنج را با استفاده از یادگیری تقویتی یاد گرفت و توانست برنامه قهرمان جهان یعنی 
+    Stockfish 8
+    را شکست دهد. 
+    AlphaZero
+    پس از تنها ۸ ساعت فراگیری بازی 
+    Go
+    توانست از ۱۰۰ مسابقه ۶۰ مسابقه را از 
+    AlphaGo
+    ببرد.<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">یک داستان شخصی</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که یکی از نویسندگان این کتاب، هاروی دایتل، دانشجوی کارشناسی 
+    MIT
+    در اواسط سال ۱۹۶۰ بود، یک درس هوش مصنوعی در سطح تحصیلات تکمیلی را با یکی از بنیانگذاران هوش مصنوعی یعنی ماروین مینسکی گذراند. هاروی می‌گوید:
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پروفسور مینسکی قصد داشت برای این درس یک پروژه تخصیص دهد. پروفسور به ما گفت در مورد هوش مصنوعی فکر کنید و با کامپیوتر کاری هوشمندانه انجام دهید. نمره پایان‌ترم کاملاً به این پروژه بستگی داشت. من در مورد آزمون‌های 
+    IQ
+    استاندارد که مدارس برای ارزیابی قابلیت‌های هوشی دانشجویان خود استفاده می‌کنند، تحقیق کردم. با توجه به علاقه‌ام به ریاضیات تصمیم گرفتم مسئله پیش‌بینی عدد بعدی در یک دنباله عددی با طول دلخواه و پیچیدگی دلخواه را حل کنم. من از یک محیط تعاملی 
+    Lisp
+    که روی یک سیستم 
+    PDP-1
+    اجرا می‌شد استفاده کردم و 
+    Lisp
+    توانست 
+    sequence predictor
+    من را بر روی موارد کاملاً پیچیده اجرا کند و چالش‌هایی را که فراتر از آنچه در آزمون‌های ضریب هوشی به یاد می‌آورم مدیریت کند. توانایی 
+    Lisp
+    برای کار با لیست‌های طولانی به صورت بازگشتی دقیقاً همان چیزی بود که من برای انجام پروژه خود نیاز داشتم. پایتون قابلیت پردازش‌های بازگشتی و پردازش لیست‌های عمومی را دارد. 
+    پیش‌بینی کننده سری عددی
+    را به تعداد زیادی از همکلاسی‌هایم در 
+    MIT
+    نشان دادم. آنها سری اعداد خود را تشکیل می‌دادند و در برنامه پیش‌بینی کننده من تایپ می‌کردند. تقریباً برنامه بعد از قدری فکر جواب درست را نشان می‌داد. بعد من به یک مشکل برخورد کردم. یکی از همکلاسی‌هایم رشته ۱۴، ۲۳، ۳۴و ۴۲ را تایپ کرد. پیش‌بینی کننده من روی آن سری کار کرد و بعد از یک مدت زمان طولانی نتوانست عدد بعدی را پیش‌بینی کند. من هم نمی‌توانستم آن را به دست بیاورم. همکلاسی‌ام به من گفت که یک شب در مورد آن فکر کنم و روز بعد پاسخ را خواهد گفت و در ضمن یادآوری کرد که این سری عددی یک سری خیلی ساده است. تلاش‌هایم بی‌فایده بود. روز بعد او به من گفت عدد بعدی ۵۷ است اما من دلیل آن را پیدا نکردم؛ بنابراین به من گفت که یک شب دیگر در مورد آن فکر کنم و روز بعد گفت عدد بعدی ۱۲۵ است. این جواب هم کمکی به من نمی‌کرد و کاملاً گیج شدم. او گفت که این سری معرف شماره خیابان‌های دو طرفه  کرانه‌ای منهتن می‌باشد. من اعتراض کردم و گفتم منصفانه نیست، اما گفت که معیار من برای پیش‌بینی عدد بعدی دنباله عددی است. نگاه من یک نگرش ریاضی بود ولی نگاه او فراتر از نگرش من بود. در طول سال‌ها، این رشته عددی را با دوستان، بستگان و همکاران حرفه‌ای امتحان کردم. تعداد کمی از کسانی که زمانی را در منهتن سپری کرده بودند، پاسخ درست را پیدا می‌کردند. پیش‌بینی کننده سری عددی من برای حل چنین مسائلی به دانشی فراتر از ریاضی محض نیاز داشت. 
+</div><h3 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#000000;">واتسون و کلان‌داده‌ها امکانات جدیدی را فراهم می‌کنند</h3> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">زمانی که من و هاروی نگارش این کتاب پایتون را شروع کردیم بلافاصله توجه ما معطوف آی‌بی‌ام واتسون شد. واتسون برای شکست دادن دو نفر از بهترین بازیکنان مسابقه 
+    !Jeopardy
+    از تکنیک‌های هوش مصنوعی نظیر پردازش زبان طبیعی و یادگیری ماشین استفاده می‌کند. به این نتیجه رسیدیم واتسون قادر است مسئله دنباله عددی بالا را حل کند به دلیل آنکه نقشه خیابان‌های جهان و اطلاعات افزون‌تری در آن ذخیره شده است. همین موضوع باعث شد علاقه ما به کلان داده و تکنیک‌های نوین هوش مصنوعی جلب شود و موجب شکل‌گیری فصول ۱۱ تا ۱۶ شود.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تمامی موردهای مطالعاتی که در فصول ۱۱ تا ۱۶ پیاده سازی شده‌اند ریشه در هوش مصنوعی و یا زیرساخت‌های نرم‌افزاری و یا سخت‌افزاری کلان داده دارند. این زیرساخت‌ها به دانشمندان علوم کامپیوتر این امکان را می‌دهد تا آخرین و جدیدترین متدهای مبتنی بر هوش مصنوعی را به طور کارآمد پیاده‌سازی کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">هوش مصنوعی: رشته‌ای پر از مسائل مختلف و البته بدون راه‌حل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای دهه‌های متمادی، هوش مصنوعی به عنوان زمینه‌ای با انبوهی از مسائل حل نشده در نظر گرفته شده است. دلیل این رویکرد آن است هنگامی که یک مسئله خاصی حل می‌شود، مردم می‌گویند "این‌که هوش نیست، این فقط یک برنامه کامپیوتری است که به کامپیوتر می‌گوید دقیقاً باید چه کاری انجام دهد." با همه این تفاسیر، در فصل ۱۵ که یادگیری ماشینی را شرح می‌دهیم برای حل مسائل از قبل برنامه‌ای نمی‌نویسیم، در عوض به کامپیوتر این امکان را می‌دهیم با یادگیری از داده‌ها و معمولاً در حجم بسیار زیاد بیاموزند و سپس مسائل را حل کنند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">بسیاری از جالب‌ترین و چالش برانگیزترین مسئله‌ها با یادگیری عمیق حل می‌شوند. شرکت گوگل به تنهایی هزاران پروژه در زمینه یادگیری عمیق دارد و تعداد این پروژه‌ها به سرعت در حال افزایش است در کل کتاب تکنیک‌های هوش مصنوعی، کلان داده و رایانش ابری را بررسی خواهیم کرد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">1.10 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='20'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، اصطلاحات و مفاهیمی معرفی کردیم که در حقیقت اصول و مبانی برنامه نویسی پایتون محسوب می‌شوند. در فصل‌های ۲ تا ۱۰ مبانی و در زمینه کلان داده، هوش مصنوعی و رایانش ابری در فصول ۱۱ تا ۱۶ با استفاده از مطالعه موردی مطالب زیادی می‌آموزید.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مفاهیم برنامه نویسی شیء‌گرا را بررسی کردیم و در مورد چرایی محبوبیت پایتون توضیح دادیم. کتابخانه استاندارد پایتون و کتابخانه‌های مختلف علم داده را معرفی کردیم تا کدنویسی مجدد انجام ندهید. در فصل‌های بعدی از این کتابخانه‌ها برای ایجاد اشیای نرم‌افزاری استفاده خواهید کرد و خواهید توانست با تعداد کمی از دستورات با این اشیا تعامل داشته باشید و کارهای زیادی را انجام می‌دهید.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با سه برنامه تستی کار کردید و با نحوه اجرای کد پایتون با مفسر 
+    IPython
+    و 
+    Jupyter Notebook
+    آشنا شدید. مفاهیم رایانش ابری و اینترنت اشیاء را معرفی کردیم، این مفاهیم مبانی نوشتن برنامه‌های مدرن در فصول ۱۱ تا ۱۶ محسوب می‌شوند.
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در مورد اندازه بزرگی کلان داده‌ها و سرعت رشد آنها صحبت کردیم. با کمک برنامه مسیریابی ویز به عنوان یک مطالعه موردی در مورد کلان داده صحبت کردیم. این برنامه از فناوری‌های مدرن زیادی استفاده می‌کند تا کوتاه‌ترین مسیر را به شما نشان دهد. در این قسمت از کتاب به این موضوع هم اشاره کردیم که بسیاری از این فناوری‌ها را به کار خواهید برد. این فصل با اولین مقدمه در مورد علم داده پایان یافت. علم داده فصل اشتراک کلیدی بین علوم کامپیوتر و هوش مصنوعی محسوب می‌شود.
+</div><div class="toctree-wrapper compound">
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/01 - Introduction-to-Computers-and-Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="../02%20-%20Introduction-to-Python-Programming/Chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2855 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/06 - Dictionaries-and-Sets/Chapter6';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../07%20-%20Array-Oriented-Programming-with-NumPy/Chapter7.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../05%20-%20Sequences-%28Lists-and-Tuples%29/Chapter5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python for Programmers with AI Case Studies in Persian</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies/issues/new?title=Issue%20on%20page%20%2FChapters/06 - Dictionaries-and-Sets/Chapter6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Chapters/06 - Dictionaries-and-Sets/Chapter6.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 style="text-align:right;font-size:250%; font-family: 'XB Zar';"><span style="color:#9575cd;font-size:300%;">پایتون</span> <br>برای برنامه‌نویسان</h1>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';"><b>با مطالعات مقدماتی هوش مصنوعی</b></p>
+    <p style="text-align:right;font-size:150%;font-family: 'XB Zar';">مولفین : پل دایتل و هاروی دایتل</p>
+</body>
+</html><html>
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <hr>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>استاد:</b> جناب آقای دکتر صالحی</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;"><b>گردآورنده:</b> مرضیه آقابالاصفر</p>
+    <p style="text-align:right;font-size:150%;font-family:XB Zar;">دپارتمان علوم‌کامپیوتر، دانشکده علوم ریاضی، دانشگاه شهرکرد</p>
+    <hr>
+</body>
+</html>
+<h1 style="text-align:center;font-size:450%; font-family: 'XB Zar';"><span style="color:#8e24aa;">فصل ۶: دیکشنری‌ها و مجموعه‌ها</span></h1> <a id='1'></a><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#F50057;">اهداف</span></h1>
+<p style="text-align:right;">
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+در این فصل :
+</div>
+    <div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#F50057;">■ </span>از دیکشنری‌ها برای نمایش کالکشنی غیرمرتب از زوج‌ها به شکل کلید - مقدار استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>از مجموعه‌ها برای نشان دادن کالکشنی نامرتب از مقادیر منحصر به فرد استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>ایجاد، مقداردهی اولیه و ارجاع به عناصر دیکشنری‌ها و مجموعه‌ها را خواهیم داشت.<br>
+    <span style="color:#F50057;">■ </span>کلیدها، مقادیر و جفت‌های کلید-مقدار دیکشنری‌ها را پیمایش خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>جفت‌های کلید-مقدار در دیکشنری را اضافه، حذف و به‌روزرسانی خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>از عملگرهای مقایسه‌ای دیکشنری‌ها و مجموعه‌ها استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>مجموعه‌ها را با استفاده از عملگرها و متدهای مجموعه ترکیب خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>برای تعیین وجود یک کلید در دیکشنری و یا مجموعه از عملگرهای 
+        in
+        و 
+         not in
+        استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>برای اصلاح محتویات یک مجموعه (قابل تغییر) از عملگرهای مربوطه استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>برای ایجاد سریع و راحت دیکشنری و مجموعه از روش 
+        comprehension
+        استفاده خواهید کرد.<br>
+    <span style="color:#F50057;">■ </span>چگونگی ایجاد نمودارهای پویا را می‌آموزید.<br>
+    <span style="color:#F50057;">■ </span>درک شما از مفاهیم تغییرپذیری و تغییرناپذیری افزایش خواهد یافت.<br>
+    </div>
+</p><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';"><span style="color:#8e24aa;">رئوس مطالب</span></h1>
+<hr>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+<ol class="arabic simple" start="6">
+<li><p><a class="reference internal" href="#1"><span class="xref myst">دیکشنری‌ها و مجموعه‌ها</span></a></p>
+<ul class="simple">
+<li><p>6.1 <a class="reference internal" href="#2"><span class="xref myst">مقدمه</span></a></p></li>
+<li><p>6.2 <a class="reference internal" href="#3"><span class="xref myst">دیکشنری‌ها</span></a></p>
+<ul>
+<li><p>6.2.1 <a class="reference internal" href="#4"><span class="xref myst">ایجاد یک دیکشنری</span></a></p></li>
+<li><p>6.2.2 <a class="reference internal" href="#5"><span class="xref myst">پیمایش یک دیکشنری</span></a></p></li>
+<li><p>6.2.3 <a class="reference internal" href="#6"><span class="xref myst">عملیات پایه دیکشنری</span></a></p></li>
+<li><p>6.2.4 <a class="reference internal" href="#7"><span class="xref myst">متدهای keys و values در دیکشنری</span></a></p></li>
+<li><p>6.2.5 <a class="reference internal" href="#8"><span class="xref myst">مقایسه در دیکشنری</span></a></p></li>
+<li><p>6.2.6 <a class="reference internal" href="#9"><span class="xref myst">مثال: دیکشنری نمرات دانش آموزان</span></a></p></li>
+<li><p>6.2.7 <a class="reference internal" href="#10"><span class="xref myst">مثال: شمارش کلمات</span></a></p></li>
+<li><p>6.2.8 <a class="reference internal" href="#11"><span class="xref myst">متد  update در دیکشنری</span></a></p></li>
+<li><p>6.2.9 <a class="reference internal" href="#12"><span class="xref myst">Dictionary Comprehensions</span></a></p></li>
+</ul>
+</li>
+<li><p>6.3 <a class="reference internal" href="#13"><span class="xref myst">مجموعه‌ها</span></a></p>
+<ul>
+<li><p>6.3.1 <a class="reference internal" href="#14"><span class="xref myst">مقایسه مجموعه‌ها</span></a></p></li>
+<li><p>6.3.2 <a class="reference internal" href="#15"><span class="xref myst">عملیات ریاضی مجموعه‌ها</span></a></p></li>
+<li><p>6.3.3 <a class="reference internal" href="#16"><span class="xref myst">عملیات و متدهای مربوط به مجموعه‌های تغییر پذیر</span></a></p></li>
+<li><p>6.3.4 <a class="reference internal" href="#17"><span class="xref myst">Set Comprehensions</span></a></p></li>
+</ul>
+</li>
+<li><p>6.4 <a class="reference internal" href="#18"><span class="xref myst">مقدمه‌ای بر علم داده: نمودارهای پویا</span></a></p>
+<ul>
+<li><p>6.4.1 <a class="reference internal" href="#19"><span class="xref myst">نحوه عملکرد نمودارهای پویا</span></a></p></li>
+<li><p>6.4.2 <a class="reference internal" href="#20"><span class="xref myst">پیاده سازی یک نمودار پویا</span></a></p></li>
+</ul>
+</li>
+<li><p>6.5 <a class="reference internal" href="#21"><span class="xref myst">جمع‌بندی</span></a></p></li>
+</ul>
+</li>
+</ol>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">6.1 <span style="color:#F50057;">مقدمه</span></h1> <a id='2'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تا اینجای کار سه داده از قبل تعریف شده رشته، لیست و تاپل را به عنوان کالکشن‌های دنباله‌ای بررسی کردیم. در این قسمت، مجموعه‌ها و دیکشنری‌ها را به عنوان دنباله‌های غیرمرتب بررسی می‌کنیم. دیکشنری کالکشنی غیرمرتب است که زوج‌های مرتبی را به شکل کلید-مقدار ذخیره می‌کند و همانند یک فرهنگ لغت معمولی که هر کلمه را به معنای آن نگاشت می‌کند، یک دیکشنری کلیدهای تغییرناپذیر را به مقادیر نگاشت می‌کند. مجموعه، کالکشنی نامرتب از اعضای تغییرناپذیر و منحصربه فرد است.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">6.2 <span style="color:#F50057;">دیکشنری‌ها</span></h1> <a id='3'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک دیکشنری، کلیدها را با مقادیر مرتبط می‌کند. هر کلید به یک مقدار خاص نگاشت می‌شود. جدول زیر شامل نمونه‌هایی از دیکشنری‌ها همراه کلیدها، نوع داده کلیدها، مقادیر و نوع داده مقادیر می‌باشد.
+</div><p><img alt="Screenshot (68).png" src="Chapters/06 - Dictionaries-and-Sets/attachment:0857c359-ed84-4a2c-9568-2594f661323a.png" /></p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">کلیدهای منحصربه فرد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کلیدهای دیکشنری باید تغییرناپذیر باشند مانند (رشته‌ها، اعداد یا تاپل‌ها) و منحصربه فرد باشند (تکراری نباشند). چندین کلید می‌توانند دارای مقادیر برابر باشند، برای مثال ممکن است دو کالایی که کدهای مختلفی دارند موجودی انبار برابری داشته باشند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.1 <span style="color:#8e24aa;">ایجاد یک دیکشنری</span></h2> <a id='4'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای ایجاد یک دیکشنری باید زوج‌های کلید و مقدار را با فرمت 
+    key: value
+    با کاما از یکدیگر جدا کنید و آنها را میان بریس 
+    {}
+    قرار دهید. استفاده از نماد 
+    {}
+    یک دیکشنری خالی ایجاد می‌کند. در این قسمت یک دیکشنری ایجاد می‌کنیم که کلید آن نام کشورهای 
+    'Finland', 'South Africa' و 'Nepal'
+    و دامنه اینترنتی آنها 
+    'fi', 'za' و 'np'
+    می‌باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Finland&#39;</span><span class="p">:</span> <span class="s1">&#39;fi&#39;</span><span class="p">,</span> <span class="s1">&#39;South Africa&#39;</span><span class="p">:</span> <span class="s1">&#39;za&#39;</span><span class="p">,</span> 
+                  <span class="s1">&#39;Nepal&#39;</span><span class="p">:</span> <span class="s1">&#39;np&#39;</span><span class="p">}</span>
+                 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Finland&#39;: &#39;fi&#39;, &#39;South Africa&#39;: &#39;za&#39;, &#39;Nepal&#39;: &#39;np&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگامی که یک دیکشنری را در خروجی نمایش می‌دهید، زوج‌های کلید-مقدار آن همیشه میان دو بریس قرار می‌گیرند. از آنجا که دیکشنری‌ها کالکشن‌های نامرتب محسوب می‌شوند، ترتیب نمایش آن‌ها می‌تواند با ترتیب زمانی که زوج‌های کلید-مقدار به دیکشنری اضافه می‌شود، متفاوت باشد. در خروجی اسنیپت [۲]، زوج‌های کلید-مقدار به ترتیب درج شدن نمایش داده می‌شوند. کدی ننویسید که به ترتیب زوج‌های کلید-مقدار بستگی داشته باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تعیین خالی بودن یک دیکشنری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع از پیش تعریف شده 
+    len
+    تعداد زوج‌های کلید-مقدار در یک دیکشنری را باز می‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">country_codes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در قسمت شرطی دستور 
+    if
+    می‌توانید از نام دیکشنری استفاده کنید تا خالی بودن آن را تعیین کنید، یک دیکشنری غیرخالی همیشه 
+    True
+    ارزیابی می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">country_codes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;country_codes is not empty&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;country_codes is empty&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country_codes is not empty
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">یک دیکشنری خالی 
+    False
+    ارزیابی می‌شود. برای نشان دادن این موضوع، در کد زیر با فراخوانی متد 
+     clear
+    زوج‌های کلید-مقدار را حذف می‌کنیم، سپس در اسنیپت [۶]، اسنیپت [۴] را فراخوانی کرده و دوباره آن را اجرا می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">country_codes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;country_codes is not empty&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;country_codes is empty&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country_codes is empty
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.2 <span style="color:#8e24aa;">پیمایش یک دیکشنری</span></h2> <a id='5'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دیکشنری زیر، رشته‌های نام ماه‌ها را به مقادیر 
+    int
+    که تعداد روزهای ماه مربوطه را نشان می‌دهد، نگاشت می‌کند. توجه داشته باشید که چندین کلید می‌توانند مقادیر برابری داشته باشند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days_per_month</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days_per_month</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;January&#39;: 31, &#39;February&#39;: 28, &#39;March&#39;: 31}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همان‌طور که مشاهده می‌کنید در نمایش رشته‌های دیکشنری، جفت‌های کلید-مقدار را به ترتیب درج آنها نشان می‌دهد، اما این تضمین نمی‌شود زیرا دیکشنری‌ها مرتب نیستند. در ادامه این فصل، نحوه پردازش کلیدها به شکل مرتب شده را نشان خواهیم داد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دستور 
+    for
+    ذیل زوج کلید-مقدار موجود در دیکشنری 
+    days_per_month
+    را پیمایش می‌کند. متد 
+    items
+    در دیکشنری هر زوج کلید-مقدار را به صورت یک تاپل بازمی‌گرداند؛ در این قسمت تاپل‌ها را در 
+    month
+    و 
+    days
+    تفکیک کرده‌ایم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">month</span><span class="p">,</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">days_per_month</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1"> has </span><span class="si">{</span><span class="n">days</span><span class="si">}</span><span class="s1"> days&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>January has 31 days
+February has 28 days
+March has 31 days
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.3 <span style="color:#8e24aa;">عملیات پایه دیکشنری</span></h2> <a id='6'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این بخش را با ایجاد و نمایش یک دیکشنری به نام 
+    roman_numerals
+    شروع می‌کنیم. عمدا مقدار نادرست ۱۰۰ را به کلید 
+    'X'
+    اختصاص داده‌ایم و به زودی آن را اصلاح خواهیم کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;II&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;III&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;III&#39;: 3, &#39;V&#39;: 5, &#39;X&#39;: 100}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">دسترسی به مقدار مرتبط با یک کلید</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با کد زیر مقدار مرتبط با کلید 
+    'V'
+    را به دست می‌آوریم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;V&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">آپدیت کردن مقدار یک جفت کلید-مقدار موجود در دیکشنری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از یک دستور انتساب می‌توانید مقدار مربوط با یک کلید را تغییر دهید. در اینجا این فرآیند را برای تغییر مقدار نادرست مرتبط با کلید
+    'X'
+    انجام می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;III&#39;: 3, &#39;V&#39;: 5, &#39;X&#39;: 10}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اضافه کردن یک زوج کلید-مقدار به دیکشنری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">انتساب یک مقدار به کلیدی که در دیکشنری وجود ندارد، موجب می‌شود زوج کلید-مقدار در دیکشنری درج شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;III&#39;: 3, &#39;V&#39;: 5, &#39;X&#39;: 10, &#39;L&#39;: 50}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کلیدهای رشته‌ای به حروف کوچک و بزرگ حساس هستند. اختصاص دادن کلیدی که وجود ندارد، یک زوج کلید-مقدار جدید را در دیکشنری ایجاد می‌کند. ممکن است این رویکرد مطابق با خواسته شما باشد و یا ممکن است یک خطای منطقی تلقی شود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">حذف کردن یک زوج کلید-مقدار از دیکشنری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از دستور 
+    del
+    می‌توانید یک زوج کلید-مقدار را از دیکشنری حذف کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;III&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;V&#39;: 5, &#39;X&#39;: 10, &#39;L&#39;: 50}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">علاوه بر روش بالا، با استفاده از متد 
+     pop
+    در دیکشنری می‌توانید یک زوج کلید-مقدار را از دیکشنری حذف کنید، این متد مقدار مرتبط با کلید حذف شده را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;I&#39;: 1, &#39;II&#39;: 2, &#39;V&#39;: 5, &#39;L&#39;: 50}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تلاش برای دستیابی به کلیدی که وجود ندارد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دسترسی به کلیدی که وجود ندارد منجر به بروز خطای 
+    KeyError
+    می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;III&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">roman_numerals</span><span class="p">[</span><span class="s1">&#39;III&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;III&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از متد 
+    get
+    می‌توانید از بروز این خطا جلوگیری کنید. این متد در حالت عادی مقدار مربوط به آرگومان خود را برمی‌گرداند. اگر آن کلید پیدا نشود، 
+    None
+    را برمی‌گرداند. مطابق اسنیپت [۱۳] 
+    IPython
+    هنگام بازگرداندن 
+    None
+    چیزی را نمایش نمی‌دهد. اگر برای آرگومان دوم متد 
+    get
+    مقداری تخصیص دهید، هنگام پیدا نشدن کلید، مقدار آرگومان دوم را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">,</span> <span class="s1">&#39;III not in dictionary&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;III not in dictionary&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roman_numerals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بررسی اینکه آیا دیکشنری حاوی کلید مشخصی است یا خیر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای بررسی وجود یک کلید در دیکشنری می‌توانید از عملگرهای 
+    in
+    و 
+    not in
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;V&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;III&#39;</span> <span class="ow">in</span> <span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;III&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">roman_numerals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.4 <span style="color:#8e24aa;">متدهای 
+    keys
+    و 
+    values
+    در دیکشنری</span></h2> <a id='7'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پیش از این، ما از متد 
+     items
+    برای پیمایش تاپل‌های کلید-مقدار یک دیکشنری استفاده کردیم. به همین ترتیب با استفاده از متدهای 
+     keys
+    و 
+    values
+    می‌توان به ترتیب کلیدها و یا  مقادیر دیکشنری را پیمایش کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">month_name</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">month_name</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>January  February  March  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">month_number</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">month_number</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1  2  3  
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    view
+    های دیکشنری</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر یک از متدهای دیکشنری نظیر 
+    items, keys و values
+    یک 
+    view
+    از داده‌های دیکشنری برمی‌گردانند. وقتی یک 
+    view
+    را پیمایش می‌کنید، 
+    view
+    داده‌های فعلی دیکشنری را می‌بیند و کپی اختصاصی از داده‌ها ندارد. برای نشان دادن این موضوع که 
+    view
+    کپی اختصاصی از داده‌ها را ذخیره نمی‌کند، ابتدا 
+    view
+    برگردانده شده توسط متد 
+    keys
+    را در متغیر 
+     months_view
+    ذخیره می‌کنیم و سپس این 
+    view
+    را پیمایش می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months_view</span> <span class="o">=</span> <span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">months_view</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>January  February  March  
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ادامه یک زوج کلید-مقدار را به دیکشنری 
+    months
+    اضافه کرده و سپس دیکشنری به روز شده را نمایش می‌دهیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months</span><span class="p">[</span><span class="s1">&#39;December&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;January&#39;: 1, &#39;February&#39;: 2, &#39;March&#39;: 3, &#39;December&#39;: 12}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اکنون دوباره 
+    months_view
+    را پیمایش می‌کنیم. کلید اضافه شده در بالا نمایش داده می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">months_view</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>January  February  March  December  
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هنگام پیمایش 
+    view
+    در دیکشنری تغییری اعمال نکنید. مطابق بخش 
+    4.10.1
+    در
+    مستندات کتابخانه استاندارد پایتون، ممکن است با خطای 
+    RuntimeError
+    مواجه شوید و یا ممکن است حلقه تمامی مقادیر 
+    view
+    را پردازش نکند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+تبدیل کلیدها، مقادیر و زوج‌های کلید-مقدار دیکشنری به لیست</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">گاهی اوقات ممکن است به لیست کلیدها، مقادیر یا زوج‌های کلید-مقدار یک دیکشنری نیاز داشته باشید. برای به دست آوردن چنین لیستی، باید
+    view
+    برگردانده شده توسط 
+    keys, values یا items
+    را به تابع از پیش تعریف شده 
+    list
+    ارسال کنید. تغییر دادن این لیست تغییری در دیکشنری مربوطه اعمال نخواهد کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;January&#39;, &#39;February&#39;, &#39;March&#39;, &#39;December&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 12]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;January&#39;, 1), (&#39;February&#39;, 2), (&#39;March&#39;, 3), (&#39;December&#39;, 12)]
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پردازش کلیدها به طور مرتب شده</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای پردازش کلیدها به طور مرتب شده، می‌توانید از تابع داخلی 
+    sorted
+    به صورت زیر استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">month_name</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">months</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">month_name</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>December  February  January  March  
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.5 <span style="color:#8e24aa;">مقایسه در دیکشنری</span></h2> <a id='8'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای بررسی یکی بودن و یا تفاوت محتویات دو دیکشنری می‌توان از عملگرهای مقایسه 
+    ==
+    و 
+    =!
+    استفاده کرد. عملگر 
+    ==
+    در صورت یکی بودن تمامی زوج‌های کلید-مقدار و صرف نظر از ترتیب اضافه شدن این زوج‌ها به دیکشنری، 
+    True
+    ارزیابی می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;Brussels&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Haiti&#39;</span><span class="p">:</span> <span class="s1">&#39;Port-au-Prince&#39;</span><span class="p">}</span>
+                        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Nepal&#39;</span><span class="p">:</span> <span class="s1">&#39;Kathmandu&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Uruguay&#39;</span><span class="p">:</span> <span class="s1">&#39;Montevideo&#39;</span><span class="p">}</span>
+                        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals3</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Haiti&#39;</span><span class="p">:</span> <span class="s1">&#39;Port-au-Prince&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;Brussels&#39;</span><span class="p">}</span>
+                        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals1</span> <span class="o">==</span> <span class="n">country_capitals3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_capitals1</span> <span class="o">!=</span> <span class="n">country_capitals2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.6 <span style="color:#8e24aa;">مثال: دیکشنری نمرات دانش‌آموزان</span></h2> <a id='9'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپت زیر دفترچه نمره یک مدرس را به عنوان یک دیکشنری نشان می‌دهد و نام هر دانش‌آموز (یک رشته) را به لیستی از اعداد صحیح حاوی نمرات آن دانش آموز در سه آزمون نگاشت می‌کند. در هر تکرار حلقه که داده‌ها را نشان می‌دهد (خطوط ۱۳ تا ۱۷)، یک زوج کلید-مقدار را در متغیرهای 
+    name
+    و 
+    grades
+    که به ترتیب حاوی نام یک دانش‌آموز و لیست مربوط به سه نمره آن دانش‌آموز است، تفکیک می‌کنیم. خط ۱۴ از تابع داخلی 
+    sum
+    برای جمع کردن نمرات دانش‌آموز جاری استفاده می‌کند. خط ۱۵ معدل دانش‌آموز را با تقسیم 
+    total
+    بر تعداد نمرات آن دانش‌آموز محاسبه و نمایش می‌دهد 
+    (len(grades))
+    . خطوط ۱۶-۱۷ کل نمرات هر دانش‌آموز و تعداد نمرات آن‌ها را ذخیره می‌کنند. خط ۱۹ میانگین نمرات دانش‌آموزان را برای کل آزمون نمایش می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig06_01.py</span>
+<span class="sd">&quot;&quot;&quot;Using a dictionary to represent an instructor&#39;s grade book.&quot;&quot;&quot;</span>
+<span class="n">grade_book</span> <span class="o">=</span> <span class="p">{</span>            
+    <span class="s1">&#39;Susan&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> 
+    <span class="s1">&#39;Eduardo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">83</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">79</span><span class="p">],</span>
+    <span class="s1">&#39;Azizi&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">91</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span>  
+    <span class="s1">&#39;Pantipa&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">92</span><span class="p">]</span> 
+<span class="p">}</span>
+
+<span class="n">all_grades_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">all_grades_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">grades</span> <span class="ow">in</span> <span class="n">grade_book</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Average for </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">total</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">all_grades_total</span> <span class="o">+=</span> <span class="n">total</span>
+    <span class="n">all_grades_count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Class&#39;s average is: </span><span class="si">{</span><span class="n">all_grades_total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">all_grades_count</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average for Susan is 92.33
+Average for Eduardo is 85.67
+Average for Azizi is 87.33
+Average for Pantipa is 93.33
+Class&#39;s average is: 89.67
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.7 <span style="color:#8e24aa;">مثال: شمارش کلمات</span></h2> <a id='10'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روش‌هایی مانند شمارش دفعات تکرار کلمات، اغلب برای تجزیه و تحلیل آثار منتشر شده استفاده می‌شوند. به عنوان مثال، برخی معتقدند که آثار ویلیام شکسپیر در واقع ممکن است توسط سر فرانسیس بیکن، کریستوفر مارلو یا دیگران نوشته شده باشد. مقایسه دفعات تکرار کلمات آثار این افراد با آثار شکسپیر می‌تواند شباهت‌های سبک نوشتاری آن‌ها را آشکار کند. سایر تکنیک‌های تجزیه و تحلیل اسناد را در فصل پردازش زبان طبیعی 
+    (NLP)
+    بررسی خواهیم کرد. 
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپت زیر یک دیکشنری را برای محاسبه دفعات تکرار هر کلمه در یک رشته ایجاد می‌کند. خطوط ۴-۵ رشته 
+    text
+    را ایجاد می‌کند و با فرآیند توکن‌سازی یک رشته، کلمات را از هم تفکیک کرده و در 
+    text
+    ذخیره می‌کند. پایتون به طور خودکار رشته‌هایی که با فضای خالی از هم جدا شده‌اند را درون پرانتز قرار می‌دهد. خط ۷ یک دیکشنری خالی ایجاد می‌کند. کلیدهای دیکشنری کلمات منحصربه فرد در 
+    text
+    و مقادیر آن دفعات تکرار آن کلمه می‌باشند: 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig06_02.py</span>
+<span class="sd">&quot;&quot;&quot;Tokenizing a string and counting unique words.&quot;&quot;&quot;</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;this is sample text with several words &#39;</span> 
+        <span class="s1">&#39;this is more sample text with some different words&#39;</span><span class="p">)</span>
+
+<span class="n">word_counts</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># count occurrences of each unique word</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">word_counts</span><span class="p">:</span> 
+        <span class="n">word_counts</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># update existing key-value pair</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">word_counts</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># insert new key-value pair</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s2">&quot;WORD&quot;</span><span class="si">:</span><span class="s1">&lt;12</span><span class="si">}</span><span class="s1">COUNT&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">word_counts</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">word</span><span class="si">:</span><span class="s1">&lt;12</span><span class="si">}{</span><span class="n">count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Number of unique words:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_counts</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WORD        COUNT
+different   1
+is          2
+more        1
+sample      2
+several     1
+some        1
+text        2
+this        2
+with        2
+words       2
+
+Number of unique words: 10
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خط ۱۰ با فراخوانی متد 
+    split
+    از کلاس 
+    String
+    متغیر 
+    text
+    را به چند توکن تقسیم می‌کند، این متد کلمات را با استفاده از آرگومان جدا کننده رشته جدا می‌کند. اگر آرگومان جداکننده را مشخص نکنید، متد 
+    split
+    به طور پیش‌فرض از کاراکتر 
+    space
+    استفاده می‌کند. متد 
+    split
+    لیستی از توکن‌ها را برمی‌گرداند (یعنی کلمات موجود در 
+    text
+    ). خطوط ۱۰-۱۴ لیستی از کلمات را پیمایش می‌کند. خط ۱۱ به ازای هر 
+    word
+    تعیین می‌کند که آیا این 
+    word
+    (کلید) از قبل در دیکشنری وجود دارد یا خیر. اگر 
+    word
+    در دیکشنری باشد، خط ۱۲ تعداد آن 
+    word
+    را یک واحد افزایش می‌دهد. در غیر این صورت، خط ۱۴ یک زوج کلید-مقدار جدید برای آن 
+    word
+    با تعداد اولیه ۱ در دیکشنری درج می‌کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۱۶-۲۱ نتایج را در یک جدول دو ستونی شامل هر 
+    word
+    و 
+    count
+    مربوط به آن خلاصه می‌کند. دستور 
+    for
+    در خطوط ۱۸ و ۱۹ زوج‌های کلید-مقدار موجود در دیکشنری را پیمایش می‌کند. دستور 
+    for
+    هر زوج کلید-مقدار را در متغیرهای 
+    word
+    و 
+    count
+    ذخیره می‌کند و سپس آن‌ها را در دو ستون نمایش می‌دهد. خط ۲۱ تعداد کلمات منحصر به فرد را نشان می‌دهد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ماژول 
+    collections
+    در کتابخانه استاندارد پایتون</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کتابخانه استاندارد پایتون دارای قابلیت شمارش است، به بیان دیگر کدی را که با استفاده از دیکشنری و حلقه تکرار در خطوط ۱۰-۱۴ پیاده سازی کردیم، با کمک این قابلیت قابل پیاده‌سازی است. ماژول 
+    collections
+    نوع داده 
+    Counter
+    دارد، 
+    Counter
+    یک 
+    iterable
+    را دریافت می‌کند و اعضای آن را خلاصه می‌کند. در این قسمت با استفاده از 
+    Counter
+    اسکریپت قبلی را با کد کمتری پیاده‌سازی می‌کنیم: 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;this is sample text with several words &#39;</span>
+        <span class="s1">&#39;this is more sample text with some different words&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">word</span><span class="si">:</span><span class="s1">&lt;12</span><span class="si">}{</span><span class="n">count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>different   1
+is          2
+more        1
+sample      2
+several     1
+some        1
+text        2
+this        2
+with        2
+words       2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of unique keys:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of unique keys: 10
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسنیپت [۳] 
+    Counter
+    را ایجاد می‌کند و 
+    Counter
+    لیست رشته‌های برگشتی توسط  
+    ()text.split
+    را خلاصه می‌کند. در اسنیپت [۴]، متد 
+    items
+    از شیء 
+    Counter
+    هر رشته و تعداد دفعات تکرار آن را به صورت تاپل برمی‌‌گرداند. برای به دست آوردن لیستی از این تاپل‌ها به ترتیب صعودی، از تابع داخلی 
+    sorted
+    استفاده می‌کنیم. متد 
+    sorted
+    به طور پیش‌فرض، تاپل‌ها را بر اساس اولین عضو آن‌ها مرتب می‌کند. اگر عضو اول برابر بود، عضو دوم بررسی می‌شود و الی آخر... دستور 
+    for
+    در لیست مرتب شده به دست آمده پیمایش کرده و هر 
+    word
+    و 
+    count
+    را در دو ستون نمایش می‌دهد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.8 <span style="color:#8e24aa;">متد 
+    update
+    در دیکشنری</span></h2> <a id='11'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از متد 
+    update
+    در دیکشنری، می‌توانید زوج‌های کلید-مقدار را در دیکشنری درج کنید و یا آن‌ها را تغییر دهید. در ابتدا یک دیکشنری خالی به نام
+    country_codes
+    ایجاد می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">فراخوانی متد 
+    update
+    در کد ذیل یک زوج کلید-مقدار دریافت کرده و آن را در دیکشنری درج کرده و یا تغییر می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;South Africa&#39;</span><span class="p">:</span> <span class="s1">&#39;za&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;South Africa&#39;: &#39;za&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    update
+    می‌تواند برای درج در دیکشنری آرگومان‌های کلیدی را به زوج‌های کلید-مقدار تبدیل کند. فراخوانی این متد در کد زیر به طور خودکار نام پارامتر 
+    Australia
+    را به کلید رشته‌ای 
+    'Australia'
+    تبدیل کرده و مقدار 
+     'ar' 
+    را به این کلید مرتبط می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;ar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;ar&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در اسنیپت [۴] برای 
+    Australia
+    دامنه اینترنتی نادرست لحاظ شده است. این اشتباه را با استفاده از یک آرگومان کلیدی دیگر و تغییر مقدار مربوط به کلید 
+    'Australia'
+    اصلاح می‌کنیم:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Australia</span><span class="o">=</span><span class="s1">&#39;au&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_codes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;South Africa&#39;: &#39;za&#39;, &#39;Australia&#39;: &#39;au&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    update
+    می‌تواند یک شیء نوع 
+    iterable
+    که حاوی زوج‌های کلید-مقدار مانند لیستی از تاپل‌های دوعنصری را دریافت کند.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.2.9 <span style="color:#8e24aa;">Dictionary comprehensions</span></h2> <a id='12'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    Dictionary comprehension
+    یک روش سریع و مناسب برای ایجاد یک دیکشنری است و اغلب با نگاشت یک دیکشنری به دیکشنری دیگر انجام می‌‌شود. به عنوان مثال، در یک دیکشنری با مقادیر منحصر به فرد می‌توانید زوج‌های کلید-مقدار را معکوس کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;January&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;February&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;March&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months2</span> <span class="o">=</span> <span class="p">{</span><span class="n">number</span><span class="p">:</span> <span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">months</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">months2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: &#39;January&#39;, 2: &#39;February&#39;, 3: &#39;March&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">آکولادها محدوده دستور 
+    dictionary comprehension
+    را مشخص می‌کنند و عبارت سمت چپ 
+    for
+    به شکل 
+    key: value
+    یک زوج کلید-مقدار را مشخص می‌کند. این دستور با  
+    ()months.items
+    دیکشنری را پیمایش کرده و هر زوج کلید-مقدار را از هم تفکیک کرده و آن‌ها را در متغیرهای 
+     name
+    و 
+    number
+    ذخیره می‌کند. عبارت 
+    number: name
+    کلید و مقدار را جابجا می‌کند و به همین دلیل دیکشنری جدید اعداد ماه را به نام ماه‌ها نگاشت می‌کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر 
+     months
+    حاوی مقادیر تکراری باشد، چه اتفاقی می‌افتد؟ از آنجایی که این مقادیر در دیکشنری 
+    months2
+    به کلید تبدیل می‌شوند، تلاش برای درج کلید تکراری موجب به روز رسانی مقدار کلید موجود می‌شود. بنابراین اگر 
+    'February'
+    و 
+    'March'
+    از ابتدا به مقدار ۲ نگاشت می‌شدند، کد قبلی دیکشنری زیر را تولید می‌کرد:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;January&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;March&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">روش 
+    dictionary comprehension
+    می‌تواند مقادیر دیکشنری را به مقادیر جدید نگاشت کند. کد زیر دیکشنری نام‌ها و لیست نمرات را به دیکشنری نام‌ها و میانگین نمرات نگاشت می‌کند. متغیرهای 
+    k
+    و 
+    v
+    معمولا به معنی کلید و مقدار هستند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Sue&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">98</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">94</span><span class="p">],</span> <span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">84</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">91</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades2</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">grades</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grades2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Sue&#39;: 93.0, &#39;Bob&#39;: 90.0}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این کد تاپل برگردانده شده از 
+    ()grades.items
+    را از حالت فشرده خارج کرده و در متغیرهای 
+     k
+    (نام) و 
+     v
+    (لیست نمرات) ذخیره می‌کند. در ادامه این کد یک زوج کلید-مقدار جدید ایجاد می‌کند. مقدار 
+    k
+    کلید بوده و مقدار مربوط به کلید با رابطه 
+    sum(v) / len(v)
+    مشخص می‌شود که میانگین عناصر لیست را نشان می‌دهد.
+</div><h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">6.3 <span style="color:#F50057;">مجموعه‌ها</span></h1> <a id='13'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مجموعه کالکشنی مرتب نشده از مقادیر منحصر به فرد می‌باشد. مجموعه‌ها فقط شامل اشیای تغییرناپذیر هستند. برای مثال رشته‌ها، اعداد صحیح، اعداد اعشاری و تاپل‌هایی که فقط از اعضای غیر قابل تغییر تشکیل شده‌اند، مثال‌هایی از این دست محسوب می‌شوند. اگرچه مجموعه‌ها
+    iterable
+    هستند، اما دنباله محسوب نمی‌شوند و از اندیس و 
+    slicing
+    با عملگر 
+     []
+    پشتیبانی نمی‌کنند. دیکشنری‌ها نیز از 
+    slicing
+    پشتیبانی نمی‌کنند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ایجاد مجموعه‌ها با آکولاد</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">کد زیر، مجموعه‌ای از رشته‌ها با نام 
+    colors
+    را ایجاد می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;red&#39;, &#39;yellow&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">توجه داشته باشید که رشته تکراری 
+    'red'
+    نادیده گرفته شده است (بدون ایجاد خطا). یک استفاده مهم از مجموعه‌ها برای از بین بردن داده‌های تکراری است و این فرایند هنگام ایجاد یک مجموعه به طور خودکار انجام می‌گیرد. مطابق اسنیپت [۱] اعضای مجموعه با ترتیبی که لیست شده‌اند، نمایش داده نمی‌شوند. اگرچه نام‌های رنگی به ترتیب نمایش داده می‌شوند، ولی مجموعه‌ها نامرتب هستند. شما نباید کدی بنویسید که به ترتیب عناصر بستگی داشته باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">مشخص کردن تعداد اعضای مجموعه</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با تابع از پیش تعریف شده 
+len
+می‌توانید تعداد اعضای یک مجموعه را تعیین کنید:
+</div><p>len(colors)</p>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">بررسی وجود یک مقدار در مجموعه</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از عملگرهای 
+    in
+    و 
+    not in
+    می‌توانید وجود یک مقدار در مجموعه را بررسی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;red&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;purple&#39;</span> <span class="ow">in</span> <span class="n">colors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;purple&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">colors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">پیمایش یک مجموعه</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مجموعه‌ها از نوع 
+    iterable
+    هستند و به همین دلیل می‌توانید هر یک از اعضای مجموعه را با حلقه 
+    for
+    پردازش کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RED YELLOW GREEN BLUE ORANGE 
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مجموعه‌ها مرتب نیستند، بنابراین ترتیب پیمایش آنها هیچ اهمیتی ندارد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">ایجاد یک مجموعه با تابع داخلی 
+    set
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از تابع داخلی 
+    set
+    می‌توانید یک مجموعه‌ از کالکشنی با سایر مقادیر ایجاد کنید. در اینجا لیستی از اعداد صحیح ایجاد می‌کنیم که بعضی از اعضای آنها تکراری هستند و از این لیست به عنوان آرگومان تابع 
+    set
+    استفاده خواهیم کرد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای ایجاد یک مجموعه تهی باید از تابع 
+    set
+    به همراه پرانتزهای خالی استفاده کنید. برای این کار از آکولادهای خالی استفاده نکنید، نماد 
+    {}
+    یک دیکشنری خالی را نشان می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set()
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">پایتون برای نمایش مجموعه تهی از  
+    ()set
+    استفاده می‌کند تا با  
+    {}
+    که معرف یک دیکشنری خالی است اشتباه نشود.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    Frozenset
+    : مجموعه غیرقابل تغییر
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مجموعه‌ها قابل تغییر هستند و به همین دلیل می‌توانید عناصری را به آن اضافه کنید و یا از آن حذف کنید، اما عناصر مجموعه باید غیرقابل تغییر باشند. بنابراین یک مجموعه نمی‌تواند مجموعه‌های دیگری را به عنوان عضو داشته باشد. 
+    frozenset
+    مجموعه‌ای غیرقابل تغییر است و پس از ایجاد نمی‌توان آن را تغییر داد، بنابراین یک مجموعه می‌تواند حاوی عناصر 
+    frozenset
+    باشد. تابع داخلی 
+    frozenset
+    باعث ایجاد 
+    frozenset
+    از هر نوع داده 
+    iterable
+    می‌شود.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.3.1 <span style="color:#8e24aa;">مقایسه مجموعه‌ها</span></h2> <a id='14'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای مقایسه مجموعه‌ها از عملگرهای مختلفی می‌توان استفاده کرد. دو مجموعه زیر دارای اعضای یکسانی هستند و به همین دلیل عملگر 
+     ==
+    مقدار 
+    True
+    و عملگر 
+     =!
+    مقدار 
+    False
+    را برمی‌گرداند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">==</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">!=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر > بررسی می‌کند که آیا مجموعه سمت چپ آن، زیرمجموعه محض عملوند سمت راست آن است و یا خیر. در این عملگر، زیر مجموعه محض یک مجموعه، مجموعه‌ای است که تمامی اعضای آن در مجموعه اصلی وجود داشته باشند و با خود آن مجموعه برابر نباشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر => بررسی می‌کند که آیا مجموعه سمت چپ آن، زیرمجموعه غیر محض عملوند سمت راست آن است و یا خیر. در این عملگر، زیرمجموعه غیر محض یک مجموعه، مجموعه‌ای است که تمامی اعضای آن در مجموعه اصلی وجود داشته باشند و می‌تواند با آن برابر باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&lt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">همچنین می‌توانید زیرمجموعه غیرمحض را با 
+    issubset
+    بررسی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">issubset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر < بررسی می‌کند که آیا مجموعه سمت چپ آن، ابرمجموعه محض عملوند سمت راست آن است و یا خیر- یعنی تمام عناصر در عملوند سمت راست در عملوند سمت چپ قرار دارند و عملوند سمت چپ دارای عناصر بیش‌تری است.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&gt;</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span> <span class="o">&gt;</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر =< بررسی می‌کند که آیا مجموعه سمت چپ آن ابرمجموعه غیرمحض عملوند سمت راست آن است و یا خیر. در این عملگر، ابرمجموعه غیرمحض یک مجموعه، مجموعه‌ای است که تمامی اعضای آن در مجموعه اصلی وجود داشته باشند و می‌توانند با آن برابر باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&gt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&gt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="o">&gt;=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">با استفاده از متد 
+    issuperset
+    در 
+    set
+    می‌توانید ابرمجموعه بودن غیرمحض را بررسی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">issuperset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">issuperset</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">آرگومان متدهای 
+    issubset
+    یا 
+     issuperset
+    می‌تواند هر نوع داده 
+    iterable
+    باشد. هنگامی که هر یک از این متدها یک آرگومان 
+    iterable
+    و غیرمجموعه‌ای دریافت کند، ابتدا آن را به یک مجموعه تبدیل کرده و سپس عملیات مربوطه را انجام می‌دهد.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.3.2 <span style="color:#8e24aa;">عملیات ریاضی مجموعه‌ها</span></h2> <a id='15'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این قسمت عملگرهای ریاضی مجموعه‌ها شامل 
+     |, &, - و ^
+    و متدهای مربوطه را بررسی خواهیم کرد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اجتماع</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اجتماع دو مجموعه، مجموعه‌ای است که اعضای آن از اعضای منحصر به فرد دو مجموعه تشکیل شده است. برای محاسبه اجتماع می‌توانید از عملگر | و یا متد 
+    union
+    در 
+    set
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">union</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 3, 5, 20, 40}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملوندهای عملگرهای دودویی مجموعه، مانند | باید از جنس مجموعه باشند. متدهای مجموعه ممکن است هر شیء 
+    iterable
+    را به عنوان آرگومان دریافت کنند، برای مثال در کد بالا یک لیست را به متد ارسال کرده‌ایم. هنگامی که یک متد ریاضی مجموعه، آرگومانی 
+    iterable
+    دریافت کند و این آرگومان از جنس مجموعه نباشد، ابتدا آن را به یک مجموعه تبدیل می‌کند و سپس عملیات ریاضی را انجام می‌دهد. بازهم یادآور می‌شویم، اگرچه نمایش رشته‌ای مجموعه‌های جدید مقادیر را به ترتیب صعودی نشان می‌دهند ولی شما نباید کدی بنویسید که به این موضوع بستگی داشته باشد.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اشتراک</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اشتراک دو مجموعه، مجموعه‌ای است که اعضای آن از اعضای منحصر به فرد مشترک دو مجموعه تشکیل شده است. برای محاسبه اشتراک می‌توانید از عملگر 
+    &
+    و یا متد 
+    intersection
+    در 
+    set
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">&amp;</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">intersection</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 3}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تفاضل</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تفاضل دو مجموعه، مجموعه‌ای است که اعضای آن از اعضای مجموعه سمت چپ که در مجموعه سمت راست قرار ندارند، تشکیل شده است. برای محاسبه اشتراک می‌توانید از عملگر 
+    -
+    و یا متد 
+    difference
+    در 
+    set
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">-</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 5, 7}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">تفاضل متقارن</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تفاضل متقارن دو مجموعه، مجموعه‌ای است که اعضای آن از اعضای دو مجموعه که در هر دو مجموعه قرار ندارند، تشکیل شده است. برای محاسبه تفاضل متقارن می‌توانید از عملگر 
+    ^
+    و یا متد 
+    symmetric_difference
+    در 
+    set
+    استفاده کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span> <span class="o">^</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 4, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 4, 5, 7}
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">Disjoint</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">دو مجموعه‌ای که هیچ عضو مشترکی نداشته باشند، جدا از هم تلقی می‌شوند. با استفاده از متد 
+    isdisjoint
+    می‌توانید جدا از هم بودن دو مجموعه را بررسی کنید:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">({</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">({</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.3.3 <span style="color:#8e24aa;">عملیات و متدهای مربوط به مجموعه‌های تغییرپذیر</span></h2> <a id='16'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگرها و متدهای ارائه شده در بخش قبل هر یک منجر به ایجاد مجموعه جدید می‌شوند. در این قسمت ما درباره عملگرها و متدهایی که مجموعه موجود را تغییر می‌دهند صحبت می‌کنیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">عملیات ریاضی مجموعه‌های تغییر پذیر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">عملگر
+    =|
+    همانند عملگر 
+    |
+    عمل اجتماع را انجام می‌دهد ولی مجموعه سمت چپ خود را تغییر می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">|=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور مشابه، متد 
+    update
+    عمل اجتماع را انجام می‌دهد و می‌تواند مجموعه‌ای که آن را فراخوانی کرده، تغییر دهد. این متد هر آرگومان از نوع 
+    iterable
+    را قبول می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">سایر متدهای مجموعه‌ قابل تغییر عبارت‌اند از:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>اشتراک همراه با انتساب با نماد 
+    =&
+    <br>
+    <span style="color:#8e24aa;">• </span>تفاضل همراه با انتساب با نماد 
+    =-
+    <br>
+    <span style="color:#8e24aa;">• </span>تفاضل متقارن همراه با انتساب با نماد 
+    =^
+    <br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">و متدهایی با قابلیت دریافت هر نوع آرگومان 
+    iterable
+    عبارت‌اند از:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>intersection_update<br>
+    <span style="color:#8e24aa;">• </span>difference_update<br>
+    <span style="color:#8e24aa;">• </span>symmetric_difference_update<br>
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">متدهایی برای اضافه کردن و یا حذف عناصر</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    add
+    آرگومان خود را به مجموعه اضافه می‌کند، البته به شرط آنکه این آرگومان عضوی از مجموعه نباشد؛ در غیراین صورت، مجموعه بدون تغییر باقی می‌ماند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    remove
+    آرگومان خود را از مجموعه حذف می‌کند، اگر این آرگومان عضوی از مجموعه نباشد، خطای 
+    KeyError
+    روی می‌دهد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 4, 5, 6, 7, 8, 9, 17}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">متد 
+    discard
+    نیز آرگومان خود را از مجموعه حذف می‌کند اما اگر این مقدار عضوی از مجموعه نباشد، 
+    exception
+    رخ نمی‌دهد. 
+علاوه بر این می‌توانید با استفاده از متد
+     pop
+     یک عض دلخواه  مجموعه را حذف کنید و آن را برگردانید. از آنجایی که مجموعه‌ها مرتب نیستند، نمی‌دانید کدام عضو برگردانده می‌شود:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 4, 5, 6, 7, 8, 9, 17}
+</pre></div>
+</div>
+</div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اگر متد
+     pop
+    را برای یک مجموعه تهی فراخوانی کنید، خطای 
+    KeyError
+    روی می‌دهد؛ و کلام آخر، متد 
+    clear
+    تمامی اعضای مجموعه‌ای که این متد را فراخوانی کرده، حذف می‌کند:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set()
+</pre></div>
+</div>
+</div>
+</div>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.3.4 <span style="color:#8e24aa;">Set comprehensions</span></h2> <a id='17'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای ایجاد مجموعه با روش 
+    set comprehensions
+    باید همانند دیکشنری تعریف مربوطه را در یک جفت آکولاد قرار دهید. در این قسمت یک مجموعه جدید ایجاد می‌کنیم که شامل اعداد زوج و منحصر به فرد لیست 
+     numbers
+    باشد:
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evens</span> <span class="o">=</span> <span class="p">{</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evens</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2, 4, 6, 8, 10}
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">6.4 <span style="color:#F50057;">مقدمه‌ای بر علم داده: نمودارهای پویا</span></h1> <a id='18'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل قبلی و در بخش مقدمه‌ای بر علم داده، رسم نمودار را معرفی کردیم. پرتاب یک تاس شش وجهی را شبیه سازی کردیم و با استفاده از کتابخانه‌های گرافیکی 
+    Seaborn
+    و 
+    Matplotlib
+    نمودار میله‌ای ایستا و با کیفیتی بالا رسم کردیم. این نمودار دفعات تکرار هر عدد و درصد مربوطه را نشان می‌داد. در این بخش، همین کار را به صورت پویا انجام می‌دهیم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">قانون اعداد بزرگ</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">وقتی که مولد اعداد تصادفی را معرفی کردیم، اشاره کردیم که اگر تابع 
+    randrange
+    در ماژول 
+    random
+    اعداد صحیح را به صورت تصادفی تولید کند، تمامی اعداد در محدوده و در هر بار فراخوانی این تابع، از احتمال انتخاب 
+    (likelihood)
+    یکسانی برخوردار هستند. در پرتاب تاس شش وجهی، احتمال وقوع هر یک از اعداد ۱ تا ۶ برابر یک ششم یا در حدود 
+    16.667%
+    است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش بعدی، یک اسکریپت شبیه سازی پرتاب تاس را به صورت پویا (یعنی متحرک) ایجاد کرده و آن را اجرا می‌کنیم. خواهید دید که هرچه تعداد پرتاب‌ها بیشتر باشد، درصد نسبی تکرار هر وجه تاس به مقدار 
+    16.667%
+    نزدیک‌تر شده و ارتفاع میله‌ها به تدریج و تقریبا یکسان می‌شوند. این پدیده جلوه‌ای از قانون اعداد بزرگ است.
+</div><h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.4.1 <span style="color:#8e24aa;">طرز کار نمودارهای داینامیک</span></h2> <a id='19'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نمودارهای تولید شده با 
+    Seaborn
+    و 
+    Matplotlib
+    در بخش مقدمه‌ای برای علم داده در فصل قبلی به شما کمک می‌کند تا نتایج تعداد ثابتی از پرتاب تاس را پس از اتمام شبیه سازی تجزیه و تحلیل کنید. این بخش با استفاده از تابع 
+    FuncAnimation
+    در  
+    animation
+    از 
+    Matplotlib
+    کد یاد شده را بهبود می‌بخشد و موجب می‌شود نمودار میله‌ای به صورت پویا به‌روز شود. خواهید دید که میله‌های نمودار، دفعات تکرار هر عدد و فراوانی نسبی آن به طور مداوم و با هر پرتاب تاس به‌روز می‌شوند.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">فریم‌های انیمیشن</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    FuncAnimation
+    یک انیمیشن را فریم به فریم اجرا می‌کند. همه مواردی که باید در طی یک به روزرسانی نمودار تغییر کند، به وسیله یک فریم انیمیشن مشخص می‌شوند. با ردیف کردن تعداد زیادی از این به روزرسانی‌ها در طول زمان، یک اثر انیمیشن خلق می‌شود. با تابعی که تعریف می‌کنید تصمیم می‌گیرید که هر فریم چه چیزی را نمایش دهد و چه چیزی را به 
+    FuncAnimation
+    ارسال کند.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">هر فریم انیمیشن باید:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span>تاس را به تعداد مشخصی پرتاب کند (از ۱ تا هر تعداد که می‌خواهید) و دفعات تکرار هر وجه را به روزرسانی نماید.<br>
+    <span style="color:#8e24aa;">• </span>نمودار فعلی را پاک کند.<br>
+    <span style="color:#8e24aa;">• </span>نمودارهای میله‌ای جدید را ایجاد کند، این میله‌ها معرف دفعات تکرار به روزرسانی شده هر وجه تاس هستند.<br>
+    <span style="color:#8e24aa;">• </span>متن مربوط به دفعات تکرار هر وجه تاس و فراوانی نسبی برای هر میله نمودار را ایجاد کند.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">به طور کلی، نمایش فریم‌های بیشتر در ثانیه، انیمیشن روان‌تری به همراه دارد. به عنوان مثال، در بازی‌های ویدیویی با عناصر متحرک سریع، سعی می‌شود در یک ثانیه حداقل ۳۰ فریم و اغلب بیشتر نمایش داده شود. اگرچه شما تعداد میلی ثانیه را بین فریم‌های انیمیشن مشخص خواهید کرد، اما تعداد واقعی فریم‌ها در ثانیه می‌تواند تحت تاثیر میزان کار شما در هر فریم و سرعت پردازنده کامپیوتر شما قرارگیرد. این مثال یک فریم انیمیشن را هر ۳۳ میلی ثانیه تقریبا ۳۰ فریم 
+     (33 / 1000)
+    در ثانیه نشان می‌دهد. مقادیر بزرگ‌تر و کوچک‌تر را امتحان کنید تا بینید چه تاثیری بر انیمیشن دارند. آزمایش بهترین گزینه برای ایجاد بهترین مصورسازی است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اجرای برنامه 
+    RollDieDynamic.py
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل قبلی و در بخش مقدمه‌ای بر علم داده، نمودار میله‌ای استاتیک را به صورت تعاملی توسعه دادیم تا بتوانید هنگام اجرای هر دستور نحوه به روزرسانی نمودار را مشاهده کنید. نمودار میله‌ای واقعی با دفعات تکرار و درصدهای نهایی فقط یک‌بار ترسیم شد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای رسم نمودار به صورت پویا، نتایج صفحه به طور مداوم به روز می‌شوند تا بتوانید انیمیشن را مشاهده کنید. بسیاری از پارامترها به طور مداوم تغییر می‌کنند، برای مثال طول میله‌ها، دفعات تکرار هر عدد و درصد مربوطه در بالای میله‌ها، فاصله و برچسب‌ها در محورها و تعداد کل پرتاب‌ها که در قسمت عنوان نمودار نشان داده می‌شود. به همین دلیل به جای آن که رسم نمودار را به صورت تعاملی توسعه دهیم، کدهای مربوطه را در یک اسکریپت ذخیره کرده‌ایم.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">این اسکریپت دو آرگومان در خط فرمان می‌گیرد:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>number_of_frames</b>
+    این آرگومان تعداد فریم‌های انیمیشن برای نمایش را تعیین می‌کند. این مقدار تعداد دفعاتی را که 
+    FuncAnimation
+    نمودار را به روز می‌کند تعیین می‌کند. 
+    FuncAnimation
+    برای هر فریم انیمیشن تابعی را فراخوانی می‌کند که شما تعریف کرده‌اید (در این مثال، 
+    update
+    ) تا نحوه تغییر طرح را مشخص کند.<br>
+    <span style="color:#8e24aa;">• </span><b>rolls_per_frame</b>
+    این آرگومان تعداد پرتاب تاس را برای هر فریم انیمیشن تعیین می‌کند. برای پرتاب تاس به تعداد 
+    rolls_per_frame
+    از یک حلقه تکرار استفاده می‌کنیم، نتایج را خلاصه می‌کنیم و سپس نمودار را با میله‌ها و متن نشان دهنده دفعات تکرار جدید به روز می‌کنیم.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای درک نحوه استفاده از این دو مقدار دستور زیر را در نظر بگیرید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ipython</span> <span class="n">RollDieDynamic</span><span class="o">.</span><span class="n">py</span> <span class="mi">6000</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این حالت تابع 
+    FuncAnimation
+    تابع 
+    update
+    را ۶۰۰۰ بار فراخوانی می‌کند و برای هر فریم، از  ۶۰۰۰ فریم یک بار تاس را پرتاب می‌کند. این رویکرد این امکان را برای شما فراهم می‌کند تا میله‌های نمودار، دفعات تکرار هر عدد و درصدهای مربوط به یک پرتاب را هربار مشاهده کنید. در سیستم ما، این انیمیشن حدود ۳.۳۳ دقیقه (۶۰۰۰ فریم/ ۳۰ فریم در ثانیه/ ۶۰ ثانیه در دقیقه) به طول انجامید تا فقط ۶۰۰۰ پرتاب تاس را به شما نشان دهد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">نمایش فریم‌های انیمیشن روی صفحه نمایش در مقایسه با عملیات پرتاب تاس که در پردازنده فوق العاده سریع کامپیوتر اتفاق می‌افتد یک عملیات ورودی-خروجی نسبتا کند محسوب می‌شود. اگر در هر فریم انیمیشن فقط یک بار تاس را پرتاب کنیم، نمی‌توانیم تعداد زیادی پرتاب تاس را در مدت زمان معقولی اجرا کنیم. علاوه بر این موارد، به نظر می‌رسد بعید است در تعداد پرتاب‌های کم تاس درصد فراوانی هر وجه تاس به مقدار 
+    16.667%
+    همگرا شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای دیدن قانون اعداد بزرگ در عمل می‌توانید سرعت اجرا را با افزایش تعداد پرتاب‌های تاس در هر فریم انیمیشن بیشتر کنید. دستور زیر را در نظر بگیرید:
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ipython</span> <span class="n">RollDieDynamic</span><span class="o">.</span><span class="n">py</span> <span class="mi">10000</span> <span class="mi">600</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این حالت تابع 
+    FuncAnimation
+    تابع 
+    update
+    را ۱۰۰۰۰ فراخوانی می‌کند و در هر فریم از۶۰۰۰۰۰۰ کل پرتاب ۶۰۰ بار تاس را پرتاب می‌کند. در سیستم ما، این کار حدود ۵.۵۵ دقیقه به طول انجامید (۱۰۰۰۰ فریم/ ۳۰ فریم در دقیقه/ ۶۰ ثانیه در دقیقه) و تقریبا ۱۸۰۰۰ پرتاب در ثانیه (۳۰ فریم در ثانیه * ۶۰۰ پرتاب در هر فریم) نمایش داده شد، بنابراین به سرعت توانستیم ببینیم که دفعات تکرار هر وجه و درصد نسبی فرآوانی آن به مقادیر مورد انتظار آن‌ها به ۱۰۰۰۰۰۰ بار تکرار به ازای هر وجه و فراوانی نسبی 
+    16.667%
+    همگرا شده است.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برنامه را با مقادیر مختلف پرتاب تاس و فریم‌ها آزمایش کنید تا زمانی که احساس کنید این برنامه به شما کمک می‌کند تا نتایج را به طور موثری مصور کنید. تماشای اجرای برنامه و تغییر آن تا زمانی که کیفیت انیمیشن رضایت شما را جلب کند جالب و آموزنده است.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">اجراهای نمونه
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در طول هر دو اجرای نمونه برنامه، چهار تصویر از صفحه نمایش گرفته‌ایم. تصویر اول نمودار را فقط پس از ۶۴ پرتاب تاس نشان می‌دهد و تصویر دوم پرتاب ۶۰۴ از ۶۰۰۰ کل پرتاب را نشان می‌دهد. اسکریپت را اجرا کنید تا به مرور ببینید که چگونه میله‌های نمودار به صورت پویا به روز می‌شوند. تصویر سوم، نمودار را بعد از ۷۲۰۰ پرتاب و تصویر چهارم پرتاب ۱۶۶۲۰۰ از ۶۰۰۰۰۰۰ پرتاب را نشان می‌دهد. با افزایش تعداد پرتاب‌های تاس، می‌توانید نزدیک شدن درصد فراوانی نسبی دفعات پرتاب به مقدار مورد انتظار آن‌ها یعنی 
+    16.667%
+    را ببینید. مقدار 
+    16.667%
+    با قانون اعداد بزرگ پیش‌بینی شده است.
+</div><p><img alt="Screenshot (70).png" src="Chapters/06 - Dictionaries-and-Sets/attachment:97cd5d98-34dd-4c8c-97f2-0c43a13f0f09.png" /></p>
+<p><img alt="Screenshot (71).png" src="Chapters/06 - Dictionaries-and-Sets/attachment:94f9663e-b70f-4b38-8c4f-a80ee831dc41.png" /></p>
+<h2 style="direction:rtl;font-size: 25px;font-family: 'XB Zar';color:#8e24aa;">6.4.2 <span style="color:#8e24aa;">پیاده سازی نمودارهای داینامیک</span></h2> <a id='20'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">اسکریپتی که در این بخش ارائه می‌دهیم از همان ویژگی‌های 
+    Seaborn
+    و 
+    Matplotlib
+    گفته شده در فصل قبلی و در بخش مقدمه‌ای بر علم داده استفاده می‌کند. کد را برای استفاده از قابلیت انیمیشن 
+    Matplotlib
+    تا حدودی تغییر داده‌ایم.
+</div><h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+    import
+    کردن ماژول 
+    animation
+    از 
+    Matplotlib
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در ابتدا، روی ویژگی‌های جدید استفاده شده در این مثال تمرکز می‌کنیم. خط ۳ ماژول 
+    animation
+    از 
+    Matplotlib
+    را 
+    import
+    می‌کند.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># RollDieDynamic.py</span>
+<span class="sd">&quot;&quot;&quot;Dynamically graphing frequencies of die rolls.&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">animation</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+تابع 
+    update
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۹ تا ۲۷ تابع 
+    update
+    را تعریف می‌کند. تابع 
+    FuncAnimation
+    به ازای هر فریم انیمیشن یک بار تابع 
+    update
+    را فراخوانی می‌کند. این تابع باید حداقل یک آرگومان داشته باشد. خطوط ۹ تا ۱۰ ابتدای تعریف تابع را نشان می‌دهد. پارامترها عبارت‌اند از:
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>frame_number</b>
+    مقدار بعدی آرگومان 
+    frames
+    از تابع 
+    FuncAnimation
+    . به زودی در این مورد توضیح خواهیم داد؛ اگرچه تابع 
+    FuncAnimation
+    برای داشتن این پارامتر به تابع 
+    update
+    نیاز دارد، اما از آن در تابع 
+    update
+    استفاده نمی‌کنیم.<br>
+    <span style="color:#8e24aa;">• </span><b>rolls</b>
+    تعداد پرتاب‌های تاس به ازای هر فریم در انیمیشن.<br>
+    <span style="color:#8e24aa;">• </span><b>faces</b>
+    مقادیر وجوه تاس که به عنوان برچسب در راستای محور افقی استفاده می‌شود.<br>
+    <span style="color:#8e24aa;">• </span><b>frequencies</b>
+    لیستی حاوی تعداد دفعات هر وجه تاس.<br>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در چند بخش بعدی، در مورد بقیه بخش‌های تابع توضیح خواهیم داد.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">frame_number</span><span class="p">,</span> <span class="n">rolls</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Configures bar plot contents for each animation frame.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+تابع 
+    update:
+پرتاب تاس و به روزرسانی لیست 
+    frequencies
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۱۲ و ۱۳ تاس را 
+    rolls
+    بار پرتاب می‌کنند و متغیر 
+    frequencies
+    مربوط به وجه مورد نظر را یک واحد افزایش می‌دهند. توجه داشته باشید که قبل از افزایش 
+    frequencies
+    ، ۱ را از مقدار عدد تاس (۱ تا ۶) کم می‌کنیم. همان طور که مشاهده خواهید کرد، 
+    frequencies
+    یک لیست شش عضوی است (در خط ۳۶ تعریف شده است) و به همین دلیل اندیس‌های آن از ۰ تا ۵ می‌باشد.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># roll die and update frequencies</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rolls</span><span class="p">):</span>
+        <span class="n">frequencies</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+تابع 
+    update:
+پیکربندی 
+    Bar Plot
+    و متن
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خط ۱۶ در تابع 
+    update
+    تابع 
+    cla
+    (پاک کردن متن) از 
+    matplotlib.pyplot
+    را فراخوانی می‌کند تا قبل از ترسیم عناصر جدید برای فریم انیمیشن فعلی، عناصر نمودار میله‌ای موجود را حذف کند. در فصل قبل و در بخش مقدمه‌ای بر علم داده در مورد کدهای خطوط ۱۷ تا ۲۷ توضیح دادیم. خطوط ۱۷ تا ۲۰ میله‌ها را ایجاد می‌کنند، عنوان نمودار میله‌ای را تنظیم می‌کنند، برچسب‌ها را در راستای محورهای افقی وعمودی تنظیم می‌کنند و نمودار را به گونه‌ای مقیاس بندی می‌کنند تا فضای کافی برای نمایش متن مربوطه به دفعات تکرار و درصد فراوانی نسبی بالای هر نوار جا بگیرد. خطوط ۲۳ تا ۲۷ دفعات و درصد مربوطه را نشان می‌دهند. 
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># reconfigure plot for updated die frequencies</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>  <span class="c1"># clear old contents contents of current Figure</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">faces</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;bright&#39;</span><span class="p">)</span>  <span class="c1"># new bars</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Die Frequencies for </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> Rolls&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Die Value&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>  
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.10</span><span class="p">)</span>  <span class="c1"># scale y-axis by 10%</span>
+
+    <span class="c1"># display frequency &amp; percentage above each patch (bar)</span>
+    <span class="k">for</span> <span class="n">bar</span><span class="p">,</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">patches</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">):</span>
+        <span class="n">text_x</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span>  
+        <span class="n">text_y</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> 
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frequency</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">frequency</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="si">:</span><span class="s1">.3%</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">text_x</span><span class="p">,</span> <span class="n">text_y</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+متغیرهایی که برای پیکربندی نمودار و حفظ حالت استفاده می‌شوند
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۳۰ و ۳۱ برای به دست آوردن آرگومان‌های خط فرمان اسکریپت، از لیست 
+    argv
+    در  
+    sys
+    استفاده می‌کند. خط ۳۳ سبک 
+    'whitegrid'
+    در 
+    Seaborn
+    را مشخص می‌کند. خط ۳۴ تابع 
+    figure
+    در  
+    matplotlib.pyplot
+    را فراخوانی می‌کند تا شیء 
+    Figure
+    را به دست آورد. تابع 
+    FuncAnimation
+    انیمیشن را در شیء 
+    Figure
+    نمایش می‌دهد. این آرگومان تابع، عنوان پنجره است. همان طور که به زودی خواهید دید، این آرگومان یکی از آرگومان‌های مورد نیاز تابع 
+    FuncAnimation
+    است. خط ۳۵ لیستی حاوی مقادیر ۱ تا ۶ یا همان اعداد روی وجوه تاس را برای نمایش در راستای محور افقی نمودار ایجاد می‌کند. خط ۳۶ لیست شش عضوی 
+    frequencies
+    را ایجاد می‌کند و با هر پرتاب تاس داده‌های این لیست را به روز می‌کنیم.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># read command-line arguments for number of frames and rolls per frame</span>
+<span class="n">number_of_frames</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  
+<span class="n">rolls_per_frame</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>  <span class="c1"># white background with gray grid lines</span>
+<span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s1">&#39;Rolling a Six-Sided Die&#39;</span><span class="p">)</span>  <span class="c1"># Figure for animation</span>
+<span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>  <span class="c1"># die faces for display on x-axis</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">6</span>  <span class="c1"># six-element list of die frequencies</span>
+</pre></div>
+</div>
+<h2 style="direction:rtl;font-size: px;font-family: 'XB Zar';color:#0288d1;">
+فراخوانی تابع انیمیشن 
+    FuncAnimation
+    از  
+    animation
+</h2> <a id=''></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">خطوط ۳۹ تا ۴۱ برای به روزرسانی نمودار میله‌ای تابع 
+     FuncAnimation
+    از 
+    animation
+    در 
+    Matplotlib
+    را فراخوانی می‌کند. این تابع شیئی را برای انیمیشن برمی‌گرداند. اگرچه از این شیء به صراحت استفاده نشده است، ولی باید ارجاع به انیمیشن را ذخیره کنید؛ درغیر این صورت، پایتون بلافاصله انیمیشن را خاتمه می‌دهد و حافظه خود را به سیستم برمی‌گرداند.
+</div><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># configure and start animation that calls function update</span>
+<span class="n">die_animation</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span>
+    <span class="n">figure</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="n">number_of_frames</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span>
+    <span class="n">fargs</span><span class="o">=</span><span class="p">(</span><span class="n">rolls_per_frame</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># display window</span>
+</pre></div>
+</div>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">تابع 
+    FuncAnimation
+    به دو آرگومان نیاز دارد:
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>figure</b>
+    تابع 
+    FuncAnimation
+    انیمیشن را در شیء 
+    Figure
+    نشان می‌دهد.<br>
+    <span style="color:#8e24aa;">• </span><b>update</b>
+    تابعی است که 
+    FuncAnimation
+    برای هر فریم انیمیشن آن را فراخوانی می‌کند.<br>
+</div>
+<br>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این حالت آرگومان‌های کلیدی و البته اختیاری زیر را به تابع ارسال کرده‌ایم:
+</div>
+<br>
+<div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
+    <span style="color:#8e24aa;">• </span><b>repeat</b>
+    اگر مقدار این آرگومان 
+    False
+    باشد، پس از تعداد مشخصی فریم، انیمیشن خاتمه می‌یابد. اگر مقدار این آرگومان 
+    True
+    (پیش‌فرض) باشد، بعد از تکمیل انیمیشن، از ابتدا دوباره شروع می‌کند.<br>
+    <span style="color:#8e24aa;">• </span><b>frames</b>
+    این آرگومان تعداد کل فریم‌های انیمیشن و دفعات فراخوانی شدن تابع 
+    update
+    به وسیله تابع 
+    FunctAnimation
+    را کنترل می‌کند. ارسال یک عدد صحیح معادل ارسال یک 
+    range
+    است - به عنوان مثال ۶۰۰ به معنای 
+     range(600)
+    است. 
+    FunctAnimation
+    در هر فراخوانی تابع 
+    update
+    ، یک مقدار از این محدوده را به عنوان اولین آرگومان به تابع 
+    update
+    ارسال می‌کند.<br>
+    <span style="color:#8e24aa;">• </span><b>interval</b>
+    این آرگومان تعداد میلی ثانیه‌ها (در این حالت ۳۳) بین فریم‌های انیمیشن (پیش فرض ۲۰۰ است) را تعیین می‌کند. تابع 
+    FuncAnimation
+    بعد از فراخوانی تابع 
+    update
+    برای فراخوانی مجدد این تابع به مدت ۳۳ میلی ثانیه منتظر می‌ماند.<br>
+    <span style="color:#8e24aa;">• </span><b>fargs</b>
+    (مخفف 
+    “function arguments”
+    ) این آرگومان یک تاپل است که شامل چند آرگومان دیگر می‌باشد. این آرگومان‌ها در حقیقت آرگومان‌هایی هستند که به تابعی که در آرگومان دوم 
+    FuncAnimation
+    مشخص کرده‌اید، ارسال می‌شوند. آرگومان‌هایی که در تاپل 
+    fargs
+    مشخص می‌کنید، مربوط به پارامترهای 
+    rolls, facesdو  frequencie
+    تابع 
+    update
+     (خط ۹) هستند.<br>
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">برای مشاهده آرگومان‌های اختیاری تابع 
+    FuncAnimation
+    به آدرس زیر مراجعه کنید:
+    <br>
+    <a href="https://matplotlib.org/api/_as_gen/
+matplotlib.animation.FuncAnimation.html">
+https://matplotlib.org/api/_as_gen/
+matplotlib.animation.FuncAnimation.html</  
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در نهایت خط ۴۳ پنجره را نشان می‌دهد.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RollDieDynamic.py</span>
+<span class="sd">&quot;&quot;&quot;Dynamically graphing frequencies of die rolls.&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">animation</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">frame_number</span><span class="p">,</span> <span class="n">rolls</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Configures bar plot contents for each animation frame.&quot;&quot;&quot;</span>
+    <span class="c1"># roll die and update frequencies</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rolls</span><span class="p">):</span>
+        <span class="n">frequencies</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span> 
+
+    <span class="c1"># reconfigure plot for updated die frequencies</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>  <span class="c1"># clear old contents contents of current Figure</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">faces</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">frequencies</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;bright&#39;</span><span class="p">)</span>  <span class="c1"># new bars</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Die Frequencies for </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="s1"> Rolls&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Die Value&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>  
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.10</span><span class="p">)</span>  <span class="c1"># scale y-axis by 10%</span>
+
+    <span class="c1"># display frequency &amp; percentage above each patch (bar)</span>
+    <span class="k">for</span> <span class="n">bar</span><span class="p">,</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">patches</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">):</span>
+        <span class="n">text_x</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.0</span>  
+        <span class="n">text_y</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> 
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frequency</span><span class="si">:</span><span class="s1">,</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">frequency</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="si">:</span><span class="s1">.3%</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">text_x</span><span class="p">,</span> <span class="n">text_y</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="c1"># read command-line arguments for number of frames and rolls per frame</span>
+<span class="n">number_of_frames</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  
+<span class="n">rolls_per_frame</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>  <span class="c1"># white background with gray grid lines</span>
+<span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="s1">&#39;Rolling a Six-Sided Die&#39;</span><span class="p">)</span>  <span class="c1"># Figure for animation</span>
+<span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>  <span class="c1"># die faces for display on x-axis</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">6</span>  <span class="c1"># six-element list of die frequencies</span>
+
+<span class="c1"># configure and start animation that calls function update</span>
+<span class="n">die_animation</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span>
+    <span class="n">figure</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="n">number_of_frames</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span>
+    <span class="n">fargs</span><span class="o">=</span><span class="p">(</span><span class="n">rolls_per_frame</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># display window</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">118</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># RollDieDynamic.py</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Dynamically graphing frequencies of die rolls.&quot;&quot;&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">animation</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span><span class="w"> </span><span class="nn">random</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<h1 style="direction:rtl;font-size: 35px;font-family: 'XB Zar';color:#8e24aa;">6.5 <span style="color:#F50057;">جمع‌بندی</span></h1> <a id='21'></a><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در این فصل، درباره دیکشنری و مجموعه در پایتون توضیح دادیم. شرح دادیم که دیکشنری چیست و چندین مثال ارائه دادیم. زوج کلید-مقدار را نشان دادیم و توضیح دادیم که چگونه از آن‌ها برای ایجاد یک دیکشنری استفاده کنیم. برای این کار، زوج‌های کلید-مقدار را با کاما جدا کرده و آنها را میان یک جفت آکولاد 
+    {}
+    قرار دادیم. علاوه بر این، با روش 
+    dictionary comprehension
+    چند دیکشنری ایجاد کردید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">از یک جفت براکت 
+    []
+    برای بازیابی مقدار مربوط به یک کلید، درج و به روزرسانی زوج‌های کلید-مقدار استفاده کردید. علاوه بر این برای تغییر مقدار مرتبط با یک کلید از متد 
+    update
+    استفاده کرده‌اید. از طریق کلیدها، مقادیر و آیتم‌های یک دیکشنری را پیمایش کردید.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">مجموعه‌هایی از مقادیر منحصربه فرد و تغییر ناپذیر ایجاد کردید. با عملگرهای مقایسه، مجموعه‌ها را با یکدیگر مقایسه کردید، با متدها و عملگرها مجموعه‌ها را با یکدیگر تلفیق کردید، با عملگرهای قابل تغییر اعضای مجموعه را تغییر دادید و با روش 
+    set comprehension
+    مجموعه‌هایی را ایجاد کردید. مشاهده کردید که مجموعه‌ها قابل تغییر هستند. مجموعه‌های 
+    frozenset
+    غیرقابل تغییر هستند، بنابراین می‌توان برای اعضای مجموعه از 
+    frozenset
+    استفاده کرد.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در بخش مقدمه‌ای بر علم داده، نتایج شبیه‌سازی پرتاب یک تاس را با نمودار میله‌ای به صورت پویا نشان دادیم و قانون اعداد بزرگ را در عمل تجربه کردیم. علاوه بر ویژگی‌های 
+    Seaborn
+    و 
+    Matplotlib
+    که در بخش قبلی مقدمه‌ای بر علم داده بررسی کردیم، از تابع 
+    FuncAnimation
+    در 
+    Matplotlib
+    برای کنترل فریم به فریم یک انیمیشن استفاده کردیم. 
+    FuncAnimation
+    تابعی را فراخوانی کرد که ما مشخص کردیم، این تابع تعیین می‌کرد در هر فریم انیمیشن چه چیزی نمایش داده شود.
+</div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">در فصل بعدی، درباره برنامه نویسی آرایه گرا با کتابخانه محبوب 
+    NumPy
+    بحث می‌کنیم. همانطور که مشاهده خواهید کرد، کالکشن 
+    ndarray
+    در قیاس با لیست‌های از پیش تعریف شده در 
+    Python
+    بسیاری از عملیات مشابه را دو برابر سریع‌تر انجام می‌دهد. این قدرت برای برنامه‌های کاربردی مرتبط با کلان داده امروزی مفید خواهد بود.
+</div>
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapters/06 - Dictionaries-and-Sets"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../05%20-%20Sequences-%28Lists-and-Tuples%29/Chapter5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../07%20-%20Array-Oriented-Programming-with-NumPy/Chapter7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Deitel & Deitel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
