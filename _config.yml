@@ -1,0 +1,14 @@
+# In _config.yml
+title: Python for Programmers with AI Case Studies in Persian
+author: Deitel & Deitel
+logo: "" # You can add a path to a logo image if you have one
+
+# Tell Jupyter Book to find your notebooks in the repository root
+repository:
+  url: https://github.com/your-username/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
+  branch: main # Or master
+
+# Add buttons to link back to your repository
+html:
+  use_issues_button: true
+  use_repository_button: true
