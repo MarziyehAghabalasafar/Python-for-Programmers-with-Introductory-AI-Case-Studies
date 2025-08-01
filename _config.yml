@@ -1,0 +1,23 @@
+# In _config.yml
+title: Python for Programmers with AI Case Studies in Persian
+author: Deitel & Deitel
+logo: ""
+
+repository:
+  url: https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+# This block controls how notebooks are executed
+execute:
+  execute_notebooks: force
+  kernel_name: python3
+  allow_errors: true
+
+# This block passes general settings to the builder
+sphinx:
+  config:
+    suppress_warnings: ["image.not_readable"]

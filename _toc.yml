@@ -1,0 +1,14 @@
+# In _toc.yml
+format: jb-book
+root: Chapters/01 - Introduction-to-Computers-and-Python/Chapter1
+chapters:
+- file: Chapters/02 - Introduction-to-Python-Programming/Chapter2
+- file: Chapters/03 - Control-Statements/Chapter3
+- file: Chapters/04 - Functions/Chapter4
+- file: Chapters/05 - Sequences-(Lists-and-Tuples)/Chapter5
+- file: Chapters/06 - Dictionaries-and-Sets/Chapter6
+- file: Chapters/07 - Array-Oriented-Programming-with-NumPy/Chapter7
+- file: Chapters/08 - Strings-(A-Deeper-Look)/Chapter8
+- file: Chapters/09 - Files-and-Exceptions/Chapter9
+- file: Chapters/10 - Object-Oriented-Programming/Chapter10
+# ... add a line for every notebook in the order you want them to appear
