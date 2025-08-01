@@ -22,7 +22,8 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        pip install jupyter-book ghp-import
+        pip install jupyter-book ghp-import ipykernel
+        python -m ipykernel install --user --name=python3
 
     - name: Build the Book
       run: |
