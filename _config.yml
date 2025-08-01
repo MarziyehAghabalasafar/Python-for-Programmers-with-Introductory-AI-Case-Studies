@@ -18,3 +18,12 @@ execute:
   execute_notebooks: force
   # This allows notebooks to run even if the kernel name doesn't match
   allow_errors: true
+
+sphinx:
+  config:
+    # Execute all notebooks
+    nb_execution_mode: force
+    # Allow the build to continue even if a code cell has an error
+    nb_execution_allow_errors: true
+    # Force the build to use the standard python3 kernel
+    nb_execution_kernel_name: "python3"
