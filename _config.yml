@@ -1,31 +1,23 @@
 # In _config.yml
 title: Python for Programmers with AI Case Studies in Persian
 author: Deitel & Deitel
-logo: "" # You can add a path to a logo image if you have one
+logo: ""
 
-# Tell Jupyter Book to find your notebooks in the repository root
 repository:
-  url: https://github.com/your-username/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
-  branch: main # Or master
+  url: https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
+  branch: main
 
-# Add buttons to link back to your repository
 html:
   use_issues_button: true
   use_repository_button: true
 
-# Tell Jupyter Book to execute notebooks
+# This block controls how notebooks are executed
 execute:
   execute_notebooks: force
-  # This allows notebooks to run even if the kernel name doesn't match
+  kernel_name: python3
   allow_errors: true
 
+# This block passes general settings to the builder
 sphinx:
   config:
-    # Execute all notebooks
-    nb_execution_mode: force
-    # Allow the build to continue even if a code cell has an error
-    nb_execution_allow_errors: true
-    # Force the build to use the standard python3 kernel
-    nb_execution_kernel_name: "python3"
-    # NEW: Add this line to ignore missing image warnings
     suppress_warnings: ["image.not_readable"]
