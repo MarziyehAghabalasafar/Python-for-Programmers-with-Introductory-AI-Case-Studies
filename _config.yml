@@ -27,3 +27,5 @@ sphinx:
     nb_execution_allow_errors: true
     # Force the build to use the standard python3 kernel
     nb_execution_kernel_name: "python3"
+    # NEW: Add this line to ignore missing image warnings
+    suppress_warnings: ["image.not_readable"]
