@@ -7,6 +7,10 @@ on:
   push:
     branches: ["main"] # Change to "master" if that's your default branch
 
+# Add this permissions block to allow the workflow to push to the gh-pages branch
+permissions:
+  contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-deploy:
