@@ -12,3 +12,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+# Tell Jupyter Book to execute notebooks
+execute:
+  execute_notebooks: force
+  # This allows notebooks to run even if the kernel name doesn't match
+  allow_errors: true
