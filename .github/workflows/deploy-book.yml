@@ -1,0 +1,35 @@
+# In .github/workflows/deploy-book.yml
+name: Deploy Jupyter Book
+
+# Controls when the action will run
+on:
+  # Run on pushes to your default branch (main or master)
+  push:
+    branches: ["main"] # Change to "master" if that's your default branch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install Dependencies
+      run: |
+        pip install jupyter-book ghp-import
+
+    - name: Build the Book
+      run: |
+        jupyter-book build .
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
