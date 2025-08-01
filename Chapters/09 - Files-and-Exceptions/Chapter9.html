@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Python for Programmers with AI Case Studies in Persian</title>
+    <title>Chapter 9 &#8212; Python for Programmers with AI Case Studies in Persian</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapters/09 - Files-and-Exceptions/Chapter9';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../10%20-%20Object-Oriented-Programming/Chapter10.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../08%20-%20Strings-%28A-Deeper-Look%29/Chapter8.html" />
+    <link rel="next" title="Chapter 10" href="../10%20-%20Object-Oriented-Programming/Chapter10.html" />
+    <link rel="prev" title="Chapter 8" href="../08%20-%20Strings-%28A-Deeper-Look%29/Chapter8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,11 +169,22 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../01%20-%20Introduction-to-Computers-and-Python/Chapter1.html">
-                    <no title>
+                    Chapter 1
                 </a>
             </li>
         </ul>
-        
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02%20-%20Introduction-to-Python-Programming/Chapter2.html">Chapter 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03%20-%20Control-Statements/Chapter3.html">Chapter 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04%20-%20Functions/Chapter4.html">Chapter 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05%20-%20Sequences-%28Lists-and-Tuples%29/Chapter5.html">Chapter 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06%20-%20Dictionaries-and-Sets/Chapter6.html">Chapter 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07%20-%20Array-Oriented-Programming-with-NumPy/Chapter7.html">Chapter 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08%20-%20Strings-%28A-Deeper-Look%29/Chapter8.html">Chapter 8</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10%20-%20Object-Oriented-Programming/Chapter10.html">Chapter 10</a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -344,9 +355,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -357,19 +366,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Chapter 9</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -379,7 +380,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-9">
+<h1>Chapter 9<a class="headerlink" href="#chapter-9" title="Link to this heading">#</a></h1>
+<img src="https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg" align = "left">
 <!DOCTYPE html>
 <html>
 <head>
@@ -2172,7 +2175,8 @@ DataFrames
     در مورد بند finally دستور try برای اجرای کد در صورتی که جریان برنامه وارد مجموعه try مربوطه شده باشد، بحث کردیم. شما می‌توانید از دستور with یا بند finally یک دستور try برای این منظور استفاده کنید — ما دستور with را ترجیح می‌دهیم.
 </div><div style="direction:rtl; font-size: 17px; font-family: 'XB Zar'; line-height: 200%">
     در بخش مقدمه‌ای بر علم داده، از ماژول csv کتابخانه استاندارد پایتون و قابلیت‌های کتابخانه pandas برای بارگیری، دستکاری و ذخیره داده‌های CSV استفاده کردیم. در نهایت، مجموعه‌داده فاجعه تایتانیک را در یک DataFrame از pandas بارگیری کردیم، برخی نام‌های ستون‌ها را برای خوانایی بهتر تغییر دادیم، ابتدا و انتهای مجموعه‌داده را نمایش دادیم و تحلیل ساده‌ای از داده‌ها انجام دادیم. در فصل بعدی، در مورد قابلیت‌های برنامه‌نویسی شیء‌گرای پایتون بحث خواهیم کرد.
-</div>
+</div></section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -2182,16 +2186,16 @@ DataFrames
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "conda-base-py"
+            mode: "python"
         },
         kernelOptions: {
-            name: "conda-base-py",
+            name: "python3",
             path: "./Chapters/09 - Files-and-Exceptions"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'conda-base-py'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -2209,7 +2213,7 @@ DataFrames
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Chapter 8</p>
       </div>
     </a>
     <a class="right-next"
@@ -2217,7 +2221,7 @@ DataFrames
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Chapter 10</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2227,21 +2231,6 @@ DataFrames
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
