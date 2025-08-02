@@ -2,6 +2,7 @@
 title: Python for Programmers with AI Case Studies in Persian
 author: Deitel & Deitel
 logo: ""
+favicon: _static/favicon.png 
 
 repository:
   url: https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
