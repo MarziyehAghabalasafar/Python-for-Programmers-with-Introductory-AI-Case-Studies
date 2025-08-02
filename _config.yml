@@ -1,7 +1,7 @@
 # In _config.yml
 title: Python for Programmers with AI Case Studies in Persian
 author: Deitel & Deitel
-logo: ""
+logo: https://deitel.com/wp-content/uploads/2020/01/python-for-programmers.jpg
 
 repository:
   url: https://github.com/MarziyehAghabalasafar/Python-for-Programmers-with-Introductory-AI-Case-Studies # Replace with your repo URL
